@@ -1,0 +1,418 @@
+<meta charset="utf-8">
+<title>{{NAME}} · Standortprofil Versorgungsforschung</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+<style>
+:root{
+  --paper:#EDF2FA; --card:#FFFFFF; --card-2:#F7FAFD;
+  --ink:#111111; --ink-soft:#444A50; --ink-faint:#545C63;
+  --line:#D0D8E4; --line-soft:#E3EAF3;
+  --brand:#0051A1; --brand-deep:#003B77; --brand-tint:#E1EAF6;
+  --action:#BE9E53; --action-deep:#A5873F; --on-action:#2A2207;
+  --accent:#8A6E28; --gut:#1F7A5A; --gut-tint:#DDF0E8;
+  --warn:#9A3B21; --warn-tint:#F7E4DE;
+  --sans:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+  --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+  --line:#22314A; --line-soft:#1A2639;
+  --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+  --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+  --accent:#D9BE82; --gut:#6FC6A1; --gut-tint:#122B23;
+  --warn:#E8927A; --warn-tint:#2E1811; color-scheme:dark; }}
+:root[data-theme="dark"]{
+  --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+  --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+  --line:#22314A; --line-soft:#1A2639;
+  --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+  --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+  --accent:#D9BE82; --gut:#6FC6A1; --gut-tint:#122B23;
+  --warn:#E8927A; --warn-tint:#2E1811; color-scheme:dark; }
+*{box-sizing:border-box}
+body{background:var(--paper); color:var(--ink); font-family:var(--sans);
+  font-size:15px; line-height:1.55; margin:0}
+/* 1.240 px Seitenbreite, Fliesstext 760 px (Mariann, n-Vorlage-breite):
+   laengere Zeilen liest man schlecht, das Auge verliert den Zeilenanfang. */
+.wrap{max-width:1240px; margin:0 auto;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance; margin:0; font-weight:900}
+h1{font-size:clamp(26px,4vw,38px); line-height:1.14; letter-spacing:-.015em}
+h2{font-size:clamp(19px,2.4vw,24px); margin-bottom:.4em}
+h3{font-size:16px; font-weight:700}
+a{color:var(--brand)}
+.eyebrow{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-faint); font-weight:700}
+header.band{background:var(--card); border-bottom:1px solid var(--line)}
+header.band .wrap{padding-block:28px 0}
+/* Reiter wie in den Hubs: linksbuendig, aktiver fett und dunkel mit 3 px
+   blauer Linie (Mariann, Canvas 2, n-Main-0). Auf jeder Seite gleich. */
+.reiter{display:flex; flex-wrap:wrap; gap:4px 22px; margin-top:20px}
+.reiter a, .reiter span{display:inline-block; padding:9px 2px 10px;
+  font-size:14.5px; text-decoration:none; color:var(--ink-soft);
+  border-bottom:3px solid transparent}
+.reiter a:hover{color:var(--brand); border-bottom-color:var(--line)}
+.reiter [aria-current]{color:var(--ink); font-weight:700;
+  border-bottom-color:var(--brand)}
+/* Art der Einrichtung: wer die Forschung traegt, bestimmt Auftrag,
+   Finanzierung und Unabhaengigkeit. Steht deshalb ganz oben in der Spalte. */
+.tart{margin:8px 0 0; font-size:15px; font-weight:700; color:var(--brand-deep)}
+.chip.fach{border-color:var(--accent); color:var(--accent);
+  background:transparent}
+.ort{color:var(--ink-soft); margin-top:8px; font-size:16px}
+.raster{display:grid; gap:18px; grid-template-columns:minmax(0,2fr) minmax(260px,1fr);
+  margin-block:22px}
+@media (max-width:760px){ .raster{grid-template-columns:1fr} }
+.box{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; min-width:0; margin-bottom:14px}
+.kz{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.kz div{background:var(--card-2); border:1px solid var(--line-soft);
+  border-radius:8px; padding:10px 12px}
+.kz .n{font-size:26px; font-weight:900; line-height:1; font-variant-numeric:tabular-nums}
+.kz .t{font-size:11.5px; color:var(--ink-soft); margin-top:5px}
+.kz .n.g{color:var(--gut)} .kz .n.w{color:var(--warn)}
+ul.studien{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+ul.studien li{border-top:1px solid var(--line-soft); padding-top:10px}
+ul.studien li:first-child{border-top:0; padding-top:0}
+.st{font-size:11px; font-weight:700; padding:2px 8px; border-radius:20px;
+  border:1px solid currentColor; white-space:nowrap}
+.st.rekrutiert{background:var(--gut-tint); color:var(--gut)}
+.st.geplant{background:var(--brand-tint); color:var(--brand-deep)}
+.st.abgeschlossen{background:var(--line-soft); color:var(--ink-soft); border-color:transparent}
+.st.sonst{background:var(--warn-tint); color:var(--warn)}
+.meta{font-size:12.5px; color:var(--ink-faint); margin-top:4px}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.chip{font-size:11.5px; padding:3px 10px; border-radius:6px; text-decoration:none;
+  border:1px solid var(--line); background:var(--card-2); color:var(--ink-soft)}
+a.chip.hub{border-color:var(--brand); color:var(--brand); background:var(--brand-tint)}
+a.chip.inno{border-color:var(--action-deep); color:var(--accent)}
+.selbst{border-left:3px solid var(--action)}
+.selbst h2{color:var(--accent)}
+details{margin-top:10px}
+summary{cursor:pointer; font-weight:700; color:var(--brand); padding:6px 0}
+label{display:block; font-size:13px; color:var(--ink-soft); margin-top:12px}
+label b{display:block; color:var(--ink); font-weight:700; font-size:13.5px;
+  margin-bottom:4px}
+input[type=text], input[type=email], textarea, select{width:100%; font:inherit;
+  font-size:13.5px; padding:8px 10px; border:1px solid var(--line);
+  border-radius:7px; background:var(--card-2); color:var(--ink)}
+textarea{min-height:76px; resize:vertical}
+fieldset{border:1px solid var(--line); border-radius:9px; padding:4px 14px 14px;
+  margin:20px 0 0; background:var(--card-2)}
+legend{font-size:12px; font-weight:700; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--brand); padding:0 6px}
+fieldset .hinweis{margin-top:6px}
+.selbst:target, .selbst.hebe{box-shadow:0 0 0 2px var(--action)}
+.ja-nein{display:flex; gap:14px; margin-top:6px; flex-wrap:wrap}
+.ja-nein label{display:inline-flex; align-items:center; gap:6px; margin:0;
+  font-size:13.5px; color:var(--ink)}
+button{font:inherit; font-size:14px; font-weight:700; padding:9px 18px;
+  border-radius:7px; border:1px solid var(--action-deep); background:var(--action);
+  color:var(--on-action); cursor:pointer; margin-top:14px}
+button:hover{background:var(--action-deep)}
+.hinweis{font-size:12px; color:var(--ink-faint); margin-top:8px}
+.stand{font-size:13px; margin-top:10px; min-height:1.4em}
+.stand.ok{color:var(--gut); font-weight:700}
+.stand.fehl{color:var(--warn); font-weight:700}
+footer{border-top:1px solid var(--line); margin-top:26px}
+footer .wrap{padding-block:20px 32px; font-size:12.5px; color:var(--ink-faint)}
+</style>
+
+<!--__NETZLEISTE__-->
+
+<header class="band">
+  <div class="wrap">
+    <div class="eyebrow">Knowledge-Hubs · Versorgungsstudien-Landkarte</div>
+    <h1>{{NAME}}</h1>
+    <p class="ort">{{ORT}}{{LAND}}</p>
+    <nav class="reiter" aria-label="Bereiche">
+      <a href="../landkarte.html">Studien</a>
+      <a href="../landkarte.html#standorte">Standorte</a>
+      <span aria-current="page">Dieses Standortprofil</span>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap raster">
+  <main>
+    <div class="box">
+      <h2>Steckbrief</h2>
+      <div class="kz">{{KENNZAHLEN}}</div>
+      <p class="hinweis">Gezählt werden registrierte Studien mit Versorgungsbezug,
+        bei denen diese Einrichtung als beteiligtes Zentrum oder als Sponsor
+        genannt ist. Quelle: DRKS, Abruf {{STAND}}.</p>
+    </div>
+
+    <div class="box">
+      <h2>Studien an diesem Standort</h2>
+      <ul class="studien">{{STUDIEN}}</ul>
+    </div>
+  </main>
+
+  <aside>
+    {{TRAEGER}}
+    {{VERZEICHNIS}}
+    {{PUBLIKATIONEN}}
+    <div class="box">
+      <h3>Themen</h3>
+      <div class="chips">{{HUBS}}</div>
+    </div>
+    {{ZENTREN}}
+    {{ETHIK}}
+    {{INNO}}
+    {{DNVF}}
+    <div class="box">
+      <h3>Angabe korrigieren</h3>
+      <p class="hinweis">Stimmt etwas nicht? Schreiben Sie an
+        <a href="mailto:info@m-vf.de?subject=Standortprofil korrigieren: {{NAME_ROH}}">info@m-vf.de</a>
+        und nennen Sie den Standort <b>{{NAME_ROH}}</b>.</p>
+    </div>
+  </aside>
+</div>
+
+<div class="wrap">
+  <div class="box selbst" id="eintragen">
+    <h2>Sie sind hier verantwortlich?</h2>
+    <p>Die Angaben oben stammen aus dem Studienregister. Sie zeigen, was
+      registriert ist — nicht, was Sie tun. Hier tragen Sie selbst ein, was
+      fehlt: Ihr Publikationsverzeichnis, neue Studiengänge, Professuren und
+      Mitarbeitende, offene Stellen, Ihre eigenen Kongresse und Veranstaltungen.
+      Was aus dem Register stammt, bleibt unverändert; Ihre Angaben stehen als
+      Ihre Angaben daneben.</p>
+
+    <details id="eintragen-auf">
+      <summary>Zugang anfordern und Angaben eintragen</summary>
+      <form id="form" novalidate>
+        <label><b>Ihre dienstliche E-Mail-Adresse</b>
+          <input name="email" type="email" required
+                 placeholder="name@einrichtung.de"></label>
+        <p class="hinweis">Wir schicken einen persönlichen Link an diese
+          Adresse. Ist die Domain dem Standort zuzuordnen, geht er sofort
+          heraus; sonst prüfen wir von Hand. Mit dem Link können Sie Ihre
+          Angaben später jederzeit ändern.</p>
+
+        <label><b>Ihr Name und Ihre Funktion</b>
+          <input type="text" name="person"
+                 placeholder="Prof. Dr. … , Leitung des Instituts für …"></label>
+
+        <fieldset>
+          <legend>Die Einrichtung im Netz</legend>
+          <p class="hinweis">Diese Verweise haben wir aus ROR, OpenAlex,
+            Wikidata und re3data zusammengetragen — öffentliche Verzeichnisse,
+            die eine Einrichtung nicht selbst pflegt. Was dort fehlt oder
+            falsch steht, können nur Sie richtigstellen.</p>
+
+          <label><b>Publikationsverzeichnis / Repositorium</b>
+            <textarea name="repositorien"
+              placeholder="Adresse Ihres Repositoriums, eine je Zeile. Auch mehrere: Hochschulschriftenserver, Forschungsinformationssystem, Publikationsliste des Instituts, Forschungsdatenrepositorium."></textarea></label>
+
+          <label><b>Netzauftritt der Einrichtung</b>
+            <input type="text" name="netzadresse"
+                   placeholder="https://…"></label>
+
+          <label><b>Ist die Zuordnung oben richtig?</b></label>
+          <div class="ja-nein">
+            <label><input type="radio" name="zuordnung" value="ja" checked> ja</label>
+            <label><input type="radio" name="zuordnung" value="nein"> nein, falsche Einrichtung</label>
+            <label><input type="radio" name="zuordnung" value="teil"> wir sind nur ein Teil davon</label>
+          </div>
+          <label><input type="text" name="zuordnung_text"
+                 placeholder="Wenn nein: Wie heißt die Einrichtung richtig? Gern mit ROR-Kennung."></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Lehre</legend>
+          <label><b>Studiengänge mit Bezug zur Versorgungsforschung</b>
+            <textarea name="studiengaenge"
+              placeholder="Name, Abschluss, Regelstudienzeit, Beginn, Link. Eine Zeile je Studiengang — auch neu eingerichtete oder gerade akkreditierte."></textarea></label>
+
+          <label><b>Promotions- und Weiterbildungsangebote</b>
+            <textarea name="weiterbildung"
+              placeholder="Graduiertenkolleg, strukturiertes Promotionsprogramm, Zertifikatskurs, Summer School …"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Menschen</legend>
+          <label><b>Neue Professuren</b>
+            <textarea name="professuren"
+              placeholder="Denomination, Name, Antritt, Link zur Seite. Auch Vertretungen und Juniorprofessuren."></textarea></label>
+
+          <label><b>Neue wissenschaftliche Mitarbeitende</b>
+            <textarea name="mitarbeitende"
+              placeholder="Name, Arbeitsgebiet, gern mit ORCID."></textarea></label>
+
+          <label><b>Wer vertritt den Standort nach außen?</b>
+            <input type="text" name="ansprechperson"
+                   placeholder="Name, Funktion, dienstliche Adresse"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Offene Stellen</legend>
+          <label><b>Suchen Sie Personal?</b></label>
+          <div class="ja-nein">
+            <label><input type="radio" name="personal" value="ja"> ja</label>
+            <label><input type="radio" name="personal" value="nein" checked> nein</label>
+          </div>
+          <label><b>Ausschreibungen</b>
+            <textarea name="stellen"
+              placeholder="Eine je Zeile: Bezeichnung, Umfang, Befristung, Bewerbungsfrist, Link zur Ausschreibung."></textarea></label>
+          <p class="hinweis">Ausschreibungen zeigen wir mit Frist und nehmen
+            sie danach von der Seite. Nennen Sie die Frist, sonst können wir
+            das nicht.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Eigene Kongresse und Veranstaltungen</legend>
+          <label><b>Veranstaltungen</b>
+            <textarea name="veranstaltungen"
+              placeholder="Eine je Zeile: Titel, Datum, Ort oder online, Anmeldung bis, Link. Kongresse, Symposien, Kolloquien, Ringvorlesungen, Tage der offenen Tür."></textarea></label>
+
+          <label><b>Regelmäßige Reihen</b>
+            <input type="text" name="reihen"
+                   placeholder="z. B. monatliches Forschungskolloquium, jährliche Fachtagung"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Forschung</legend>
+          <label><b>Aktuelle Veröffentlichungen</b>
+            <textarea name="publikationen"
+              placeholder="Eine je Zeile, gern mit DOI."></textarea></label>
+
+          <label><b>Bücher und Buchbeiträge</b>
+            <textarea name="buecher"
+              placeholder="Titel, Verlag, Jahr; bei Beiträgen auch das Werk."></textarea></label>
+
+          <label><b>Methoden und Datenzugänge</b>
+            <textarea name="methoden"
+              placeholder="Routinedaten, Register, qualitative Verfahren, cluster-randomisierte Studien, FDZ Gesundheit …"></textarea></label>
+
+          <label><b>Studien, die hier fehlen</b>
+            <textarea name="studien_fehlen"
+              placeholder="DRKS-Nummer oder Titel. Auch Studien, die nicht im DRKS stehen."></textarea></label>
+
+          <label><b>Sind Sie für Kooperationen ansprechbar?</b></label>
+          <div class="ja-nein">
+            <label><input type="radio" name="kooperation" value="ja"> ja</label>
+            <label><input type="radio" name="kooperation" value="nein" checked> keine Angabe</label>
+          </div>
+        </fieldset>
+
+        <label><b>Was sonst fehlt oder falsch ist</b>
+          <textarea name="sonstiges"></textarea></label>
+
+        <button type="submit">Absenden</button>
+        <p class="stand" id="stand" aria-live="polite"></p>
+        <p class="hinweis">Mit dem Absenden stimmen Sie zu, dass wir Ihre
+          Angaben zur Pflege dieses Profils verarbeiten. Sie erscheinen als
+          Angaben Ihrer Einrichtung, erkennbar getrennt von den Registerdaten.
+          <a href="https://knowledge-hubs.m-vf.de/datenschutz.html" target="_blank"
+             rel="noopener">Datenschutz</a></p>
+      </form>
+    </details>
+  </div>
+</div>
+
+
+<footer><div class="wrap">
+  Standortprofil aus der Versorgungsstudien-Landkarte von
+  <em>Monitor Versorgungsforschung</em>. Studiendaten: Deutsches Register
+  Klinischer Studien (DRKS), BfArM, abgerufen am {{STAND}}, Einträge unter
+  CC BY 4.0. Keine Gewähr für Richtigkeit und Vollständigkeit; maßgeblich ist
+  der <a href="https://drks.de" target="_blank" rel="noopener">Originaleintrag
+  im DRKS</a>. Personenbezogene Kontaktangaben aus dem Register werden nicht
+  wiedergegeben.
+</div></footer>
+
+<!--__FUSSLEISTE__-->
+
+<script>
+(function(){
+  "use strict";
+  /* Gleiches Muster wie die Innofonds-Pruefseiten: POST an einen Endpunkt auf
+     dem MVF-Server. ENDPUNKT ist noch nicht eingerichtet - solange er leer
+     ist, sagt das Formular das ehrlich, statt eine Einsendung vorzutaeuschen. */
+  var ENDPUNKT = "{{ENDPUNKT}}";
+  var STANDORT = {{STANDORT_JSON}};
+  var BETREFF = "Standortprofil ergänzen: " + (STANDORT.name || "");
+  var f = document.getElementById("form"), st = document.getElementById("stand");
+
+  /* Ein Verweis auf #eintragen muss das zugeklappte <details> auch aufmachen
+     und in das gemeinte Feld springen - sonst landet man auf einer Ueber-
+     schrift und sucht selbst weiter. */
+  Array.prototype.forEach.call(
+    document.querySelectorAll("a.zum-formular"), function(a){
+      a.addEventListener("click", function(ev){
+        ev.preventDefault();
+        var auf = document.getElementById("eintragen-auf");
+        if (auf) auf.open = true;
+        var kasten = document.getElementById("eintragen");
+        if (kasten) {
+          kasten.classList.add("hebe");
+          kasten.scrollIntoView({behavior:"smooth", block:"start"});
+          setTimeout(function(){ kasten.classList.remove("hebe"); }, 2200);
+        }
+        var feld = a.getAttribute("data-feld");
+        var ziel = feld && f.querySelector('[name="' + feld + '"]');
+        if (ziel) setTimeout(function(){ ziel.focus(); }, 420);
+      });
+    });
+
+  f.addEventListener("submit", async function(e){
+    e.preventDefault();
+    var d = new FormData(f), o = {standort: STANDORT};
+    d.forEach(function(v, k){ o[k] = v; });
+    if (!o.email || o.email.indexOf("@") < 1) {
+      st.className = "stand fehl";
+      st.textContent = "Bitte eine dienstliche E-Mail-Adresse angeben.";
+      return;
+    }
+    if (!ENDPUNKT) {
+      /* Solange der Endpunkt auf dem MVF-Server fehlt, ist der Weg die
+         E-Mail. Die Seite BITTET um Eintraege - sie darf die Leute dann
+         nicht mit einer Fehlermeldung stehen lassen. */
+      var zeilen = [];
+      Object.keys(o).forEach(function(k){
+        if (k === "email" || k === "standort") { return; }
+        var v = (o[k] == null ? "" : String(o[k])).trim();
+        if (v) { zeilen.push(k + ": " + v); }
+      });
+      var UM = String.fromCharCode(10);
+      var mail = "mailto:info@m-vf.de"
+        + "?subject=" + encodeURIComponent(BETREFF)
+        + "&body=" + encodeURIComponent(
+            "Absender: " + (o.email || "") + UM
+            + "Standort: " + (STANDORT.name || "") + UM + UM
+            + zeilen.join(UM + UM));
+      st.className = "stand";
+      st.innerHTML = "Das Absenden über die Seite ist noch nicht "
+        + "eingerichtet — wir richten den Zugang gerade ein. "
+        + "<a href='" + mail + "'>Ihre Angaben als E-Mail öffnen</a>: "
+        + "Der Text ist bereits ausgefüllt, Sie müssen nur senden.";
+      return;
+    }
+    st.className = "stand"; st.textContent = "wird gesendet …";
+    try {
+      var r = await fetch(ENDPUNKT, {method:"POST",
+        headers:{"Content-Type":"application/json"}, body: JSON.stringify(o)});
+      if (r.ok) {
+        st.className = "stand ok";
+        st.textContent = "Angekommen. Wir schicken den persönlichen Link an "
+          + o.email + ".";
+        f.querySelector("button[type=submit]").disabled = true;
+      } else if (r.status === 429) {
+        st.className = "stand";
+        st.textContent = "Ihre vorige Einsendung ist angekommen. Der Server "
+          + "nimmt je Standort nur eine Einsendung pro Minute an.";
+      } else {
+        st.className = "stand fehl";
+        st.textContent = "Der Server hat abgelehnt (" + r.status + "). Bitte "
+          + "schreiben Sie an info@m-vf.de.";
+      }
+    } catch (err) {
+      st.className = "stand fehl";
+      st.textContent = "Keine Verbindung. Bitte später erneut versuchen oder "
+        + "an info@m-vf.de schreiben.";
+    }
+  });
+})();
+</script>

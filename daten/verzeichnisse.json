@@ -1,0 +1,3248 @@
+{
+ "stand": "2026-10-30",
+ "hinweis": "Jeder Verweis fuehrt auf den Eintrag DIESER Einrichtung in einem oeffentlichen Verzeichnis. Zusammengetragen ueber die ROR-Kennung (Wikidata P6782) und, wo ein Verzeichnis keine ROR-Kennung fuehrt (re3data), ueber einen geprueften Namensabgleich. Nicht enthalten: OpenDOAR (Zugang nur mit Schluessel), GERiT (keine Schnittstelle), FIS-Landkarte (kein Export). Diese Verzeichnisse pflegt die Einrichtung nicht selbst - Fehler darin koennen nur die Verantwortlichen richtigstellen.",
+ "nicht_enthalten": [
+  {
+   "verzeichnis": "OpenDOAR",
+   "grund": "HTTP 403 auf alle Adressen; braucht einen kostenlosen Sherpa-Schluessel",
+   "gemessen": "2026-11-01"
+  },
+  {
+   "verzeichnis": "GERiT (DFG)",
+   "grund": "kein Endpunkt; 33.000 Einrichtungen nur ueber die Oberflaeche",
+   "gemessen": "2026-11-01"
+  },
+  {
+   "verzeichnis": "FIS-Landkarte (KFiD/DINI)",
+   "grund": "baut sich im Browser auf, kein Export",
+   "gemessen": "2026-10-31"
+  }
+ ],
+ "zaehlung": {
+  "standorte": 65,
+  "mit_eintrag": 53,
+  "in_wikidata": 53,
+  "re3data": 9,
+  "je_verzeichnis": {
+   "Gemeinsame Normdatei (DNB)": 50,
+   "ISNI": 46,
+   "VIAF": 51,
+   "GRID": 51,
+   "Crossref-Foerderkennung": 23,
+   "Scopus-Affiliation": 5
+  }
+ },
+ "standorte": {
+  "Charité - Universitätsmedizin Berlin": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "001w7jn25",
+    "adresse": "https://ror.org/001w7jn25"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q162684",
+    "adresse": "https://www.wikidata.org/wiki/Q162684"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Charit%C3%A9"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10070261-2",
+    "adresse": "https://d-nb.info/gnd/10070261-2"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000122184662",
+    "adresse": "https://isni.org/isni/0000000122184662"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "131145599",
+    "adresse": "https://viaf.org/viaf/131145599/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.6363.0",
+    "adresse": "https://www.grid.ac/institutes/grid.6363.0"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100002839",
+    "adresse": "https://api.crossref.org/funders/501100002839"
+   },
+   {
+    "verzeichnis": "Scopus-Affiliation",
+    "was": "Kennung",
+    "kennung": "60026245",
+    "adresse": "https://www.scopus.com/affil/profile.uri?afid=60026245"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: Zentrale Biomaterialbank der Charité",
+    "kennung": "r3d100011367",
+    "adresse": "https://www.re3data.org/repository/r3d100011367",
+    "ziel": "https://biobank.charite.de/"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: BIH / Charité Virtual Research Environment",
+    "kennung": "r3d100014127",
+    "adresse": "https://www.re3data.org/repository/r3d100014127",
+    "ziel": "https://www.bihealth.org/en/translation/network/digital-medicine/bihcharite-virtual-research-environment"
+   }
+  ],
+  "Universitätsklinikum Heidelberg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "013czdx64",
+    "adresse": "https://ror.org/013czdx64"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q324206",
+    "adresse": "https://www.wikidata.org/wiki/Q324206"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Heidelberg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1027243282",
+    "adresse": "https://d-nb.info/gnd/1027243282"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000103284908",
+    "adresse": "https://isni.org/isni/0000000103284908"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "154213309",
+    "adresse": "https://viaf.org/viaf/154213309/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.5253.1",
+    "adresse": "https://www.grid.ac/institutes/grid.5253.1"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100018936",
+    "adresse": "https://api.crossref.org/funders/501100018936"
+   }
+  ],
+  "Universitätsklinikum Hamburg-Eppendorf": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "01zgy1s35",
+    "adresse": "https://ror.org/01zgy1s35"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q316207",
+    "adresse": "https://www.wikidata.org/wiki/Q316207"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Hamburg-Eppendorf"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10034179-2",
+    "adresse": "https://d-nb.info/gnd/10034179-2"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000121803484",
+    "adresse": "https://isni.org/isni/0000000121803484"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "147977661",
+    "adresse": "https://viaf.org/viaf/147977661/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.13648.38",
+    "adresse": "https://www.grid.ac/institutes/grid.13648.38"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100012680",
+    "adresse": "https://api.crossref.org/funders/501100012680"
+   }
+  ],
+  "Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00t3r8h32",
+    "adresse": "https://ror.org/00t3r8h32"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q317087",
+    "adresse": "https://www.wikidata.org/wiki/Q317087"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4t_zu_L%C3%BCbeck"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10044490-8",
+    "adresse": "https://d-nb.info/gnd/10044490-8"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000100572672",
+    "adresse": "https://isni.org/isni/0000000100572672"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "149533737",
+    "adresse": "https://viaf.org/viaf/149533737/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.4562.5",
+    "adresse": "https://www.grid.ac/institutes/grid.4562.5"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100004168",
+    "adresse": "https://api.crossref.org/funders/501100004168"
+   }
+  ],
+  "Universitätsklinikum Aachen": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "02gm5zw39",
+    "adresse": "https://ror.org/02gm5zw39"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q560144",
+    "adresse": "https://www.wikidata.org/wiki/Q560144"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Aachen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10371379-7",
+    "adresse": "https://d-nb.info/gnd/10371379-7"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000086531507",
+    "adresse": "https://isni.org/isni/0000000086531507"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "125363426",
+    "adresse": "https://viaf.org/viaf/125363426/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.412301.5",
+    "adresse": "https://www.grid.ac/institutes/grid.412301.5"
+   }
+  ],
+  "Medizinische Hochschule Hannover": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00f2yqf98",
+    "adresse": "https://ror.org/00f2yqf98"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q911561",
+    "adresse": "https://www.wikidata.org/wiki/Q911561"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Medizinische_Hochschule_Hannover"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2019538-2",
+    "adresse": "https://d-nb.info/gnd/2019538-2"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000095299877",
+    "adresse": "https://isni.org/isni/0000000095299877"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "156586830",
+    "adresse": "https://viaf.org/viaf/156586830/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.10423.34",
+    "adresse": "https://www.grid.ac/institutes/grid.10423.34"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100005624",
+    "adresse": "https://api.crossref.org/funders/501100005624"
+   }
+  ],
+  "Heinrich-Heine-Universität Düsseldorf": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "024z2rq82",
+    "adresse": "https://ror.org/024z2rq82"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q317032",
+    "adresse": "https://www.wikidata.org/wiki/Q317032"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Heinrich-Heine-Universit%C3%A4t_D%C3%BCsseldorf"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "36152-5",
+    "adresse": "https://d-nb.info/gnd/36152-5"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000121769917",
+    "adresse": "https://isni.org/isni/0000000121769917"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "139179453",
+    "adresse": "https://viaf.org/viaf/139179453/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411327.2",
+    "adresse": "https://www.grid.ac/institutes/grid.411327.2"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100003484",
+    "adresse": "https://api.crossref.org/funders/501100003484"
+   }
+  ],
+  "Goethe-Universität Frankfurt am Main": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "04cvxnb49",
+    "adresse": "https://ror.org/04cvxnb49"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q50662",
+    "adresse": "https://www.wikidata.org/wiki/Q50662"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Johann_Wolfgang_Goethe-Universit%C3%A4t_Frankfurt_am_Main"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "35074-6",
+    "adresse": "https://d-nb.info/gnd/35074-6"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000419369721",
+    "adresse": "https://isni.org/isni/0000000419369721"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "141451702",
+    "adresse": "https://viaf.org/viaf/141451702/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.7839.5",
+    "adresse": "https://www.grid.ac/institutes/grid.7839.5"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100005687",
+    "adresse": "https://api.crossref.org/funders/501100005687"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: Digitale Sammlungen, Goethe-Universität Frankfurt am Main",
+    "kennung": "r3d100011183",
+    "adresse": "https://www.re3data.org/repository/r3d100011183",
+    "ziel": "https://sammlungen.ub.uni-frankfurt.de/"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: Goethe University Data Repository - GUDe",
+    "kennung": "r3d100014359",
+    "adresse": "https://www.re3data.org/repository/r3d100014359",
+    "ziel": "https://gude.uni-frankfurt.de/home"
+   }
+  ],
+  "Universitätsklinikum Bonn": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "01xnwqx93",
+    "adresse": "https://ror.org/01xnwqx93"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2496385",
+    "adresse": "https://www.wikidata.org/wiki/Q2496385"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Bonn"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "6044122-7",
+    "adresse": "https://d-nb.info/gnd/6044122-7"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "000000008786803X",
+    "adresse": "https://isni.org/isni/000000008786803X"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "127661047",
+    "adresse": "https://viaf.org/viaf/127661047/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.15090.3d",
+    "adresse": "https://www.grid.ac/institutes/grid.15090.3d"
+   }
+  ],
+  "Universität zu Köln": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00rcxh774",
+    "adresse": "https://ror.org/00rcxh774"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q54096",
+    "adresse": "https://www.wikidata.org/wiki/Q54096"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4t_zu_K%C3%B6ln"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2024231-1",
+    "adresse": "https://d-nb.info/gnd/2024231-1"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000459052315",
+    "adresse": "https://isni.org/isni/0000000459052315"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "158300692",
+    "adresse": "https://viaf.org/viaf/158300692/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.6190.e",
+    "adresse": "https://www.grid.ac/institutes/grid.6190.e"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100008001",
+    "adresse": "https://api.crossref.org/funders/501100008001"
+   }
+  ],
+  "Universitätsklinikum Würzburg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "03pvr2g57",
+    "adresse": "https://ror.org/03pvr2g57"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q1784848",
+    "adresse": "https://www.wikidata.org/wiki/Q1784848"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_W%C3%BCrzburg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1706207-X",
+    "adresse": "https://d-nb.info/gnd/1706207-X"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000113787891",
+    "adresse": "https://isni.org/isni/0000000113787891"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "166334577",
+    "adresse": "https://viaf.org/viaf/166334577/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411760.5",
+    "adresse": "https://www.grid.ac/institutes/grid.411760.5"
+   }
+  ],
+  "Charité Campus Charité Mitte": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "001w7jn25",
+    "adresse": "https://ror.org/001w7jn25"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q162684",
+    "adresse": "https://www.wikidata.org/wiki/Q162684"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Charit%C3%A9"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10070261-2",
+    "adresse": "https://d-nb.info/gnd/10070261-2"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000122184662",
+    "adresse": "https://isni.org/isni/0000000122184662"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "131145599",
+    "adresse": "https://viaf.org/viaf/131145599/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.6363.0",
+    "adresse": "https://www.grid.ac/institutes/grid.6363.0"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100002839",
+    "adresse": "https://api.crossref.org/funders/501100002839"
+   },
+   {
+    "verzeichnis": "Scopus-Affiliation",
+    "was": "Kennung",
+    "kennung": "60026245",
+    "adresse": "https://www.scopus.com/affil/profile.uri?afid=60026245"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: Zentrale Biomaterialbank der Charité",
+    "kennung": "r3d100011367",
+    "adresse": "https://www.re3data.org/repository/r3d100011367",
+    "ziel": "https://biobank.charite.de/"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: BIH / Charité Virtual Research Environment",
+    "kennung": "r3d100014127",
+    "adresse": "https://www.re3data.org/repository/r3d100014127",
+    "ziel": "https://www.bihealth.org/en/translation/network/digital-medicine/bihcharite-virtual-research-environment"
+   }
+  ],
+  "Universitätsklinikum Tübingen": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00pjgxh97",
+    "adresse": "https://ror.org/00pjgxh97"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q1373617",
+    "adresse": "https://www.wikidata.org/wiki/Q1373617"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_T%C3%BCbingen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2095576-5",
+    "adresse": "https://d-nb.info/gnd/2095576-5"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000101968249",
+    "adresse": "https://isni.org/isni/0000000101968249"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "151949393",
+    "adresse": "https://viaf.org/viaf/151949393/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411544.1",
+    "adresse": "https://www.grid.ac/institutes/grid.411544.1"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "100012940",
+    "adresse": "https://api.crossref.org/funders/100012940"
+   }
+  ],
+  "Universitätsklinikum Köln": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "05mxhda18",
+    "adresse": "https://ror.org/05mxhda18"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2494398",
+    "adresse": "https://www.wikidata.org/wiki/Q2494398"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_K%C3%B6ln"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10044629-2",
+    "adresse": "https://d-nb.info/gnd/10044629-2"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "000000008852305X",
+    "adresse": "https://isni.org/isni/000000008852305X"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "128786549",
+    "adresse": "https://viaf.org/viaf/128786549/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411097.a",
+    "adresse": "https://www.grid.ac/institutes/grid.411097.a"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100012681",
+    "adresse": "https://api.crossref.org/funders/501100012681"
+   }
+  ],
+  "Carl von Ossietzky Universität Oldenburg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "033n9gh91",
+    "adresse": "https://ror.org/033n9gh91"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q597758",
+    "adresse": "https://www.wikidata.org/wiki/Q597758"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky_Universit%C3%A4t_Oldenburg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "26375-8",
+    "adresse": "https://d-nb.info/gnd/26375-8"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000110093608",
+    "adresse": "https://isni.org/isni/0000000110093608"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "261307068",
+    "adresse": "https://viaf.org/viaf/261307068/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.5560.6",
+    "adresse": "https://www.grid.ac/institutes/grid.5560.6"
+   }
+  ],
+  "Universität Witten Herdecke": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00yq55g44",
+    "adresse": "https://ror.org/00yq55g44"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q314305",
+    "adresse": "https://www.wikidata.org/wiki/Q314305"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Witten/Herdecke"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "511081-6",
+    "adresse": "https://d-nb.info/gnd/511081-6"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000090246397",
+    "adresse": "https://isni.org/isni/0000000090246397"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "131725045",
+    "adresse": "https://viaf.org/viaf/131725045/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.412581.b",
+    "adresse": "https://www.grid.ac/institutes/grid.412581.b"
+   }
+  ],
+  "Martin-Luther-Universität Halle-Wittenberg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "05gqaka33",
+    "adresse": "https://ror.org/05gqaka33"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q32120",
+    "adresse": "https://www.wikidata.org/wiki/Q32120"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Martin-Luther-Universit%C3%A4t_Halle-Wittenberg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2024276-1",
+    "adresse": "https://d-nb.info/gnd/2024276-1"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000120974038",
+    "adresse": "https://isni.org/isni/0000000120974038"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "131344908",
+    "adresse": "https://viaf.org/viaf/131344908/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.9018.0",
+    "adresse": "https://www.grid.ac/institutes/grid.9018.0"
+   }
+  ],
+  "Hochschule Rosenheim": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "03hbmgt12",
+    "adresse": "https://ror.org/03hbmgt12"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q263537",
+    "adresse": "https://www.wikidata.org/wiki/Q263537"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Technische_Hochschule_Rosenheim"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1204497257",
+    "adresse": "https://d-nb.info/gnd/1204497257"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000100586011",
+    "adresse": "https://isni.org/isni/0000000100586011"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "144119593",
+    "adresse": "https://viaf.org/viaf/144119593/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.449770.9",
+    "adresse": "https://www.grid.ac/institutes/grid.449770.9"
+   }
+  ],
+  "Universitätsmedizin der Johannes Gutenberg-Universität Mainz": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00q1fsf04",
+    "adresse": "https://ror.org/00q1fsf04"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q748094",
+    "adresse": "https://www.wikidata.org/wiki/Q748094"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsmedizin_der_Johannes_Gutenberg-Universit%C3%A4t_Mainz"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "16008294-8",
+    "adresse": "https://d-nb.info/gnd/16008294-8"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "135919717",
+    "adresse": "https://viaf.org/viaf/135919717/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.410607.4",
+    "adresse": "https://www.grid.ac/institutes/grid.410607.4"
+   }
+  ],
+  "Klinikum der Technischen Universität München (TUM Klinikum)": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "04jc43x05",
+    "adresse": "https://ror.org/04jc43x05"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q883813",
+    "adresse": "https://www.wikidata.org/wiki/Q883813"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/TUM_Klinikum_Rechts_der_Isar"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1007888-5",
+    "adresse": "https://d-nb.info/gnd/1007888-5"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000404772438",
+    "adresse": "https://isni.org/isni/0000000404772438"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "129634540",
+    "adresse": "https://viaf.org/viaf/129634540/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.15474.33",
+    "adresse": "https://www.grid.ac/institutes/grid.15474.33"
+   }
+  ],
+  "Zentralinstitut für die Kassenärztliche Versorgung in der Bundesrepublik Deutschland": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "04gx8zb05",
+    "adresse": "https://ror.org/04gx8zb05"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q30292764",
+    "adresse": "https://www.wikidata.org/wiki/Q30292764"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.439300.d",
+    "adresse": "https://www.grid.ac/institutes/grid.439300.d"
+   }
+  ],
+  "Universitätsklinikum Carl Gustav Carus Dresden": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "04za5zm41",
+    "adresse": "https://ror.org/04za5zm41"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q1651640",
+    "adresse": "https://www.wikidata.org/wiki/Q1651640"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Carl_Gustav_Carus_Dresden"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "5097019-7",
+    "adresse": "https://d-nb.info/gnd/5097019-7"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000110912917",
+    "adresse": "https://isni.org/isni/0000000110912917"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "147522720",
+    "adresse": "https://viaf.org/viaf/147522720/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.412282.f",
+    "adresse": "https://www.grid.ac/institutes/grid.412282.f"
+   }
+  ],
+  "Universitätsklinikum Freiburg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "03vzbgh69",
+    "adresse": "https://ror.org/03vzbgh69"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q127773",
+    "adresse": "https://www.wikidata.org/wiki/Q127773"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Freiburg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1025070674",
+    "adresse": "https://d-nb.info/gnd/1025070674"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000094287911",
+    "adresse": "https://isni.org/isni/0000000094287911"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "138715300",
+    "adresse": "https://viaf.org/viaf/138715300/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.7708.8",
+    "adresse": "https://www.grid.ac/institutes/grid.7708.8"
+   }
+  ],
+  "Friedrich-Alexander-Universität Erlangen-Nürnberg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00f7hpc57",
+    "adresse": "https://ror.org/00f7hpc57"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q40025",
+    "adresse": "https://www.wikidata.org/wiki/Q40025"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Friedrich-Alexander-Universit%C3%A4t_Erlangen-N%C3%BCrnberg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2000862-4",
+    "adresse": "https://d-nb.info/gnd/2000862-4"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000121073311",
+    "adresse": "https://isni.org/isni/0000000121073311"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "261702189",
+    "adresse": "https://viaf.org/viaf/261702189/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.5330.5",
+    "adresse": "https://www.grid.ac/institutes/grid.5330.5"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100001652",
+    "adresse": "https://api.crossref.org/funders/501100001652"
+   }
+  ],
+  "Berliner Institut für Gesundheitsforschung": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "0493xsw21",
+    "adresse": "https://ror.org/0493xsw21"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q19835368",
+    "adresse": "https://www.wikidata.org/wiki/Q19835368"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Berliner_Institut_f%C3%BCr_Gesundheitsforschung"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1227622449",
+    "adresse": "https://d-nb.info/gnd/1227622449"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "4020161392916658480009",
+    "adresse": "https://viaf.org/viaf/4020161392916658480009/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.484013.a",
+    "adresse": "https://www.grid.ac/institutes/grid.484013.a"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100017268",
+    "adresse": "https://api.crossref.org/funders/501100017268"
+   },
+   {
+    "verzeichnis": "Scopus-Affiliation",
+    "was": "Kennung",
+    "kennung": "60126120",
+    "adresse": "https://www.scopus.com/affil/profile.uri?afid=60126120"
+   }
+  ],
+  "Universitätsklinikum Essen": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "02na8dn90",
+    "adresse": "https://ror.org/02na8dn90"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2496379",
+    "adresse": "https://www.wikidata.org/wiki/Q2496379"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Essen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2045988-9",
+    "adresse": "https://d-nb.info/gnd/2045988-9"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000102627331",
+    "adresse": "https://isni.org/isni/0000000102627331"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "153090003",
+    "adresse": "https://viaf.org/viaf/153090003/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.410718.b",
+    "adresse": "https://www.grid.ac/institutes/grid.410718.b"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "100017590",
+    "adresse": "https://api.crossref.org/funders/100017590"
+   }
+  ],
+  "Technische Universität München, Lehrstuhl für Gesundheitsökonomie": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "02kkvpp62",
+    "adresse": "https://ror.org/02kkvpp62"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q157808",
+    "adresse": "https://www.wikidata.org/wiki/Q157808"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Technische_Universit%C3%A4t_M%C3%BCnchen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "36241-4",
+    "adresse": "https://d-nb.info/gnd/36241-4"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000123369749",
+    "adresse": "https://isni.org/isni/0000000123369749"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "145299462",
+    "adresse": "https://viaf.org/viaf/145299462/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.6936.a",
+    "adresse": "https://www.grid.ac/institutes/grid.6936.a"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100005713",
+    "adresse": "https://api.crossref.org/funders/501100005713"
+   }
+  ],
+  "Universität Duisburg-Essen": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "04mz5ra38",
+    "adresse": "https://ror.org/04mz5ra38"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q696757",
+    "adresse": "https://www.wikidata.org/wiki/Q696757"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Duisburg-Essen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10050375-5",
+    "adresse": "https://d-nb.info/gnd/10050375-5"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000121875445",
+    "adresse": "https://isni.org/isni/0000000121875445"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "156746339",
+    "adresse": "https://viaf.org/viaf/156746339/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.5718.b",
+    "adresse": "https://www.grid.ac/institutes/grid.5718.b"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100008349",
+    "adresse": "https://api.crossref.org/funders/501100008349"
+   }
+  ],
+  "Universitätsklinikum des Saarlandes": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00nvxt968",
+    "adresse": "https://ror.org/00nvxt968"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q47507885",
+    "adresse": "https://www.wikidata.org/wiki/Q47507885"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_des_Saarlandes"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "16005302-X",
+    "adresse": "https://d-nb.info/gnd/16005302-X"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "156982530",
+    "adresse": "https://viaf.org/viaf/156982530/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411937.9",
+    "adresse": "https://www.grid.ac/institutes/grid.411937.9"
+   }
+  ],
+  "Universitätsklinikum Erlangen": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "0030f2a11",
+    "adresse": "https://ror.org/0030f2a11"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q1544159",
+    "adresse": "https://www.wikidata.org/wiki/Q1544159"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Erlangen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2183469-6",
+    "adresse": "https://d-nb.info/gnd/2183469-6"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000099356525",
+    "adresse": "https://isni.org/isni/0000000099356525"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "147487668",
+    "adresse": "https://viaf.org/viaf/147487668/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411668.c",
+    "adresse": "https://www.grid.ac/institutes/grid.411668.c"
+   }
+  ],
+  "Robert-Bosch-Krankenhaus": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "034nkkr84",
+    "adresse": "https://ror.org/034nkkr84"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q7341140",
+    "adresse": "https://www.wikidata.org/wiki/Q7341140"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Robert-Bosch-Krankenhaus"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2019909-0",
+    "adresse": "https://d-nb.info/gnd/2019909-0"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000406034965",
+    "adresse": "https://isni.org/isni/0000000406034965"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "155419735",
+    "adresse": "https://viaf.org/viaf/155419735/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.416008.b",
+    "adresse": "https://www.grid.ac/institutes/grid.416008.b"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: Forschungsdatenzentrum am Robert Koch Institut",
+    "kennung": "r3d100010436",
+    "adresse": "https://www.re3data.org/repository/r3d100010436",
+    "ziel": "https://www.rki.de/EN/News/Publications/Research-data/RDC/research-data-centre-node.html"
+   }
+  ],
+  "Universitätsklinikum Gießen und Marburg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "032nzv584",
+    "adresse": "https://ror.org/032nzv584"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2496396",
+    "adresse": "https://www.wikidata.org/wiki/Q2496396"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Gie%C3%9Fen_und_Marburg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10148395-8",
+    "adresse": "https://d-nb.info/gnd/10148395-8"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000085849230",
+    "adresse": "https://isni.org/isni/0000000085849230"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "124172432",
+    "adresse": "https://viaf.org/viaf/124172432/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411067.5",
+    "adresse": "https://www.grid.ac/institutes/grid.411067.5"
+   }
+  ],
+  "LVR-Institut für Forschung und Bildung": [],
+  "Robert Koch-Institut": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "01k5qnb77",
+    "adresse": "https://ror.org/01k5qnb77"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q679041",
+    "adresse": "https://www.wikidata.org/wiki/Q679041"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Robert_Koch-Institut"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "17690-4",
+    "adresse": "https://d-nb.info/gnd/17690-4"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000109403744",
+    "adresse": "https://isni.org/isni/0000000109403744"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "123556639",
+    "adresse": "https://viaf.org/viaf/123556639/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.13652.33",
+    "adresse": "https://www.grid.ac/institutes/grid.13652.33"
+   },
+   {
+    "verzeichnis": "Scopus-Affiliation",
+    "was": "Kennung",
+    "kennung": "60016183",
+    "adresse": "https://www.scopus.com/affil/profile.uri?afid=60016183"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: Forschungsdatenzentrum am Robert Koch Institut",
+    "kennung": "r3d100010436",
+    "adresse": "https://www.re3data.org/repository/r3d100010436",
+    "ziel": "https://www.rki.de/EN/News/Publications/Research-data/RDC/research-data-centre-node.html"
+   }
+  ],
+  "Institut für Allgemeinmedizin": [],
+  "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig Holstein, Campus Lübeck": [],
+  "Hochschule für angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00fkqwx76",
+    "adresse": "https://ror.org/00fkqwx76"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q913987",
+    "adresse": "https://www.wikidata.org/wiki/Q913987"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Hochschule_f%C3%BCr_Angewandte_Wissenschaften_Hamburg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10029922-2",
+    "adresse": "https://d-nb.info/gnd/10029922-2"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000089198412",
+    "adresse": "https://isni.org/isni/0000000089198412"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "129952233",
+    "adresse": "https://viaf.org/viaf/129952233/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.11500.35",
+    "adresse": "https://www.grid.ac/institutes/grid.11500.35"
+   }
+  ],
+  "Deutsches Herzzentrum der Charité": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "01mmady97",
+    "adresse": "https://ror.org/01mmady97"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q1205694",
+    "adresse": "https://www.wikidata.org/wiki/Q1205694"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Deutsches_Herzzentrum_der_Charit%C3%A9"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2151755-1",
+    "adresse": "https://d-nb.info/gnd/2151755-1"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000100000404",
+    "adresse": "https://isni.org/isni/0000000100000404"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "148582846",
+    "adresse": "https://viaf.org/viaf/148582846/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.418209.6",
+    "adresse": "https://www.grid.ac/institutes/grid.418209.6"
+   },
+   {
+    "verzeichnis": "Scopus-Affiliation",
+    "was": "Kennung",
+    "kennung": "60009113",
+    "adresse": "https://www.scopus.com/affil/profile.uri?afid=60009113"
+   }
+  ],
+  "Universitätsklinikum Schleswig-Holstein": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "01tvm6f46",
+    "adresse": "https://ror.org/01tvm6f46"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2496401",
+    "adresse": "https://www.wikidata.org/wiki/Q2496401"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Schleswig-Holstein"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10136686-3",
+    "adresse": "https://d-nb.info/gnd/10136686-3"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000406462097",
+    "adresse": "https://isni.org/isni/0000000406462097"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "139388433",
+    "adresse": "https://viaf.org/viaf/139388433/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.412468.d",
+    "adresse": "https://www.grid.ac/institutes/grid.412468.d"
+   }
+  ],
+  "Rheinhessen-Fachklinik Mainz": [],
+  "Kleine Riesen Nordhessen gGmbH": [],
+  "Deutsche Krebsgesellschaft e. V.": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "013z6ae41",
+    "adresse": "https://ror.org/013z6ae41"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q1203248",
+    "adresse": "https://www.wikidata.org/wiki/Q1203248"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Deutsche_Krebsgesellschaft"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "6652-7",
+    "adresse": "https://d-nb.info/gnd/6652-7"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000106567508",
+    "adresse": "https://isni.org/isni/0000000106567508"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "123146903",
+    "adresse": "https://viaf.org/viaf/123146903/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.489540.4",
+    "adresse": "https://www.grid.ac/institutes/grid.489540.4"
+   }
+  ],
+  "Technische Universität Dresden": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "042aqky30",
+    "adresse": "https://ror.org/042aqky30"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q158158",
+    "adresse": "https://www.wikidata.org/wiki/Q158158"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Technische_Universit%C3%A4t_Dresden"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2024114-8",
+    "adresse": "https://d-nb.info/gnd/2024114-8"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000121117257",
+    "adresse": "https://isni.org/isni/0000000121117257"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "149572715",
+    "adresse": "https://viaf.org/viaf/149572715/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.4488.0",
+    "adresse": "https://www.grid.ac/institutes/grid.4488.0"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100002957",
+    "adresse": "https://api.crossref.org/funders/501100002957"
+   }
+  ],
+  "Medizinische Fakultät Mannheim": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "02m1z0a87",
+    "adresse": "https://ror.org/02m1z0a87"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q5698722",
+    "adresse": "https://www.wikidata.org/wiki/Q5698722"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Medizinische_Fakult%C3%A4t_Mannheim"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1026363004",
+    "adresse": "https://d-nb.info/gnd/1026363004"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "157610690",
+    "adresse": "https://viaf.org/viaf/157610690/"
+   }
+  ],
+  "Interdisziplinäre Schmerzambulanz, Campus Innenstadt, Klinik für Anaesthesiologie, LMU Klinikum, LMU München": [],
+  "Zentralinstitut für Seelische Gesundheit": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "01hynnt93",
+    "adresse": "https://ror.org/01hynnt93"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q190621",
+    "adresse": "https://www.wikidata.org/wiki/Q190621"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Zentralinstitut_f%C3%BCr_Seelische_Gesundheit"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "74536-4",
+    "adresse": "https://d-nb.info/gnd/74536-4"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000404772235",
+    "adresse": "https://isni.org/isni/0000000404772235"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "154198983",
+    "adresse": "https://viaf.org/viaf/154198983/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.413757.3",
+    "adresse": "https://www.grid.ac/institutes/grid.413757.3"
+   }
+  ],
+  "Zentrum für Integrative Psychiatrie gGmbH": [],
+  "Vestische Kinder- und Jugendklinik Datteln, Universität Witten/Herdecke": [],
+  "Universität Bremen - Socium": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "04ers2y35",
+    "adresse": "https://ror.org/04ers2y35"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q500692",
+    "adresse": "https://www.wikidata.org/wiki/Q500692"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Bremen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2001386-3",
+    "adresse": "https://d-nb.info/gnd/2001386-3"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000122974381",
+    "adresse": "https://isni.org/isni/0000000122974381"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "154317346",
+    "adresse": "https://viaf.org/viaf/154317346/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.7704.4",
+    "adresse": "https://www.grid.ac/institutes/grid.7704.4"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100007837",
+    "adresse": "https://api.crossref.org/funders/501100007837"
+   }
+  ],
+  "Orthopädische Klinik König-Ludwig-Haus Würzburg": [],
+  "Universitätsklinikum Düsseldorf": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "006k2kk72",
+    "adresse": "https://ror.org/006k2kk72"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2496389",
+    "adresse": "https://www.wikidata.org/wiki/Q2496389"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_D%C3%BCsseldorf"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "10131072-9",
+    "adresse": "https://d-nb.info/gnd/10131072-9"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000089227789",
+    "adresse": "https://isni.org/isni/0000000089227789"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "130015128",
+    "adresse": "https://viaf.org/viaf/130015128/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.14778.3d",
+    "adresse": "https://www.grid.ac/institutes/grid.14778.3d"
+   }
+  ],
+  "Otto-von-Guericke-Universität Magdeburg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00ggpsq73",
+    "adresse": "https://ror.org/00ggpsq73"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q655866",
+    "adresse": "https://www.wikidata.org/wiki/Q655866"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Otto-von-Guericke-Universit%C3%A4t_Magdeburg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "5095826-4",
+    "adresse": "https://d-nb.info/gnd/5095826-4"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000110184307",
+    "adresse": "https://isni.org/isni/0000000110184307"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "154928624",
+    "adresse": "https://viaf.org/viaf/154928624/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.5807.a",
+    "adresse": "https://www.grid.ac/institutes/grid.5807.a"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100012320",
+    "adresse": "https://api.crossref.org/funders/501100012320"
+   }
+  ],
+  "Hochschule für angewandte Wissenschaften Kempten, Institut für Gesundheit und Generationen (IGG)": [],
+  "LMU Klinikum München": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "02jet3w32",
+    "adresse": "https://ror.org/02jet3w32"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q598814",
+    "adresse": "https://www.wikidata.org/wiki/Q598814"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Klinikum_Gro%C3%9Fhadern"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000404772585",
+    "adresse": "https://isni.org/isni/0000000404772585"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "128505992",
+    "adresse": "https://viaf.org/viaf/128505992/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.411095.8",
+    "adresse": "https://www.grid.ac/institutes/grid.411095.8"
+   },
+   {
+    "verzeichnis": "re3data",
+    "was": "Forschungsdaten-Repositorium: Open Data LMU - Physics",
+    "kennung": "r3d100014139",
+    "adresse": "https://www.re3data.org/repository/r3d100014139",
+    "ziel": "https://opendata.physik.lmu.de"
+   }
+  ],
+  "Hochschule Osnabrück": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "059vymd37",
+    "adresse": "https://ror.org/059vymd37"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q1622135",
+    "adresse": "https://www.wikidata.org/wiki/Q1622135"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Hochschule_Osnabr%C3%BCck"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "16104840-7",
+    "adresse": "https://d-nb.info/gnd/16104840-7"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000118649826",
+    "adresse": "https://isni.org/isni/0000000118649826"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "169845881",
+    "adresse": "https://viaf.org/viaf/169845881/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.434095.f",
+    "adresse": "https://www.grid.ac/institutes/grid.434095.f"
+   }
+  ],
+  "Universitätsklinikum Ulm, Klinik für Allgemein- und Viszeralchirurgie, Fachbereich Integrative Medizin": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "05emabm63",
+    "adresse": "https://ror.org/05emabm63"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2496404",
+    "adresse": "https://www.wikidata.org/wiki/Q2496404"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Ulm"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "94471-3",
+    "adresse": "https://d-nb.info/gnd/94471-3"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "124920750",
+    "adresse": "https://viaf.org/viaf/124920750/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.410712.1",
+    "adresse": "https://www.grid.ac/institutes/grid.410712.1"
+   }
+  ],
+  "Institut für Allgemeinmedizin Universitätsmedizin Essen": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "00ykp8811",
+    "adresse": "https://ror.org/00ykp8811"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q15849284",
+    "adresse": "https://www.wikidata.org/wiki/Q15849284"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Stiftung_Universit%C3%A4tsmedizin_Essen"
+   }
+  ],
+  "Universität Bayreuth": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "0234wmv40",
+    "adresse": "https://ror.org/0234wmv40"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q702482",
+    "adresse": "https://www.wikidata.org/wiki/Q702482"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Bayreuth"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "1029605-0",
+    "adresse": "https://d-nb.info/gnd/1029605-0"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000404676972",
+    "adresse": "https://isni.org/isni/0000000404676972"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "154936018",
+    "adresse": "https://viaf.org/viaf/154936018/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.7384.8",
+    "adresse": "https://www.grid.ac/institutes/grid.7384.8"
+   }
+  ],
+  "Universitätsmedizin Greifswald": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "025vngs54",
+    "adresse": "https://ror.org/025vngs54"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q2496421",
+    "adresse": "https://www.wikidata.org/wiki/Q2496421"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Universit%C3%A4tsmedizin_Greifswald"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "16329317-X",
+    "adresse": "https://d-nb.info/gnd/16329317-X"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000091168976",
+    "adresse": "https://isni.org/isni/0000000091168976"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "133323095",
+    "adresse": "https://viaf.org/viaf/133323095/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.412469.c",
+    "adresse": "https://www.grid.ac/institutes/grid.412469.c"
+   }
+  ],
+  "Universität Heidelberg": [],
+  "Ruhr-Universität Bochum": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "04tsk2644",
+    "adresse": "https://ror.org/04tsk2644"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q309948",
+    "adresse": "https://www.wikidata.org/wiki/Q309948"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Ruhr-Universit%C3%A4t_Bochum"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "7409-3",
+    "adresse": "https://d-nb.info/gnd/7409-3"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "000000040490981X",
+    "adresse": "https://isni.org/isni/000000040490981X"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "133248582",
+    "adresse": "https://viaf.org/viaf/133248582/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.5570.7",
+    "adresse": "https://www.grid.ac/institutes/grid.5570.7"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100006254",
+    "adresse": "https://api.crossref.org/funders/501100006254"
+   }
+  ],
+  "Justus-Liebig-Universität Gießen": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "033eqas34",
+    "adresse": "https://ror.org/033eqas34"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q317053",
+    "adresse": "https://www.wikidata.org/wiki/Q317053"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Justus-Liebig-Universit%C3%A4t_Gie%C3%9Fen"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "36154-9",
+    "adresse": "https://d-nb.info/gnd/36154-9"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000121658627",
+    "adresse": "https://isni.org/isni/0000000121658627"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "137080884",
+    "adresse": "https://viaf.org/viaf/137080884/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.8664.c",
+    "adresse": "https://www.grid.ac/institutes/grid.8664.c"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "100009091",
+    "adresse": "https://api.crossref.org/funders/100009091"
+   }
+  ],
+  "Viszeralmedizinisches Zentrum, Evangelisches Diakoniekrankenhaus Freiburg": [],
+  "Philipps-Universität Marburg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "01rdrb571",
+    "adresse": "https://ror.org/01rdrb571"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q155354",
+    "adresse": "https://www.wikidata.org/wiki/Q155354"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Philipps-Universit%C3%A4t_Marburg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2001630-X",
+    "adresse": "https://d-nb.info/gnd/2001630-X"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000419369756",
+    "adresse": "https://isni.org/isni/0000000419369756"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "135589622",
+    "adresse": "https://viaf.org/viaf/135589622/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.10253.35",
+    "adresse": "https://www.grid.ac/institutes/grid.10253.35"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "100008967",
+    "adresse": "https://api.crossref.org/funders/100008967"
+   }
+  ],
+  "Ruprecht-Karls-Universität Heidelberg": [
+   {
+    "verzeichnis": "ROR",
+    "was": "Einrichtungskennung",
+    "kennung": "038t36y30",
+    "adresse": "https://ror.org/038t36y30"
+   },
+   {
+    "verzeichnis": "Wikidata",
+    "was": "Datenobjekt",
+    "kennung": "Q151510",
+    "adresse": "https://www.wikidata.org/wiki/Q151510"
+   },
+   {
+    "verzeichnis": "Wikipedia",
+    "was": "Artikel",
+    "kennung": null,
+    "adresse": "https://de.wikipedia.org/wiki/Ruprecht-Karls-Universit%C3%A4t_Heidelberg"
+   },
+   {
+    "verzeichnis": "Gemeinsame Normdatei (DNB)",
+    "was": "Kennung",
+    "kennung": "2024349-2",
+    "adresse": "https://d-nb.info/gnd/2024349-2"
+   },
+   {
+    "verzeichnis": "ISNI",
+    "was": "Kennung",
+    "kennung": "0000000121904373",
+    "adresse": "https://isni.org/isni/0000000121904373"
+   },
+   {
+    "verzeichnis": "VIAF",
+    "was": "Kennung",
+    "kennung": "155544909",
+    "adresse": "https://viaf.org/viaf/155544909/"
+   },
+   {
+    "verzeichnis": "GRID",
+    "was": "Kennung",
+    "kennung": "grid.7700.0",
+    "adresse": "https://www.grid.ac/institutes/grid.7700.0"
+   },
+   {
+    "verzeichnis": "Crossref-Foerderkennung",
+    "was": "Kennung",
+    "kennung": "501100001661",
+    "adresse": "https://api.crossref.org/funders/501100001661"
+   }
+  ]
+ },
+ "_wikidata": {
+  "https://ror.org/02kkvpp62": {
+   "wikidata": "Q157808",
+   "label": "Technische Universität München",
+   "dewiki": "https://de.wikipedia.org/wiki/Technische_Universit%C3%A4t_M%C3%BCnchen",
+   "kennungen": {
+    "gnd": "36241-4",
+    "isni": "0000000123369749",
+    "viaf": "145299462",
+    "grid": "grid.6936.a",
+    "crossref": "501100005713"
+   }
+  },
+  "https://ror.org/038t36y30": {
+   "wikidata": "Q151510",
+   "label": "Ruprecht-Karls-Universität Heidelberg",
+   "dewiki": "https://de.wikipedia.org/wiki/Ruprecht-Karls-Universit%C3%A4t_Heidelberg",
+   "kennungen": {
+    "gnd": "2024349-2",
+    "isni": "0000000121904373",
+    "viaf": "155544909",
+    "grid": "grid.7700.0",
+    "crossref": "501100001661"
+   }
+  },
+  "https://ror.org/01rdrb571": {
+   "wikidata": "Q155354",
+   "label": "Philipps-Universität Marburg",
+   "dewiki": "https://de.wikipedia.org/wiki/Philipps-Universit%C3%A4t_Marburg",
+   "kennungen": {
+    "gnd": "2001630-X",
+    "isni": "0000000419369756",
+    "viaf": "135589622",
+    "grid": "grid.10253.35",
+    "crossref": "100008967"
+   }
+  },
+  "https://ror.org/042aqky30": {
+   "wikidata": "Q158158",
+   "label": "Technische Universität Dresden",
+   "dewiki": "https://de.wikipedia.org/wiki/Technische_Universit%C3%A4t_Dresden",
+   "kennungen": {
+    "gnd": "2024114-8",
+    "isni": "0000000121117257",
+    "viaf": "149572715",
+    "grid": "grid.4488.0",
+    "crossref": "501100002957"
+   }
+  },
+  "https://ror.org/001w7jn25": {
+   "wikidata": "Q162684",
+   "label": "Charité",
+   "dewiki": "https://de.wikipedia.org/wiki/Charit%C3%A9",
+   "kennungen": {
+    "gnd": "10070261-2",
+    "isni": "0000000122184662",
+    "viaf": "131145599",
+    "grid": "grid.6363.0",
+    "crossref": "501100002839",
+    "scopus": "60026245"
+   }
+  },
+  "https://ror.org/01hynnt93": {
+   "wikidata": "Q190621",
+   "label": "Zentralinstitut für Seelische Gesundheit",
+   "dewiki": "https://de.wikipedia.org/wiki/Zentralinstitut_f%C3%BCr_Seelische_Gesundheit",
+   "kennungen": {
+    "gnd": "74536-4",
+    "isni": "0000000404772235",
+    "viaf": "154198983",
+    "grid": "grid.413757.3"
+   }
+  },
+  "https://ror.org/03hbmgt12": {
+   "wikidata": "Q263537",
+   "label": "Technische Hochschule Rosenheim",
+   "dewiki": "https://de.wikipedia.org/wiki/Technische_Hochschule_Rosenheim",
+   "kennungen": {
+    "gnd": "1204497257",
+    "isni": "0000000100586011",
+    "viaf": "144119593",
+    "grid": "grid.449770.9"
+   }
+  },
+  "https://ror.org/00yq55g44": {
+   "wikidata": "Q314305",
+   "label": "Universität Witten/Herdecke",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Witten/Herdecke",
+   "kennungen": {
+    "gnd": "511081-6",
+    "isni": "0000000090246397",
+    "viaf": "131725045",
+    "grid": "grid.412581.b"
+   }
+  },
+  "https://ror.org/03vzbgh69": {
+   "wikidata": "Q127773",
+   "label": "Universitätsklinikum Freiburg",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Freiburg",
+   "kennungen": {
+    "gnd": "1025070674",
+    "isni": "0000000094287911",
+    "viaf": "138715300",
+    "grid": "grid.7708.8"
+   }
+  },
+  "https://ror.org/00f7hpc57": {
+   "wikidata": "Q40025",
+   "label": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+   "dewiki": "https://de.wikipedia.org/wiki/Friedrich-Alexander-Universit%C3%A4t_Erlangen-N%C3%BCrnberg",
+   "kennungen": {
+    "gnd": "2000862-4",
+    "isni": "0000000121073311",
+    "viaf": "261702189",
+    "grid": "grid.5330.5",
+    "crossref": "501100001652"
+   }
+  },
+  "https://ror.org/00rcxh774": {
+   "wikidata": "Q54096",
+   "label": "Universität zu Köln",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4t_zu_K%C3%B6ln",
+   "kennungen": {
+    "gnd": "2024231-1",
+    "isni": "0000000459052315",
+    "viaf": "158300692",
+    "grid": "grid.6190.e",
+    "crossref": "501100008001"
+   }
+  },
+  "https://ror.org/01zgy1s35": {
+   "wikidata": "Q316207",
+   "label": "Universitätsklinikum Hamburg-Eppendorf",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Hamburg-Eppendorf",
+   "kennungen": {
+    "gnd": "10034179-2",
+    "isni": "0000000121803484",
+    "viaf": "147977661",
+    "grid": "grid.13648.38",
+    "crossref": "501100012680"
+   }
+  },
+  "https://ror.org/024z2rq82": {
+   "wikidata": "Q317032",
+   "label": "Heinrich-Heine-Universität Düsseldorf",
+   "dewiki": "https://de.wikipedia.org/wiki/Heinrich-Heine-Universit%C3%A4t_D%C3%BCsseldorf",
+   "kennungen": {
+    "gnd": "36152-5",
+    "isni": "0000000121769917",
+    "viaf": "139179453",
+    "grid": "grid.411327.2",
+    "crossref": "501100003484"
+   }
+  },
+  "https://ror.org/033eqas34": {
+   "wikidata": "Q317053",
+   "label": "Justus-Liebig-Universität Gießen",
+   "dewiki": "https://de.wikipedia.org/wiki/Justus-Liebig-Universit%C3%A4t_Gie%C3%9Fen",
+   "kennungen": {
+    "gnd": "36154-9",
+    "isni": "0000000121658627",
+    "viaf": "137080884",
+    "grid": "grid.8664.c",
+    "crossref": "100009091"
+   }
+  },
+  "https://ror.org/00t3r8h32": {
+   "wikidata": "Q317087",
+   "label": "Universität zu Lübeck",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4t_zu_L%C3%BCbeck",
+   "kennungen": {
+    "gnd": "10044490-8",
+    "isni": "0000000100572672",
+    "viaf": "149533737",
+    "grid": "grid.4562.5",
+    "crossref": "501100004168"
+   }
+  },
+  "https://ror.org/013czdx64": {
+   "wikidata": "Q324206",
+   "label": "Universitätsklinikum Heidelberg",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Heidelberg",
+   "kennungen": {
+    "gnd": "1027243282",
+    "isni": "0000000103284908",
+    "viaf": "154213309",
+    "grid": "grid.5253.1",
+    "crossref": "501100018936"
+   }
+  },
+  "https://ror.org/02gm5zw39": {
+   "wikidata": "Q560144",
+   "label": "Universitätsklinikum Aachen",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Aachen",
+   "kennungen": {
+    "gnd": "10371379-7",
+    "isni": "0000000086531507",
+    "viaf": "125363426",
+    "grid": "grid.412301.5"
+   }
+  },
+  "https://ror.org/033n9gh91": {
+   "wikidata": "Q597758",
+   "label": "Carl von Ossietzky Universität Oldenburg",
+   "dewiki": "https://de.wikipedia.org/wiki/Carl_von_Ossietzky_Universit%C3%A4t_Oldenburg",
+   "kennungen": {
+    "gnd": "26375-8",
+    "isni": "0000000110093608",
+    "viaf": "261307068",
+    "grid": "grid.5560.6"
+   }
+  },
+  "https://ror.org/02jet3w32": {
+   "wikidata": "Q598814",
+   "label": "Klinikum Großhadern",
+   "dewiki": "https://de.wikipedia.org/wiki/Klinikum_Gro%C3%9Fhadern",
+   "kennungen": {
+    "isni": "0000000404772585",
+    "viaf": "128505992",
+    "grid": "grid.411095.8"
+   }
+  },
+  "https://ror.org/00ggpsq73": {
+   "wikidata": "Q655866",
+   "label": "Otto-von-Guericke-Universität Magdeburg",
+   "dewiki": "https://de.wikipedia.org/wiki/Otto-von-Guericke-Universit%C3%A4t_Magdeburg",
+   "kennungen": {
+    "gnd": "5095826-4",
+    "isni": "0000000110184307",
+    "viaf": "154928624",
+    "grid": "grid.5807.a",
+    "crossref": "501100012320"
+   }
+  },
+  "https://ror.org/01k5qnb77": {
+   "wikidata": "Q679041",
+   "label": "Robert Koch-Institut",
+   "dewiki": "https://de.wikipedia.org/wiki/Robert_Koch-Institut",
+   "kennungen": {
+    "gnd": "17690-4",
+    "isni": "0000000109403744",
+    "viaf": "123556639",
+    "grid": "grid.13652.33",
+    "scopus": "60016183"
+   }
+  },
+  "https://ror.org/0234wmv40": {
+   "wikidata": "Q702482",
+   "label": "Universität Bayreuth",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Bayreuth",
+   "kennungen": {
+    "gnd": "1029605-0",
+    "isni": "0000000404676972",
+    "viaf": "154936018",
+    "grid": "grid.7384.8"
+   }
+  },
+  "https://ror.org/00q1fsf04": {
+   "wikidata": "Q748094",
+   "label": "Universitätsmedizin der Johannes Gutenberg-Universität Mainz",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsmedizin_der_Johannes_Gutenberg-Universit%C3%A4t_Mainz",
+   "kennungen": {
+    "gnd": "16008294-8",
+    "viaf": "135919717",
+    "grid": "grid.410607.4"
+   }
+  },
+  "https://ror.org/00f2yqf98": {
+   "wikidata": "Q911561",
+   "label": "Medizinische Hochschule Hannover",
+   "dewiki": "https://de.wikipedia.org/wiki/Medizinische_Hochschule_Hannover",
+   "kennungen": {
+    "gnd": "2019538-2",
+    "isni": "0000000095299877",
+    "viaf": "156586830",
+    "grid": "grid.10423.34",
+    "crossref": "501100005624"
+   }
+  },
+  "https://ror.org/00fkqwx76": {
+   "wikidata": "Q913987",
+   "label": "Hochschule für Angewandte Wissenschaften Hamburg",
+   "dewiki": "https://de.wikipedia.org/wiki/Hochschule_f%C3%BCr_Angewandte_Wissenschaften_Hamburg",
+   "kennungen": {
+    "gnd": "10029922-2",
+    "isni": "0000000089198412",
+    "viaf": "129952233",
+    "grid": "grid.11500.35"
+   }
+  },
+  "https://ror.org/013z6ae41": {
+   "wikidata": "Q1203248",
+   "label": "Deutsche Krebsgesellschaft",
+   "dewiki": "https://de.wikipedia.org/wiki/Deutsche_Krebsgesellschaft",
+   "kennungen": {
+    "gnd": "6652-7",
+    "isni": "0000000106567508",
+    "viaf": "123146903",
+    "grid": "grid.489540.4"
+   }
+  },
+  "https://ror.org/01mmady97": {
+   "wikidata": "Q1205694",
+   "label": "Deutsches Herzzentrum Berlin",
+   "dewiki": "https://de.wikipedia.org/wiki/Deutsches_Herzzentrum_der_Charit%C3%A9",
+   "kennungen": {
+    "gnd": "2151755-1",
+    "isni": "0000000100000404",
+    "viaf": "148582846",
+    "grid": "grid.418209.6",
+    "scopus": "60009113"
+   }
+  },
+  "https://ror.org/00pjgxh97": {
+   "wikidata": "Q1373617",
+   "label": "Universitätsklinikum Tübingen",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_T%C3%BCbingen",
+   "kennungen": {
+    "gnd": "2095576-5",
+    "isni": "0000000101968249",
+    "viaf": "151949393",
+    "grid": "grid.411544.1",
+    "crossref": "100012940"
+   }
+  },
+  "https://ror.org/0030f2a11": {
+   "wikidata": "Q1544159",
+   "label": "Universitätsklinikum Erlangen",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Erlangen",
+   "kennungen": {
+    "gnd": "2183469-6",
+    "isni": "0000000099356525",
+    "viaf": "147487668",
+    "grid": "grid.411668.c"
+   }
+  },
+  "https://ror.org/03pvr2g57": {
+   "wikidata": "Q1784848",
+   "label": "Universitätsklinikum Würzburg",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_W%C3%BCrzburg",
+   "kennungen": {
+    "gnd": "1706207-X",
+    "isni": "0000000113787891",
+    "viaf": "166334577",
+    "grid": "grid.411760.5"
+   }
+  },
+  "https://ror.org/02na8dn90": {
+   "wikidata": "Q2496379",
+   "label": "Universitätsklinikum Essen",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Essen",
+   "kennungen": {
+    "gnd": "2045988-9",
+    "isni": "0000000102627331",
+    "viaf": "153090003",
+    "grid": "grid.410718.b",
+    "crossref": "100017590"
+   }
+  },
+  "https://ror.org/01xnwqx93": {
+   "wikidata": "Q2496385",
+   "label": "Universitätsklinikum Bonn",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Bonn",
+   "kennungen": {
+    "gnd": "6044122-7",
+    "isni": "000000008786803X",
+    "viaf": "127661047",
+    "grid": "grid.15090.3d"
+   }
+  },
+  "https://ror.org/006k2kk72": {
+   "wikidata": "Q2496389",
+   "label": "Universitätsklinikum Düsseldorf",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_D%C3%BCsseldorf",
+   "kennungen": {
+    "gnd": "10131072-9",
+    "isni": "0000000089227789",
+    "viaf": "130015128",
+    "grid": "grid.14778.3d"
+   }
+  },
+  "https://ror.org/032nzv584": {
+   "wikidata": "Q2496396",
+   "label": "Universitätsklinikum Gießen und Marburg",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Gie%C3%9Fen_und_Marburg",
+   "kennungen": {
+    "gnd": "10148395-8",
+    "isni": "0000000085849230",
+    "viaf": "124172432",
+    "grid": "grid.411067.5"
+   }
+  },
+  "https://ror.org/01tvm6f46": {
+   "wikidata": "Q2496401",
+   "label": "Universitätsklinikum Schleswig-Holstein",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Schleswig-Holstein",
+   "kennungen": {
+    "gnd": "10136686-3",
+    "isni": "0000000406462097",
+    "viaf": "139388433",
+    "grid": "grid.412468.d"
+   }
+  },
+  "https://ror.org/025vngs54": {
+   "wikidata": "Q2496421",
+   "label": "Universitätsmedizin Greifswald",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsmedizin_Greifswald",
+   "kennungen": {
+    "gnd": "16329317-X",
+    "isni": "0000000091168976",
+    "viaf": "133323095",
+    "grid": "grid.412469.c"
+   }
+  },
+  "https://ror.org/02m1z0a87": {
+   "wikidata": "Q5698722",
+   "label": "Medizinische Fakultät Mannheim",
+   "dewiki": "https://de.wikipedia.org/wiki/Medizinische_Fakult%C3%A4t_Mannheim",
+   "kennungen": {
+    "gnd": "1026363004",
+    "viaf": "157610690"
+   }
+  },
+  "https://ror.org/034nkkr84": {
+   "wikidata": "Q7341140",
+   "label": "Robert Bosch Hospital",
+   "dewiki": "https://de.wikipedia.org/wiki/Robert-Bosch-Krankenhaus",
+   "kennungen": {
+    "gnd": "2019909-0",
+    "isni": "0000000406034965",
+    "viaf": "155419735",
+    "grid": "grid.416008.b"
+   }
+  },
+  "https://ror.org/00ykp8811": {
+   "wikidata": "Q15849284",
+   "label": "Stiftung Universitätsmedizin Essen",
+   "dewiki": "https://de.wikipedia.org/wiki/Stiftung_Universit%C3%A4tsmedizin_Essen",
+   "kennungen": {}
+  },
+  "https://ror.org/00nvxt968": {
+   "wikidata": "Q47507885",
+   "label": "Universitätsklinikum des Saarlandes",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_des_Saarlandes",
+   "kennungen": {
+    "gnd": "16005302-X",
+    "viaf": "156982530",
+    "grid": "grid.411937.9"
+   }
+  },
+  "https://ror.org/059vymd37": {
+   "wikidata": "Q1622135",
+   "label": "Hochschule Osnabrück",
+   "dewiki": "https://de.wikipedia.org/wiki/Hochschule_Osnabr%C3%BCck",
+   "kennungen": {
+    "gnd": "16104840-7",
+    "isni": "0000000118649826",
+    "viaf": "169845881",
+    "grid": "grid.434095.f"
+   }
+  },
+  "https://ror.org/04za5zm41": {
+   "wikidata": "Q1651640",
+   "label": "Universitätsklinikum Carl Gustav Carus",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Carl_Gustav_Carus_Dresden",
+   "kennungen": {
+    "gnd": "5097019-7",
+    "isni": "0000000110912917",
+    "viaf": "147522720",
+    "grid": "grid.412282.f"
+   }
+  },
+  "https://ror.org/05mxhda18": {
+   "wikidata": "Q2494398",
+   "label": "Universitätsklinikum Köln",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_K%C3%B6ln",
+   "kennungen": {
+    "gnd": "10044629-2",
+    "isni": "000000008852305X",
+    "viaf": "128786549",
+    "grid": "grid.411097.a",
+    "crossref": "501100012681"
+   }
+  },
+  "https://ror.org/05emabm63": {
+   "wikidata": "Q2496404",
+   "label": "Universitätsklinikum Ulm",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4tsklinikum_Ulm",
+   "kennungen": {
+    "gnd": "94471-3",
+    "viaf": "124920750",
+    "grid": "grid.410712.1"
+   }
+  },
+  "https://ror.org/0493xsw21": {
+   "wikidata": "Q19835368",
+   "label": "Berliner Institut für Gesundheitsforschung",
+   "dewiki": "https://de.wikipedia.org/wiki/Berliner_Institut_f%C3%BCr_Gesundheitsforschung",
+   "kennungen": {
+    "gnd": "1227622449",
+    "viaf": "4020161392916658480009",
+    "grid": "grid.484013.a",
+    "crossref": "501100017268",
+    "scopus": "60126120"
+   }
+  },
+  "https://ror.org/05gqaka33": {
+   "wikidata": "Q32120",
+   "label": "Martin-Luther-Universität Halle-Wittenberg",
+   "dewiki": "https://de.wikipedia.org/wiki/Martin-Luther-Universit%C3%A4t_Halle-Wittenberg",
+   "kennungen": {
+    "gnd": "2024276-1",
+    "isni": "0000000120974038",
+    "viaf": "131344908",
+    "grid": "grid.9018.0"
+   }
+  },
+  "https://ror.org/04cvxnb49": {
+   "wikidata": "Q50662",
+   "label": "Goethe-Universität Frankfurt am Main",
+   "dewiki": "https://de.wikipedia.org/wiki/Johann_Wolfgang_Goethe-Universit%C3%A4t_Frankfurt_am_Main",
+   "kennungen": {
+    "gnd": "35074-6",
+    "isni": "0000000419369721",
+    "viaf": "141451702",
+    "grid": "grid.7839.5",
+    "crossref": "501100005687"
+   }
+  },
+  "https://ror.org/04tsk2644": {
+   "wikidata": "Q309948",
+   "label": "Ruhr-Universität Bochum",
+   "dewiki": "https://de.wikipedia.org/wiki/Ruhr-Universit%C3%A4t_Bochum",
+   "kennungen": {
+    "gnd": "7409-3",
+    "isni": "000000040490981X",
+    "viaf": "133248582",
+    "grid": "grid.5570.7",
+    "crossref": "501100006254"
+   }
+  },
+  "https://ror.org/04ers2y35": {
+   "wikidata": "Q500692",
+   "label": "Universität Bremen",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Bremen",
+   "kennungen": {
+    "gnd": "2001386-3",
+    "isni": "0000000122974381",
+    "viaf": "154317346",
+    "grid": "grid.7704.4",
+    "crossref": "501100007837"
+   }
+  },
+  "https://ror.org/04mz5ra38": {
+   "wikidata": "Q696757",
+   "label": "Universität Duisburg-Essen",
+   "dewiki": "https://de.wikipedia.org/wiki/Universit%C3%A4t_Duisburg-Essen",
+   "kennungen": {
+    "gnd": "10050375-5",
+    "isni": "0000000121875445",
+    "viaf": "156746339",
+    "grid": "grid.5718.b",
+    "crossref": "501100008349"
+   }
+  },
+  "https://ror.org/04jc43x05": {
+   "wikidata": "Q883813",
+   "label": "Klinikum rechts der Isar",
+   "dewiki": "https://de.wikipedia.org/wiki/TUM_Klinikum_Rechts_der_Isar",
+   "kennungen": {
+    "gnd": "1007888-5",
+    "isni": "0000000404772438",
+    "viaf": "129634540",
+    "grid": "grid.15474.33"
+   }
+  },
+  "https://ror.org/04gx8zb05": {
+   "wikidata": "Q30292764",
+   "label": "Zentralinstitut für die Kassenärztliche Versorgung in der Bundesrepublik Deutschland",
+   "dewiki": null,
+   "kennungen": {
+    "grid": "grid.439300.d"
+   }
+  }
+ },
+ "_re3data": {
+  "Charité - Universitätsmedizin Berlin": [
+   {
+    "id": "r3d100011367",
+    "name": "Zentrale Biomaterialbank der Charité",
+    "adresse": "https://biobank.charite.de/",
+    "seite": "https://www.re3data.org/repository/r3d100011367",
+    "traeger": [
+     "Charité - Universitätsmedizin Berlin",
+     "Federal Ministry of Research, Technology and Space"
+    ],
+    "art": [
+     "disciplinary"
+    ]
+   },
+   {
+    "id": "r3d100014127",
+    "name": "BIH / Charité Virtual Research Environment",
+    "adresse": "https://www.bihealth.org/en/translation/network/digital-medicine/bihcharite-virtual-research-environment",
+    "seite": "https://www.re3data.org/repository/r3d100014127",
+    "traeger": [
+     "Berlin Institute of Health at Charité",
+     "Berlin Institute of Health at Charité, Translation Hub Digital Medicine",
+     "Berlin.de",
+     "Charité, Business Division IT",
+     "Federal Ministry of Research, Technology and Space",
+     "Indoc",
+     "Stiftung Charité"
+    ],
+    "art": [
+     "disciplinary"
+    ]
+   }
+  ],
+  "Goethe-Universität Frankfurt am Main": [
+   {
+    "id": "r3d100011183",
+    "name": "Digitale Sammlungen, Goethe-Universität Frankfurt am Main",
+    "adresse": "https://sammlungen.ub.uni-frankfurt.de/",
+    "seite": "https://www.re3data.org/repository/r3d100011183",
+    "traeger": [
+     "Johann Wolfgang Goethe-Universität Frankfurt, Universitätsbibliothek Johann Christian Senckenberg"
+    ],
+    "art": [
+     "institutional"
+    ]
+   },
+   {
+    "id": "r3d100014359",
+    "name": "Goethe University Data Repository - GUDe",
+    "adresse": "https://gude.uni-frankfurt.de/home",
+    "seite": "https://www.re3data.org/repository/r3d100014359",
+    "traeger": [
+     "Goethe University Frankfurt",
+     "University Library Johann Christian Senckenberg"
+    ],
+    "art": [
+     "institutional"
+    ]
+   }
+  ],
+  "Charité Campus Charité Mitte": [
+   {
+    "id": "r3d100011367",
+    "name": "Zentrale Biomaterialbank der Charité",
+    "adresse": "https://biobank.charite.de/",
+    "seite": "https://www.re3data.org/repository/r3d100011367",
+    "traeger": [
+     "Charité - Universitätsmedizin Berlin",
+     "Federal Ministry of Research, Technology and Space"
+    ],
+    "art": [
+     "disciplinary"
+    ]
+   },
+   {
+    "id": "r3d100014127",
+    "name": "BIH / Charité Virtual Research Environment",
+    "adresse": "https://www.bihealth.org/en/translation/network/digital-medicine/bihcharite-virtual-research-environment",
+    "seite": "https://www.re3data.org/repository/r3d100014127",
+    "traeger": [
+     "Berlin Institute of Health at Charité",
+     "Berlin Institute of Health at Charité, Translation Hub Digital Medicine",
+     "Berlin.de",
+     "Charité, Business Division IT",
+     "Federal Ministry of Research, Technology and Space",
+     "Indoc",
+     "Stiftung Charité"
+    ],
+    "art": [
+     "disciplinary"
+    ]
+   }
+  ],
+  "Robert-Bosch-Krankenhaus": [
+   {
+    "id": "r3d100010436",
+    "name": "Forschungsdatenzentrum am Robert Koch Institut",
+    "adresse": "https://www.rki.de/EN/News/Publications/Research-data/RDC/research-data-centre-node.html",
+    "seite": "https://www.re3data.org/repository/r3d100010436",
+    "traeger": [
+     "Robert Koch Institute"
+    ],
+    "art": [
+     "disciplinary",
+     "other"
+    ]
+   }
+  ],
+  "Robert Koch-Institut": [
+   {
+    "id": "r3d100010436",
+    "name": "Forschungsdatenzentrum am Robert Koch Institut",
+    "adresse": "https://www.rki.de/EN/News/Publications/Research-data/RDC/research-data-centre-node.html",
+    "seite": "https://www.re3data.org/repository/r3d100010436",
+    "traeger": [
+     "Robert Koch Institute"
+    ],
+    "art": [
+     "disciplinary",
+     "other"
+    ]
+   }
+  ],
+  "LMU Klinikum München": [
+   {
+    "id": "r3d100014139",
+    "name": "Open Data LMU - Physics",
+    "adresse": "https://opendata.physik.lmu.de",
+    "seite": "https://www.re3data.org/repository/r3d100014139",
+    "traeger": [
+     "LMU, Faculty of Physics",
+     "LMU, University Library",
+     "Leibniz Supercomputing Centre"
+    ],
+    "art": [
+     "institutional"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,1640 @@
+{
+ "stand": "2026-10-30",
+ "standorte": [
+  {
+   "datei": "charite-universitatsmedizin-berlin.html",
+   "name": "Charité - Universitätsmedizin Berlin",
+   "ort": "Berlin",
+   "land": "",
+   "studien": 46,
+   "ror": "https://ror.org/001w7jn25",
+   "lat": 52.52437,
+   "lon": 13.41053,
+   "rekrutiert": 17,
+   "hubs": [
+    "mental",
+    "wissen",
+    "ki",
+    "pflege",
+    "longevity",
+    "ncd",
+    "impfen",
+    "safety",
+    "kardio",
+    "adipositas",
+    "onkologie",
+    "gender",
+    "klima"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Rehabilitationswissenschaft",
+    "Medizinsoziologie",
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 46,
+   "schreibweisen": [
+    "Charité",
+    "Charité - Univeristätsmedizin Berlin",
+    "Charité - Universitätsmedizin Berlin",
+    "Charité - Universitätsmedizin Berlin, Arbeitsbereich Physikalische Medizin",
+    "Charité - Universitätsmedizin Berlin, Institut für Allgemeinmedizin",
+    "Charité - Universitätsmedizin Berlin, Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité - Universitätsmedizin Berlin, Klinik für Radiologie",
+    "Charité Campus Charité Mitte",
+    "Charité Competence Center for Traditional and Integrative Medicine (CCCTIM) Charité – Universitätsmedizin Berlin",
+    "Charité Universitäsmedizin Berlin",
+    "Charité Universitätsmedizin Berlin",
+    "Charité Universitätsmedizin Berlin Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité – Universitätsmedizin Berlin",
+    "Charité – Universitätsmedizin Berlin  Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité – Universitätsmedizin Berlin, Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité – Universitätsmedizin Berlin, Klinik für Kardiologie, Angiologie und Intensivmedizin",
+    "Charité – Universitätsmedizin Berlin, Klinik für Neurochirurgie",
+    "Charité – Universitätsmedizin Berlin, Medizinische Klinik für Endokrinologie und Stoffwechselmedizin",
+    "Charité – Universitätsmedizin Berlin, Medizinische Klinik mit Schwerpunkt Hepatologie und Gastroenterologie, Campus Virchow-Klinikum",
+    "Charité-Universitätsmedizin Berlin",
+    "Institut für Allgemeinmedizin, Charité - Universitätsmedizin Berlin",
+    "Klinik für Pädiatrie mit SP Onkologie und Hämatologie, Charité Universitätsmedizin Berlin",
+    "Medizinische Klinik für Endokrinologie, Charité - Universitätsmedizin Berlin",
+    "Medizinische Klinik m.S. Psychosomatik Charité Berlin"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-heidelberg.html",
+   "name": "Universitätsklinikum Heidelberg",
+   "ort": "Heidelberg",
+   "land": " · FR",
+   "studien": 25,
+   "ror": "https://ror.org/013czdx64",
+   "lat": 49.40768,
+   "lon": 8.69079,
+   "rekrutiert": 12,
+   "hubs": [
+    "mental",
+    "wissen",
+    "onkologie",
+    "healthliteracy",
+    "ki",
+    "impfen",
+    "ncd",
+    "gender",
+    "longevity",
+    "kardio",
+    "safety",
+    "pflege"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin",
+    "Versorgungsforschung (als Fach benannt)"
+   ],
+   "zentren": 13,
+   "schreibweisen": [
+    "Abteilung Allgemeinmedizin und Versorgungsforschung, Universitätsklinikum Heidelberg",
+    "Klinik für Anästhesiologie, Universitätsklinikum Heidelberg",
+    "Neurologische Klinik, Universitätsklinikum Heidelberg",
+    "Universitätsklinikum Heidelberg",
+    "Universitätsklinikum Heidelberg - Innere Medizin V",
+    "Universitätsklinikum Heidelberg Abteilung Allgemeinmedizin und Versorgungsforschung",
+    "Universitätsklinikum Heidelberg Thoraxklinik Heidelberg",
+    "Universitätsklinikum Heidelberg, Abteilung Allgemeinmedizin und Versorgungsforschung",
+    "Universitätsklinikum Heidelberg, Innere Medizin V"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-hamburg-eppendorf.html",
+   "name": "Universitätsklinikum Hamburg-Eppendorf",
+   "ort": "Hamburg",
+   "land": "",
+   "studien": 21,
+   "ror": "https://ror.org/01zgy1s35",
+   "lat": 53.55073,
+   "lon": 9.99302,
+   "rekrutiert": 8,
+   "hubs": [
+    "mental",
+    "wissen",
+    "kardio",
+    "ki",
+    "diabetes",
+    "ncd",
+    "healthliteracy",
+    "gender",
+    "onkologie",
+    "impfen",
+    "longevity",
+    "pflege"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Medizinische Psychologie und Psychotherapieforschung",
+    "Versorgungsforschung (als Fach benannt)",
+    "Gesundheitsoekonomie"
+   ],
+   "zentren": 34,
+   "schreibweisen": [
+    "Universitätsklinikum Hamburg Eppendorf",
+    "Universitätsklinikum Hamburg-Eppendorf",
+    "Universitätsklinikum Hamburg-Eppendorf\nInstitut und Poliklinik für Medizinische Psychologie",
+    "Universitätsklinikum Hamburg-Eppendorf Institut für Gesundheitsökonomie und Versorgungsforschung",
+    "Universitätsklinikum Hamburg-Eppendorf Klinik und Poliklinik für Psychiatrie und Psychotherapie Forschungsbereich Neuropsychologie und Psychotherapie"
+   ]
+  },
+  {
+   "datei": "universitat-zu-lubeck-institut-fur-sozialmedizin-und-epidemi.html",
+   "name": "Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie",
+   "ort": "Lübeck",
+   "land": "",
+   "studien": 13,
+   "ror": null,
+   "lat": 53.86893,
+   "lon": 10.68729,
+   "rekrutiert": 4,
+   "hubs": [
+    "wissen",
+    "mental",
+    "impfen",
+    "onkologie",
+    "kardio",
+    "healthliteracy",
+    "ki"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Sozialmedizin und Epidemiologie"
+   ],
+   "zentren": 33,
+   "schreibweisen": [
+    "Institut für Sozialmedizin und Epidemiologie der Universität zu Lübeck",
+    "Universität zu Lübeck",
+    "Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-aachen.html",
+   "name": "Universitätsklinikum Aachen",
+   "ort": "Aachen",
+   "land": "Nordrhein-Westfalen",
+   "studien": 12,
+   "ror": "https://ror.org/02gm5zw39",
+   "lat": 50.77664,
+   "lon": 6.08342,
+   "rekrutiert": 4,
+   "hubs": [
+    "mental",
+    "wissen",
+    "ki",
+    "onkologie",
+    "ncd",
+    "longevity",
+    "healthliteracy"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Geriatrie und Altersforschung"
+   ],
+   "zentren": 12,
+   "schreibweisen": [
+    "Klinik für Altersmedizin, Uniklinik RWTH Aachen",
+    "Uniklinik RWTH Aachen",
+    "Uniklinik RWTH Aachen, Klinik für Anästhesiologie",
+    "Uniklinik RWTH Aachen, Medizinische Klinik IV",
+    "Uniklinik der RWTH Aachen",
+    "Universitätsklinikum Aachen"
+   ]
+  },
+  {
+   "datei": "medizinische-hochschule-hannover.html",
+   "name": "Medizinische Hochschule Hannover",
+   "ort": "Hannover",
+   "land": "",
+   "studien": 8,
+   "ror": "https://ror.org/00f2yqf98",
+   "lat": 52.37052,
+   "lon": 9.73322,
+   "rekrutiert": 3,
+   "hubs": [
+    "wissen",
+    "mental",
+    "ki",
+    "impfen",
+    "onkologie"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin",
+    "Palliativ- und Hospizforschung"
+   ],
+   "zentren": 5,
+   "schreibweisen": [
+    "Medizinische Hochschule Hannover",
+    "Medizinische Hochschule Hannover, Institut für Allgemeinmedizin und Palliativmedizin",
+    "Medizinische Hochschule Hannover, Institut für Allgemeinmedizin und Palliativmedizin / Universitätklinikum Erlangen, Palliativmedizinische Abteilung"
+   ]
+  },
+  {
+   "datei": "heinrich-heine-universitat-dusseldorf.html",
+   "name": "Heinrich-Heine-Universität Düsseldorf",
+   "ort": "Düsseldorf",
+   "land": "",
+   "studien": 7,
+   "ror": "https://ror.org/024z2rq82",
+   "lat": 51.22319,
+   "lon": 6.77927,
+   "rekrutiert": 2,
+   "hubs": [
+    "kardio",
+    "wissen",
+    "mental",
+    "safety",
+    "longevity",
+    "diabetes",
+    "gender",
+    "adipositas"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Versorgungsforschung (als Fach benannt)",
+    "Gesundheitsoekonomie"
+   ],
+   "zentren": 9,
+   "schreibweisen": [
+    "Heinrich Heine Universität Düsseldorf Medizinische Fakultät",
+    "Heinrich-Heine-University Düsseldorf, Medical Faculty",
+    "Institut für Versorgungsforschung und Gesundheitsökonomie, Heinrich-Heine-Universität Düsseldorf",
+    "LVR-Klinikum Düsseldorf - Kliniken der Heinrich-Heine-Universität Düsseldorf",
+    "LVR-Klinikum Düsseldorf, Klinken der Heinrich-Heine-Universität Düsseldorf"
+   ]
+  },
+  {
+   "datei": "goethe-universitat-frankfurt-am-main.html",
+   "name": "Goethe-Universität Frankfurt am Main",
+   "ort": "Frankfurt am Main",
+   "land": "",
+   "studien": 7,
+   "ror": "https://ror.org/04cvxnb49",
+   "lat": 50.11552,
+   "lon": 8.68417,
+   "rekrutiert": 1,
+   "hubs": [
+    "mental",
+    "wissen",
+    "ki",
+    "onkologie",
+    "ncd"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 15,
+   "schreibweisen": [
+    "Goethe Universität Frankfurt, Universitätsklinikum, Klinik für Anästhesiologie, Intensivmedizin und Schmerztherapie",
+    "Goethe Universität; Universitätsklinikum Frankfurt Goethe-Universität",
+    "Institut für Allgemeinmedizin Goethe Universität Frankfurt am Main",
+    "Institut für Allgemeinmedizin der Goethe-Universität Frankfurt",
+    "Johann-Wolfgang-Goethe Universität Frankfurt",
+    "Klinikum der Johann Wolfgang Goethe-Universität Frankfurt am Main",
+    "Klinikum der Johann Wolfgang Goethe-Universität Frankfurt am Main Epilepsiezentrum Frankfurt Rhein-Main"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-bonn.html",
+   "name": "Universitätsklinikum Bonn",
+   "ort": "Bonn",
+   "land": "Nordrhein-Westfalen",
+   "studien": 7,
+   "ror": "https://ror.org/01xnwqx93",
+   "lat": 50.73438,
+   "lon": 7.09549,
+   "rekrutiert": 5,
+   "hubs": [
+    "wissen",
+    "safety",
+    "mental",
+    "kardio",
+    "impfen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 2,
+   "schreibweisen": [
+    "Institut für Hausarztmedizin, Universitätsklinikum Bonn",
+    "Universitätsklinikum Bonn"
+   ]
+  },
+  {
+   "datei": "universitat-zu-koln.html",
+   "name": "Universität zu Köln",
+   "ort": "Köln",
+   "land": "",
+   "studien": 6,
+   "ror": "https://ror.org/00rcxh774",
+   "lat": 50.93333,
+   "lon": 6.95,
+   "rekrutiert": 0,
+   "hubs": [
+    "wissen",
+    "mental",
+    "pflege",
+    "longevity",
+    "adipositas",
+    "diabetes",
+    "kardio",
+    "ncd"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Medizinische Psychologie und Psychotherapieforschung"
+   ],
+   "zentren": 23,
+   "schreibweisen": [
+    "Medizinische Psychologie | Neuropsychologie und Gender Studies & Centrum für Neuropsychologische Diagnostik und Intervention (CeNDI)",
+    "Medizinische Psychologie | Neuropsychologie und Gender Studies, Medizinische Fakultät und Uniklinik Köln, Universität zu Köln",
+    "Universität zu Köln"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-wurzburg.html",
+   "name": "Universitätsklinikum Würzburg",
+   "ort": "Würzburg",
+   "land": "",
+   "studien": 6,
+   "ror": "https://ror.org/03pvr2g57",
+   "lat": 49.79391,
+   "lon": 9.95121,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "wissen",
+    "kardio",
+    "onkologie",
+    "ki",
+    "klima"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Rehabilitationswissenschaft"
+   ],
+   "zentren": 15,
+   "schreibweisen": [
+    "Universitätsklinikum Würzburg",
+    "Universitätsklinikum Würzburg, Frauenklinik und Poliklinik",
+    "Universitätsklinikum Würzburg, Zentrum für Psychische Gesundheit, AG Rehabilitationswissenschaften",
+    "Universitätsklinikum Würzburg, Zentrum für Psychische Gesundheit, Kinder- und Jugendpsychiatrie, Psychosomatik und Psychotherapie"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-tubingen.html",
+   "name": "Universitätsklinikum Tübingen",
+   "ort": "Tübingen",
+   "land": "Baden-Württemberg",
+   "studien": 5,
+   "ror": "https://ror.org/00pjgxh97",
+   "lat": 48.52266,
+   "lon": 9.05222,
+   "rekrutiert": 3,
+   "hubs": [
+    "wissen",
+    "mental",
+    "pflege",
+    "safety"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 10,
+   "schreibweisen": [
+    "Universitätsklinikum Tübingen"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-koln.html",
+   "name": "Universitätsklinikum Köln",
+   "ort": "Köln",
+   "land": "",
+   "studien": 5,
+   "ror": "https://ror.org/05mxhda18",
+   "lat": 50.93333,
+   "lon": 6.95,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "longevity",
+    "kardio",
+    "wissen",
+    "diabetes",
+    "healthliteracy"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 3,
+   "schreibweisen": [
+    "Klinik und Poliklinik für Psychiatrie und Psychotherapie Uniklinik Köln (AöR)",
+    "Uniklinik Köln",
+    "Uniklinik Köln Neurologie",
+    "Uniklinik Köln, Klinik und Poliklinik für Psychiatrie und Psychotherapie",
+    "Universitätsklinikum Köln"
+   ]
+  },
+  {
+   "datei": "carl-von-ossietzky-universitat-oldenburg.html",
+   "name": "Carl von Ossietzky Universität Oldenburg",
+   "ort": "Oldenburg",
+   "land": "Niedersachsen",
+   "studien": 5,
+   "ror": "https://ror.org/033n9gh91",
+   "lat": 53.14039,
+   "lon": 8.21479,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "diabetes",
+    "ki",
+    "pflege"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Versorgungsforschung (als Fach benannt)",
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 3,
+   "schreibweisen": [
+    "Carl von Ossietzky Universität Oldenburg",
+    "Carl von Ossietzky Universität Oldenburg - Department für Versorgungsforschung, Abteilung Allgemeimedizin",
+    "Carl von Ossietzky Universität Oldenburg Fakultät VI - Medizin und Gesundheitswissenschaften Department für Versorgungsforschung Abteilung Allgemeinmedizin",
+    "Carl-von-Ossietzky-Universität Oldenburg - Klinik für Spezielle Orthopädie und Unfallchirurgie am Pius Hospital"
+   ]
+  },
+  {
+   "datei": "universitat-witten-herdecke.html",
+   "name": "Universität Witten Herdecke",
+   "ort": "Witten",
+   "land": "",
+   "studien": 5,
+   "ror": null,
+   "lat": 51.44362,
+   "lon": 7.35258,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "longevity",
+    "onkologie",
+    "wissen",
+    "impfen",
+    "ki",
+    "healthliteracy"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 2,
+   "schreibweisen": [
+    "Private Universität Witten/Herdecke",
+    "Universität Witten Herdecke",
+    "Universität Witten/Herdecke"
+   ]
+  },
+  {
+   "datei": "martin-luther-universitat-halle-wittenberg.html",
+   "name": "Martin-Luther-Universität Halle-Wittenberg",
+   "ort": "Halle",
+   "land": "",
+   "studien": 5,
+   "ror": "https://ror.org/05gqaka33",
+   "lat": 51.48158,
+   "lon": 11.97947,
+   "rekrutiert": 1,
+   "hubs": [
+    "onkologie",
+    "longevity",
+    "wissen",
+    "pflege"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Pflegewissenschaft"
+   ],
+   "zentren": 9,
+   "schreibweisen": [
+    "Institut für Gesundheits- und Pflegewissenschaft Medizinische Fakultät der Martin-Luther-Universität Halle Wittenberg",
+    "Martin-Luther-Universität Halle-WittenbergUniversitätsklinikum Halle (Saale)",
+    "Medizinische Fakultät der Martin-Luther-Universität Halle-Wittenberg",
+    "Wilhelm-Roux-Förderprogramm der Medizinischen Fakultät der Martin-Luther-Universität Halle-Wittenberg, Prodekanat Forschung"
+   ]
+  },
+  {
+   "datei": "hochschule-rosenheim.html",
+   "name": "Hochschule Rosenheim",
+   "ort": "Rosenheim",
+   "land": "",
+   "studien": 5,
+   "ror": "https://ror.org/03hbmgt12",
+   "lat": 47.85636901855469,
+   "lon": 12.122469902038574,
+   "rekrutiert": 1,
+   "hubs": [
+    "pflege",
+    "impfen",
+    "kardio",
+    "longevity",
+    "mental",
+    "safety"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 6,
+   "schreibweisen": [
+    "Technische Hochschule Rosenheim",
+    "Technische Hochschule Rosenheim, Fakultät für Angewandte Gesundheits- und Sozialwissenschaften"
+   ]
+  },
+  {
+   "datei": "universitatsmedizin-der-johannes-gutenberg-universitat-mainz.html",
+   "name": "Universitätsmedizin der Johannes Gutenberg-Universität Mainz",
+   "ort": "Mainz",
+   "land": "",
+   "studien": 5,
+   "ror": "https://ror.org/00q1fsf04",
+   "lat": 49.98185,
+   "lon": 8.28008,
+   "rekrutiert": 2,
+   "hubs": [
+    "wissen",
+    "mental",
+    "ki",
+    "kardio",
+    "onkologie",
+    "healthliteracy",
+    "diabetes"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 7,
+   "schreibweisen": [
+    "Klinik und Poliklinik für Urologie und Kinderurologie Universitätsmedizin der Johannes Gutenberg-Universität Mainz",
+    "Universitätsmedizin der Johannes Gutenberg-Universität Mainz"
+   ]
+  },
+  {
+   "datei": "klinikum-der-technischen-universitat-munchen-tum-klinikum.html",
+   "name": "Klinikum der Technischen Universität München (TUM Klinikum)",
+   "ort": "München",
+   "land": "",
+   "studien": 4,
+   "ror": "https://ror.org/04jc43x05",
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "rekrutiert": 2,
+   "hubs": [
+    "ki",
+    "mental",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 12,
+   "schreibweisen": [
+    "Klinik und Poliklinik für Kinder- und Jugendmedizin, Klinikum rechts der Isar der Technischen Universität München",
+    "Klinikum rechts der Isar der Technischen Universität München",
+    "Neurologische Klinik, Klinikum rechts der Isar, TU München",
+    "TUM Klinikum Rechts der Isar, Klinik und Poliklinik für psychosomatische Medizin und Psychotherapie, Professur für Spiritual Care und psychosomatische Gesundheit"
+   ]
+  },
+  {
+   "datei": "zentralinstitut-fur-die-kassenarztliche-versorgung-in-der-bu.html",
+   "name": "Zentralinstitut für die Kassenärztliche Versorgung in der Bundesrepublik Deutschland",
+   "ort": "Berlin",
+   "land": "",
+   "studien": 4,
+   "ror": "https://ror.org/04gx8zb05",
+   "lat": 52.51518630981445,
+   "lon": 13.333866119384766,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental"
+   ],
+   "traegerart": "Selbstverwaltung im Gesundheitswesen",
+   "faecher": [],
+   "zentren": 12,
+   "schreibweisen": [
+    "Zentralinstitut für die kassenärztliche Versorgung in Deutschland",
+    "Zentralinstitut für die kassenärztliche Versorgung in der Bundesrepublik Deutschland"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-carl-gustav-carus-dresden.html",
+   "name": "Universitätsklinikum Carl Gustav Carus Dresden",
+   "ort": "Dresden",
+   "land": " · BE",
+   "studien": 4,
+   "ror": "https://ror.org/04za5zm41",
+   "lat": 51.05089,
+   "lon": 13.73832,
+   "rekrutiert": 3,
+   "hubs": [
+    "diabetes",
+    "wissen",
+    "healthliteracy",
+    "mental",
+    "ki",
+    "onkologie"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 5,
+   "schreibweisen": [
+    "Medizinische Fakultät Carl Gustav Carus an der TU Dresden Bereich Allgemeinmedizin/ Medizinische Klinik und Poliklinik III",
+    "Technische Universität Dresden, Medizinische Fakultät Carl Gustav Carus, Klinik und Poliklinik für Viszeral-, Thorax- und Gefäßchirurgie",
+    "Universitätsklinikum Carl Gustav Carus"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-freiburg.html",
+   "name": "Universitätsklinikum Freiburg",
+   "ort": "Freiburg",
+   "land": "",
+   "studien": 4,
+   "ror": "https://ror.org/03vzbgh69",
+   "lat": 47.9959,
+   "lon": 7.85222,
+   "rekrutiert": 0,
+   "hubs": [
+    "wissen",
+    "ki",
+    "onkologie",
+    "longevity",
+    "diabetes",
+    "mental",
+    "safety",
+    "pflege"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 5,
+   "schreibweisen": [
+    "Universitätsklinikum Freiburg"
+   ]
+  },
+  {
+   "datei": "friedrich-alexander-universitat-erlangen-nurnberg.html",
+   "name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+   "ort": "Erlangen",
+   "land": "",
+   "studien": 4,
+   "ror": "https://ror.org/00f7hpc57",
+   "lat": 49.59099,
+   "lon": 11.00783,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "longevity",
+    "wissen",
+    "ki"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Medizinische Psychologie und Psychotherapieforschung",
+    "Palliativ- und Hospizforschung"
+   ],
+   "zentren": 17,
+   "schreibweisen": [
+    "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "Lehrstuhl für Klinische Psychologie und Psychotherapie, Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "Universitätsklinikum Erlangen, Abteilung für Palliativmedizin, Friedrich-Alexander-Universität Erlangen-Nürnberg"
+   ]
+  },
+  {
+   "datei": "berliner-institut-fur-gesundheitsforschung.html",
+   "name": "Berliner Institut für Gesundheitsforschung",
+   "ort": "Berlin",
+   "land": "Berlin",
+   "studien": 3,
+   "ror": "https://ror.org/0493xsw21",
+   "lat": 52.52437,
+   "lon": 13.41053,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "longevity",
+    "impfen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 2,
+   "schreibweisen": [
+    "Charité Centre for Global Health",
+    "Charité Universitätsmedizin Berlin - Institut für Allgemeinmedizin - AG Health Policy and Systems Research and Innovation"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-essen.html",
+   "name": "Universitätsklinikum Essen",
+   "ort": "Essen",
+   "land": "Nordrhein-Westfalen",
+   "studien": 3,
+   "ror": "https://ror.org/02na8dn90",
+   "lat": 51.45656967163086,
+   "lon": 7.012279987335205,
+   "rekrutiert": 2,
+   "hubs": [
+    "onkologie",
+    "mental",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 3,
+   "schreibweisen": [
+    "Universitätsklinikum Essen"
+   ]
+  },
+  {
+   "datei": "technische-universitat-munchen-lehrstuhl-fur-gesundheitsokon.html",
+   "name": "Technische Universität München, Lehrstuhl für Gesundheitsökonomie",
+   "ort": "München",
+   "land": "",
+   "studien": 3,
+   "ror": null,
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "rekrutiert": 0,
+   "hubs": [
+    "wissen",
+    "mental",
+    "ncd",
+    "diabetes",
+    "kardio",
+    "impfen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Gesundheitsoekonomie"
+   ],
+   "zentren": 3,
+   "schreibweisen": [
+    "Technische Universität München, Lehrstuhl für Gesundheitsökonomie"
+   ]
+  },
+  {
+   "datei": "universitat-duisburg-essen.html",
+   "name": "Universität Duisburg-Essen",
+   "ort": "Essen",
+   "land": "Nordrhein-Westfalen",
+   "studien": 3,
+   "ror": "https://ror.org/04mz5ra38",
+   "lat": 51.45657,
+   "lon": 7.01228,
+   "rekrutiert": 2,
+   "hubs": [
+    "wissen",
+    "mental",
+    "ki"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 6,
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin, Universitätsmedizin Essen, Medizinische Fakultät, Universität Duisburg-Essen",
+    "Universität Duisburg Essen",
+    "Universität Duisburg-Essen"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-des-saarlandes.html",
+   "name": "Universitätsklinikum des Saarlandes",
+   "ort": "Homburg",
+   "land": "Saarland",
+   "studien": 3,
+   "ror": "https://ror.org/00nvxt968",
+   "lat": 49.32637,
+   "lon": 7.33867,
+   "rekrutiert": 3,
+   "hubs": [
+    "wissen",
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 7,
+   "schreibweisen": [
+    "Universitätsklinikum des Saarlandes"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-erlangen.html",
+   "name": "Universitätsklinikum Erlangen",
+   "ort": "Erlangen",
+   "land": "Bayern",
+   "studien": 3,
+   "ror": "https://ror.org/0030f2a11",
+   "lat": 49.59099,
+   "lon": 11.00783,
+   "rekrutiert": 3,
+   "hubs": [
+    "impfen",
+    "mental",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 3,
+   "schreibweisen": [
+    "Universitätsklinikum Erlangen"
+   ]
+  },
+  {
+   "datei": "robert-bosch-krankenhaus.html",
+   "name": "Robert-Bosch-Krankenhaus",
+   "ort": "Stuttgart",
+   "land": "",
+   "studien": 3,
+   "ror": "https://ror.org/034nkkr84",
+   "lat": 48.78232,
+   "lon": 9.17702,
+   "rekrutiert": 0,
+   "hubs": [
+    "safety",
+    "pflege",
+    "ki",
+    "longevity",
+    "mental",
+    "wissen"
+   ],
+   "traegerart": "Krankenhaus oder Praxis",
+   "faecher": [],
+   "zentren": 5,
+   "schreibweisen": [
+    "Robert Bosch Gesellschaft für medizinische Forschung mbH",
+    "Robert-Bosch-Krankenhaus",
+    "Robert-Bosch-Krankenhaus Klinik für Geriatrische Rehabilitation"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-gie-en-und-marburg.html",
+   "name": "Universitätsklinikum Gießen und Marburg",
+   "ort": "Gießen",
+   "land": "",
+   "studien": 3,
+   "ror": "https://ror.org/032nzv584",
+   "lat": 50.58727,
+   "lon": 8.67554,
+   "rekrutiert": 0,
+   "hubs": [
+    "onkologie",
+    "healthliteracy"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 3,
+   "schreibweisen": [
+    "Universitätsklinikum Gießen und Marburg GmbH; Klinik für Strahlentherapie",
+    "Universitätsklinikum Gießen und Marburg, Standort Marburg",
+    "Universitätsklinikum Gießen-Marburg"
+   ]
+  },
+  {
+   "datei": "lvr-institut-fur-forschung-und-bildung.html",
+   "name": "LVR-Institut für Forschung und Bildung",
+   "ort": "Köln",
+   "land": "",
+   "studien": 3,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 1,
+   "hubs": [
+    "longevity",
+    "mental",
+    "diabetes",
+    "adipositas",
+    "onkologie",
+    "kardio",
+    "wissen"
+   ],
+   "traegerart": "Kommunaler oder kirchlicher Träger",
+   "faecher": [],
+   "zentren": 6,
+   "schreibweisen": [
+    "LVR-Institut für Forschung und Bildung"
+   ]
+  },
+  {
+   "datei": "robert-koch-institut.html",
+   "name": "Robert Koch-Institut",
+   "ort": "Berlin",
+   "land": "Berlin",
+   "studien": 2,
+   "ror": "https://ror.org/01k5qnb77",
+   "lat": 52.52437,
+   "lon": 13.41053,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental"
+   ],
+   "traegerart": "Ressortforschung des Bundes",
+   "faecher": [
+    "Sozialmedizin und Epidemiologie"
+   ],
+   "zentren": 3,
+   "schreibweisen": [
+    "Robert Koch-Institut",
+    "Robert Koch-Institut, Abteilung für Epidemiologie und Gesundheitsmonitoring"
+   ]
+  },
+  {
+   "datei": "institut-fur-allgemeinmedizin.html",
+   "name": "Institut für Allgemeinmedizin",
+   "ort": "Düsseldorf",
+   "land": "Nordrhein-Westfalen",
+   "studien": 2,
+   "ror": "https://ror.org/05885p792",
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental",
+    "kardio"
+   ],
+   "traegerart": "nicht zuzuordnen",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 2,
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin"
+   ]
+  },
+  {
+   "datei": "institut-fur-allgemeinmedizin-universitatsklinikum-schleswig.html",
+   "name": "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig Holstein, Campus Lübeck",
+   "ort": "Lübeck",
+   "land": "Schleswig-Holstein",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 1,
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig Holstein, Campus Lübeck",
+    "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig-Holstein, Campus Lübeck"
+   ]
+  },
+  {
+   "datei": "hochschule-fur-angewandte-wissenschaften-hamburg-fakultat-wi.html",
+   "name": "Hochschule für angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management",
+   "ort": "Hamburg",
+   "land": "",
+   "studien": 2,
+   "ror": null,
+   "lat": 53.55073,
+   "lon": 9.99302,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 9,
+   "schreibweisen": [
+    "Hochschule für Angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management",
+    "Hochschule für angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management"
+   ]
+  },
+  {
+   "datei": "deutsches-herzzentrum-der-charite.html",
+   "name": "Deutsches Herzzentrum der Charité",
+   "ort": "Berlin",
+   "land": "Berlin",
+   "studien": 2,
+   "ror": "https://ror.org/01mmady97",
+   "lat": 52.52437,
+   "lon": 13.41053,
+   "rekrutiert": 1,
+   "hubs": [
+    "kardio",
+    "healthliteracy",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 2,
+   "schreibweisen": [
+    "Deutsches Herzzentrum der Charité"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-schleswig-holstein.html",
+   "name": "Universitätsklinikum Schleswig-Holstein",
+   "ort": "Kiel",
+   "land": "Hamburg",
+   "studien": 2,
+   "ror": "https://ror.org/01tvm6f46",
+   "lat": 54.32133,
+   "lon": 10.13489,
+   "rekrutiert": 1,
+   "hubs": [
+    "wissen",
+    "mental",
+    "safety"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 3,
+   "schreibweisen": [
+    "Universitätsklinikum Schleswig-Holstein"
+   ]
+  },
+  {
+   "datei": "rheinhessen-fachklinik-mainz.html",
+   "name": "Rheinhessen-Fachklinik Mainz",
+   "ort": "Alzey",
+   "land": "Rheinland-Pfalz",
+   "studien": 2,
+   "ror": "https://ror.org/055kyaa64",
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 0,
+   "hubs": [
+    "pflege",
+    "longevity"
+   ],
+   "traegerart": "Krankenhaus oder Praxis",
+   "faecher": [],
+   "zentren": 1,
+   "schreibweisen": [
+    "Rheinhessen-Fachklinik Alzey"
+   ]
+  },
+  {
+   "datei": "kleine-riesen-nordhessen-ggmbh.html",
+   "name": "Kleine Riesen Nordhessen gGmbH",
+   "ort": "Kassel",
+   "land": "Hessen",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 2,
+   "hubs": [
+    "ki"
+   ],
+   "traegerart": "Gemeinnütziger Träger",
+   "faecher": [],
+   "zentren": 6,
+   "schreibweisen": [
+    "Kleine Riesen Nordhessen gGmbH"
+   ]
+  },
+  {
+   "datei": "deutsche-krebsgesellschaft-e-v.html",
+   "name": "Deutsche Krebsgesellschaft e. V.",
+   "ort": "Berlin",
+   "land": "Brandenburg",
+   "studien": 2,
+   "ror": null,
+   "lat": 52.50527572631836,
+   "lon": 13.290114402770996,
+   "rekrutiert": 2,
+   "hubs": [
+    "wissen",
+    "onkologie"
+   ],
+   "traegerart": "Fachgesellschaft, Verband oder Stiftung",
+   "faecher": [],
+   "zentren": 7,
+   "schreibweisen": [
+    "Deutsche Krebsgesellschaft e. V."
+   ]
+  },
+  {
+   "datei": "technische-universitat-dresden.html",
+   "name": "Technische Universität Dresden",
+   "ort": "Dresden",
+   "land": "Sachsen",
+   "studien": 2,
+   "ror": "https://ror.org/042aqky30",
+   "lat": 51.05089,
+   "lon": 13.73832,
+   "rekrutiert": 0,
+   "hubs": [
+    "pflege",
+    "longevity",
+    "mental",
+    "ki",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 7,
+   "schreibweisen": [
+    "TU Dresden",
+    "Technische Universität Dresden"
+   ]
+  },
+  {
+   "datei": "medizinische-fakultat-mannheim.html",
+   "name": "Medizinische Fakultät Mannheim",
+   "ort": "Mannheim",
+   "land": "Baden-Württemberg",
+   "studien": 2,
+   "ror": "https://ror.org/02m1z0a87",
+   "lat": 49.48910140991211,
+   "lon": 8.466939926147461,
+   "rekrutiert": 1,
+   "hubs": [
+    "healthliteracy",
+    "kardio",
+    "wissen",
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 1,
+   "schreibweisen": [
+    "Medizinische Fakultät Mannheim der Universität Heidelberg",
+    "Universitätsklinikum Heidelberg – UK Mannheim GmbH"
+   ]
+  },
+  {
+   "datei": "interdisziplinare-schmerzambulanz-campus-innenstadt-klinik-f.html",
+   "name": "Interdisziplinäre Schmerzambulanz, Campus Innenstadt, Klinik für Anaesthesiologie, LMU Klinikum, LMU München",
+   "ort": "München",
+   "land": "Bayern",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 3,
+   "schreibweisen": [
+    "Interdisziplinäre Schmerzambulanz, Campus Innenstadt, Klinik für Anaesthesiologie, LMU Klinikum, LMU München"
+   ]
+  },
+  {
+   "datei": "zentralinstitut-fur-seelische-gesundheit.html",
+   "name": "Zentralinstitut für Seelische Gesundheit",
+   "ort": "Mannheim",
+   "land": "Baden-Württemberg",
+   "studien": 2,
+   "ror": "https://ror.org/01hynnt93",
+   "lat": 49.48910140991211,
+   "lon": 8.466939926147461,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental",
+    "ki",
+    "wissen"
+   ],
+   "traegerart": "nicht zuzuordnen",
+   "faecher": [],
+   "zentren": 2,
+   "schreibweisen": [
+    "Zentralinstitut für Seelische Gesundheit",
+    "Zentralinstitut für Seelische Gesundheit Mannheim"
+   ]
+  },
+  {
+   "datei": "zentrum-fur-integrative-psychiatrie-ggmbh.html",
+   "name": "Zentrum für Integrative Psychiatrie gGmbH",
+   "ort": "Lübeck",
+   "land": "Schleswig-Holstein",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental"
+   ],
+   "traegerart": "Gemeinnütziger Träger",
+   "faecher": [],
+   "zentren": 1,
+   "schreibweisen": [
+    "Zentrum für Integrative Psychiatrie gGmbH"
+   ]
+  },
+  {
+   "datei": "vestische-kinder-und-jugendklinik-datteln-universitat-witten.html",
+   "name": "Vestische Kinder- und Jugendklinik Datteln, Universität Witten/Herdecke",
+   "ort": "Datteln",
+   "land": " · BR",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 2,
+   "hubs": [
+    "mental",
+    "wissen",
+    "ki",
+    "healthliteracy"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 4,
+   "schreibweisen": [
+    "Vestische Kinder- und Jugendklinik Datteln, Universität Witten/Herdecke"
+   ]
+  },
+  {
+   "datei": "universitat-bremen-socium.html",
+   "name": "Universität Bremen - Socium",
+   "ort": "Bremen",
+   "land": "",
+   "studien": 2,
+   "ror": null,
+   "lat": 53.07582,
+   "lon": 8.80717,
+   "rekrutiert": 2,
+   "hubs": [
+    "pflege",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 4,
+   "schreibweisen": [
+    "Universität Bremen  - Socium",
+    "Universität Bremen - Socium"
+   ]
+  },
+  {
+   "datei": "orthopadische-klinik-konig-ludwig-haus-wurzburg.html",
+   "name": "Orthopädische Klinik König-Ludwig-Haus Würzburg",
+   "ort": "Würzburg",
+   "land": "Bayern",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 2,
+   "hubs": [
+    "ncd",
+    "longevity",
+    "adipositas",
+    "mental"
+   ],
+   "traegerart": "Krankenhaus oder Praxis",
+   "faecher": [],
+   "zentren": 1,
+   "schreibweisen": [
+    "Orthopädische Klinik König-Ludwig-Haus Würzburg"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-dusseldorf.html",
+   "name": "Universitätsklinikum Düsseldorf",
+   "ort": "Düsseldorf",
+   "land": "",
+   "studien": 2,
+   "ror": "https://ror.org/006k2kk72",
+   "lat": 51.22172,
+   "lon": 6.77616,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental",
+    "wissen",
+    "diabetes",
+    "onkologie",
+    "healthliteracy"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 5,
+   "schreibweisen": [
+    "Universitätsklinikum Düsseldorf"
+   ]
+  },
+  {
+   "datei": "otto-von-guericke-universitat-magdeburg.html",
+   "name": "Otto-von-Guericke-Universität Magdeburg",
+   "ort": "Magdeburg",
+   "land": "",
+   "studien": 2,
+   "ror": "https://ror.org/00ggpsq73",
+   "lat": 52.13129,
+   "lon": 11.63189,
+   "rekrutiert": 1,
+   "hubs": [
+    "wissen",
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 2,
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin/Medizinische Fakultät der Otto-von-Guericke-Universität Magdeburg",
+    "Otto-von-Guericke-Universität MagdeburgUniversitätsklinik für Unfallchirurgie"
+   ]
+  },
+  {
+   "datei": "hochschule-fur-angewandte-wissenschaften-kempten-institut-fu.html",
+   "name": "Hochschule für angewandte Wissenschaften Kempten, Institut für Gesundheit und Generationen (IGG)",
+   "ort": "Kempten",
+   "land": "Bayern",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 1,
+   "hubs": [
+    "pflege"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 1,
+   "schreibweisen": [
+    "Hochschule für angewandte Wissenschaften Kempten, Institut für Gesundheit und Generationen (IGG)"
+   ]
+  },
+  {
+   "datei": "lmu-klinikum-munchen.html",
+   "name": "LMU Klinikum München",
+   "ort": "München",
+   "land": "Bayern",
+   "studien": 2,
+   "ror": null,
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "rekrutiert": 2,
+   "hubs": [
+    "healthliteracy"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 8,
+   "schreibweisen": [
+    "LMU Klinikum München"
+   ]
+  },
+  {
+   "datei": "hochschule-osnabruck.html",
+   "name": "Hochschule Osnabrück",
+   "ort": "Osnabrück",
+   "land": "Niedersachsen",
+   "studien": 2,
+   "ror": "https://ror.org/059vymd37",
+   "lat": 52.27264,
+   "lon": 8.0498,
+   "rekrutiert": 1,
+   "hubs": [
+    "onkologie",
+    "pflege"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 1,
+   "schreibweisen": [
+    "Hochschule Osnabrück"
+   ]
+  },
+  {
+   "datei": "universitatsklinikum-ulm-klinik-fur-allgemein-und-viszeralch.html",
+   "name": "Universitätsklinikum Ulm, Klinik für Allgemein- und Viszeralchirurgie, Fachbereich Integrative Medizin",
+   "ort": "Ulm",
+   "land": "",
+   "studien": 2,
+   "ror": null,
+   "lat": 48.39841079711914,
+   "lon": 9.99155044555664,
+   "rekrutiert": 0,
+   "hubs": [
+    "wissen",
+    "onkologie"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 1,
+   "schreibweisen": [
+    "Universitätsklinikum Ulm, Klinik für Allgemein- und Viszeralchirurgie, Fachbereich Integrative Medizin"
+   ]
+  },
+  {
+   "datei": "institut-fur-allgemeinmedizin-universitatsmedizin-essen.html",
+   "name": "Institut für Allgemeinmedizin Universitätsmedizin Essen",
+   "ort": "Essen",
+   "land": "Nordrhein-Westfalen",
+   "studien": 2,
+   "ror": null,
+   "lat": 51.45657,
+   "lon": 7.01228,
+   "rekrutiert": 0,
+   "hubs": [
+    "impfen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [
+    "Allgemein- und Hausarztmedizin"
+   ],
+   "zentren": 3,
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin Universitätsmedizin Essen",
+    "Institut für Allgemeinmedizin, Universitätsmedizin Essen"
+   ]
+  },
+  {
+   "datei": "universitat-bayreuth.html",
+   "name": "Universität Bayreuth",
+   "ort": "Bayreuth",
+   "land": "",
+   "studien": 2,
+   "ror": "https://ror.org/0234wmv40",
+   "lat": 49.94782,
+   "lon": 11.57893,
+   "rekrutiert": 0,
+   "hubs": [
+    "gender",
+    "adipositas"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 0,
+   "schreibweisen": [
+    "Universität Bayreuth"
+   ]
+  },
+  {
+   "datei": "universitatsmedizin-greifswald.html",
+   "name": "Universitätsmedizin Greifswald",
+   "ort": "Greifswald",
+   "land": "",
+   "studien": 2,
+   "ror": "https://ror.org/025vngs54",
+   "lat": 54.08905,
+   "lon": 13.40244,
+   "rekrutiert": 0,
+   "hubs": [
+    "mental",
+    "longevity",
+    "wissen",
+    "ki"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 6,
+   "schreibweisen": [
+    "Universitätsmedizin Greifswald",
+    "Universitätsmedizin Greifswald, Institut für Community Medicine"
+   ]
+  },
+  {
+   "datei": "universitat-heidelberg.html",
+   "name": "Universität Heidelberg",
+   "ort": "Heidelberg",
+   "land": "Baden-Württemberg",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 2,
+   "hubs": [
+    "kardio",
+    "wissen",
+    "mental",
+    "onkologie"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 7,
+   "schreibweisen": [
+    "Universität Heidelberg"
+   ]
+  },
+  {
+   "datei": "ruhr-universitat-bochum.html",
+   "name": "Ruhr-Universität Bochum",
+   "ort": "Bochum",
+   "land": "",
+   "studien": 2,
+   "ror": "https://ror.org/04tsk2644",
+   "lat": 51.48165,
+   "lon": 7.21648,
+   "rekrutiert": 1,
+   "hubs": [
+    "mental",
+    "ki",
+    "longevity"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 10,
+   "schreibweisen": [
+    "Ruhr-Universität Bochum",
+    "Ruhr-Universität Bochum St. Josef-Hospital Klinik für Neurologie"
+   ]
+  },
+  {
+   "datei": "justus-liebig-universitat-gie-en.html",
+   "name": "Justus-Liebig-Universität Gießen",
+   "ort": "Gießen",
+   "land": "Hessen",
+   "studien": 2,
+   "ror": "https://ror.org/033eqas34",
+   "lat": 50.58727,
+   "lon": 8.67554,
+   "rekrutiert": 2,
+   "hubs": [
+    "wissen",
+    "ncd",
+    "diabetes",
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 2,
+   "schreibweisen": [
+    "Justus-Liebig-Universität Gießen, Fachbereich Medizin",
+    "Klinik für Psychosomatik und Psychotherapie, Universitätsklinikum Gießen und Marburg, Justus-Liebig-Universität Gießen"
+   ]
+  },
+  {
+   "datei": "viszeralmedizinisches-zentrum-evangelisches-diakoniekrankenh.html",
+   "name": "Viszeralmedizinisches Zentrum, Evangelisches Diakoniekrankenhaus Freiburg",
+   "ort": "Freiburg",
+   "land": "",
+   "studien": 2,
+   "ror": null,
+   "lat": null,
+   "lon": null,
+   "rekrutiert": 0,
+   "hubs": [
+    "onkologie"
+   ],
+   "traegerart": "Kommunaler oder kirchlicher Träger",
+   "faecher": [],
+   "zentren": 9,
+   "schreibweisen": [
+    "Viszeralmedizinisches Zentrum, Evangelisches Diakoniekrankenhaus Freiburg"
+   ]
+  },
+  {
+   "datei": "philipps-universitat-marburg.html",
+   "name": "Philipps-Universität Marburg",
+   "ort": "Marburg",
+   "land": "",
+   "studien": 2,
+   "ror": "https://ror.org/01rdrb571",
+   "lat": 50.80904,
+   "lon": 8.77069,
+   "rekrutiert": 0,
+   "hubs": [
+    "wissen",
+    "pflege",
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 2,
+   "schreibweisen": [
+    "Philipps Universität Marburg - Klinik für Neurologie",
+    "Universitätsklinikum Marburg, Philipps Universität Marburg"
+   ]
+  },
+  {
+   "datei": "ruprecht-karls-universitat-heidelberg.html",
+   "name": "Ruprecht-Karls-Universität Heidelberg",
+   "ort": "Heidelberg",
+   "land": "Baden-Württemberg",
+   "studien": 2,
+   "ror": "https://ror.org/038t36y30",
+   "lat": 49.40768,
+   "lon": 8.69079,
+   "rekrutiert": 1,
+   "hubs": [
+    "onkologie",
+    "wissen"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 9,
+   "schreibweisen": [
+    "Ruprecht-Karls-Universität Heidelberg",
+    "Ruprecht-Karls-Universität Heidelberg Medizinische Fakultät vertreten durch das Universitätsklinikum Heidelberg und dessen Kaufmännische Direktorin Katrin Erk"
+   ]
+  }
+ ]
+}

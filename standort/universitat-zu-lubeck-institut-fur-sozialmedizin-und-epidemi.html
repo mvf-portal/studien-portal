@@ -1,0 +1,940 @@
+<meta charset="utf-8">
+<title>Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie · Standortprofil Versorgungsforschung</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+<style>
+:root{
+  --paper:#EDF2FA; --card:#FFFFFF; --card-2:#F7FAFD;
+  --ink:#111111; --ink-soft:#444A50; --ink-faint:#545C63;
+  --line:#D0D8E4; --line-soft:#E3EAF3;
+  --brand:#0051A1; --brand-deep:#003B77; --brand-tint:#E1EAF6;
+  --action:#BE9E53; --action-deep:#A5873F; --on-action:#2A2207;
+  --accent:#8A6E28; --gut:#1F7A5A; --gut-tint:#DDF0E8;
+  --warn:#9A3B21; --warn-tint:#F7E4DE;
+  --sans:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+  --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+  --line:#22314A; --line-soft:#1A2639;
+  --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+  --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+  --accent:#D9BE82; --gut:#6FC6A1; --gut-tint:#122B23;
+  --warn:#E8927A; --warn-tint:#2E1811; color-scheme:dark; }}
+:root[data-theme="dark"]{
+  --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+  --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+  --line:#22314A; --line-soft:#1A2639;
+  --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+  --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+  --accent:#D9BE82; --gut:#6FC6A1; --gut-tint:#122B23;
+  --warn:#E8927A; --warn-tint:#2E1811; color-scheme:dark; }
+*{box-sizing:border-box}
+body{background:var(--paper); color:var(--ink); font-family:var(--sans);
+  font-size:15px; line-height:1.55; margin:0}
+/* 1.240 px Seitenbreite, Fliesstext 760 px (Mariann, n-Vorlage-breite):
+   laengere Zeilen liest man schlecht, das Auge verliert den Zeilenanfang. */
+.wrap{max-width:1240px; margin:0 auto;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance; margin:0; font-weight:900}
+h1{font-size:clamp(26px,4vw,38px); line-height:1.14; letter-spacing:-.015em}
+h2{font-size:clamp(19px,2.4vw,24px); margin-bottom:.4em}
+h3{font-size:16px; font-weight:700}
+a{color:var(--brand)}
+.eyebrow{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-faint); font-weight:700}
+header.band{background:var(--card); border-bottom:1px solid var(--line)}
+header.band .wrap{padding-block:28px 0}
+/* Reiter wie in den Hubs: linksbuendig, aktiver fett und dunkel mit 3 px
+   blauer Linie (Mariann, Canvas 2, n-Main-0). Auf jeder Seite gleich. */
+.reiter{display:flex; flex-wrap:wrap; gap:4px 22px; margin-top:20px}
+.reiter a, .reiter span{display:inline-block; padding:9px 2px 10px;
+  font-size:14.5px; text-decoration:none; color:var(--ink-soft);
+  border-bottom:3px solid transparent}
+.reiter a:hover{color:var(--brand); border-bottom-color:var(--line)}
+.reiter [aria-current]{color:var(--ink); font-weight:700;
+  border-bottom-color:var(--brand)}
+/* Art der Einrichtung: wer die Forschung traegt, bestimmt Auftrag,
+   Finanzierung und Unabhaengigkeit. Steht deshalb ganz oben in der Spalte. */
+.tart{margin:8px 0 0; font-size:15px; font-weight:700; color:var(--brand-deep)}
+.chip.fach{border-color:var(--accent); color:var(--accent);
+  background:transparent}
+.ort{color:var(--ink-soft); margin-top:8px; font-size:16px}
+.raster{display:grid; gap:18px; grid-template-columns:minmax(0,2fr) minmax(260px,1fr);
+  margin-block:22px}
+@media (max-width:760px){ .raster{grid-template-columns:1fr} }
+.box{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; min-width:0; margin-bottom:14px}
+.kz{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.kz div{background:var(--card-2); border:1px solid var(--line-soft);
+  border-radius:8px; padding:10px 12px}
+.kz .n{font-size:26px; font-weight:900; line-height:1; font-variant-numeric:tabular-nums}
+.kz .t{font-size:11.5px; color:var(--ink-soft); margin-top:5px}
+.kz .n.g{color:var(--gut)} .kz .n.w{color:var(--warn)}
+ul.studien{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+ul.studien li{border-top:1px solid var(--line-soft); padding-top:10px}
+ul.studien li:first-child{border-top:0; padding-top:0}
+.st{font-size:11px; font-weight:700; padding:2px 8px; border-radius:20px;
+  border:1px solid currentColor; white-space:nowrap}
+.st.rekrutiert{background:var(--gut-tint); color:var(--gut)}
+.st.geplant{background:var(--brand-tint); color:var(--brand-deep)}
+.st.abgeschlossen{background:var(--line-soft); color:var(--ink-soft); border-color:transparent}
+.st.sonst{background:var(--warn-tint); color:var(--warn)}
+.meta{font-size:12.5px; color:var(--ink-faint); margin-top:4px}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
+.chip{font-size:11.5px; padding:3px 10px; border-radius:6px; text-decoration:none;
+  border:1px solid var(--line); background:var(--card-2); color:var(--ink-soft)}
+a.chip.hub{border-color:var(--brand); color:var(--brand); background:var(--brand-tint)}
+a.chip.inno{border-color:var(--action-deep); color:var(--accent)}
+.selbst{border-left:3px solid var(--action)}
+.selbst h2{color:var(--accent)}
+details{margin-top:10px}
+summary{cursor:pointer; font-weight:700; color:var(--brand); padding:6px 0}
+label{display:block; font-size:13px; color:var(--ink-soft); margin-top:12px}
+label b{display:block; color:var(--ink); font-weight:700; font-size:13.5px;
+  margin-bottom:4px}
+input[type=text], input[type=email], textarea, select{width:100%; font:inherit;
+  font-size:13.5px; padding:8px 10px; border:1px solid var(--line);
+  border-radius:7px; background:var(--card-2); color:var(--ink)}
+textarea{min-height:76px; resize:vertical}
+fieldset{border:1px solid var(--line); border-radius:9px; padding:4px 14px 14px;
+  margin:20px 0 0; background:var(--card-2)}
+legend{font-size:12px; font-weight:700; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--brand); padding:0 6px}
+fieldset .hinweis{margin-top:6px}
+.selbst:target, .selbst.hebe{box-shadow:0 0 0 2px var(--action)}
+.ja-nein{display:flex; gap:14px; margin-top:6px; flex-wrap:wrap}
+.ja-nein label{display:inline-flex; align-items:center; gap:6px; margin:0;
+  font-size:13.5px; color:var(--ink)}
+button{font:inherit; font-size:14px; font-weight:700; padding:9px 18px;
+  border-radius:7px; border:1px solid var(--action-deep); background:var(--action);
+  color:var(--on-action); cursor:pointer; margin-top:14px}
+button:hover{background:var(--action-deep)}
+.hinweis{font-size:12px; color:var(--ink-faint); margin-top:8px}
+.stand{font-size:13px; margin-top:10px; min-height:1.4em}
+.stand.ok{color:var(--gut); font-weight:700}
+.stand.fehl{color:var(--warn); font-weight:700}
+footer{border-top:1px solid var(--line); margin-top:26px}
+footer .wrap{padding-block:20px 32px; font-size:12.5px; color:var(--ink-faint)}
+</style>
+
+<!-- NETZLEISTE-START ======================================================
+     Die Leiste ueber ALLEN Seiten der Reihe: 15 Hubs plus Uebersicht.
+     Entwurf nach Mariann Stegmaier, „Feedback Knowledge-Hubs: Startseite &
+     Menue" (V1, 07.10.2026), Seiten 7 und 8.
+
+     EINE Quelle fuer alle 16 Seiten. Diese Datei wird nicht ausgeliefert:
+     netzleiste_einsetzen.py schreibt sie zwischen die Marker in
+     vorlage/index.html (liegt deshalb neben vorlage/, nicht darin), und vorschaltseite.py liest sie fuer die Uebersicht.
+     Wer hier etwas aendert, baut danach beides neu.
+
+     Die Hubliste ist die sechste Pflegestelle je neuem Hub (neben REIHE,
+     ZUSATZ/REIHENFOLGE, PORTALE in den drei Skripten von knowledge-hubs).
+
+     Welcher Hub „hier" ist, sagt data-hier. Verglichen wird mit data-domain
+     an den Eintraegen, nicht mit der Adresse im Browser - so stimmt die
+     Markierung auch in der Testumgebung unter *.localhost. -->
+<!-- DARSTELLUNG-KOPF: liest die Wahl (Cookie mvf-theme) vor dem ersten Zeichnen. -->
+<script>(function(){var m=document.cookie.match(/(?:^|;\s*)mvf-theme=(light|dark)/);if(m)document.documentElement.setAttribute('data-theme',m[1]);})();</script>
+<style>
+  .netz{ --nz-grund:#14202E; --nz-text:#D3DCE8; --nz-leise:#9FB0C4; --nz-gold:#BE9E53;
+         --nz-petrol:#0E6E71; --nz-blau:var(--brand,#0051A1);
+         --nz-karte:var(--card,#FFFFFF); --nz-ink:var(--ink,#111); --nz-soft:var(--ink-soft,#444A50);
+         --nz-linie:var(--line,#D0D8E4); --nz-tint:var(--brand-tint,#E1EAF6);
+         position:sticky; top:0; z-index:60; background:var(--nz-grund); color:var(--nz-text);
+         font-size:13px; line-height:1.3; transition:transform .22s ease; }
+  /* Schwarze und weisse Leiste verschwinden beim Herunterscrollen gemeinsam
+     und kommen beim Hochscrollen gemeinsam wieder (Rueckmeldung Mariann
+     Stegmaier, 09.10.2026: vorher kam nur die weisse zurueck). */
+  .netz.weg{ transform:translateY(-100%); }
+  @media (prefers-reduced-motion:reduce){ .netz{ transition:none; } }
+  /* Breite: einheitlich, auch auf Seiten, deren eigenes .wrap schmaler ist
+     (Newsletter, Ausschreibungsradar, Ueber den Hub: 820 px). */
+  .netz .wrap, .ortsleiste .wrap{ max-width:1180px; margin-left:auto; margin-right:auto;
+         padding-left:22px; padding-right:22px; box-sizing:border-box; }
+  @media (max-width:560px){ .netz .wrap, .ortsleiste .wrap{ padding-left:16px; padding-right:16px; } }
+  :root[data-theme="dark"] .netz{ --nz-petrol:#4FC2C4; }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .netz{ --nz-petrol:#4FC2C4; } }
+  .netz *{ box-sizing:border-box; }
+  /* Breite und Seitenrand kommen von .wrap der jeweiligen Seite - Hubs und
+     Uebersicht setzen den Rand verschieden, die Leiste soll buendig mit dem
+     Inhalt darunter stehen. */
+  .netz-innen{ display:flex; align-items:center; gap:4px; min-height:44px; }
+  .netz a, .netz button{ font:inherit; color:inherit; }
+  .netz a:focus-visible, .netz button:focus-visible{ outline:2px solid var(--nz-gold); outline-offset:2px; border-radius:4px; }
+  .netz-marke{ display:flex; align-items:center; gap:9px; text-decoration:none; padding:8px 14px 8px 0;
+               margin-right:6px; border-right:1px solid #2E3D52; font-weight:700; letter-spacing:.09em; font-size:12.5px; color:#FFF; white-space:nowrap; }
+  .netz-marke img{ width:20px; height:20px; display:block; }
+  .netz-marke b{ color:var(--nz-gold); font-weight:700; }
+  .netz-knopf, .netz-link{ background:none; border:0; cursor:pointer; padding:13px 11px; text-decoration:none;
+               white-space:nowrap; font-weight:700; color:var(--nz-text); }
+  .netz-knopf:hover, .netz-link:hover{ color:#FFF; }
+  .netz-knopf[aria-expanded="true"]{ background:var(--nz-karte); color:var(--nz-ink); border-radius:6px 6px 0 0; }
+  .netz-knopf .pfeil{ display:inline-block; margin-left:5px; font-size:10px; transition:transform .15s; }
+  .netz-knopf[aria-expanded="true"] .pfeil{ transform:rotate(180deg); }
+  .netz-rechts{ margin-left:auto; display:flex; align-items:center; gap:14px; }
+  .netz-sprache{ display:flex; border:1px solid #3A4A60; border-radius:5px; overflow:hidden; font-size:11.5px; font-weight:700; }
+  .netz-sprache a, .netz-sprache span{ padding:3px 8px; text-decoration:none; }
+  .netz-sprache [aria-current]{ background:var(--nz-blau); color:#FFF; }
+  :root[data-theme="dark"] .netz-sprache [aria-current]{ background:#2C5C93; }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .netz-sprache [aria-current]{ background:#2C5C93; } }
+  .netz-mvf{ color:var(--nz-leise); text-decoration:none; white-space:nowrap; font-size:12px; }
+  .netz-mvf b{ color:var(--nz-text); }
+  .netz-mvf:hover b{ color:#FFF; text-decoration:underline; }
+
+  /* Mega-Menue: eine Ebene, drei Gruppen. Oeffnet per Klick, nie per Hover. */
+  .netz-mega{ position:absolute; left:0; right:0; top:100%; }
+  .netz-mega[hidden]{ display:none; }
+  .netz-mega-karte{ background:var(--nz-karte); color:var(--nz-ink);
+               border:1px solid var(--nz-linie); border-radius:0 0 12px 12px;
+               box-shadow:0 22px 50px -18px rgba(10,20,40,.45); padding:22px 26px 0; }
+  .netz-spalten{ display:grid; grid-template-columns:1.25fr 1fr 1.15fr; gap:30px; }
+  .netz-gruppe h3{ margin:0 0 9px; font-size:11px; letter-spacing:.11em; text-transform:uppercase; color:var(--nz-soft); font-weight:700; }
+  .netz-gruppe ul{ list-style:none; margin:0; padding:0; }
+  .netz-gruppe li a{ display:flex; align-items:center; gap:9px; padding:5px 8px; margin:0 -8px; border-radius:6px;
+               text-decoration:none; color:var(--nz-ink); font-size:14px; line-height:1.3; }
+  .netz-gruppe li a::before{ content:""; flex:0 0 7px; height:7px; border-radius:50%; background:var(--nz-blau); opacity:.55; }
+  .netz-gruppe.krank li a::before{ background:var(--nz-petrol); }
+  .netz-gruppe li a:hover{ background:var(--nz-tint); }
+  .netz-gruppe li a[aria-current]{ background:var(--nz-tint); color:var(--nz-blau); font-weight:700; }
+  .netz-gruppe li a[aria-current]::before{ opacity:1; }
+  .netz-gruppe.krank li a[aria-current]{ color:var(--nz-petrol); }
+  .netz-angebote li a{ align-items:flex-start; padding:7px 8px; }
+  .netz-angebote li a::before{ display:none; }
+  .netz-angebote svg{ flex:0 0 22px; width:22px; height:22px; color:#8A6E28; margin-top:1px; }
+  :root[data-theme="dark"] .netz-angebote svg{ color:var(--nz-gold); }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .netz-angebote svg{ color:var(--nz-gold); } }
+  .netz-angebote b{ display:block; font-size:14px; }
+  .netz-angebote small{ display:block; font-size:12.5px; color:var(--nz-soft); margin-top:2px; }
+  .netz-fuss{ display:flex; justify-content:space-between; gap:16px; margin-top:16px; padding:13px 0 15px;
+               border-top:1px solid var(--nz-linie); font-size:13.5px; font-weight:700; }
+  .netz-fuss a{ color:var(--nz-blau); text-decoration:none; }
+  .netz-fuss a:hover{ text-decoration:underline; }
+
+  /* Die weisse Leiste des Hubs (bzw. die Sprunglinks der Uebersicht).
+     Klebt oben, verschwindet beim Herunterscrollen und kommt beim
+     Hochscrollen wieder. */
+  .ortsleiste{ position:sticky; top:var(--netz-h,44px); z-index:50; background:var(--card,#fff);
+               border-bottom:1px solid var(--line,#D0D8E4); transition:transform .22s ease; }
+  .ortsleiste.weg{ transform:translateY(calc(-102% - var(--netz-h,44px))); }
+  @media (prefers-reduced-motion:reduce){ .ortsleiste{ transition:none; } }
+  .ortsleiste-innen{ display:flex; align-items:center; gap:6px; min-height:58px; }
+  .ort-name{ display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--ink,#111); margin-right:18px; min-width:0; }
+  .ort-name img{ width:34px; height:34px; flex:0 0 34px; display:block; }
+  .ort-name small{ display:block; font-size:10.5px; letter-spacing:.12em; font-weight:700; color:var(--ink-soft,#444A50); }
+  .ort-name b{ display:block; font-size:14.5px; color:var(--brand,#0051A1); line-height:1.2; }
+  .ort-links{ display:flex; gap:2px; }
+  .ort-links a{ padding:18px 11px 17px; font-size:13.5px; font-weight:700; color:var(--ink-soft,#444A50);
+               text-decoration:none; border-bottom:2px solid transparent; white-space:nowrap; }
+  .ort-links a:hover, .ort-links a[aria-current]{ color:var(--brand,#0051A1); border-bottom-color:var(--brand,#0051A1); }
+  .ort-nl{ margin-left:auto; background:var(--action,#BE9E53); color:var(--on-action,#2A2207); font-weight:700;
+               font-size:13.5px; padding:9px 16px; border-radius:7px; text-decoration:none; white-space:nowrap; }
+  .ort-nl:hover{ background:var(--action-deep,#A5873F); }
+  .ort-menue{ display:none; margin-left:8px; align-items:center; gap:7px; background:none; cursor:pointer;
+               border:1px solid var(--line,#D0D8E4); border-radius:7px; padding:8px 12px;
+               font:inherit; font-size:13.5px; font-weight:700; color:var(--ink,#111); }
+  .ort-menue svg{ width:18px; height:18px; }
+  .netz a:focus-visible, .ortsleiste a:focus-visible, .ort-menue:focus-visible{ outline:2px solid var(--brand,#0051A1); outline-offset:2px; }
+
+  /* Smartphone-Menue: alles untereinander, nichts weiter aufzuklappen. */
+  .netz-handy{ --nz-petrol:#0E6E71; --nz-blau:var(--brand,#0051A1); --nz-ink:var(--ink,#111); --nz-soft:var(--ink-soft,#444A50);
+               --nz-tint:var(--brand-tint,#E1EAF6); --nz-gold:#BE9E53; }
+  :root[data-theme="dark"] .netz-handy{ --nz-petrol:#4FC2C4; }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .netz-handy{ --nz-petrol:#4FC2C4; } }
+  /* Grund aus der Seitenfarbe: Mit festem Weiss stand im Dunkelmodus helle
+     Schrift auf weissem Grund (Rueckmeldung 09.10.2026). */
+  .netz-handy{ position:fixed; inset:0; z-index:90; background:var(--card,#fff); color:var(--ink,#111);
+               overflow-y:auto; padding:0 0 30px; }
+  .netz-handy[hidden]{ display:none; }
+  .netz-handy-kopf{ position:sticky; top:0; display:flex; justify-content:space-between; align-items:center;
+               padding:12px 18px; background:var(--card,#fff); border-bottom:1px solid var(--line,#D0D8E4); font-weight:700; }
+  .netz-handy-kopf button{ font:inherit; font-size:14px; font-weight:700; background:none; border:1px solid var(--line,#D0D8E4);
+               border-radius:7px; padding:7px 12px; cursor:pointer; color:inherit; }
+  .netz-handy section{ padding:14px 18px 6px; border-bottom:1px solid var(--line-soft,#E3EAF3); }
+  .netz-handy h3{ margin:0 0 6px; font-size:11px; letter-spacing:.11em; text-transform:uppercase; color:var(--ink-soft,#444A50); }
+  .netz-handy .netz-gruppe h3{ margin-top:10px; font-size:10.5px; }
+  .netz-handy ul{ list-style:none; margin:0; padding:0; }
+  .netz-handy li a, .netz-handy .handy-zeile{ display:flex; justify-content:space-between; align-items:center;
+               padding:10px 0; min-height:44px; text-decoration:none; color:var(--ink,#111); font-size:15px; }
+  /* Die Hubliste ist aus dem Mega-Menue geklont; dort stehen Punkt und Name
+     linksbuendig nebeneinander, nicht auf Abstand wie die Zeilen oben. */
+  .netz-handy .netz-gruppe li a{ margin:0; padding:9px 6px; justify-content:flex-start; gap:10px; min-height:42px; }
+  .netz-handy .netz-angebote li a{ align-items:flex-start; }
+  .netz-handy .netz-gruppe li a[aria-current]::after{ content:"✓"; margin-left:auto; color:var(--brand,#0051A1); }
+  .netz-handy .netz-sprache span[aria-current]{ background:var(--brand,#0051A1); color:#FFF; }
+  .netz-handy .netz-sprache a{ color:var(--ink,#111); }
+  .netz-handy .handy-nl{ display:block; text-align:center; margin:16px 18px; background:var(--action,#BE9E53);
+               color:var(--on-action,#2A2207); font-weight:700; padding:13px; border-radius:8px; text-decoration:none; }
+  .netz-handy .handy-unten{ display:flex; flex-wrap:wrap; gap:14px 22px; align-items:center; padding:16px 18px; font-size:13.5px; }
+  .netz-handy .handy-unten a{ color:var(--ink-soft,#444A50); }
+  .netz-handy .netz-sprache{ border-color:var(--line,#D0D8E4); }
+
+  /* Rechtsseiten: keine Sprunglinks, die Leiste traegt nur den Menueknopf
+     fuer schmale Bildschirme (startseite_neu.sprungleiste, links=False). */
+  .ortsleiste.nur-handy{ display:none; }
+  @media (max-width:980px){ .netz-mvf .lang{ display:none; } }
+  @media (max-width:860px){
+    .netz-rechts, .netz-link{ display:none; }
+    .netz-spalten{ grid-template-columns:1fr 1fr; }
+    .netz-angebote{ grid-column:1 / -1; }
+    .ort-links, .ort-nl{ display:none; }
+    .ort-menue{ display:inline-flex; margin-left:auto; }
+    .ortsleiste.nur-handy{ display:block; }
+    .ortsleiste-innen{ min-height:56px; }
+  }
+  @media (max-width:560px){
+    .netz-mega-karte{ border-radius:0 0 10px 10px; padding:16px 16px 0; max-height:calc(100vh - 60px); overflow-y:auto; }
+    .netz-spalten{ grid-template-columns:1fr; gap:14px; }
+    .netz-marke{ border-right:0; padding-right:4px; letter-spacing:.06em; }
+    .ort-name b{ font-size:13.5px; }
+  }
+  /* Aktionsleiste: befristet, auf allen Seiten der Reihe (seit 09.10.2026,
+     vorher nur auf der Uebersicht). Schliessen gilt fuer diesen Aufruf -
+     bewusst nichts im Speicher des Browsers (keine Tracking-Cookies versprochen). */
+  .netz-aktion{ background:#F6EEDB; color:#111; border-bottom:1px solid #E3D3A8; font-size:13.5px; line-height:1.35; }
+  :root[data-theme="dark"] .netz-aktion{ background:#2A2414; color:#E9EEF6; border-bottom-color:#4A3E1E; }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .netz-aktion{ background:#2A2414; color:#E9EEF6; border-bottom-color:#4A3E1E; } }
+  .netz-aktion .wrap{ display:flex; align-items:center; gap:14px; min-height:38px; max-width:1180px; margin:0 auto; padding:0 22px; box-sizing:border-box; }
+  .netz-aktion p{ margin:0; flex:1; max-width:none; }
+  .netz-aktion a{ color:inherit; font-weight:700; text-decoration:none; white-space:nowrap; }
+  .netz-aktion a:hover{ text-decoration:underline; }
+  .netz-aktion button{ background:none; border:0; font:inherit; font-size:18px; line-height:1; padding:6px 8px; cursor:pointer; color:inherit; border-radius:5px; }
+  @media (max-width:560px){ .netz-aktion .wrap{ padding:0 16px; font-size:13px; } }
+  @media print{ .netz, .ortsleiste, .netz-handy, .netz-aktion{ display:none !important; } }
+</style>
+
+<!-- AKTION-START (befristet bis 11.11.2026; netzleiste_einsetzen.py laesst
+     sie nach Ablauf weg, das Skript unten raeumt sie im Browser weg) -->
+<div class="netz-aktion" id="netzAktion" data-ende="2026-11-11T23:59:59+01:00">
+  <div class="wrap">
+    <p><b>Bis 11.11.:</b> 1 von 10 Tickets für den 15. MVF-Fachkongress am 27. November in Berlin gewinnen</p>
+    <a href="https://knowledge-hubs.m-vf.de/gewinnspiel/">Teilnehmen →</a>
+    <button type="button" aria-label="Hinweis schließen">×</button>
+  </div>
+</div>
+<!-- AKTION-ENDE -->
+<nav class="netz" aria-label="Alle Knowledge-Hubs" data-hier="knowledge-hubs.m-vf.de">
+  <div class="netz-innen wrap">
+    <a class="netz-marke" href="https://knowledge-hubs.m-vf.de/" title="Zur Übersicht aller Knowledge-Hubs">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiByb2xlPSJpbWciCiAgICAgYXJpYS1sYWJlbD0iS25vd2xlZGdlLUh1YiB2b24gTW9uaXRvciBWZXJzb3JndW5nc2ZvcnNjaHVuZyI+CiAgPCEtLSBEYXMgWmVpY2hlbiBkZXIgUmVpaGU6IGRpZSBnb2xkZW5lIExlaXN0ZSB6aXRpZXJ0IGRlbiAibW9uaXRvciItQmFsa2VuCiAgICAgICBkZXMgTVZGLUxvZ29zLCBkaWUgdmllciBLYWNoZWxuIHN0ZWhlbiBmdWVyIGRpZSBIdWJzLiBCZXd1c3N0IG51ciB2aWVyCiAgICAgICBzdGF0dCB6d29lbGYgLSBiZWkgMTYgUGl4ZWxuIGluIGRlciBUYWJsZWlzdGUgemVyZmFlbGx0IGplZGVzIGZlaW5lcmUKICAgICAgIFJhc3RlciB6dSBHcmF1LgoKICAgICAgIEluIEFMTEVOIHp3b2VsZiBQb3J0YWxlbiBkYXNzZWxiZSBaZWljaGVuLCBhdWNoIGluIGRlciBGYXJiZTogV2VyIGRyZWkKICAgICAgIEh1YnMgb2ZmZW4gaGF0LCBzb2xsIGVpbmUgUmVpaGUgc2VoZW4gdW5kIG5pY2h0IGRyZWkgTWFya2VuLiBEZXIKICAgICAgIFVudGVyc2NoaWVkIGJsZWlidCBkZXIgVm9yc2NoYWx0c2VpdGUgdm9yYmVoYWx0ZW4gLSBkb3J0IHNpbmQgZGllCiAgICAgICBLYWNoZWxuIGdvbGQgc3RhdHQgd2Vpc3MsIHdlaWwgZG9ydCBhbGxlIEh1YnMgenVzYW1tZW5zdGVoZW4uIC0tPgogIDxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iMTEzIiBmaWxsPSIjMDA1MUExIi8+CiAgPHJlY3QgeD0iNjYuNiIgeT0iODEuOSIgd2lkdGg9Ijc2LjgiIGhlaWdodD0iMzQ4LjIiIHJ4PSIxNy45IiBmaWxsPSIjQkU5RTUzIi8+CiAgPGcgZmlsbD0iI0ZGRkZGRiI+CiAgICA8cmVjdCB4PSIxODQuMyIgeT0iMTI1LjUiIHdpZHRoPSIxMTIuNiIgaGVpZ2h0PSIxMTIuNiIgcng9IjI0LjgiLz4KICAgIDxyZWN0IHg9IjMzMi43IiB5PSIxMjUuNSIgd2lkdGg9IjExMi42IiBoZWlnaHQ9IjExMi42IiByeD0iMjQuOCIvPgogICAgPHJlY3QgeD0iMTg0LjMiIHk9IjI3My45IiB3aWR0aD0iMTEyLjYiIGhlaWdodD0iMTEyLjYiIHJ4PSIyNC44Ii8+CiAgICA8cmVjdCB4PSIzMzIuNyIgeT0iMjczLjkiIHdpZHRoPSIxMTIuNiIgaGVpZ2h0PSIxMTIuNiIgcng9IjI0LjgiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="" width="20" height="20">
+      <span>KNOWLEDGE<b>-HUBS</b></span>
+    </a>
+    <button class="netz-knopf" type="button" id="netzKnopf" aria-expanded="false" aria-controls="netzMega">Alle Angebote<span class="pfeil" aria-hidden="true">▼</span></button>
+    <a class="netz-link" href="https://knowledge-hubs.m-vf.de/ueber-die-hubs.html">Über die Hubs</a>
+    <!-- DARSTELLUNG-START ====================================================
+         Schalter „Darstellung" (hell / dunkel / wie mein Geraet), links neben
+         DE/EN. Entwurf Mariann Stegmaier, Canvas 2 (28.10.2026); gebaut von der
+         Innofonds-Sitzung (innovationsfonds/darstellung.html), seit 30.10.2026
+         hier in der gemeinsamen Leiste und damit auf allen Seiten der Reihe.
+
+         Vertrag: Cookie „mvf-theme" = light | dark, bei „Wie mein Geraet"
+         geloescht (Max-Age=0); Domain=.m-vf.de, Path=/, ein Jahr, SameSite=Lax,
+         Secure nur unter https. Kein localStorage - der gaelte nur je Subdomain.
+         Wirkung ueber <html data-theme>. Der Datenschutztext dazu steht in
+         recht_neu.py, Abschnitt 2, #darstellung - wer hier etwas am Cookie
+         aendert, aendert ihn dort mit.
+
+         Englisch: startseite_neu.NETZ_EN uebersetzt die Texte fuer /en/. -->
+    <style>
+      .dsw{ position:relative; margin-left:auto; display:flex; align-items:center; }
+      .dsw ~ .netz-rechts{ margin-left:14px; }  /* ~ statt +: dazwischen steht das <script> */
+      .dsw-knopf{ width:34px; height:27px; border:1px solid #3A4A60; border-radius:6px; background:transparent;
+                  display:flex; align-items:center; justify-content:center; cursor:pointer; padding:0; }
+      .dsw-knopf:hover, .dsw-knopf[aria-expanded="true"]{ background:#22324A; }
+      .dsw-knopf svg{ width:16px; height:16px; display:block; }
+      .dsw .mond{ display:none; }
+      :root[data-theme="dark"] .dsw .sonne{ display:none; }
+      :root[data-theme="dark"] .dsw .mond{ display:block; }
+      @media (prefers-color-scheme:dark){
+        :root:not([data-theme="light"]) .dsw .sonne{ display:none; }
+        :root:not([data-theme="light"]) .dsw .mond{ display:block; }
+      }
+      .dsw-menue{ position:absolute; top:36px; right:0; z-index:95; width:230px; background:#FFF; color:#14202E;
+                  border:1px solid #D8DFE9; border-radius:10px; box-shadow:0 14px 32px rgba(20,32,46,.28);
+                  padding:6px; display:flex; flex-direction:column; font-size:14px; font-weight:500; letter-spacing:0; }
+      .dsw-menue[hidden]{ display:none; }
+      .dsw-titel{ font-size:11px; font-weight:700; letter-spacing:.12em; color:#5A6577; padding:6px 10px 4px; }
+      .dsw-menue button{ display:flex; align-items:center; gap:10px; padding:8px 10px; border:0; border-radius:6px;
+                  background:transparent; color:#14202E; font:inherit; text-align:left; cursor:pointer; }
+      .dsw-menue button:hover{ background:#EEF1F5; }
+      .dsw-menue button[aria-checked="true"]{ background:#E3ECF7; }
+      .dsw-menue button span{ flex:1 1 auto; }
+      .dsw-menue button i{ font-style:normal; color:#00529F; font-weight:700; visibility:hidden; }
+      .dsw-menue button[aria-checked="true"] i{ visibility:visible; }
+      .dsw-menue svg{ width:16px; height:16px; flex:none; }
+      .dsw-fuss{ font-size:12px; line-height:1.4; color:#5A6577; padding:6px 10px 4px; border-top:1px solid #EEF1F5; margin-top:4px; }
+      @media print{ .dsw{ display:none !important; } }
+    </style>
+    <div class="dsw">
+      <button class="dsw-knopf" type="button" id="dswKnopf" aria-haspopup="menu" aria-expanded="false" aria-controls="dswMenue"
+              title="Darstellung" aria-label="Darstellung: hell, dunkel oder wie Ihr Gerät">
+        <svg class="sonne" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="#F2B84B" stroke-width="2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="#F2B84B" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="mond" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="#C9D6F2" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="dsw-menue" id="dswMenue" role="menu" aria-label="Darstellung" hidden>
+        <span class="dsw-titel">DARSTELLUNG</span>
+        <button type="button" role="menuitemradio" data-wahl="hell" aria-checked="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="#B7791F" stroke-width="2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="#B7791F" stroke-width="2" stroke-linecap="round"/></svg><span>Hell</span><i>✓</i></button>
+        <button type="button" role="menuitemradio" data-wahl="dunkel" aria-checked="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="#3A4658" stroke-width="2" stroke-linejoin="round"/></svg><span>Dunkel</span><i>✓</i></button>
+        <button type="button" role="menuitemradio" data-wahl="geraet" aria-checked="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="#3A4658" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="#3A4658" stroke-width="1.8" stroke-linecap="round"/></svg><span>Wie mein Gerät</span><i>✓</i></button>
+        <span class="dsw-fuss">Voreinstellung: wie Ihr Gerät. Die Wahl gilt für alle Angebote.</span>
+      </div>
+    </div>
+    <script>
+    (function () {
+      var knopf = document.getElementById("dswKnopf"), menue = document.getElementById("dswMenue");
+      if (!knopf || !menue) return;
+      function lesen() {
+        var m = document.cookie.match(/(?:^|;\s*)mvf-theme=(light|dark)/);
+        return m ? (m[1] === "light" ? "hell" : "dunkel") : "geraet";
+      }
+      function schreiben(w) {
+        var d = /(^|\.)m-vf\.de$/.test(location.hostname) ? "; Domain=.m-vf.de" : "";
+        var sicher = location.protocol === "https:" ? "; Secure" : "";
+        document.cookie = "mvf-theme=" + (w === "geraet" ? "; Max-Age=0" : (w === "hell" ? "light" : "dark") + "; Max-Age=31536000")
+          + "; Path=/; SameSite=Lax" + d + sicher;
+      }
+      function anwenden(w) {
+        var h = document.documentElement;
+        if (w === "hell") h.setAttribute("data-theme", "light");
+        else if (w === "dunkel") h.setAttribute("data-theme", "dark");
+        else h.removeAttribute("data-theme");
+        menue.querySelectorAll("[data-wahl]").forEach(function (b) {
+          b.setAttribute("aria-checked", b.getAttribute("data-wahl") === w ? "true" : "false");
+        });
+      }
+      function zu() { menue.hidden = true; knopf.setAttribute("aria-expanded", "false"); }
+      anwenden(lesen());
+      knopf.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var auf = menue.hidden;
+        menue.hidden = !auf;
+        knopf.setAttribute("aria-expanded", auf ? "true" : "false");
+        if (auf) { var b = menue.querySelector('[aria-checked="true"]'); if (b) b.focus(); }
+      });
+      menue.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-wahl]");
+        if (!b) return;
+        var w = b.getAttribute("data-wahl");
+        schreiben(w); anwenden(w); zu(); knopf.focus();
+      });
+      document.addEventListener("click", function (e) { if (!menue.hidden && !e.target.closest(".dsw")) zu(); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !menue.hidden) { zu(); knopf.focus(); } });
+    })();
+    </script>
+    <!-- DARSTELLUNG-ENDE -->
+    <div class="netz-rechts">
+      <div class="netz-sprache" role="group" aria-label="Sprache">
+        <span aria-current="true" lang="de" title="Deutsch" aria-label="Deutsch">DE</span>
+        <a href="https://knowledge-hubs.m-vf.de/en/" lang="en" hreflang="en" aria-label="English" title="English overview of all hubs">EN</a>
+      </div>
+      <a class="netz-mvf" href="https://www.monitor-versorgungsforschung.de/?utm_source=vf-landkarte&amp;utm_medium=referral&amp;utm_campaign=netzleiste" target="_blank" rel="noopener"><span class="lang">ein Angebot von </span><b>Monitor Versorgungsforschung</b> ↗</a>
+    </div>
+  </div>
+
+  <div class="netz-mega" id="netzMega" hidden>
+    <div class="wrap"><div class="netz-mega-karte">
+      <div class="netz-spalten">
+        <div class="netz-gruppe">
+          <h3>Versorgungsthemen · 11</h3>
+          <ul>
+            <li><a data-domain="wissen.m-vf.de" href="https://wissen.m-vf.de/">Versorgungsforschung</a></li>
+            <li><a data-domain="ki.m-vf.de" href="https://ki.m-vf.de/">Digitalisierung, KI &amp; Gesundheit</a></li>
+            <li><a data-domain="gender.m-vf.de" href="https://gender.m-vf.de/">Geschlechtersensible Medizin</a></li>
+            <li><a data-domain="longevity.m-vf.de" href="https://longevity.m-vf.de/">Gesundes Altern &amp; Longevity</a></li>
+            <li><a data-domain="healthliteracy.m-vf.de" href="https://healthliteracy.m-vf.de/">Gesundheitskompetenz</a></li>
+            <li><a data-domain="klima.m-vf.de" href="https://klima.m-vf.de/">Hitze, Klima &amp; Gesundheit</a></li>
+            <li><a data-domain="impfen.m-vf.de" href="https://impfen.m-vf.de/">Impfen &amp; Prävention</a></li>
+            <li><a data-domain="ncd.m-vf.de" href="https://ncd.m-vf.de/">NCD/Chronische Krankheiten</a></li>
+            <li><a data-domain="safety.m-vf.de" href="https://safety.m-vf.de/">Patientensicherheit</a></li>
+            <li><a data-domain="pflege.m-vf.de" href="https://pflege.m-vf.de/">Pflege &amp; Langzeitversorgung</a></li>
+            <li><a data-domain="mental.m-vf.de" href="https://mental.m-vf.de/">Psychische Gesundheit</a></li>
+          </ul>
+        </div>
+        <div class="netz-gruppe krank">
+          <h3>Krankheitsgebiete · 4</h3>
+          <ul>
+            <li><a data-domain="adipositas.m-vf.de" href="https://adipositas.m-vf.de/">Adipositas</a></li>
+            <li><a data-domain="diabetes.m-vf.de" href="https://diabetes.m-vf.de/">Diabetes</a></li>
+            <li><a data-domain="kardio.m-vf.de" href="https://kardio.m-vf.de/">Kardiologie</a></li>
+            <li><a data-domain="onkologie.m-vf.de" href="https://onkologie.m-vf.de/">Onkologie</a></li>
+          </ul>
+        </div>
+        <div class="netz-gruppe netz-angebote">
+          <h3>Weitere Angebote</h3>
+          <ul>
+            <li><a href="https://innofonds.m-vf.de/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/></svg>
+              <span><b>Innovationsfonds-Radar</b><small>Projekte und Beschlüsse des GBA-Innovationsfonds</small></span></a></li>
+            <li><a href="https://wissen.m-vf.de/ausschreibungen.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><path d="M12 12l6-6"/></svg>
+              <span><b>Ausschreibungsradar</b><small>Offene Förderausschreibungen, zweimal pro Woche aktualisiert</small></span></a></li>
+            <li><a href="https://knowledge-hubs.m-vf.de/curatiohub.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M9 7.5V5.5a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 5.5v2"/><path d="M3 13h18"/></svg>
+              <span><b>CuratioHub</b><small>Jobs in Versorgungsforschung, Public Health und Medizin</small></span></a></li>
+            <li><a href="https://wissen.m-vf.de/zulassungen.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.6" y="8.6" width="18.8" height="6.8" rx="3.4"/><path d="M12 8.6v6.8"/></svg>
+              <span><b>Zulassungs-/DiGA-Radar</b><small>Zugelassen, empfohlen, beantragt: EMA, FDA und die DiGA des BfArM</small></span></a></li>
+            <li><a href="https://einreichung.m-vf.de/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 17v-6M9.5 13.5 12 11l2.5 2.5"/></svg>
+              <span><b>Manuskript einreichen</b><small>Für Monitor Versorgungsforschung, mit doppelt verdecktem Peer Review</small></span></a></li>
+            <li><a href="https://www.monitor-versorgungsforschung.de/education/mvf-jahreskongresse/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6" r="2.5"/><path d="M8 13a4 4 0 0 1 8 0"/><path d="M4 15h16l-1.5 6h-13z"/></svg>
+              <span><b>MVF-Fachkongress</b><small>Einmal im Jahr in Berlin</small></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="netz-fuss">
+        <a href="newsletter.html" data-netz-nl>Newsletter dieses Hubs ›</a>
+        <a href="https://knowledge-hubs.m-vf.de/#themen">Zur Übersicht aller Hubs →</a>
+      </div>
+    </div></div>
+  </div>
+</nav>
+<script>
+// Laeuft erst, wenn das Dokument steht: Die weisse Leiste und das
+// Smartphone-Menue folgen erst NACH diesem Baustein.
+(function (los) {
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', los);
+  else los();
+})(function () {
+  var netz = document.querySelector('.netz');
+  if (!netz) return;
+  var hier = netz.getAttribute('data-hier');
+  var knopf = document.getElementById('netzKnopf');
+  var mega = document.getElementById('netzMega');
+
+  // „Hier bin ich": der eigene Hub im Menue.
+  Array.prototype.forEach.call(netz.querySelectorAll('a[data-domain]'), function (a) {
+    if (a.getAttribute('data-domain') === hier) a.setAttribute('aria-current', 'page');
+  });
+
+  var aktion = document.getElementById('netzAktion');
+  if (aktion) {
+    if (new Date() > new Date(aktion.getAttribute('data-ende'))) aktion.remove();
+    else aktion.querySelector('button').addEventListener('click', function () { aktion.remove(); });
+  }
+
+  // Die eigene Seite in der weissen Leiste markieren (Newsletter, Themen &
+  // Quellen ...). Sprunglinks innerhalb der Seite bleiben unmarkiert.
+  Array.prototype.forEach.call(document.querySelectorAll('.ort-links a, .ort-nl'), function (a) {
+    if (!a.hash && a.pathname === location.pathname && a.host === location.host
+        && !/\/$/.test(a.pathname)) a.setAttribute('aria-current', 'page');
+  });
+
+  function zu(fokus) {
+    mega.hidden = true; knopf.setAttribute('aria-expanded', 'false');
+    if (fokus) knopf.focus();
+  }
+  knopf.addEventListener('click', function () {
+    var auf = knopf.getAttribute('aria-expanded') === 'true';
+    if (auf) { zu(false); return; }
+    mega.hidden = false; knopf.setAttribute('aria-expanded', 'true');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !mega.hidden) zu(true);
+  });
+  document.addEventListener('click', function (e) {
+    if (!mega.hidden && !netz.contains(e.target)) zu(false);
+  });
+  // Ein Link im Menue schliesst es - sonst bliebe es bei einem Sprung
+  // innerhalb derselben Seite (Zur Uebersicht -> #themen) offen stehen.
+  mega.addEventListener('click', function (e) { if (e.target.closest('a')) zu(false); });
+
+  // Beide Leisten: weg beim Herunterscrollen, zurueck beim Hochscrollen.
+  // --netz-h haelt die weisse Leiste unter der schwarzen; --ort-h sagt der
+  // Sprungleiste der Hubs, wie viel Kopf gerade oben klebt.
+  var ort = document.querySelector('.ortsleiste');
+  var wurzel = document.documentElement;
+  var zuletzt = window.scrollY;
+  var setze = function (weg) {
+    var nh = netz.offsetHeight, oh = ort ? ort.offsetHeight : 0;
+    wurzel.style.setProperty('--netz-h', nh + 'px');
+    wurzel.style.setProperty('--ort-h', weg ? '0px' : (nh + oh) + 'px');
+    netz.classList.toggle('weg', weg);
+    if (ort) ort.classList.toggle('weg', weg);
+    if (weg && !mega.hidden) zu(false);
+  };
+  setze(false);
+  window.addEventListener('resize', function () { setze(netz.classList.contains('weg')); });
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    if (Math.abs(y - zuletzt) < 6) return;
+    setze(y > zuletzt && y > 240);
+    zuletzt = y;
+  }, { passive: true });
+
+  // Smartphone: „Menue" oeffnet eine Seite mit allem. Die Hubliste wird aus
+  // dem Mega-Menue uebernommen, damit sie nur an einer Stelle steht.
+  var menueKnopf = document.getElementById('ortMenue');
+  var handy = document.getElementById('netzHandy');
+  if (menueKnopf && handy) {
+    var platz = handy.querySelector('[data-netz-hubs]');
+    if (platz) Array.prototype.forEach.call(mega.querySelectorAll('.netz-gruppe'), function (g) {
+      platz.appendChild(g.cloneNode(true));
+    });
+    var schliessen = handy.querySelector('[data-netz-zu]');
+    var oeffne = function () { handy.hidden = false; menueKnopf.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; schliessen.focus(); };
+    var schliesse = function () { handy.hidden = true; menueKnopf.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; menueKnopf.focus(); };
+    menueKnopf.addEventListener('click', oeffne);
+    schliessen.addEventListener('click', schliesse);
+    handy.addEventListener('click', function (e) { if (e.target.closest('a')) schliesse(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !handy.hidden) schliesse(); });
+  }
+});
+</script>
+<!-- NETZLEISTE-ENDE ====================================================== -->
+
+
+<header class="band">
+  <div class="wrap">
+    <div class="eyebrow">Knowledge-Hubs · Versorgungsstudien-Landkarte</div>
+    <h1>Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie</h1>
+    <p class="ort">Lübeck</p>
+    <nav class="reiter" aria-label="Bereiche">
+      <a href="../landkarte.html">Studien</a>
+      <a href="../landkarte.html#standorte">Standorte</a>
+      <span aria-current="page">Dieses Standortprofil</span>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap raster">
+  <main>
+    <div class="box">
+      <h2>Steckbrief</h2>
+      <div class="kz"><div><div class="n ">13</div><div class="t">Studien mit Versorgungsbezug</div></div><div><div class="n g">4</div><div class="t">suchen Teilnehmende</div></div><div><div class="n ">0</div><div class="t">geplant</div></div><div><div class="n ">5</div><div class="t">abgeschlossen</div></div><div><div class="n w">2</div><div class="t">abgeschlossen ohne Publikationsangabe</div></div></div>
+      <p class="hinweis">Gezählt werden registrierte Studien mit Versorgungsbezug,
+        bei denen diese Einrichtung als beteiligtes Zentrum oder als Sponsor
+        genannt ist. Quelle: DRKS, Abruf 2026-10-30.</p>
+    </div>
+
+    <div class="box">
+      <h2>Studien an diesem Standort</h2>
+      <ul class="studien"><li><span class="st rekrutiert">rekrutiert</span> <b>Begleitende Unterstützung der Rückkehr in Arbeit nach Post-COVID-Rehabilitation: eine clusterrandomisierte Machbarkeitsstudie</b> <i>RTW-PCR</i><div class="meta">Post-COVID-19-Zustand, nicht näher bezeichnet · 154 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00036568" target="_blank" rel="noopener">DRKS00036568</a></div><div class="chips"><a class="chip hub" href="https://impfen.m-vf.de" target="_blank" rel="noopener">Impfen &amp; Prävention</a><a class="chip hub" href="https://wissen.m-vf.de" target="_blank" rel="noopener">Versorgungsforschung</a><a class="chip hub" href="https://mental.m-vf.de" target="_blank" rel="noopener">Psychische Gesundheit</a></div></li><li><span class="st rekrutiert">rekrutiert</span> <b>Einfluss psychischer Komorbidität auf Erwerbsminderungsrente und Mortalität nach kardiologischer Anschlussheilbehandlung bei ischämischer Herzkrankheit: eine Routinedatenanalyse</b> <i>PsyKo-IHK</i><div class="meta">Ischämische Herzkrankheiten · 8000 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00040741" target="_blank" rel="noopener">DRKS00040741</a></div><div class="chips"><a class="chip hub" href="https://kardio.m-vf.de" target="_blank" rel="noopener">Kardiologie</a><a class="chip hub" href="https://wissen.m-vf.de" target="_blank" rel="noopener">Versorgungsforschung</a><a class="chip hub" href="https://mental.m-vf.de" target="_blank" rel="noopener">Psychische Gesundheit</a></div></li><li><span class="st rekrutiert">rekrutiert</span> <b>Querschnittliche Erhebung der Versorgungssituation von Menschen mit peripherer Fazialisparese</b><div class="meta">Fazialisparese · 96 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00040617" target="_blank" rel="noopener">DRKS00040617</a></div></li><li><span class="st rekrutiert">rekrutiert</span> <b>Versorgungsbedarfe nach Post-COVID-Rehabilitation mit interdisziplinärer fachärztlicher Diagnostik: eine Mixed-Methods-Studie</b> <i>CoNa</i><div class="meta">Post-COVID-19-Zustand · 170 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00038955" target="_blank" rel="noopener">DRKS00038955</a></div><div class="chips"><a class="chip hub" href="https://impfen.m-vf.de" target="_blank" rel="noopener">Impfen &amp; Prävention</a></div></li><li><span class="st abgeschlossen">abgeschlossen</span> <b>Determinanten für leitlinieninkongruente Versorgung von älteren Krebspatienten/-innen in der GKV</b> <i>DELIVER</i><div class="meta">Bösartige Neubildung des Kolons · 750 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00015495" target="_blank" rel="noopener">DRKS00015495</a></div><div class="chips"><a class="chip hub" href="https://onkologie.m-vf.de" target="_blank" rel="noopener">Onkologie</a><a class="chip hub" href="https://mental.m-vf.de" target="_blank" rel="noopener">Psychische Gesundheit</a></div></li><li><span class="st sonst">in Nachbeobachtung</span> <b>Die Videosprechstunde als präoperative Maßnahme in der stationären Versorgung:
+Eine qualitative Untersuchung der Perspektiven von Expertinnen und Experten des
+deutschen Gesundheitswesens</b><div class="meta">Es werden eigenständig Kategorien gebildet, anhand derer eine qualitative Inhaltsanalyse erfolgt. · 8 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00036628" target="_blank" rel="noopener">DRKS00036628</a></div><div class="chips"><a class="chip hub" href="https://ki.m-vf.de" target="_blank" rel="noopener">Digitalisierung, KI &amp; Gesundheit</a><a class="chip hub" href="https://mental.m-vf.de" target="_blank" rel="noopener">Psychische Gesundheit</a></div></li><li><span class="st abgeschlossen">abgeschlossen</span> <b>Die gesundheitliche Lage und die Versorgungssituation von Kindern und Jugendlichen in Schleswig-Holstein (geKuJu 2)</b> <i>geKuJu 2</i><div class="meta">Bevölkerungsbezogene Versorgungsforschungsstudie · 15000 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00035949" target="_blank" rel="noopener">DRKS00035949</a></div><div class="chips"><a class="chip hub" href="https://healthliteracy.m-vf.de" target="_blank" rel="noopener">Gesundheitskompetenz</a><a class="chip hub" href="https://wissen.m-vf.de" target="_blank" rel="noopener">Versorgungsforschung</a></div></li><li><span class="st abgeschlossen">abgeschlossen</span> <b>Individualisiertes Trainingsprogramm für Parkinson-Patienten (ParkProTrain)</b> <i>ParkProTrain</i><div class="meta">Primäres Parkinson-Syndrom mit schwerster Beeinträchtigung: Ohne Wirkungsfluktuation · 200 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00014952" target="_blank" rel="noopener">DRKS00014952</a></div></li><li><span class="st abgeschlossen">abgeschlossen</span> <b>Lübecker Bevölkerungsbefragung zu Long COVID und der Versorgungssituation von ehemals mit SARS-CoV-2-Infizierten</b> <i>LüCoV</i><div class="meta">Post-COVID-19-Zustand, nicht näher bezeichnet · 700 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00033370" target="_blank" rel="noopener">DRKS00033370</a></div><div class="chips"><a class="chip hub" href="https://impfen.m-vf.de" target="_blank" rel="noopener">Impfen &amp; Prävention</a></div></li><li><span class="st sonst">in Nachbeobachtung</span> <b>Open Door Policy in der stationären psychiatrischen Versorgung: quantitative Studie zu Einflussfaktoren für Türöffnungszeiten</b> <i>ODP-akut</i><div class="meta">Open doors policy in der stationären Akutpsychiatrie · 1400 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00038027" target="_blank" rel="noopener">DRKS00038027</a></div><div class="chips"><a class="chip hub" href="https://wissen.m-vf.de" target="_blank" rel="noopener">Versorgungsforschung</a><a class="chip hub" href="https://mental.m-vf.de" target="_blank" rel="noopener">Psychische Gesundheit</a></div></li><li><span class="st sonst">in Nachbeobachtung</span> <b>Outcome bei Lungenkarzinomen in Abhängigkeit der Primärtherapie - eine Versorgungsforschungsstudie auf Basis von Krebsregisterdaten nach § 65c SGB V</b> <i>VONKO-009 (Akronym für Versorgungsforschung in der Onkologie-009)</i><div class="meta">Bösartige Neubildung der Bronchien und der Lunge · 60000 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00028698" target="_blank" rel="noopener">DRKS00028698</a></div><div class="chips"><a class="chip hub" href="https://onkologie.m-vf.de" target="_blank" rel="noopener">Onkologie</a><a class="chip hub" href="https://wissen.m-vf.de" target="_blank" rel="noopener">Versorgungsforschung</a><a class="chip hub" href="https://mental.m-vf.de" target="_blank" rel="noopener">Psychische Gesundheit</a></div></li><li><span class="st abgeschlossen">abgeschlossen</span> <b>Prozessevaluation des Pilotprojekts „Einsatz des Risikoindex Erwerbsminderungsrente (RI-EMR) für proaktive Zugangsstrategien“</b> <i>PP-RI-EMR</i><div class="meta">Punktwert auf dem Risikoindex Erwerbsminderungsrente von mindestens 60 Punkten · 1500 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00034737" target="_blank" rel="noopener">DRKS00034737</a></div></li><li><span class="st sonst">in Nachbeobachtung</span> <b>Therapie des Lungenkarzinoms - eine Versorgungsforschungsstudie auf Basis von Krebsregisterdaten nach § 65c SGB V</b> <i>VONKO-001 (Akronym für Versorgungsforschung in der Onkologie-001)</i><div class="meta">Bösartige Neubildung der Bronchien und der Lunge · 70000 Teilnehmende · <a href="https://drks.de/search/de/trial/DRKS00025080" target="_blank" rel="noopener">DRKS00025080</a></div><div class="chips"><a class="chip hub" href="https://onkologie.m-vf.de" target="_blank" rel="noopener">Onkologie</a><a class="chip hub" href="https://wissen.m-vf.de" target="_blank" rel="noopener">Versorgungsforschung</a></div></li></ul>
+    </div>
+  </main>
+
+  <aside>
+    <div class="box"><h3>Art der Einrichtung</h3><p class="tart">Hochschule und Universitätsmedizin</p><p class="hinweis">Hochschuleinrichtung; Forschung ist ihr satzungsgemäßer Zweck. Abgeleitet aus dem Namen, nicht aus einem Feld des Registers.</p></div><div class="box"><h3>Wissenschaftsrichtung</h3><div class="chips"><span class="chip fach">Sozialmedizin und Epidemiologie · 9</span></div><p class='hinweis'>Aus dem Namen der Einrichtung abgelesen.</p></div>
+    <div class="box"><h3>Die Einrichtung im Netz</h3><ul style='margin:8px 0 0;padding-left:18px;font-size:13px'><li><a href="https://www.uni-luebeck.de/" target="_blank" rel="noopener">Netzauftritt der Einrichtung ↗</a></li><li><a href="https://ror.org/00t3r8h32" target="_blank" rel="noopener">00t3r8h32 ↗</a><br><span style="color:var(--ink-faint)">Kennung im Research Organization Registry</span></li></ul><p style='margin:14px 0 4px;font-weight:700;font-size:13px'>In weiteren Verzeichnissen (7)</p><ul style='margin:0;padding-left:18px;font-size:13px'><li><a href="https://www.wikidata.org/wiki/Q317087" target="_blank" rel="noopener">Wikidata ↗</a> <span style="color:var(--ink-faint)">Q317087</span><br><span style="color:var(--ink-faint)">Datenobjekt</span></li><li><a href="https://de.wikipedia.org/wiki/Universit%C3%A4t_zu_L%C3%BCbeck" target="_blank" rel="noopener">Wikipedia ↗</a><br><span style="color:var(--ink-faint)">Artikel</span></li><li><a href="https://d-nb.info/gnd/10044490-8" target="_blank" rel="noopener">Gemeinsame Normdatei (DNB) ↗</a> <span style="color:var(--ink-faint)">10044490-8</span><br><span style="color:var(--ink-faint)">Kennung</span></li><li><a href="https://isni.org/isni/0000000100572672" target="_blank" rel="noopener">ISNI ↗</a> <span style="color:var(--ink-faint)">0000000100572672</span><br><span style="color:var(--ink-faint)">Kennung</span></li><li><a href="https://viaf.org/viaf/149533737/" target="_blank" rel="noopener">VIAF ↗</a> <span style="color:var(--ink-faint)">149533737</span><br><span style="color:var(--ink-faint)">Kennung</span></li><li><a href="https://www.grid.ac/institutes/grid.4562.5" target="_blank" rel="noopener">GRID ↗</a> <span style="color:var(--ink-faint)">grid.4562.5</span><br><span style="color:var(--ink-faint)">Kennung</span></li><li><a href="https://api.crossref.org/funders/501100004168" target="_blank" rel="noopener">Crossref-Foerderkennung ↗</a> <span style="color:var(--ink-faint)">501100004168</span><br><span style="color:var(--ink-faint)">Kennung</span></li></ul><p class='hinweis'>Zusammengetragen über die ROR-Kennung aus ROR, OpenAlex, Wikidata und re3data (alle offen), geprüft gegen Name und Ort. Nicht enthalten: OpenDOAR (Zugang nur mit Schlüssel), GERiT (keine Schnittstelle), FIS-Landkarte (kein Export).</p><p class='hinweis' style='margin-top:12px'>Fehlt hier Ihr Publikationsverzeichnis, oder steht etwas falsch? Diese Verzeichnisse pflegt Ihre Einrichtung nicht selbst — richtigstellen können das nur Sie: <a href='#eintragen' class='zum-formular' data-feld='repositorien'>selbst eintragen</a>.</p></div>
+    <div class="box"><h3>Aus den Ergebnispublikationen</h3><p style='font-size:13px;color:var(--ink-soft);margin:8px 0 0'>3 der 13 Studien nennen Veröffentlichungen; dazu sind 6 Arbeiten auffindbar.</p><p style='margin:14px 0 4px;font-weight:700;font-size:13px'>Fachgebiete der Arbeiten</p><div class='chips'><span class="chip">General Health Professions · 2</span><span class="chip">Neurology · 2</span><span class="chip">Cancer Research</span><span class="chip">Public Health, Environmental and Occupational Health</span></div><p class='hinweis'>Systematik von OpenAlex, unverändert englisch, weil die Quelle englisch ist. Wir übersetzen und fassen nicht zusammen.</p><p style='margin:14px 0 4px;font-weight:700;font-size:13px'>Mitwirkende Einrichtungen (6)</p><div class='chips'><a class="chip" href="https://ror.org/01tvm6f46" target="_blank" rel="noopener">University Hospital Schleswig-Holstein ↗</a><a class="chip" href="https://ror.org/006thab72" target="_blank" rel="noopener">MSH Medical School Hamburg – University of Applied Sciences and Medical University ↗</a><a class="chip" href="https://ror.org/04n0rde95" target="_blank" rel="noopener">Segeberger Kliniken ↗</a><a class="chip" href="https://ror.org/03r29tc70" target="_blank" rel="noopener">Lungenklinik Hemer ↗</a><a class="chip" href="https://ror.org/05cvd1d02" target="_blank" rel="noopener">Diamed Medizintechnik (Germany) ↗</a><a class="chip" href="https://ror.org/00r1edq15" target="_blank" rel="noopener">Universität Greifswald ↗</a></div><p class='hinweis'><b>Das sind Mitautoren, nicht Forschungsstandorte.</b> Bei einer Multizenterstudie stehen hier die Partner aller beteiligten Häuser — wer die Studie leitet, sagt diese Liste nicht. Sie zählt auch nicht in die Studienzahl dieses Standorts.</p><p style='margin:16px 0 4px;font-weight:700;font-size:13px'>Wer hier veröffentlicht hat (18) · 4 weitere</p><ul style='margin:6px 0 0;padding-left:18px;font-size:13px'><li><a href="https://orcid.org/0000-0003-0490-1554" target="_blank" rel="noopener">Alexander Katalinic ↗</a><br><span style="color:var(--ink-faint)">4 Arbeiten · davon 1 mal erst- oder letztgenannt</span></li><li><a href="https://orcid.org/0000-0003-3279-416X" target="_blank" rel="noopener">Andreas Heidenreich ↗</a><br><span style="color:var(--ink-faint)">3 Arbeiten · davon 2 mal erst- oder letztgenannt</span></li><li><a href="https://openalex.org/A5108554614" target="_blank" rel="noopener">Ruth Deck ↗</a><br><span style="color:var(--ink-faint)">3 Arbeiten · davon 3 mal erst- oder letztgenannt</span></li><li><a href="https://orcid.org/0000-0001-7678-7071" target="_blank" rel="noopener">Susanne A. Elsner ↗</a><br><span style="color:var(--ink-faint)">3 Arbeiten</span></li><li><a href="https://orcid.org/0000-0001-7926-0611" target="_blank" rel="noopener">Andreas Schräder ↗</a><br><span style="color:var(--ink-faint)">2 Arbeiten</span></li><li><a href="https://orcid.org/0000-0002-8533-2527" target="_blank" rel="noopener">Christina Schües ↗</a><br><span style="color:var(--ink-faint)">2 Arbeiten</span></li><li><a href="https://orcid.org/0000-0001-7642-5556" target="_blank" rel="noopener">Christoph Rehmann‐Sutter ↗</a><br><span style="color:var(--ink-faint)">2 Arbeiten</span></li><li><a href="https://orcid.org/0000-0002-1582-4972" target="_blank" rel="noopener">Frank Wörler ↗</a><br><span style="color:var(--ink-faint)">2 Arbeiten</span></li><li><a href="https://orcid.org/0000-0001-8596-2046" target="_blank" rel="noopener">Joachim Hübner ↗</a><br><span style="color:var(--ink-faint)">2 Arbeiten</span></li><li><a href="https://orcid.org/0000-0002-7014-9105" target="_blank" rel="noopener">Nicole Jochems ↗</a><br><span style="color:var(--ink-faint)">2 Arbeiten</span></li><li><a href="https://orcid.org/0000-0001-5904-0486" target="_blank" rel="noopener">Achim Rody ↗</a><br><span style="color:var(--ink-faint)">1 Arbeit</span></li><li><a href="https://openalex.org/A5010281714" target="_blank" rel="noopener">Bastian Schmeier ↗</a><br><span style="color:var(--ink-faint)">1 Arbeit</span></li><li><a href="https://openalex.org/A5047952393" target="_blank" rel="noopener">Carolin Siegert ↗</a><br><span style="color:var(--ink-faint)">1 Arbeit · davon 1 mal erst- oder letztgenannt</span></li><li><a href="https://orcid.org/0000-0002-9414-347X" target="_blank" rel="noopener">Fabian‐Simon Frielitz ↗</a><br><span style="color:var(--ink-faint)">1 Arbeit</span></li></ul><p class='hinweis'><b>Keine Rangliste.</b> Gezählt sind nur die Arbeiten, die zu den hier gelisteten Studien als Ergebnis angegeben sind — eine einzige publikationsreiche Studie hebt ihr ganzes Team. Wer hier fehlt, hat nicht weniger geforscht, sondern führt keine Studie mit Ergebnis-DOI. Zuordnung über die ROR-Kennung der Einrichtung in der jeweiligen Arbeit; Verweis auf ORCID, sonst OpenAlex.</p></div>
+    <div class="box">
+      <h3>Themen</h3>
+      <div class="chips"><a class="chip hub" href="https://wissen.m-vf.de" target="_blank" rel="noopener">Versorgungsforschung · 6</a><a class="chip hub" href="https://mental.m-vf.de" target="_blank" rel="noopener">Psychische Gesundheit · 6</a><a class="chip hub" href="https://impfen.m-vf.de" target="_blank" rel="noopener">Impfen &amp; Prävention · 3</a><a class="chip hub" href="https://onkologie.m-vf.de" target="_blank" rel="noopener">Onkologie · 3</a><a class="chip hub" href="https://kardio.m-vf.de" target="_blank" rel="noopener">Kardiologie · 1</a><a class="chip hub" href="https://healthliteracy.m-vf.de" target="_blank" rel="noopener">Gesundheitskompetenz · 1</a><a class="chip hub" href="https://ki.m-vf.de" target="_blank" rel="noopener">Digitalisierung, KI &amp; Gesundheit · 1</a></div>
+    </div>
+    <div class="box"><h3>Wo rekrutiert wurde</h3><p class='hinweis'>Praxen, Kliniken und Einrichtungen, die Teilnehmende für die Studien dieses Standorts eingeschlossen haben. Sie forschen nicht selbst und haben deshalb keine eigene Profilseite.</p><ul style='margin:8px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink-soft)'><li>Krebsregister Schleswig-Holstein · 2 Studien</li><li>Klinik und Poliklinik für Hals-, Nasen- und Ohrenheilkunde,  Universitätsklinikum Jena</li><li>Vereinigung Akustikus Neurinom e.V.</li><li>Selbsthilfegruppe Halbwegs schön</li><li>Logokom - Logopädie mit Kompetenz, Pansdorf</li><li>Praxis für Logopädie LogVogel, Berlin</li><li>Praxis für Logopädie, Gütersloh</li><li>Deutsche Rentenversicherung Baden-Württemberg</li><li>Deutsche Rentenversicherung Bayern Süd</li><li>Deutsche Rentenversicherung Braunschweig-Hannover</li><li>Deutsche Rentenversicherung Bund</li><li>Deutsche Rentenversicherung Hessen</li><li>Deutsche Rentenversicherung Mitteldeutschland</li><li>Mühlenbergklinik - Holsteinische Schweiz</li><li>Krebsregister Hessen</li><li>Krebsregister Bayern</li><li>Forschungsdatenzentrum der Rentenversicherung (FDZ-RV)</li><li>Westerwaldklinik Waldbreitbach</li><li>Kliniken Schmieder Gailingen</li><li>cts Klinik Stöckenhöfe</li><li>Reha-Zentrum Seehof</li><li>Kliniken Schmieder Konstanz</li><li>Landeskrebsregister NRW</li><li>Hamburgisches Krebsregister</li><li>Krebsregister Baden-Württemberg</li></ul><p class='hinweis'>und 8 weitere</p></div>
+    <div class="box"><h3>Ethikvoten</h3><ul style="margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--ink-soft)"><li>Ethik-Kommission der Universität zu Lübeck · 9</li><li>Ethik-Kommission der Med. Fakultät der Universität zu Lübeck · 4</li></ul></div>
+    
+    <div class="box"><h3>In der MVF-Serie porträtiert</h3><ul style='margin:8px 0 0;padding-left:18px;font-size:13px'><li><a href="https://www.monitor-versorgungsforschung.de/wp-content/uploads/2023/01/MVF_05-21_Bethge220921.pdf" target="_blank" rel="noopener">Gemeinsames Denken und Forschen für die Rehabilitation</a><br><span style="color:var(--ink-faint)">MVF 05/2021 · Universität zu Lübeck</span></li></ul><p class='hinweis'>Aus der Serie „Versorgungsforschung made in …" · <a href="https://www.monitor-versorgungsforschung.de/cooperations/vf-serie/" target="_blank" rel="noopener">alle Beiträge ↗</a></p></div><div class="box"><h3>Zusammengeführte Schreibweisen</h3><p style='font-size:12.5px;color:var(--ink-faint);margin:8px 0 0'>Im Register erscheint dieser Standort unter 3 Schreibweisen; zusammengeführt über die Trägerliste des Innovationsfonds und über die ROR-Kennung:</p><ul style='margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink-faint)'><li>Institut für Sozialmedizin und Epidemiologie der Universität zu Lübeck</li><li>Universität zu Lübeck</li><li>Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie</li></ul></div>
+    <div class="box">
+      <h3>Angabe korrigieren</h3>
+      <p class="hinweis">Stimmt etwas nicht? Schreiben Sie an
+        <a href="mailto:info@m-vf.de?subject=Standortprofil korrigieren: Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie">info@m-vf.de</a>
+        und nennen Sie den Standort <b>Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie</b>.</p>
+    </div>
+  </aside>
+</div>
+
+<div class="wrap">
+  <div class="box selbst" id="eintragen">
+    <h2>Sie sind hier verantwortlich?</h2>
+    <p>Die Angaben oben stammen aus dem Studienregister. Sie zeigen, was
+      registriert ist — nicht, was Sie tun. Hier tragen Sie selbst ein, was
+      fehlt: Ihr Publikationsverzeichnis, neue Studiengänge, Professuren und
+      Mitarbeitende, offene Stellen, Ihre eigenen Kongresse und Veranstaltungen.
+      Was aus dem Register stammt, bleibt unverändert; Ihre Angaben stehen als
+      Ihre Angaben daneben.</p>
+
+    <details id="eintragen-auf">
+      <summary>Zugang anfordern und Angaben eintragen</summary>
+      <form id="form" novalidate>
+        <label><b>Ihre dienstliche E-Mail-Adresse</b>
+          <input name="email" type="email" required
+                 placeholder="name@einrichtung.de"></label>
+        <p class="hinweis">Wir schicken einen persönlichen Link an diese
+          Adresse. Ist die Domain dem Standort zuzuordnen, geht er sofort
+          heraus; sonst prüfen wir von Hand. Mit dem Link können Sie Ihre
+          Angaben später jederzeit ändern.</p>
+
+        <label><b>Ihr Name und Ihre Funktion</b>
+          <input type="text" name="person"
+                 placeholder="Prof. Dr. … , Leitung des Instituts für …"></label>
+
+        <fieldset>
+          <legend>Die Einrichtung im Netz</legend>
+          <p class="hinweis">Diese Verweise haben wir aus ROR, OpenAlex,
+            Wikidata und re3data zusammengetragen — öffentliche Verzeichnisse,
+            die eine Einrichtung nicht selbst pflegt. Was dort fehlt oder
+            falsch steht, können nur Sie richtigstellen.</p>
+
+          <label><b>Publikationsverzeichnis / Repositorium</b>
+            <textarea name="repositorien"
+              placeholder="Adresse Ihres Repositoriums, eine je Zeile. Auch mehrere: Hochschulschriftenserver, Forschungsinformationssystem, Publikationsliste des Instituts, Forschungsdatenrepositorium."></textarea></label>
+
+          <label><b>Netzauftritt der Einrichtung</b>
+            <input type="text" name="netzadresse"
+                   placeholder="https://…"></label>
+
+          <label><b>Ist die Zuordnung oben richtig?</b></label>
+          <div class="ja-nein">
+            <label><input type="radio" name="zuordnung" value="ja" checked> ja</label>
+            <label><input type="radio" name="zuordnung" value="nein"> nein, falsche Einrichtung</label>
+            <label><input type="radio" name="zuordnung" value="teil"> wir sind nur ein Teil davon</label>
+          </div>
+          <label><input type="text" name="zuordnung_text"
+                 placeholder="Wenn nein: Wie heißt die Einrichtung richtig? Gern mit ROR-Kennung."></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Lehre</legend>
+          <label><b>Studiengänge mit Bezug zur Versorgungsforschung</b>
+            <textarea name="studiengaenge"
+              placeholder="Name, Abschluss, Regelstudienzeit, Beginn, Link. Eine Zeile je Studiengang — auch neu eingerichtete oder gerade akkreditierte."></textarea></label>
+
+          <label><b>Promotions- und Weiterbildungsangebote</b>
+            <textarea name="weiterbildung"
+              placeholder="Graduiertenkolleg, strukturiertes Promotionsprogramm, Zertifikatskurs, Summer School …"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Menschen</legend>
+          <label><b>Neue Professuren</b>
+            <textarea name="professuren"
+              placeholder="Denomination, Name, Antritt, Link zur Seite. Auch Vertretungen und Juniorprofessuren."></textarea></label>
+
+          <label><b>Neue wissenschaftliche Mitarbeitende</b>
+            <textarea name="mitarbeitende"
+              placeholder="Name, Arbeitsgebiet, gern mit ORCID."></textarea></label>
+
+          <label><b>Wer vertritt den Standort nach außen?</b>
+            <input type="text" name="ansprechperson"
+                   placeholder="Name, Funktion, dienstliche Adresse"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Offene Stellen</legend>
+          <label><b>Suchen Sie Personal?</b></label>
+          <div class="ja-nein">
+            <label><input type="radio" name="personal" value="ja"> ja</label>
+            <label><input type="radio" name="personal" value="nein" checked> nein</label>
+          </div>
+          <label><b>Ausschreibungen</b>
+            <textarea name="stellen"
+              placeholder="Eine je Zeile: Bezeichnung, Umfang, Befristung, Bewerbungsfrist, Link zur Ausschreibung."></textarea></label>
+          <p class="hinweis">Ausschreibungen zeigen wir mit Frist und nehmen
+            sie danach von der Seite. Nennen Sie die Frist, sonst können wir
+            das nicht.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Eigene Kongresse und Veranstaltungen</legend>
+          <label><b>Veranstaltungen</b>
+            <textarea name="veranstaltungen"
+              placeholder="Eine je Zeile: Titel, Datum, Ort oder online, Anmeldung bis, Link. Kongresse, Symposien, Kolloquien, Ringvorlesungen, Tage der offenen Tür."></textarea></label>
+
+          <label><b>Regelmäßige Reihen</b>
+            <input type="text" name="reihen"
+                   placeholder="z. B. monatliches Forschungskolloquium, jährliche Fachtagung"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Forschung</legend>
+          <label><b>Aktuelle Veröffentlichungen</b>
+            <textarea name="publikationen"
+              placeholder="Eine je Zeile, gern mit DOI."></textarea></label>
+
+          <label><b>Bücher und Buchbeiträge</b>
+            <textarea name="buecher"
+              placeholder="Titel, Verlag, Jahr; bei Beiträgen auch das Werk."></textarea></label>
+
+          <label><b>Methoden und Datenzugänge</b>
+            <textarea name="methoden"
+              placeholder="Routinedaten, Register, qualitative Verfahren, cluster-randomisierte Studien, FDZ Gesundheit …"></textarea></label>
+
+          <label><b>Studien, die hier fehlen</b>
+            <textarea name="studien_fehlen"
+              placeholder="DRKS-Nummer oder Titel. Auch Studien, die nicht im DRKS stehen."></textarea></label>
+
+          <label><b>Sind Sie für Kooperationen ansprechbar?</b></label>
+          <div class="ja-nein">
+            <label><input type="radio" name="kooperation" value="ja"> ja</label>
+            <label><input type="radio" name="kooperation" value="nein" checked> keine Angabe</label>
+          </div>
+        </fieldset>
+
+        <label><b>Was sonst fehlt oder falsch ist</b>
+          <textarea name="sonstiges"></textarea></label>
+
+        <button type="submit">Absenden</button>
+        <p class="stand" id="stand" aria-live="polite"></p>
+        <p class="hinweis">Mit dem Absenden stimmen Sie zu, dass wir Ihre
+          Angaben zur Pflege dieses Profils verarbeiten. Sie erscheinen als
+          Angaben Ihrer Einrichtung, erkennbar getrennt von den Registerdaten.
+          <a href="https://knowledge-hubs.m-vf.de/datenschutz.html" target="_blank"
+             rel="noopener">Datenschutz</a></p>
+      </form>
+    </details>
+  </div>
+</div>
+
+
+<footer><div class="wrap">
+  Standortprofil aus der Versorgungsstudien-Landkarte von
+  <em>Monitor Versorgungsforschung</em>. Studiendaten: Deutsches Register
+  Klinischer Studien (DRKS), BfArM, abgerufen am 2026-10-30, Einträge unter
+  CC BY 4.0. Keine Gewähr für Richtigkeit und Vollständigkeit; maßgeblich ist
+  der <a href="https://drks.de" target="_blank" rel="noopener">Originaleintrag
+  im DRKS</a>. Personenbezogene Kontaktangaben aus dem Register werden nicht
+  wiedergegeben.
+</div></footer>
+
+<!-- FUSSLEISTE (Quelle) ====================================================
+     Der dunkle Fussbereich fuer alle Seiten der Reihe, die nicht die
+     Hub-Startseite sind: Newsletter, Themen & Quellen, Ausschreibungsradar,
+     CuratioHub, Innovationsfonds-Wissen (seit 09.10.2026, Rueckmeldung
+     Mariann Stegmaier). Vorbild ist der Fuss der Uebersicht und der Hubs.
+
+     Zwei Teile: <style> und der Kopf des Fussbereichs (.nf-kopf). Seiten mit
+     eigenen Rechtstexten im Fuss (CuratioHub, Innofonds) behalten diese; sie
+     bekommen nur die Klasse "nf" und den Kopf obendrauf.
+
+     Platzhalter: data:image/png;base64,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 Pfad zum Negativlogo, https://www.monitor-versorgungsforschung.de/impressum/ und
+     https://www.monitor-versorgungsforschung.de/datenschutz/ Ziele der beiden Links, vf-landkarte.
+
+     Kontakt mit SICHTBARER Adresse: Ein blosser mailto-Link tut nichts, wenn
+     auf dem Rechner kein Mailprogramm eingerichtet ist - so erlebt am
+     09.10.2026. Die Adresse muss man lesen und kopieren koennen. -->
+<style>
+  /* Volle Breite auch dann, wenn der Fuss in einem schmalen Container steht
+     (Innofonds): die Flaeche reicht per Schatten bis an den Rand. */
+  footer.nf{ background:#14202E; color:#C3CFDD; box-shadow:0 0 0 100vmax #14202E; clip-path:inset(0 -100vmax);
+             border-top:0; margin-top:44px; font-size:14px; }
+  footer.nf > .wrap, footer.nf{ padding-top:26px; padding-bottom:30px; }
+  /* Breite wie die Leiste oben, auch wo die Seite selbst schmaler ist (820 px). */
+  footer.nf > .wrap{ max-width:1180px; margin-left:auto; margin-right:auto; padding-left:22px; padding-right:22px; box-sizing:border-box; }
+  footer.nf p, footer.nf .attrib, footer.nf .stand{ color:#C3CFDD; }
+  footer.nf a{ color:#9CC6F4; }
+  footer.nf strong, footer.nf b{ color:#FFFFFF; }
+  footer.nf details{ background:#1B2A3C; border:1px solid #2E3D52; border-radius:6px; margin-top:8px; }
+  footer.nf summary{ color:#E3EAF3; cursor:pointer; padding:10px 13px; font-weight:700; }
+  footer.nf .legal-body{ color:#C3CFDD; padding:6px 14px 12px; font-size:12.5px; line-height:1.55; }
+  footer.nf .legal-body h4{ color:#FFFFFF; }
+  .nf-kopf{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 24px; margin-bottom:6px; }
+  .nf-absender{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; text-decoration:none !important; }
+  .nf-absender span{ font-size:12px; letter-spacing:.06em; color:#9FB0C4; }
+  .nf-absender img{ width:150px; height:auto; display:block; }
+  .nf-absender small{ color:#9FB0C4; font-size:13px; }
+  /* margin/padding/max-width zuruecksetzen: Innofonds stylt jedes <nav> pauschal. */
+  .nf-links{ display:flex; flex-wrap:wrap; gap:8px 20px; font-weight:700; margin:0; padding:0; max-width:none; }
+  footer.nf .nf-links a{ color:#E3EAF3; text-decoration:none; }
+  footer.nf .nf-links a:hover{ text-decoration:underline; }
+  footer.nf .nf-links .nf-mail{ font-weight:400; color:#C3CFDD; }
+  footer.nf .nf-links .nf-mail a{ color:#9CC6F4; font-weight:700; }
+</style>
+<div class="nf-kopf">
+  <a class="nf-absender" href="https://www.monitor-versorgungsforschung.de/?utm_source=vf-landkarte&amp;utm_medium=referral&amp;utm_campaign=fuss" target="_blank" rel="noopener">
+    <span>Ein Angebot von</span>
+    <img src="data:image/png;base64,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" width="1236" height="327" alt="Monitor Versorgungsforschung">
+    <small>· eRelation AG – Content in Health</small>
+  </a>
+  <nav class="nf-links" aria-label="Rechtliches">
+    <a href="https://www.monitor-versorgungsforschung.de/impressum/">Impressum</a>
+    <a href="https://www.monitor-versorgungsforschung.de/datenschutz/">Datenschutz</a>
+    <span class="nf-mail">Kontakt: <a href="mailto:info@m-vf.de">info@m-vf.de</a></span>
+  </nav>
+</div>
+
+
+<script>
+(function(){
+  "use strict";
+  /* Gleiches Muster wie die Innofonds-Pruefseiten: POST an einen Endpunkt auf
+     dem MVF-Server. ENDPUNKT ist noch nicht eingerichtet - solange er leer
+     ist, sagt das Formular das ehrlich, statt eine Einsendung vorzutaeuschen. */
+  var ENDPUNKT = "";
+  var STANDORT = {"kennung": "universitat-zu-lubeck-institut-fur-sozialmedizin-und-epidemi", "name": "Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie", "ror": null, "ort": "Lübeck"};
+  var BETREFF = "Standortprofil ergänzen: " + (STANDORT.name || "");
+  var f = document.getElementById("form"), st = document.getElementById("stand");
+
+  /* Ein Verweis auf #eintragen muss das zugeklappte <details> auch aufmachen
+     und in das gemeinte Feld springen - sonst landet man auf einer Ueber-
+     schrift und sucht selbst weiter. */
+  Array.prototype.forEach.call(
+    document.querySelectorAll("a.zum-formular"), function(a){
+      a.addEventListener("click", function(ev){
+        ev.preventDefault();
+        var auf = document.getElementById("eintragen-auf");
+        if (auf) auf.open = true;
+        var kasten = document.getElementById("eintragen");
+        if (kasten) {
+          kasten.classList.add("hebe");
+          kasten.scrollIntoView({behavior:"smooth", block:"start"});
+          setTimeout(function(){ kasten.classList.remove("hebe"); }, 2200);
+        }
+        var feld = a.getAttribute("data-feld");
+        var ziel = feld && f.querySelector('[name="' + feld + '"]');
+        if (ziel) setTimeout(function(){ ziel.focus(); }, 420);
+      });
+    });
+
+  f.addEventListener("submit", async function(e){
+    e.preventDefault();
+    var d = new FormData(f), o = {standort: STANDORT};
+    d.forEach(function(v, k){ o[k] = v; });
+    if (!o.email || o.email.indexOf("@") < 1) {
+      st.className = "stand fehl";
+      st.textContent = "Bitte eine dienstliche E-Mail-Adresse angeben.";
+      return;
+    }
+    if (!ENDPUNKT) {
+      /* Solange der Endpunkt auf dem MVF-Server fehlt, ist der Weg die
+         E-Mail. Die Seite BITTET um Eintraege - sie darf die Leute dann
+         nicht mit einer Fehlermeldung stehen lassen. */
+      var zeilen = [];
+      Object.keys(o).forEach(function(k){
+        if (k === "email" || k === "standort") { return; }
+        var v = (o[k] == null ? "" : String(o[k])).trim();
+        if (v) { zeilen.push(k + ": " + v); }
+      });
+      var UM = String.fromCharCode(10);
+      var mail = "mailto:info@m-vf.de"
+        + "?subject=" + encodeURIComponent(BETREFF)
+        + "&body=" + encodeURIComponent(
+            "Absender: " + (o.email || "") + UM
+            + "Standort: " + (STANDORT.name || "") + UM + UM
+            + zeilen.join(UM + UM));
+      st.className = "stand";
+      st.innerHTML = "Das Absenden über die Seite ist noch nicht "
+        + "eingerichtet — wir richten den Zugang gerade ein. "
+        + "<a href='" + mail + "'>Ihre Angaben als E-Mail öffnen</a>: "
+        + "Der Text ist bereits ausgefüllt, Sie müssen nur senden.";
+      return;
+    }
+    st.className = "stand"; st.textContent = "wird gesendet …";
+    try {
+      var r = await fetch(ENDPUNKT, {method:"POST",
+        headers:{"Content-Type":"application/json"}, body: JSON.stringify(o)});
+      if (r.ok) {
+        st.className = "stand ok";
+        st.textContent = "Angekommen. Wir schicken den persönlichen Link an "
+          + o.email + ".";
+        f.querySelector("button[type=submit]").disabled = true;
+      } else if (r.status === 429) {
+        st.className = "stand";
+        st.textContent = "Ihre vorige Einsendung ist angekommen. Der Server "
+          + "nimmt je Standort nur eine Einsendung pro Minute an.";
+      } else {
+        st.className = "stand fehl";
+        st.textContent = "Der Server hat abgelehnt (" + r.status + "). Bitte "
+          + "schreiben Sie an info@m-vf.de.";
+      }
+    } catch (err) {
+      st.className = "stand fehl";
+      st.textContent = "Keine Verbindung. Bitte später erneut versuchen oder "
+        + "an info@m-vf.de schreiben.";
+    }
+  });
+})();
+</script>

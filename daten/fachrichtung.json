@@ -1,0 +1,897 @@
+{
+ "hinweis": "Nur was der Name der fuehrenden Einrichtung NENNT. Nichts geschaetzt, nichts aus dem Studientext abgeleitet.",
+ "studien": 709,
+ "mit_fach": 136,
+ "ohne_fach": 573,
+ "je_fach": [
+  [
+   "Allgemein- und Hausarztmedizin",
+   47
+  ],
+  [
+   "Versorgungsforschung (als Fach benannt)",
+   29
+  ],
+  [
+   "Sozialmedizin und Epidemiologie",
+   20
+  ],
+  [
+   "Rehabilitationswissenschaft",
+   17
+  ],
+  [
+   "Medizinische Psychologie und Psychotherapieforschung",
+   10
+  ],
+  [
+   "Geriatrie und Altersforschung",
+   9
+  ],
+  [
+   "Medizinsoziologie",
+   9
+  ],
+  [
+   "Palliativ- und Hospizforschung",
+   8
+  ],
+  [
+   "Gesundheitsoekonomie",
+   8
+  ],
+  [
+   "Pflegewissenschaft",
+   4
+  ],
+  [
+   "Biometrie und Statistik",
+   4
+  ],
+  [
+   "Arbeits- und Umweltmedizin",
+   3
+  ],
+  [
+   "Evidenzbasierte Medizin und Leitlinien",
+   2
+  ],
+  [
+   "Medizinische Informatik und digitale Versorgung",
+   2
+  ]
+ ],
+ "je_einrichtung": {
+  "Institut für Geriatrische Forschung Ulm, Universitätsklinikum Ulm": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Universität zu Köln Klinik und Poliklinik für Psychiatrie und Psychotherapie": [],
+  "Heinrich Heine Universität Düsseldorf Medizinische Fakultät": [],
+  "Universitätsklinikum Freiburg, Institut für Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Klinik für Altersmedizin, Uniklinik RWTH Aachen": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Universität Witten/HerdeckeProfessur für Lebensqualität, Spiritualität und Coping": [],
+  "Universitätsklinikum Schleswig-Holstein (UKSH), Institut für Sozialmedizin und Epidemiologie, Sektion für Forschung und Lehre in der Pflege": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Institut für Sozialmedizin und Epidemiologie der Universität zu Lübeck": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Bristol Myers Squibb": [],
+  "Universitätsklinikum UlmKlinik für Kinder- und Jugendmedizin": [],
+  "Universitätsklinik Dresden": [],
+  "Zentrum für Zahn-, Mund- und Kieferheilkunde Poliklinik für Zahnerhaltung und Parodontologie Universitätsklinikum Köln": [],
+  "AUC – Akademie der Unfallchirurgie GmbH (AUC), München": [],
+  "Klinik und Poliklinik für Anästhesiologie und Intensivtherapie, Universitätsklinikum Leipzig AöR": [],
+  "HS-Döpfer": [],
+  "Robert Koch-Institut, Abteilung für Epidemiologie und Gesundheitsmonitoring": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Charité - Universitätsmedizin Berlin": [],
+  "German Cancer Research Center": [],
+  "Institut für Evidenz in der Medizin (für Cochrane Deutschland Stiftung), Universitätsklinikum Freiburg, Medizinische Fakultät, Albert-Ludwigs-Universität Freiburg": [
+   "Evidenzbasierte Medizin und Leitlinien"
+  ],
+  "Institut für Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universitätsherzzentrum Freiburg Bad Krozingen": [],
+  "Charité – Universitätsmedizin Berlin, Klinik für Kardiologie, Angiologie und Intensivmedizin": [],
+  "Universitätsklinikum Heidelberg": [],
+  "Technische Universität Dresden, Abteilung Neurologie": [],
+  "Neurologische Klinik, Universitätsklinikum Heidelberg": [],
+  "Technische Universität Dortmund, Institut für Sport und Sportwissenschaft, Arbeitsbereich für Leistung und Gesundheit (Sportmedizin)": [],
+  "Neurologische Klinik und Poliklinik, Klinikum der LMU München - Großhadern": [],
+  "Universitätsklinikum Hamburg-Eppendorf\nInstitut und Poliklinik für Medizinische Psychologie": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Universitätsklinik und Poliklinik für Gynäkologie": [],
+  "Techniker Krankenkasse": [],
+  "Projektträger JülichGründungs-, Technologietransfer- und InnovationsförderungInternationales Forschungszentrum Jülich GmbH": [],
+  "Projekt \"Mit uns im Gleichgewicht\", Lehrstuhl für Klinische Psychologie und Psychotherapie, Institut für Psychologie, Friedrich-Alexander-Universität (FAU) Erlangen-Nürnberg": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Bergische Universität Wuppertal": [],
+  "Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "TUM Klinikum Rechts der Isar, Klinik und Poliklinik für psychosomatische Medizin und Psychotherapie, Professur für Spiritual Care und psychosomatische Gesundheit": [],
+  "Universitätsklinikum Düsseldorf Institut für Medizinische Soziologie Weiterbildungsstudiengang Public Health": [
+   "Sozialmedizin und Epidemiologie",
+   "Medizinsoziologie"
+  ],
+  "Charité – Universitätsmedizin Berlin, Medizinische Klinik für Endokrinologie und Stoffwechselmedizin": [],
+  "Universitätsmedizin Greifswald, Abt. Versorgungsepidemiologieund Community Health": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Universitätsklinikum Köln, Institut für Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "TUM, Dermatologie am Biederstein": [],
+  "Universitätsklinikum Hamburg-Eppendorf": [],
+  "Poliklinik für Zahnerhaltungskunde, Universitätsklinikum Heidelberg": [],
+  "GIZ": [],
+  "Kommunalunternehmen Klinikum Fichtelgebirge": [],
+  "WIVA – Wissenschaftliches Institut der Apothekerkammer Westfalen-Lippe für Versorgungsforschung in der Apotheke": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Klinikum der Johann Wolfgang Goethe-Universität Frankfurt am Main": [],
+  "Medizinische Fakultät der TU Dresden": [],
+  "Universitätsklinikum Tübingen, Abt. Sportmedizin": [],
+  "Charité Universitätsmedizin Berlin - Institut für Allgemeinmedizin - AG Health Policy and Systems Research and Innovation": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Charité Campus Charité Mitte": [],
+  "Klinik für Neurochirurgie, Universitätsklinikum Düsseldorf": [],
+  "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig Holstein, Campus Lübeck": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Charité-Universitätsmedizin": [],
+  "Uniklinik RWTH Aachen": [],
+  "Asklepios Kinderklinik Abt. Neurochirurgie": [],
+  "Universität Witten/Herdecke, Institut für Integrative Medizin, Gerhard-Kienle-Lehrstuhl": [],
+  "Klinik für Anaesthesiologie": [],
+  "AWMF-Institut für Medizinisches Wissensmanagement": [
+   "Evidenzbasierte Medizin und Leitlinien"
+  ],
+  "Innere Medizin X:Klinik für Nephrologie": [],
+  "Klinikum der Universität München, Klinik und Poliklinik für Palliativmedizin": [
+   "Palliativ- und Hospizforschung"
+  ],
+  "Klinik für Anästhesiologie und Operative Intensivmedizin, Universitätsklinikum Bonn": [],
+  "Universitätsklinikum des Saarlandes, Klinik für Innere Medizin V – Pneumologie, Allergologie, Beatmungs- und Umweltmedizin": [
+   "Arbeits- und Umweltmedizin"
+  ],
+  "Hochschule für angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management": [],
+  "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig-Holstein, Campus Lübeck": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universitätsklinikum Leipzig AöR": [],
+  "DB Regio Bus": [],
+  "Klinik für Geriatrie, Universitätsklinikum Jena": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Universitätsklinikum Hamburg-Eppendorf Klinik und Poliklinik für Psychiatrie und Psychotherapie Forschungsbereich Neuropsychologie und Psychotherapie": [],
+  "UNIVERSITÄTSKLINIKUM FREIBURG, Versorgungsforschung und Rehabilitationsforschung (SEVERA)": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft"
+  ],
+  "Institut für Sozialmedizin und Gesundheitssystemforschung": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Universitätsklinikum Tübingen": [],
+  "Deutsches Herzzentrum der Charité": [],
+  "Institut für Allgemeinmedizin Goethe Universität Frankfurt am Main": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Klinik für Hämatologie, Onkologie, Hämostaseologie und SZT, Uniklinik RWTH Aachen": [],
+  "Innovationsausschuss beim G-BA": [],
+  "Klinik und Poliklinik für Psychiatrie und Psychotherapie Uniklinik Köln (AöR)": [],
+  "Klinikum rechts der Isar der Technischen Universität München": [],
+  "Institut für Medizinische Virologie, Universitätsklinikum Frankfurt am Main": [],
+  "Universitätsklinikum Essen": [],
+  "Klinikum Wahrendorff GmbH": [],
+  "Notfall- und Akutmedizin Charité Campi CVK, CCM, Charité Universitätsmedizin Berlin": [],
+  "Institut für PflegewissenschaftUniversität Wien - Fakultät für Sozialwissenschaften": [
+   "Pflegewissenschaft"
+  ],
+  "Carl von Ossietzky Universität Oldenburg - Department für Versorgungsforschung, Abteilung Allgemeimedizin": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Universitätsklinikum Freiburg Klinik für Psychiatrie und Psychotherapie": [],
+  "Technische Universität München, Lehrstuhl für Gesundheitsökonomie": [
+   "Gesundheitsoekonomie"
+  ],
+  "Universität Witten/Herdecke, Institut für Integrative Gesundheitsversorgung und Gesundheitsförderung": [],
+  "GFO Kliniken Rhein-Berg": [],
+  "Universitätsklinikum Schleswig-Holstein": [],
+  "Medizinische Universität Graz": [],
+  "Institut für Allgemeinmedizin und Interprofessionelle Versorgung": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Rheinhessen-Fachklinik Alzey": [],
+  "Kleine Riesen Nordhessen gGmbH": [],
+  "Zentralinstitut für die kassenärztliche Versorgung in der Bundesrepublik Deutschland": [],
+  "Deutsche Krebsgesellschaft e. V.": [],
+  "Zentrum Familiärer Brust- und Eierstockkrebs am Institut Familiäre Tumorerkrankungen Uniklinikum Köln": [],
+  "Universität zu Lübeck": [],
+  "Landschaftsverband Rheinland (LVR)": [],
+  "Klinik für Psychiatrie, Psychosomatik und Psychotherapie des Kindes- und Jugendalters Campus Charité Virchow Klinikum": [],
+  "Universitätsklinikum Freiburg Klinik für Neurochirurgie Abteilung Stereotaktische und Funktionelle Neurochirurgie": [],
+  "Klinik für Gefäßchirurgie und Endovaskuläre Chirurgie, Universitätsklinikum Heidelberg": [],
+  "Charité-Universitätsmedizin Berlin": [],
+  "PGXperts GmbH": [],
+  "TUM School of Medicine and Health, Klinikum Rechts der Isar, Klinik für Anästhesiologie und Intensivmedizin": [],
+  "Technische Universität Dresden": [],
+  "Universitäts-Notfallzentrum": [],
+  "Wilhelm-Roux-Förderprogramm der Medizinischen Fakultät der Martin-Luther-Universität Halle-Wittenberg, Prodekanat Forschung": [],
+  "Referat Kultur, Stadtverwaltung Kaiserslautern": [],
+  "LVR-Institut für Forschung und Bildung, Sparte Forschung, c/o LVR-Klinik Köln": [],
+  "Goethe Universität Frankfurt, Universitätsklinikum, Klinik für Anästhesiologie, Intensivmedizin und Schmerztherapie": [],
+  "Deutsches Zentrum für Herzinsuffizienz (DZHI) Universitätsklinikum Würzburg": [],
+  "Institut für Medizinsoziologie, Versorgungsforschung und Rehabilitationswissenschaft": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft",
+   "Medizinsoziologie"
+  ],
+  "Universitätsklinikum Fankfurt": [],
+  "Stiftung Bethel": [],
+  "Klinik für Kinder- und Jugendmedizin (UKU) Sektion Pädiatrische Endokrinologie und Diabetologie": [],
+  "Universität zu Köln": [],
+  "Universitätsklinikum Bonn – Institut für Hausarztmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universitätsmedizin Frankfurt am Main, Klinik für Kinder- und Jugendmedizin": [],
+  "Vivantes Klinikum im Friedrichshain": [],
+  "Universitätsklinikum Carl Gustav Carus": [],
+  "Klinik und Poliklinik für Kinderheilkunde, Neonatologie, Standort Großhadern Ludwig-Maximilians-Universität München": [],
+  "Thoraxklinik": [],
+  "Universitätsklinikum Hamburg-Eppendorf Institut für Gesundheitsökonomie und Versorgungsforschung": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Gesundheitsoekonomie"
+  ],
+  "Charité – Universitätsmedizin Berlin": [],
+  "Universiteit Hasselt - Campus Diepenbeek": [],
+  "Institut für Geriatrische Forschung der Uniklinik Ulm": [
+   "Geriatrie und Altersforschung"
+  ],
+  "NOGGO e.V.": [],
+  "Thoraxklinik Heidelberg gGmbH": [],
+  "Universitätsklinikum HeidelbergKlinik für Allgemeine Innere Medizin und Psychosomatik": [],
+  "Medizinische Psychologie | Neuropsychologie und Gender Studies, Medizinische Fakultät und Uniklinik Köln, Universität zu Köln": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Medizinische Fakultät Mannheim der Universität Heidelberg": [],
+  "AOK Rheinland/Hamburg – Die Gesundheitskasse": [],
+  "Interdisziplinäre Schmerzambulanz, Campus Innenstadt, Klinik für Anaesthesiologie, LMU Klinikum, LMU München": [],
+  "m&i-Fachklinik Herzogenaurach": [],
+  "Medical Magnesium GmbH": [],
+  "Universitätsklinikum Freiburg, Institut für Medizinische Biometrie und Statistik, Sektion Versorgungsforschung und Rehabilitationsforschung (SEVERA)": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft",
+   "Biometrie und Statistik"
+  ],
+  "Klinik für Rehabilitations- und Sportmedizin": [],
+  "Deutsches Zentrum für Luft- und Raumfahrt e. V.": [],
+  "DLR-Projektträger": [],
+  "Herzzentrum - Universitätsklinikum Bonn": [],
+  "Universitätsklinikum Freiburg, Klinik für Anästhesiologie und Intensivmedizin": [],
+  "Zentralinstitut für Seelische Gesundheit": [],
+  "Zentrum für Integrative Psychiatrie gGmbH": [],
+  "Universitätsklinikum Heidelberg, Abteilung Allgemeinmedizin und Versorgungsforschung": [
+   "Allgemein- und Hausarztmedizin",
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "AG Versorgungsforschung | Pflege im Krankenhaus, Medizinische Fakultät der Martin-Luther-Universität Halle-Wittenberg": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Universitätsklinikum Würzburg": [],
+  "LMU Klinikum München – Neurochirurgische Klinik und Poliklinik Klinikum der Universität München": [],
+  "Institut für Medizinische Soziologieund RehabilitationswissenschaftCharité - Universitätsmedizin Berlin": [
+   "Rehabilitationswissenschaft",
+   "Medizinsoziologie"
+  ],
+  "Universitätsklinikum Freiburg": [],
+  "Institut für Klinische Epidemiologie und Biometrie": [
+   "Sozialmedizin und Epidemiologie",
+   "Biometrie und Statistik"
+  ],
+  "Universitätsklinikum Heidelberg; Abteilung für RadioOnkologie und Strahlentherapie": [],
+  "Deutsche Rentenversicherung Berlin-Brandenburg, Abteilung Rehabilitation und Gesundheitsförderung": [],
+  "Gesellschaft für Pädiatrische Gastroenterologie und Ernährung e. V.": [],
+  "Carl von Ossietzky Universität Oldenburg": [],
+  "Klinikum der Johann Wolfgang Goethe-Universität Frankfurt am Main Epilepsiezentrum Frankfurt Rhein-Main": [],
+  "Universitätsklinikum Heidelberg, Neurologische Klinik": [],
+  "Orthopy Health GmbH": [],
+  "Medizinische Klinik m.S. Psychosomatik Charité Berlin": [],
+  "Universitätsmedizin Essen-Ruhrlandklinik": [],
+  "Stiftung Swiss Tumor Institute": [],
+  "Hochschule für angewandte Wissenschaft und Kunst Hildesheim/Holzminden/Göttingen": [],
+  "Vantis GmbH": [],
+  "Klinik für Pädiatrie mit SP Onkologie und Hämatologie, Charité Universitätsmedizin Berlin": [],
+  "Medizinische Fakultät Carl Gustav Carus an der TU Dresden Bereich Allgemeinmedizin/ Medizinische Klinik und Poliklinik III": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "AG Versorgungsforschung / Pflege im Krankenhaus, Department für Innere Medizin, Universitätsmedizin Halle, Medizinische Fakultät, Martin-Luther-Universität Halle-Wittenberg": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Abteilung für Allgemeinmedizin, Präventive und Rehabilitative Medizin Philipps-Universität Marburg": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universität zu Lübeck Institut für Sozialmedizin": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Unversitätsklinikum Augsburg": [],
+  "Technische Hochschule Rosenheim, Fakultät für Angewandte Gesundheits- und Sozialwissenschaften": [],
+  "Universitätsklinikum Heidelberg - Innere Medizin V": [],
+  "Universitätsklinikum Freiburg, Klinik für Strahlenheilkunde": [],
+  "Uniklinik Freiburg, SEVERA": [],
+  "Universitätsmedizin Mainz": [],
+  "Insitut für Allgemeinmedizin und interprofessionelle Versorgung, Universitätsklinikum Tübingen": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universität Witten Herdecke": [],
+  "LMU Klinikum": [],
+  "Universität Duisburg-Essen": [],
+  "Universitätsklinikum Bonn (AöR)": [],
+  "Hochschule Furtwangen": [],
+  "Klinik für Psychiatrie und Psychotherapie": [],
+  "Universitätsklinikum Tübingen, Klinik für Kinder- und Jugendmedizin, Abteilung für Kinderkardiologie, Pulmologie und Intensivmedizin": [],
+  "St. Elisabethgruppe GmbH Katholsiche Kliniken Rhein-Ruhr": [],
+  "Herz- und Diabeteszentrum NRW": [],
+  "Charité Competence Center for Traditional and Integrative Medicine (CCCTIM) Charité – Universitätsmedizin Berlin": [],
+  "Vestische Kinder- und Jugendklinik Datteln, Universität Witten/Herdecke": [],
+  "Universitätsklinik Freiburg, Sektion Versorgungsforschung und Rehabilitationsforschung (SEVERA)": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft"
+  ],
+  "Katholische Hochschule Freiburg": [],
+  "Universität Leipzig, Medizinische Fakultät, Klinik und Poliklinik für Psychiatrie und Psychotherapie": [],
+  "Universitätsmedizin Göttingen": [],
+  "Deutsches Zentrum für Neurodegenerative Erkrankungen e. V.": [],
+  "Universitätsklinikum Freiburg, Department Chirurgie, Klinik für Urologie": [],
+  "Uniklinik Freiburg; Institut für Medizinische Biometrie und Statistik (IMBI); Sektion Versorgungsforschung und Rehabilitationsforschung (SEVERA)": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft",
+   "Biometrie und Statistik"
+  ],
+  "Kassenärztliche Vereinigung Baden-Württemberg, Geschäftsbereich Vertragswesen": [],
+  "Universitätsklinikum des Saarlandes": [],
+  "d-uo Deutsche Uro-OnkologenInteressenverband zur Qualitätssicherung in der Uro-Onkologie in Deutschland e.V.Geschäftsstelle Berlin": [],
+  "Universität Bremen - Socium": [],
+  "inav - privates Institut für angewandte Versorgungsforschung GmbH": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Ambulanzpartner Soziotechnologie APST GmbH": [],
+  "Johann-Wolfgang-Goethe Universität Frankfurt": [],
+  "Klinik und Poliklinik für Hals-Nasen-Ohrenheilkunde, Kopf- und Halschirurgie \"Otto Körner\"": [],
+  "Physiotherapie, Universitätsklinikum Hamburg-Eppendorf (UKE)": [],
+  "Universitätsklinik Freiburg": [],
+  "Klinik für Anästhesiologie, Universitätsklinikum Heidelberg": [],
+  "Universitätsklinikum Heidelberg - Klinik für Anästhesiologie": [],
+  "Klinik für Palliativmedizin": [
+   "Palliativ- und Hospizforschung"
+  ],
+  "Universitätsklinikum Halle (Saale) Universitätsklinik und Poliklinik für Pädiatrie I": [],
+  "Kassenärztliche Vereinigung Bremen (KVHB)": [],
+  "Hochschule für Gesundheit Bochum": [],
+  "Universitätsmedizin Frankfurt, Klinik für Anästhesiologie, Intensivmedizin und  Schmerztherapie": [],
+  "Mundipharma GmbH": [],
+  "Universitätsklinikum Erlangen": [],
+  "Institut für Patientensicherheit": [],
+  "Robert Bosch Gesellschaft für medizinische Forschung mbH": [],
+  "Universitätsklinikum Ulm, Klinik für Kinder-und Jugendmedizin, Sektion Kinderchirurgie": [],
+  "Orthopädische Klinik König-Ludwig-Haus Würzburg": [],
+  "Martin-Luther-Universität Halle-WittenbergUniversitätsklinikum Halle (Saale)": [],
+  "Heinrich-Heine-University Düsseldorf, Medical Faculty": [],
+  "Universität Bremen - IPP": [],
+  "Psychotherapeutische Praxis Ehrenberg und Kollegen": [],
+  "Abteilung für Angeborene Herzfehler und Pädiatrische Kardiologie am Universitäts-Herzzentrum Freiburg": [],
+  "d-uo | Deutsche Uro-Onkologen e.V.": [],
+  "Institut für Allgemeinmedizin, Charité - Universitätsmedizin Berlin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Klinik für Anästhesiologie und Intensivmedizin CCM/CVK, Charité - Universitätsmedizin Berlin": [],
+  "Klinik für Allgemein- und Viszeralchirurgie": [],
+  "Klinik für Pädiatrie m.S. Pneumologie, Immunologie und Intensivmedizin, Charité Universitätsmedizin - Berlin": [],
+  "Universitätsklinikum Leipzig": [],
+  "Klinik und Poliklinik für Neurologie, Universitätsklinikum Dresden": [],
+  "Klinik für Pallliativmedizin, Universitätsklinikum Freiburg": [],
+  "Robert-Bosch-Krankenhaus": [],
+  "NOGGO e.V. Nord-Ostdeutsche Gesellschaft für Gynäkologische Onkologie": [],
+  "CED Service GmbH": [],
+  "Klinik für Neurologie und Neurophysiologie, Universitätsklinikum Freiburg": [],
+  "Zentrale Notaufnahme des Universitätsklinikum Magdeburg": [],
+  "Universitätsklinikum Bonn": [],
+  "Universitätsklinikum Bonn, Klinik und Poliklinik für Psychosomatische Medizin und Psychotherapie, CHSR - Forschungsstelle für Gesundheitskommunikation und Versorgungsforschung": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Universitätsklinikum Halle": [],
+  "Zentrum für Feto-Neonatale Gesundheit, Universitätsklinikum Carl Gustav Carus und medizinische Fakultät der TU Dresden": [],
+  "Centrum für Chronische Immundefizienz (CCI)": [],
+  "Immanuel Klinikum Bernau Herzzentrum Brandenburg": [],
+  "Zürcher Hochschule für angewandte Wissenschaften, Department Gesundheit, Institut für Pflege": [],
+  "Technische Hochschule Rosenheim": [],
+  "Institut für Rehabilitationsmedizin der Martin-Luther-Universität Halle-Wittenberg": [
+   "Rehabilitationswissenschaft"
+  ],
+  "Institut für Patientensicherheit, Universitätsklinikum Bonn": [],
+  "Neurologische Klinik, Uniklinikum Erlangen": [],
+  "Universitätsmedizin der Johannes Gutenberg-Universität Mainz": [],
+  "Universitätsklinikum Düsseldorf": [],
+  "Institut für Arbeits-, Sozial- und Umweltmedizin": [
+   "Arbeits- und Umweltmedizin"
+  ],
+  "Otto-von-Guericke-Universität MagdeburgUniversitätsklinik für Unfallchirurgie": [],
+  "Uniklinik Freiburg - Klinik für Anästhesiologie und Intensivmedizin": [],
+  "Hochschule für Angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management": [],
+  "Medizinische Hochschule Hannover": [],
+  "Uniklinik Ulm, Psychiatrie II, Sektion Public Mental Health": [],
+  "Universität Witten/Herdecke": [],
+  "Gemeinschaftspraxis Dr. Wehling & Partner Regenerative Orthopädie und Schmerzmedizin": [],
+  "Universitätsklinikum Heidelberg, Abt. Allgemeinmedizin und Versorgungsforschung": [
+   "Allgemein- und Hausarztmedizin",
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Charité – Universitätsmedizin Berlin  Institut für Medizinische Soziologie und Rehabilitationswissenschaft": [
+   "Rehabilitationswissenschaft",
+   "Medizinsoziologie"
+  ],
+  "Universitätsklinikum Würzburg, Frauenklinik und Poliklinik": [],
+  "Freie Universität Berlin": [],
+  "Uniklinik RWTH Aachen, Klinik für Anästhesiologie": [],
+  "eCovery GmbH": [],
+  "Institut für Hygiene und Umweltmedizin- Charité Berlin": [
+   "Arbeits- und Umweltmedizin"
+  ],
+  "HES-SO Fribourg, School of Health Sciences": [],
+  "Zentrum für Integrative Psychiatrie gGmbH, Standort Kiel": [],
+  "Institut für Versorgungsforschung und Gesundheitsökonomie (IVG) Deutsches Diabetes Zentrum (DDZ) Träger: Deutsche Diabetes-Forschungsgesellschaft e.V. Leibniz-Zentrum für Diabetes-Forschung an der Heinrich-Heine-Universität Düsseldorf": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Gesundheitsoekonomie"
+  ],
+  "Universität Leipzig": [],
+  "Hochschule für angewandte Wissenschaften Kempten, Institut für Gesundheit und Generationen (IGG)": [],
+  "Charité - Univeristätsmedizin Berlin": [],
+  "Sektion Versorgungsforschung und Rehabilitationsforschung (SEVERA)": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft"
+  ],
+  "Charité - Universitätsmedizin Berlin, Institut für Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Charité - Universitätsmedizin Berlin, Institut für Medizinische Soziologie und Rehabilitationswissenschaft": [
+   "Rehabilitationswissenschaft",
+   "Medizinsoziologie"
+  ],
+  "Medizinische Hochschule Hannover, Institut für Allgemeinmedizin und Palliativmedizin": [
+   "Allgemein- und Hausarztmedizin",
+   "Palliativ- und Hospizforschung"
+  ],
+  "Institut für AllgemeinmedizinGoethe-Universität Frankfurt am Main": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Kassenärztliche Vereinigung Hessen": [],
+  "Klinik für Anästhesiologie, Operative Intensivmedizin und Schmerzmedizin": [],
+  "Institute für Hausarztmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "AG Versorgungsforschung | Pflege im Krankenhaus": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Sana Kliniken Sommerfeld": [],
+  "Universitätsklinikum Ulm": [],
+  "Universitätsklinikum Freiburg (UKF)": [],
+  "Zentralinstitut für Seelische Gesundheit Mannheim": [],
+  "Brandenburgische Technische Universität Cottbus-Senftenberg": [],
+  "LMU Klinikum: Klinik und Poliklinik für Palliativmedizin": [
+   "Palliativ- und Hospizforschung"
+  ],
+  "Zentrum für Personalisierte Medizin, Universitätsklinikum Tübingen": [],
+  "Universitätsklinik Leipzig": [],
+  "Karlsruher Institut für Technologie (KIT) Institut für Sport und Sportwissenschaft (IfSS)": [],
+  "Medizinische Fakultät der Martin-Luther-Universität Halle-Wittenberg": [],
+  "OST - Ostschweizer Fachhochschule": [],
+  "Klinik für Anästhesie und IntensivmedizinUniversitätsklinikum Gießen und MarburgStandort Marburg": [],
+  "Klinik für Dermatologie, Allergologie und Phlebologie, Klinikum Bremerhaven": [],
+  "Institut für Gesundheits- und Pflegewissenschaft Medizinische Fakultät der Martin-Luther-Universität Halle Wittenberg": [
+   "Pflegewissenschaft"
+  ],
+  "LMU Klinikum München": [],
+  "MVZ Dr. Stein + Kollegen SE & Co. eGbR": [],
+  "Carl-von-Ossietzky-Universität Oldenburg - Klinik für Spezielle Orthopädie und Unfallchirurgie am Pius Hospital": [],
+  "Universitätsklinikum Heidelberg Thoraxklinik Heidelberg": [],
+  "Kinderpalliativzentrum am LMU Klinikum München": [],
+  "Universitätsklinik für Allgemein-, Viszeral-, Gefäß- und Transplantationschirurgie": [],
+  "Klinik und Poliklinik für Hämatologie, Zelltherapie, Hämostaseologie und Infektiologie, Bereich Infektiologie und Tropenmedizin, Universitätsklinikum Leipzig AöR": [],
+  "SIGNUS Medizintechnik GmbH": [],
+  "PrehApp GmbH": [],
+  "Charité - Universitätsmedizin Berlin, Arbeitsbereich Physikalische Medizin": [],
+  "Cardiovascular and Interventional Radiological Society of Europe": [],
+  "Charité – Universitätsmedizin Berlin, Institut für Medizinische Soziologie und Rehabilitationswissenschaft": [
+   "Rehabilitationswissenschaft",
+   "Medizinsoziologie"
+  ],
+  "Friedrich-Alexander-Universität Erlangen-Nürnberg": [],
+  "Institut für Qualitätssicherung in Prävention und Rehabilitation GmbH an der Deutschen Sporthochschule Köln - iqpr GmbH": [],
+  "LMU Klinikum, Poliklinik für Zahnerhaltung, Parodontologie und digitale Zahnmedizin": [],
+  "Goethe Universität; Universitätsklinikum Frankfurt Goethe-Universität": [],
+  "Uniklinik RWTH Aachen, Medizinische Klinik IV": [],
+  "Hochschule Osnabrück": [],
+  "Fachgebiet Management im Gesundheitswesen - Technische Universität Berlin": [],
+  "Deutsche Gesellschaft für Kardiologie e.V. DGK": [],
+  "Universitätsklinik Hamburg Eppendorf": [],
+  "Deutsches Zentrum für Luft und Raumfahrt": [],
+  "Charité – Universitätsmedizin Berlin, Medizinische Klinik mit Schwerpunkt Hepatologie und Gastroenterologie, Campus Virchow-Klinikum": [],
+  "Zentralinstitut für die kassenärztliche Versorgung in Deutschland": [],
+  "Klinik für Psychiatrie, Psychosomatik und Psychotherapie": [],
+  "Uniklinik Köln, Klinik und Poliklinik für Psychiatrie und Psychotherapie": [],
+  "Paracelsus Medizinische Universität": [],
+  "Poliklinik für Parodontologie  Zentrum der Zahn-, Mund- und Kieferheilkunde (ZZMK, Carolinum) Johann Wolfgang Goethe-Universität Frankfurt am Main": [],
+  "Poliklinik für Zahnerhaltung und Parodontologie": [],
+  "Zentrale Notaufnahme Universitätsklinikum Düsseldorf, Moorenstr. 5": [],
+  "Universitäres Perinatalzentrum des Universitätsklinikum Marburg": [],
+  "Institut für Entzündungsmedizin, Universitätsklinikum Schleswig-Holstein": [],
+  "Universitätsklinikum Bonn, Klinik für Anästhesiologie und Operative Intensivmedizin": [],
+  "Vision2B GmbH": [],
+  "AstraZeneca Deutschland GmbH": [],
+  "kaarlo health GmbH": [],
+  "Universitätsklinikum Gießen und Marburg GmbH; Klinik für Strahlentherapie": [],
+  "Private Universität Witten/Herdecke": [],
+  "Charité Centre for Global Health": [],
+  "Klinikum der Universität München, Campus Großhadern": [],
+  "Klinik für Kinder- und Jugendpsychiatrie/Psychotherapie, Universitätsklinikum Ulm": [],
+  "Klinik für Anaesthesiologie Universitätsklinikum Heidelberg": [],
+  "Uniklinik Freiburg, Sektion Versorgungsforschung und Rehabilitationsforschung, Institut für Medizinische Biometrie und Statistik": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft",
+   "Biometrie und Statistik"
+  ],
+  "Universitätsklinikum Düsseldorf, Zentrale Notaufnahme": [],
+  "AOK Baden-Württemberg": [],
+  "LMU Klinikum, Medizinische Klinik und Poliklinik III": [],
+  "Vivantes - Netzwerk für Gesundheit GmbH, Institut für Nuklearmedizin": [],
+  "Medizinische Klinik 1": [],
+  "Kliniki für Operative Intensivmedizin und Intermediate Care": [],
+  "Schön Klinik Roseneck": [],
+  "LVR-Institut für Forschung und Bildung": [],
+  "Universität Basel, Institut für Pflegewissenschaft": [
+   "Pflegewissenschaft"
+  ],
+  "Universitätsklinikum Heidelberg, Radiologische Klinik, RadioOnkologie und Strahlentherapie": [],
+  "LVR Klinik Düsseldorf": [],
+  "Universitätsklinikum Gießen und Marburg, Standort Marburg": [],
+  "Vestische Kinder- und Jugendklinik, Universität Witten/Herdecke": [],
+  "Geriatrische Fachklinik Rheinhessen-Nahe": [],
+  "CSL Behring GmbH": [],
+  "Universitätsklinikum Ulm, Klinik für Allgemein- und Viszeralchirurgie, Fachbereich Integrative Medizin": [],
+  "Institut für Gesundheitsökonomie und Management im Gesundheitswesen, Helmholtz Zentrum München": [
+   "Gesundheitsoekonomie"
+  ],
+  "Universitätsklinikum Würzburg, Zentrum für Psychische Gesundheit, Kinder- und Jugendpsychiatrie, Psychosomatik und Psychotherapie": [],
+  "Universitätsklinikum Freiburg, Klinik für zahnärztliche Prothetik": [],
+  "Medizinische Hochschule Hannover, Institut für Allgemeinmedizin und Palliativmedizin / Universitätklinikum Erlangen, Palliativmedizinische Abteilung": [
+   "Allgemein- und Hausarztmedizin",
+   "Palliativ- und Hospizforschung"
+  ],
+  "Klinik und Poliklinik für Kinder- und Jugendmedizin, Klinikum rechts der Isar der Technischen Universität München": [],
+  "Abteilung Allgemeinmedizin und Versorgungsforschung, Universitätsklinikum Heidelberg": [
+   "Allgemein- und Hausarztmedizin",
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "hochschule 21": [],
+  "LVR-Klinikum Düsseldorf": [],
+  "Medizinische Hochschule Brandenburg (MHB) Campus GmbH": [],
+  "Klinik für Adipositas und Metabolische Chirurgie, HELIOS Klinikum Berlin Buch": [],
+  "Institut für Allgemeinmedizin Universitätsmedizin Essen": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universitätsklinikum Greifswald": [],
+  "Medizinische Hochschule Brandenburg Campus GmbH": [],
+  "Klinik für Neurochirurgie, Universitätsklinikum Augsburg": [],
+  "Universitätsmedizin Frankfurt": [],
+  "Universitätsklinik Heidelberg,  Abteilung für Allgemeine Innere Medizin und Psychosomatik, Sektion Psychoonkologie": [],
+  "UKGM, Phillips-Universität Marburg": [],
+  "LUP-Klinikum am Crivitzer See gGmbH": [],
+  "Universitätsklinikum Heidelberg, Klinik für Allgemein-, Viszeral- und Transplantationschirurgie": [],
+  "Medizinische Mikrobiologie": [],
+  "Deutsche Rentenversicherung Baden- Württemberg": [],
+  "Arbeitskreis klinische Studien e.V.": [],
+  "Universitätsklinikum Gießen-Marburg": [],
+  "Contilia GmbH Klinik für Kardiologie": [],
+  "BARMER Abteilung Digitale Versorgung / Prävention": [
+   "Medizinische Informatik und digitale Versorgung"
+  ],
+  "AOK Baden Württemberg": [],
+  "Kaia Health Software GmbH": [],
+  "Lehrstuhl für Medizinmanagement": [],
+  "Herzogin Elisabeth Hospital": [],
+  "Uniklinik Köln": [],
+  "Universität Bayreuth": [],
+  "Universität Bremen  - Socium": [],
+  "Klinik und Poliklinik für Urologie und Kinderurologie Universitätsmedizin der Johannes Gutenberg-Universität Mainz": [],
+  "Klinikum der Ludwig-Maximilians Universität München Poliklinik für Zahnerhaltung, Parodontologie und digitale Zahnmedizin": [],
+  "TU Dresden": [],
+  "Psychologische Hochschule Berlin": [],
+  "Universitätsfrauenklinik Heidelberg, Abtl. 4.2": [],
+  "Institut für Allgemeinmedizin der Goethe-Universität Frankfurt": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universitätsklinikum Ulm, Klinik für Psychiatrie und Psychotherapie III": [],
+  "Universitätsklinikum Aachen": [],
+  "Universität Greifswald, Institut für Psychologie, Lehrstuhl für Klinische Psychologie und Psychotherapie, Zentrum für Psychologische Psychotherapie Greifswald": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Katholische Universität Eichstätt-Ingolstadt": [],
+  "Universitätsklinikum Erlangen, Abteilung für Palliativmedizin, Friedrich-Alexander-Universität Erlangen-Nürnberg": [
+   "Palliativ- und Hospizforschung"
+  ],
+  "Verband der Ersatzkassen e. V. (vdek), Abteilung Ambulante Versorgung,": [],
+  "Universitätsklinikum Augsburg": [],
+  "Zentrum Familiärer Brust- und Eierstockkrebs, Universitätsklinikum Köln": [],
+  "Berufsgenossenschaft für Gesundheitsdienst und Wohlfahrtspflege": [],
+  "PedScience Vestische Forschungs-gGmbH": [],
+  "Klinik für Diagnostische und Interventionelle Radiologie, Universitätsklinikum Bonn": [],
+  "Kliniken der Stadt Köln gGmbH, Institut für Hygiene": [],
+  "Klinik für Urologie und Urochirurgie; Universitätsklinikum Heidelberg - UK Mannheim": [],
+  "Gesellschaft für pädiatrische Onkologie und Hämatologie (GPOH)": [],
+  "DRV Hessen/Klinik Sonnenblick der DRV": [],
+  "Charité Universitätsmedizin Berlin": [],
+  "Institut für Allgemeinmedizin Universitätsklinikum Freiburg": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universitätsklinikum Augsburg, Medizinische Fakultät, Universität Augsburg": [],
+  "Universitätsklinikum Heidelberg – UK Mannheim GmbH": [],
+  "Universität Münster": [],
+  "Institut für interdisziplinäre Dermatologische Prävention und Rehabilitation (iDerm) an der Universität Osnabrück": [],
+  "Klinik für Kardiologie und Angiologie, Westdeutsches Herz- und Gefäßzentrum Essen, Universitätsklinikum Essen": [],
+  "Universitätsmedizin Greifswald": [],
+  "UKGM – Universitätsklinikum Gießen und Marburg, GmbH, Standort Gießen": [],
+  "aQua - Institut für angewandte Qualitätsförderung und Forschung im Gesundheitswesen GmbH": [],
+  "Universitätklinikum Ulm": [],
+  "Institut für Allgemeinmedizin, Universitätsmedizin Essen, Medizinische Fakultät, Universität Duisburg-Essen": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Charité - Universitätsmedizin Berlin, Klinik für Radiologie": [],
+  "Klinik für Psychosomatische Medizin und Psychotherapie am LVR-Klinikum Essen, Universität Duisburg-Essen": [],
+  "Institut für Digitale Gesundheit (IDG) gGmbH": [],
+  "Mund-, Kiefer-, Gesichtschirurgie Zahnklinik Freiburg": [],
+  "Universitätsklinik Freiburg, Klinik für Innere Medizin 1": [],
+  "Westfälische Hochschule (Institut für Arbeit und Technik)": [],
+  "Universität Bremen, SOCIUM Forschungszentrum Ungleichheit und Sozialpolitik, Abteilung Gesundheit, Pflege und Alterssicherung": [],
+  "Universitätsklinikum Schleswig-HolsteinKlinik für Kinder- und JugendmedizinSektion Pädiatrische Endokrinologie und Diabetologie": [],
+  "Neurologische Klinik, Klinikum rechts der Isar, TU München": [],
+  "BKK Dachverband e.V.": [],
+  "TransEnteric Inc.": [],
+  "Medizinische Universität Wien, Zentrum für Public Health, Abteilung für Sozial- und Präventivmedizin, Unit Suizidforschung & Mental Health Promotion": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Institut für Muskuloskelettale Medizin (IMM), LMu Klinikum": [],
+  "Uniklinik der RWTH Aachen": [],
+  "Universitätsklinikum Tübingen, Abteilung für Psychosomatische Medizin und Psychotherapie": [],
+  "Bayerisches Zentrum für präventive Infektionsmedizin": [],
+  "Kassenärztliche Vereinigung Baden-Württemberg": [],
+  "Neurologisches Rehabilitationszentrum \"Godeshöhe\" e.V.": [],
+  "Universitätsklinikum Würzburg, Zentrum für Psychische Gesundheit, AG Rehabilitationswissenschaften": [
+   "Rehabilitationswissenschaft"
+  ],
+  "Universitätsklinik Heidelberg": [],
+  "Hochschule für Angewandte Wissenschaften": [],
+  "Deutsche Krebsgesellschaft": [],
+  "Abteilung für Molekulare Neurologie, Universitätsklinik Erlangen": [],
+  "Medizinische Klinik für Endokrinologie, Charité - Universitätsmedizin Berlin": [],
+  "Leibniz-Institut für Präventionsforschung und Epidemiologie – BIPS GmbH": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Institut für Hausarztmedizin, Universitätsklinikum Bonn": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Lehrstuhl für Klinische Psychologie und Psychotherapie, Friedrich-Alexander-Universität Erlangen-Nürnberg": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Universitätsklinikum Freiburg; Klinik für Psychosomatische Medizin und Psychotherapie": [],
+  "Technische Universität München, TUM School of Medicine and Health, Professur für Psychology & Digital Mental Health Care": [],
+  "Hochschule für angewandte Wissenschaften München": [],
+  "Hochschule Esslingen": [],
+  "Universitätsklinikum Erlangen, Psychosomatische und Psychotherapeutische Abteilung": [],
+  "Heidelberg Institut of Global Health": [],
+  "Klinik für Psychiatrie II der Univ. Ulm Sektion Public Mental Health": [],
+  "LVR-Klinikum Düsseldorf - Kliniken der Heinrich-Heine-Universität Düsseldorf": [],
+  "Universitätsklinikum Heidelberg Geriatrisches Zentrum der Universität Heidelberg": [],
+  "Universität Heidelberg": [],
+  "Universitätsklinikum Freiburg, Sektion für Versorgungsforschung und Rehabilitationsforschung": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Rehabilitationswissenschaft"
+  ],
+  "Universitätsklinikum Heidelberg - Sektion Translationale Gesundheitsökonomie": [
+   "Gesundheitsoekonomie"
+  ],
+  "Institut und Poliklinik für Allgemeinmedizin (IPA) am UKE-Hamburg": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Deutsches Rheumaforschungszentrum DRFZ": [],
+  "Universität Ulm,  Fakultät Ingenieurwissenschaften, Informatik und Psychologie,  Institut für Psychologie und Pädagogik,  Abteilung für Klinische Psychologie und Psychotherapie": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Uniklinik Freiburg": [],
+  "Universitätsklinikum Heidelberg Abteilung Allgemeinmedizin und Versorgungsforschung": [
+   "Allgemein- und Hausarztmedizin",
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Klinikum Kassel": [],
+  "EPRD Deutsche Endoprothesenregister gGmbH": [],
+  "Universitätsklinikum Köln": [],
+  "Charité Universitätsmedizin Berlin Institut für Medizinische Soziologie und Rehabilitationswissenschaft": [
+   "Rehabilitationswissenschaft",
+   "Medizinsoziologie"
+  ],
+  "Centrum für integrierte Onkologie": [],
+  "Institut für Allgemeinmedizin und Ambulante Gesundheitsversorgung (iamag), Universität Witten/Herdecke": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Universitätsklinikum Heidelberg, Klinik für Allgemeine Innere Medizin und Psychosomatik, Zentrum für Psychosoziale Medizin": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "ZHAW Gesundheit, Institut für Physiotherapie": [],
+  "Friedrich-Schiller-Universität Jena": [],
+  "Ruhr-Universität Bochum": [],
+  "Klinik und Poliklinik für Innere Medizin III TUM Klinikum  Rechts der Isar": [],
+  "Universitätsklinik und Poliklinik für Innere Medizin III der Universitätsmedizin Halle (Saale)": [],
+  "Institut für Versorgungsforschung und Gesundheitsökonomie, Heinrich-Heine-Universität Düsseldorf": [
+   "Versorgungsforschung (als Fach benannt)",
+   "Gesundheitsoekonomie"
+  ],
+  "Ruhr-Universität Bochum St. Josef-Hospital Klinik für Neurologie": [],
+  "P95 Julius Clinical (ehem. P95 Clinical & Epidemiology Services)": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "Marburger Institut für Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Mobil Krankenkasse": [],
+  "Universitätsklinikum Würzburg, Institut für Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Institut für Allgemeinmedizin, Universitätsmedizin Essen": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Institut für Sportwissenschaft, Bildungs- und Gesundheitsforschung, Eberhard Karls-Universität Tübingen": [],
+  "Palliativzentrum Universitätsklinik Köln": [],
+  "Justus-Liebig-Universität Gießen, Fachbereich Medizin": [],
+  "LVR-Klinikum Düsseldorf, Klinken der Heinrich-Heine-Universität Düsseldorf": [],
+  "Viszeralmedizinisches Zentrum, Evangelisches Diakoniekrankenhaus Freiburg": [],
+  "Arbeitsgemeinschaft katholischer Krankenhäuser Saarland, Caritasverband für die Diözese Trier e. V.": [],
+  "Charité Universitäsmedizin Berlin": [],
+  "Universitätsmedizin Greifswald, Institut für Community Medicine": [],
+  "Contergansprechstunde, Schön Klinik Hamburg SE & Co. KG": [],
+  "HES-SO Fribourg": [],
+  "Institut für Geriatrische Forschung Universitätsklinikum Ulm": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Universitätsklinikum Augsburg, Lehrstuhl für Palliativmedizin": [
+   "Palliativ- und Hospizforschung"
+  ],
+  "Medizinische Psychologie | Neuropsychologie und Gender Studies & Centrum für Neuropsychologische Diagnostik und Intervention (CeNDI)": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Klinikum der Universität München": [],
+  "Technische Universität Dresden, Medizinische Fakultät Carl Gustav Carus, Klinik und Poliklinik für Viszeral-, Thorax- und Gefäßchirurgie": [],
+  "Séguin-Klinik, Epilepsiezentrum Kork": [],
+  "Klinik für Psychiatrie und PsychotherapieUniversitätsklinikum FreiburgMedizinische Fakultät": [],
+  "Deutsches Zentrum für Suchtfragen des Kindes- und Jugendalters (DZSKJ) am Universitätsklinikum Hamburg-Eppendorf": [],
+  "Robert Koch-Institut": [],
+  "Philipps Universität Marburg - Klinik für Neurologie": [],
+  "Charité – Universitätsmedizin Berlin, Klinik für Neurochirurgie": [],
+  "CaRe High gGmbH i.G.": [],
+  "Universitätsklinikum Schleswig-Holstein, Campus Lübeck": [],
+  "Deutsches Krebsforschungszentrum": [],
+  "Klinik für Anästhesiologie und Intensivmedizin": [],
+  "Uniklinikum Bonn, Institut für Exp. Hämatologie und Transfusionsmedizin": [],
+  "Professorin Dr. sc. hum. Hanna M. Seidling": [],
+  "Universitätsklinikum Freiburg, Pflegedirektion": [],
+  "Carl von Ossietzky Universität Oldenburg Fakultät VI - Medizin und Gesundheitswissenschaften Department für Versorgungsforschung Abteilung Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin",
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Gesundheitsnetz Rhein-Neckar e.V.": [],
+  "Universitätsklinikum Heidelberg, Innere Medizin V": [],
+  "Institut für Allgemeinmedizin und Versorgungsforschung der Technischen Universität München": [
+   "Allgemein- und Hausarztmedizin",
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Universitätsklinikum Marburg, Philipps Universität Marburg": [],
+  "Charite - Universitätsmedizin Berlin Experimental Clinical Research Center, ECRC": [],
+  "Martini-Klinik am UKE GmbH": [],
+  "Universitätsklinik Würzburg": [],
+  "Institut für Sexualwissenschaft und Sexualmedizin": [],
+  "Universitätsklinik für Psychosomatische Medizin und Psychotherapie Magdeburg": [],
+  "Abteilung für Klinische Psychologie und Psychotherapie,Institut für Psychologie und Pädagogik, Universität Ulm": [
+   "Medizinische Psychologie und Psychotherapieforschung"
+  ],
+  "Vereinigung für analytische und tiefenpsychologisch fundierte Kinder- und Jugendlichen-Psychotherapie in Deutschland e.V.": [],
+  "Universitätsklinikum Freiburg, Klinik für Kinder- und Jugendmedizin": [],
+  "Universitätsklinik und Poliklinik für Altersmedizin": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Institut für Community Medicine, Abt. Versorgungsepidemiologie und Community Health": [
+   "Sozialmedizin und Epidemiologie"
+  ],
+  "City St. Georges, University of London": [],
+  "Ruprecht-Karls-Universität Heidelberg": [],
+  "Pfizer Inc": [],
+  "Robert-Bosch-Krankenhaus Klinik für Geriatrische Rehabilitation": [],
+  "DAGNÄ e.V. (Deutsche Arbeitsgemeinschaft niedergelassener Ärzte in der Versorgung HIV-Infizierter e.V.) vertreten durch Dr. med. Knud Schewe und Dr. med. Stefan Klauke": [],
+  "Una Health GmbH": [],
+  "Institut für Allgemeinmedizin der LMU München": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "PULZ im Rieselfeld": [],
+  "Stiftung Deutsche Schlaganfall-Hilfe": [],
+  "UKGM - Universitätsklinikum Giessen und Marburg GmbH": [],
+  "Bristol Myers Squibb-Stiftung Immunonkologie": [],
+  "LMU Klinikum Großhadern": [],
+  "Stabsstelle für Pflegewissenschaft & Praxisentwicklung": [
+   "Pflegewissenschaft"
+  ],
+  "Philipps-Universität MarburgAbt. f. Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Katholische Hochschule Mainz": [],
+  "Institut und Poliklinik für Allgemeinmedizin": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Ordensklinikum Linz - Barmherzige Schwestern": [],
+  "Evangelisches Klinikum Bethel gGmbH, Universitätsklinik für Psychiatrie und Psychotherapie": [],
+  "Ruprecht-Karls-Universität Heidelberg Medizinische Fakultät vertreten durch das Universitätsklinikum Heidelberg und dessen Kaufmännische Direktorin Katrin Erk": [],
+  "Universitätsklinikum Tübingen, Institut für Allgemeinmedizin und Interprofessionelle Versorgung": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Augenklinik und Poliklinik der Universitätsmedizin Mainz": [],
+  "Universitätsklinik Ulm": [],
+  "mkk": [],
+  "Institut für Allgemeinmedizin, Universitätsklinikum Jena": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "Institut für Allgemeinmedizin/Medizinische Fakultät der Otto-von-Guericke-Universität Magdeburg": [
+   "Allgemein- und Hausarztmedizin"
+  ],
+  "AOK Rheinland/Hamburg - Die Gesundheitskasse": [],
+  "Universitätsklinikum Hamburg Eppendorf": [],
+  "Universitätsklinikum Ruppin-Brandenburg": [],
+  "Klinikum Ernst von Bergmann": [],
+  "Mind Generation GmbH": [],
+  "Medizinische Klinik III, Universitätsklinikum Bonn": [],
+  "Albertinen-Haus,\nZentrum für Geriatrie und Gerontologie,\nWissenschaftliche Einrichtung an der Universität Hamburg": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Universitätsmedizin Göttingen,  Klinik für Geriatrie": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Universitäres Cancer Center Hamburg, Universitätsklinikum Hamburg-Eppendorf": [],
+  "Forschungsstelle für Gesundheitskommunikation und Versorgungsforschung (CHSR), Klinik und Poliklinik für Psychosomatische Medizin und Psychotherapie am Universitätsklinikum Bonn": [
+   "Versorgungsforschung (als Fach benannt)"
+  ],
+  "Klinik für Kinder-und Jugendmedizin, Schwerpunkt Onkologie, Hämatologie und Hämostaseologie,  Universitätsmedizin Frankfurt, Goethe-Universität Frankfurt": [],
+  "Universitätsklinikum Würzburg, Zentrum für Altersmedizin": [
+   "Geriatrie und Altersforschung"
+  ],
+  "Uniklinik Köln Neurologie": [],
+  "Klinik und Poliklinik für Kinder- und JugendmedizinUniversität Köln": [],
+  "Universität Duisburg Essen": [],
+  "JKU, MC IV, Universitätsklinik für Gynäkologie, Geburtshilfe und Gyn. Endokrinologie": [],
+  "Sidekickhealth Germany GmbH": [],
+  "MoRe-Life GmbH": [],
+  "Universitätsklinikum Jena; Abteilung Palliativmedizin": [
+   "Palliativ- und Hospizforschung"
+  ],
+  "Klinik für Psychosomatik und Psychotherapie, Universitätsklinikum Gießen und Marburg, Justus-Liebig-Universität Gießen": [],
+  "Klinik für Anästhesiologie, Universitätsklinikum Düsseldorf": [],
+  "Bundesamt für Sport (BASPO)": [],
+  "Universitätmedizin Essen": [],
+  "Charité": []
+ }
+}

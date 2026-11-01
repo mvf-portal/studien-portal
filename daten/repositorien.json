@@ -1,0 +1,2195 @@
+{
+ "stand": "2026-10-30",
+ "hinweis": "Die Publikationslisten der Einrichtungen selbst sind von Hand gepflegte Webseiten ohne Schnittstelle. Abfragbar sind ROR (Identitaet) und OpenAlex (Typ, Netzadresse, eigene Repositorien). Jede Namensauflösung ist durch den Waechter in traegt() gelaufen.",
+ "quellen": {
+  "ROR": "https://ror.org - CC0",
+  "OpenAlex": "https://openalex.org - CC0",
+  "Innofonds-Portal": "db/ror_cache.json, handgeprueft, nur gelesen"
+ },
+ "standorte": [
+  {
+   "name": "Charité - Universitätsmedizin Berlin",
+   "datei": "charite-universitatsmedizin-berlin.html",
+   "schreibweisen": [
+    "Charité",
+    "Charité - Univeristätsmedizin Berlin",
+    "Charité - Universitätsmedizin Berlin",
+    "Charité - Universitätsmedizin Berlin, Arbeitsbereich Physikalische Medizin",
+    "Charité - Universitätsmedizin Berlin, Institut für Allgemeinmedizin",
+    "Charité - Universitätsmedizin Berlin, Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité - Universitätsmedizin Berlin, Klinik für Radiologie",
+    "Charité Competence Center for Traditional and Integrative Medicine (CCCTIM) Charité – Universitätsmedizin Berlin",
+    "Charité Universitäsmedizin Berlin",
+    "Charité Universitätsmedizin Berlin",
+    "Charité Universitätsmedizin Berlin Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité – Universitätsmedizin Berlin",
+    "Charité – Universitätsmedizin Berlin  Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité – Universitätsmedizin Berlin, Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
+    "Charité – Universitätsmedizin Berlin, Klinik für Kardiologie, Angiologie und Intensivmedizin",
+    "Charité – Universitätsmedizin Berlin, Klinik für Neurochirurgie",
+    "Charité – Universitätsmedizin Berlin, Medizinische Klinik für Endokrinologie und Stoffwechselmedizin",
+    "Charité – Universitätsmedizin Berlin, Medizinische Klinik mit Schwerpunkt Hepatologie und Gastroenterologie, Campus Virchow-Klinikum",
+    "Charité-Universitätsmedizin Berlin",
+    "Institut für Allgemeinmedizin, Charité - Universitätsmedizin Berlin",
+    "Klinik für Pädiatrie mit SP Onkologie und Hämatologie, Charité Universitätsmedizin Berlin",
+    "Medizinische Klinik für Endokrinologie, Charité - Universitätsmedizin Berlin",
+    "Medizinische Klinik m.S. Psychosomatik Charité Berlin"
+   ],
+   "studien": 41,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/001w7jn25",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.charite.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 163973,
+   "repositorien": [
+    {
+     "name": "Publication Server (Berlin-Brandenburg Academy of Sciences and Humanities)",
+     "id": "https://openalex.org/S4306400214",
+     "adresse": null,
+     "arbeiten": 3941,
+     "traeger": "Charité – Universitätsmedizin Berlin"
+    }
+   ],
+   "namensvarianten": [
+    "Charité",
+    "Charité - Universitätsmedizin Berlin",
+    "Charité Universitätsmedizin Berlin",
+    "Charité – Universitätsmedizin Berlin"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Berlin",
+   "lat": 52.52437,
+   "lon": 13.41053
+  },
+  {
+   "name": "Universitätsklinikum Heidelberg",
+   "datei": "universitatsklinikum-heidelberg.html",
+   "schreibweisen": [
+    "Abteilung Allgemeinmedizin und Versorgungsforschung, Universitätsklinikum Heidelberg",
+    "Klinik für Anästhesiologie, Universitätsklinikum Heidelberg",
+    "Neurologische Klinik, Universitätsklinikum Heidelberg",
+    "Universitätsklinikum Heidelberg",
+    "Universitätsklinikum Heidelberg - Innere Medizin V",
+    "Universitätsklinikum Heidelberg Abteilung Allgemeinmedizin und Versorgungsforschung",
+    "Universitätsklinikum Heidelberg Thoraxklinik Heidelberg",
+    "Universitätsklinikum Heidelberg, Abteilung Allgemeinmedizin und Versorgungsforschung",
+    "Universitätsklinikum Heidelberg, Innere Medizin V"
+   ],
+   "studien": 25,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/013czdx64",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.klinikum.uni-heidelberg.de/Startseite.2.0.html?&no_cache=1",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 62597,
+   "repositorien": [],
+   "namensvarianten": [
+    "Heidelberg University Hospital",
+    "Universitaetsklinikum Heidelberg",
+    "University Hospital Heidelberg",
+    "University Hospital of Heidelberg",
+    "Universitätsklinikum Heidelberg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Heidelberg",
+   "lat": 49.40768,
+   "lon": 8.69079
+  },
+  {
+   "name": "Universitätsklinikum Hamburg-Eppendorf",
+   "datei": "universitatsklinikum-hamburg-eppendorf.html",
+   "schreibweisen": [
+    "Universitätsklinikum Hamburg Eppendorf",
+    "Universitätsklinikum Hamburg-Eppendorf",
+    "Universitätsklinikum Hamburg-Eppendorf\nInstitut und Poliklinik für Medizinische Psychologie",
+    "Universitätsklinikum Hamburg-Eppendorf Institut für Gesundheitsökonomie und Versorgungsforschung",
+    "Universitätsklinikum Hamburg-Eppendorf Klinik und Poliklinik für Psychiatrie und Psychotherapie Forschungsbereich Neuropsychologie und Psychotherapie"
+   ],
+   "studien": 21,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/01zgy1s35",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uke.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 83688,
+   "repositorien": [],
+   "namensvarianten": [
+    "University Medical Center Hamburg-Eppendorf",
+    "Universitätsklinikum Hamburg-Eppendorf"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Hamburg",
+   "lat": 53.55073,
+   "lon": 9.99302
+  },
+  {
+   "name": "Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie",
+   "datei": "universitat-zu-lubeck-institut-fur-sozialmedizin-und-epidemi.html",
+   "schreibweisen": [
+    "Institut für Sozialmedizin und Epidemiologie der Universität zu Lübeck",
+    "Universität zu Lübeck",
+    "Universität zu Lübeck, Institut für Sozialmedizin und Epidemiologie"
+   ],
+   "studien": 13,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00t3r8h32",
+   "ror_name": "University of Lübeck",
+   "ror_grund": "Innofonds-Portal (handgeprueft)",
+   "netzadresse": "https://www.uni-luebeck.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 45039,
+   "repositorien": [],
+   "namensvarianten": [
+    "University of Luebeck",
+    "University of Lübeck",
+    "Universität zu Lübeck"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Lübeck",
+   "lat": 53.86893,
+   "lon": 10.68729
+  },
+  {
+   "name": "Universitätsklinikum Aachen",
+   "datei": "universitatsklinikum-aachen.html",
+   "schreibweisen": [
+    "Klinik für Altersmedizin, Uniklinik RWTH Aachen",
+    "Uniklinik RWTH Aachen",
+    "Uniklinik RWTH Aachen, Klinik für Anästhesiologie",
+    "Uniklinik RWTH Aachen, Medizinische Klinik IV",
+    "Uniklinik der RWTH Aachen",
+    "Universitätsklinikum Aachen"
+   ],
+   "studien": 12,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/02gm5zw39",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "http://www.ukaachen.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 34607,
+   "repositorien": [],
+   "namensvarianten": [
+    "Uniklinik RWTH Aachen",
+    "University Hospital Aachen",
+    "Universitätsklinikum Aachen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Aachen",
+   "lat": 50.77664,
+   "lon": 6.08342
+  },
+  {
+   "name": "Medizinische Hochschule Hannover",
+   "datei": "medizinische-hochschule-hannover.html",
+   "schreibweisen": [
+    "Medizinische Hochschule Hannover",
+    "Medizinische Hochschule Hannover, Institut für Allgemeinmedizin und Palliativmedizin",
+    "Medizinische Hochschule Hannover, Institut für Allgemeinmedizin und Palliativmedizin / Universitätklinikum Erlangen, Palliativmedizinische Abteilung"
+   ],
+   "studien": 8,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00f2yqf98",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.mhh.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 92573,
+   "repositorien": [
+    {
+     "name": "Medizinische Hochschule Hannover Bibliothek",
+     "id": "https://openalex.org/S7407052960",
+     "adresse": null,
+     "arbeiten": 1960,
+     "traeger": "Medizinische Hochschule Hannover"
+    }
+   ],
+   "namensvarianten": [
+    "Hannover Medical School",
+    "Med. HS Hannover",
+    "Medizinische Hochschule Hannover"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Hanover",
+   "lat": 52.37052,
+   "lon": 9.73322
+  },
+  {
+   "name": "Heinrich-Heine-Universität Düsseldorf",
+   "datei": "heinrich-heine-universitat-dusseldorf.html",
+   "schreibweisen": [
+    "Heinrich Heine Universität Düsseldorf Medizinische Fakultät",
+    "Heinrich-Heine-University Düsseldorf, Medical Faculty",
+    "Institut für Versorgungsforschung und Gesundheitsökonomie, Heinrich-Heine-Universität Düsseldorf",
+    "LVR-Klinikum Düsseldorf - Kliniken der Heinrich-Heine-Universität Düsseldorf",
+    "LVR-Klinikum Düsseldorf, Klinken der Heinrich-Heine-Universität Düsseldorf"
+   ],
+   "studien": 7,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/024z2rq82",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.hhu.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 102378,
+   "repositorien": [
+    {
+     "name": "HHU FDM",
+     "id": "https://openalex.org/S7407052923",
+     "adresse": "https://researchdata.hhu.de/",
+     "arbeiten": 130,
+     "traeger": "Heinrich Heine University Düsseldorf"
+    },
+    {
+     "name": "HHU Books",
+     "id": "https://openalex.org/S7407053064",
+     "adresse": null,
+     "arbeiten": 109,
+     "traeger": "Heinrich Heine University Düsseldorf"
+    },
+    {
+     "name": "HHU Pubserv",
+     "id": "https://openalex.org/S7407053066",
+     "adresse": null,
+     "arbeiten": 0,
+     "traeger": "Heinrich Heine University Düsseldorf"
+    }
+   ],
+   "namensvarianten": [
+    "Heinrich Heine University Dusseldorf",
+    "Heinrich Heine University Düsseldorf",
+    "Heinrich Heine University of Düsseldorf",
+    "Heinrich-Heine-Universitaet Duesseldorf",
+    "Heinrich-Heine-University Dusseldorf",
+    "Heinrich-Heine-Universität Düsseldorf",
+    "University of Dusseldorf",
+    "University of Düsseldorf"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Düsseldorf",
+   "lat": 51.22319,
+   "lon": 6.77927
+  },
+  {
+   "name": "Goethe-Universität Frankfurt am Main",
+   "datei": "goethe-universitat-frankfurt-am-main.html",
+   "schreibweisen": [
+    "Goethe Universität Frankfurt, Universitätsklinikum, Klinik für Anästhesiologie, Intensivmedizin und Schmerztherapie",
+    "Goethe Universität; Universitätsklinikum Frankfurt Goethe-Universität",
+    "Institut für Allgemeinmedizin Goethe Universität Frankfurt am Main",
+    "Institut für Allgemeinmedizin der Goethe-Universität Frankfurt",
+    "Johann-Wolfgang-Goethe Universität Frankfurt",
+    "Klinikum der Johann Wolfgang Goethe-Universität Frankfurt am Main",
+    "Klinikum der Johann Wolfgang Goethe-Universität Frankfurt am Main Epilepsiezentrum Frankfurt Rhein-Main"
+   ],
+   "studien": 7,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/04cvxnb49",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-frankfurt.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 154870,
+   "repositorien": [
+    {
+     "name": "Digital collections (Goethe University Frankfurt)",
+     "id": "https://openalex.org/S4306400172",
+     "adresse": null,
+     "arbeiten": 105878,
+     "traeger": "Goethe University Frankfurt"
+    },
+    {
+     "name": "Publication Server of Goethe University Frankfurt am Main (Goethe University Frankfurt)",
+     "id": "https://openalex.org/S4306400432",
+     "adresse": null,
+     "arbeiten": 43486,
+     "traeger": "Goethe University Frankfurt"
+    }
+   ],
+   "namensvarianten": [
+    "Goethe University Frankfurt",
+    "Goethe-Universität Frankfurt am Main",
+    "Johann Wolfgang Goethe-Universität Frankfurt am Main"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Frankfurt am Main",
+   "lat": 50.11552,
+   "lon": 8.68417
+  },
+  {
+   "name": "Universitätsklinikum Bonn",
+   "datei": "universitatsklinikum-bonn.html",
+   "schreibweisen": [
+    "Institut für Hausarztmedizin, Universitätsklinikum Bonn",
+    "Universitätsklinikum Bonn"
+   ],
+   "studien": 7,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/01xnwqx93",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.ukbonn.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 37508,
+   "repositorien": [],
+   "namensvarianten": [
+    "University Hospital Bonn",
+    "Universitätsklinikum Bonn"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Bonn",
+   "lat": 50.73438,
+   "lon": 7.09549
+  },
+  {
+   "name": "Universität zu Köln",
+   "datei": "universitat-zu-koln.html",
+   "schreibweisen": [
+    "Medizinische Psychologie | Neuropsychologie und Gender Studies & Centrum für Neuropsychologische Diagnostik und Intervention (CeNDI)",
+    "Medizinische Psychologie | Neuropsychologie und Gender Studies, Medizinische Fakultät und Uniklinik Köln, Universität zu Köln",
+    "Universität zu Köln"
+   ],
+   "studien": 6,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00rcxh774",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://uni-koeln.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 138941,
+   "repositorien": [
+    {
+     "name": "PubLIS Cologne (Cologne University)",
+     "id": "https://openalex.org/S4306400368",
+     "adresse": null,
+     "arbeiten": 21,
+     "traeger": "University of Cologne"
+    },
+    {
+     "name": "Computer Science Publication Server (University of Cologne)",
+     "id": "https://openalex.org/S4306401304",
+     "adresse": null,
+     "arbeiten": 308,
+     "traeger": "University of Cologne"
+    }
+   ],
+   "namensvarianten": [
+    "Cologne University",
+    "Universitaet zu Koeln",
+    "University of Cologne",
+    "Universität Köln",
+    "Universität zu Köln"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Cologne",
+   "lat": 50.93333,
+   "lon": 6.95
+  },
+  {
+   "name": "Universitätsklinikum Würzburg",
+   "datei": "universitatsklinikum-wurzburg.html",
+   "schreibweisen": [
+    "Universitätsklinikum Würzburg",
+    "Universitätsklinikum Würzburg, Frauenklinik und Poliklinik",
+    "Universitätsklinikum Würzburg, Zentrum für Psychische Gesundheit, AG Rehabilitationswissenschaften",
+    "Universitätsklinikum Würzburg, Zentrum für Psychische Gesundheit, Kinder- und Jugendpsychiatrie, Psychosomatik und Psychotherapie"
+   ],
+   "studien": 6,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/03pvr2g57",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.ukw.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 34778,
+   "repositorien": [],
+   "namensvarianten": [
+    "Universitaetsklinikum Wuerzburg - Klinikum Der Bayerischen Julius-Maximilians-Universitat",
+    "University Hospital Würzburg",
+    "University Hospital of Wuerzburg",
+    "Universitätsklinikum Würzburg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Würzburg",
+   "lat": 49.79391,
+   "lon": 9.95121
+  },
+  {
+   "name": "Charité Campus Charité Mitte",
+   "datei": "charite-campus-charite-mitte.html",
+   "schreibweisen": [
+    "Charité Campus Charité Mitte"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/001w7jn25",
+   "ror_name": "Charité – Universitätsmedizin Berlin",
+   "ror_grund": "ROR-Namensauflösung über das Kopfwort „charite“, Punktwert 1.00",
+   "netzadresse": "https://www.charite.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 163973,
+   "repositorien": [
+    {
+     "name": "Publication Server (Berlin-Brandenburg Academy of Sciences and Humanities)",
+     "id": "https://openalex.org/S4306400214",
+     "adresse": null,
+     "arbeiten": 3941,
+     "traeger": "Charité – Universitätsmedizin Berlin"
+    }
+   ],
+   "namensvarianten": [
+    "Charité",
+    "Charité - Universitätsmedizin Berlin",
+    "Charité Universitätsmedizin Berlin",
+    "Charité – Universitätsmedizin Berlin"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Berlin",
+   "lat": 52.52437,
+   "lon": 13.41053
+  },
+  {
+   "name": "Universitätsklinikum Tübingen",
+   "datei": "universitatsklinikum-tubingen.html",
+   "schreibweisen": [
+    "Universitätsklinikum Tübingen"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00pjgxh97",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.medizin.uni-tuebingen.de/en/Homepage.html",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 33467,
+   "repositorien": [],
+   "namensvarianten": [
+    "Universitätsklinikum Tübingen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Tübingen",
+   "lat": 48.52266,
+   "lon": 9.05222
+  },
+  {
+   "name": "Universitätsklinikum Köln",
+   "datei": "universitatsklinikum-koln.html",
+   "schreibweisen": [
+    "Klinik und Poliklinik für Psychiatrie und Psychotherapie Uniklinik Köln (AöR)",
+    "Uniklinik Köln",
+    "Uniklinik Köln Neurologie",
+    "Uniklinik Köln, Klinik und Poliklinik für Psychiatrie und Psychotherapie",
+    "Universitätsklinikum Köln"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/05mxhda18",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uk-koeln.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 40938,
+   "repositorien": [],
+   "namensvarianten": [
+    "Cologne University Hospital",
+    "Uniklinik Koeln",
+    "Uniklinik Köln",
+    "Universitaetsklinikum Koeln",
+    "University Clinic Cologne",
+    "University Hospital Cologne",
+    "University Hospital of Cologne",
+    "Universitätsklinikum Köln"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Cologne",
+   "lat": 50.93333,
+   "lon": 6.95
+  },
+  {
+   "name": "Carl von Ossietzky Universität Oldenburg",
+   "datei": "carl-von-ossietzky-universitat-oldenburg.html",
+   "schreibweisen": [
+    "Carl von Ossietzky Universität Oldenburg",
+    "Carl von Ossietzky Universität Oldenburg - Department für Versorgungsforschung, Abteilung Allgemeimedizin",
+    "Carl von Ossietzky Universität Oldenburg Fakultät VI - Medizin und Gesundheitswissenschaften Department für Versorgungsforschung Abteilung Allgemeinmedizin",
+    "Carl-von-Ossietzky-Universität Oldenburg - Klinik für Spezielle Orthopädie und Unfallchirurgie am Pius Hospital"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/033n9gh91",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://uol.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 39472,
+   "repositorien": [
+    {
+     "name": "GERICS Climate Service Center Germany (University of Oldenburg)",
+     "id": "https://openalex.org/S4306401657",
+     "adresse": null,
+     "arbeiten": 333,
+     "traeger": "Carl von Ossietzky Universität Oldenburg"
+    }
+   ],
+   "namensvarianten": [
+    "Carl von Ossietzky University of Oldenburg",
+    "Carl von Ossietzky Universität Oldenburg",
+    "University of Oldenburg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Oldenburg",
+   "lat": 53.14039,
+   "lon": 8.21479
+  },
+  {
+   "name": "Universität Witten Herdecke",
+   "datei": "universitat-witten-herdecke.html",
+   "schreibweisen": [
+    "Private Universität Witten/Herdecke",
+    "Universität Witten Herdecke",
+    "Universität Witten/Herdecke"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00yq55g44",
+   "ror_name": "Witten/Herdecke University",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 0.96",
+   "netzadresse": "https://www.uni-wh.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 24787,
+   "repositorien": [],
+   "namensvarianten": [
+    "Universität Witten/Herdecke",
+    "Witten/Herdecke University"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Witten",
+   "lat": 51.44362,
+   "lon": 7.35258
+  },
+  {
+   "name": "Martin-Luther-Universität Halle-Wittenberg",
+   "datei": "martin-luther-universitat-halle-wittenberg.html",
+   "schreibweisen": [
+    "Institut für Gesundheits- und Pflegewissenschaft Medizinische Fakultät der Martin-Luther-Universität Halle Wittenberg",
+    "Martin-Luther-Universität Halle-WittenbergUniversitätsklinikum Halle (Saale)",
+    "Medizinische Fakultät der Martin-Luther-Universität Halle-Wittenberg",
+    "Wilhelm-Roux-Förderprogramm der Medizinischen Fakultät der Martin-Luther-Universität Halle-Wittenberg, Prodekanat Forschung"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/05gqaka33",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-halle.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 84199,
+   "repositorien": [
+    {
+     "name": "Digitale Bibliothek Uni Halle (Martin-Luther-Universität Halle-Wittenberg)",
+     "id": "https://openalex.org/S4306402442",
+     "adresse": null,
+     "arbeiten": 67927,
+     "traeger": "Martin Luther University Halle-Wittenberg"
+    }
+   ],
+   "namensvarianten": [
+    "Martin Luther University Halle-Wittenberg",
+    "Martin-Luther-Universität Halle-Wittenberg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Halle",
+   "lat": 51.48158,
+   "lon": 11.97947
+  },
+  {
+   "name": "Hochschule Rosenheim",
+   "datei": "hochschule-rosenheim.html",
+   "schreibweisen": [
+    "Technische Hochschule Rosenheim",
+    "Technische Hochschule Rosenheim, Fakultät für Angewandte Gesundheits- und Sozialwissenschaften"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/03hbmgt12",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.th-rosenheim.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 1147,
+   "repositorien": [],
+   "namensvarianten": [
+    "Hochschule Rosenheim",
+    "Rosenheim University of Applied Sciences",
+    "TH Rosenheim",
+    "Technische Hochschule Rosenheim",
+    "University of Applied Sciences Rosenheim"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Rosenheim",
+   "lat": 47.85636901855469,
+   "lon": 12.122469902038574
+  },
+  {
+   "name": "Universitätsmedizin der Johannes Gutenberg-Universität Mainz",
+   "datei": "universitatsmedizin-der-johannes-gutenberg-universitat-mainz.html",
+   "schreibweisen": [
+    "Klinik und Poliklinik für Urologie und Kinderurologie Universitätsmedizin der Johannes Gutenberg-Universität Mainz",
+    "Universitätsmedizin der Johannes Gutenberg-Universität Mainz"
+   ],
+   "studien": 5,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00q1fsf04",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.unimedizin-mainz.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 43249,
+   "repositorien": [],
+   "namensvarianten": [
+    "University Medical Center of the Johannes Gutenberg University Mainz",
+    "Universitätsmedizin der Johannes Gutenberg-Universität Mainz"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Mainz",
+   "lat": 49.98185,
+   "lon": 8.28008
+  },
+  {
+   "name": "Klinikum der Technischen Universität München (TUM Klinikum)",
+   "datei": "klinikum-der-technischen-universitat-munchen-tum-klinikum.html",
+   "schreibweisen": [
+    "Klinik und Poliklinik für Kinder- und Jugendmedizin, Klinikum rechts der Isar der Technischen Universität München",
+    "Klinikum rechts der Isar der Technischen Universität München",
+    "Neurologische Klinik, Klinikum rechts der Isar, TU München",
+    "TUM Klinikum Rechts der Isar, Klinik und Poliklinik für psychosomatische Medizin und Psychotherapie, Professur für Spiritual Care und psychosomatische Gesundheit"
+   ],
+   "studien": 4,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/04jc43x05",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.mri.tum.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 38902,
+   "repositorien": [],
+   "namensvarianten": [
+    "Klinikum der Technischen Universität München (TUM Klinikum)",
+    "Klinikum rechts der Isar",
+    "TUM Klinikum",
+    "TUM Klinikum Rechts der Isar"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Munich",
+   "lat": 48.13743,
+   "lon": 11.57549
+  },
+  {
+   "name": "Zentralinstitut für die Kassenärztliche Versorgung in der Bundesrepublik Deutschland",
+   "datei": "zentralinstitut-fur-die-kassenarztliche-versorgung-in-der-bu.html",
+   "schreibweisen": [
+    "Zentralinstitut für die kassenärztliche Versorgung in Deutschland",
+    "Zentralinstitut für die kassenärztliche Versorgung in der Bundesrepublik Deutschland"
+   ],
+   "studien": 4,
+   "traegerart": "Selbstverwaltung im Gesundheitswesen",
+   "ror": "https://ror.org/04gx8zb05",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "http://www.zi-berlin.de/cms/index.php",
+   "oa_typ": "facility",
+   "oa_arbeiten": 553,
+   "repositorien": [],
+   "namensvarianten": [
+    "Zentralinstitut für die Kassenärztliche Versorgung in der Bundesrepublik Deutschland"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Berlin",
+   "lat": 52.51518630981445,
+   "lon": 13.333866119384766
+  },
+  {
+   "name": "Universitätsklinikum Carl Gustav Carus Dresden",
+   "datei": "universitatsklinikum-carl-gustav-carus-dresden.html",
+   "schreibweisen": [
+    "Medizinische Fakultät Carl Gustav Carus an der TU Dresden Bereich Allgemeinmedizin/ Medizinische Klinik und Poliklinik III",
+    "Technische Universität Dresden, Medizinische Fakultät Carl Gustav Carus, Klinik und Poliklinik für Viszeral-, Thorax- und Gefäßchirurgie",
+    "Universitätsklinikum Carl Gustav Carus"
+   ],
+   "studien": 4,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/04za5zm41",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uniklinikum-dresden.de/en",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 27944,
+   "repositorien": [],
+   "namensvarianten": [
+    "Carl Gustav Carus Hospital",
+    "University Hospital Carl Gustav Carus",
+    "Universitätsklinikum Carl Gustav Carus Dresden"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Dresden",
+   "lat": 51.05089,
+   "lon": 13.73832
+  },
+  {
+   "name": "Universitätsklinikum Freiburg",
+   "datei": "universitatsklinikum-freiburg.html",
+   "schreibweisen": [
+    "Universitätsklinikum Freiburg"
+   ],
+   "studien": 4,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/03vzbgh69",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uniklinik-freiburg.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 63215,
+   "repositorien": [],
+   "namensvarianten": [
+    "Freiburg University Hospital",
+    "Freiburg University Medical Center",
+    "Universitaetsklinikum Freiburg",
+    "University Hospital Freiburg",
+    "University Medical Center Freiburg",
+    "University Medical Centre Freiburg",
+    "Universitätsklinikum Freiburg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Freiburg im Breisgau",
+   "lat": 47.9959,
+   "lon": 7.85222
+  },
+  {
+   "name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+   "datei": "friedrich-alexander-universitat-erlangen-nurnberg.html",
+   "schreibweisen": [
+    "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "Lehrstuhl für Klinische Psychologie und Psychotherapie, Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "Universitätsklinikum Erlangen, Abteilung für Palliativmedizin, Friedrich-Alexander-Universität Erlangen-Nürnberg"
+   ],
+   "studien": 4,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00f7hpc57",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.fau.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 164220,
+   "repositorien": [
+    {
+     "name": "FAUdata",
+     "id": "https://openalex.org/S7407051940",
+     "adresse": "https://cris.fau.de/datasets/",
+     "arbeiten": 8,
+     "traeger": "Friedrich-Alexander-Universität Erlangen-Nürnberg"
+    }
+   ],
+   "namensvarianten": [
+    "FAU Erlangen-Nuremberg",
+    "FAU Erlangen-Nürnberg",
+    "Friedrich Alexander University Erlangen-Nuremberg",
+    "Friedrich-Alexander University Erlangen-Nuremberg",
+    "Friedrich-Alexander-Universitaet Erlangen-Nuernberg",
+    "Friedrich-Alexander-University Erlangen-Nürnberg",
+    "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "University of Erlangen-Nuremberg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Erlangen",
+   "lat": 49.59099,
+   "lon": 11.00783
+  },
+  {
+   "name": "Berliner Institut für Gesundheitsforschung",
+   "datei": "berliner-institut-fur-gesundheitsforschung.html",
+   "schreibweisen": [
+    "Charité Centre for Global Health",
+    "Charité Universitätsmedizin Berlin - Institut für Allgemeinmedizin - AG Health Policy and Systems Research and Innovation"
+   ],
+   "studien": 3,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/0493xsw21",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.bihealth.org/",
+   "oa_typ": "facility",
+   "oa_arbeiten": 17343,
+   "repositorien": [],
+   "namensvarianten": [
+    "Berlin Institute for Health Research",
+    "Berlin Institute of Health at Charité - Universitätsmedizin Berlin",
+    "Berliner Institut für Gesundheitsforschung"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Berlin",
+   "lat": 52.52437,
+   "lon": 13.41053
+  },
+  {
+   "name": "Universitätsklinikum Essen",
+   "datei": "universitatsklinikum-essen.html",
+   "schreibweisen": [
+    "Universitätsklinikum Essen"
+   ],
+   "studien": 3,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/02na8dn90",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uk-essen.de",
+   "oa_typ": "funder",
+   "oa_arbeiten": 44451,
+   "repositorien": [],
+   "namensvarianten": [
+    "Essen University Hospital",
+    "Universitätsklinikum Essen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Essen",
+   "lat": 51.45656967163086,
+   "lon": 7.012279987335205
+  },
+  {
+   "name": "Technische Universität München, Lehrstuhl für Gesundheitsökonomie",
+   "datei": "technische-universitat-munchen-lehrstuhl-fur-gesundheitsokon.html",
+   "schreibweisen": [
+    "Technische Universität München, Lehrstuhl für Gesundheitsökonomie"
+   ],
+   "studien": 3,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/02kkvpp62",
+   "ror_name": "Technical University of Munich",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 1.00",
+   "netzadresse": "https://www.tum.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 269556,
+   "repositorien": [
+    {
+     "name": "mediaTUM – the media and publications repository of the Technical University Munich (Technical University Munich)",
+     "id": "https://openalex.org/S4306400453",
+     "adresse": null,
+     "arbeiten": 43372,
+     "traeger": "Technical University of Munich"
+    },
+    {
+     "name": "mediaTUM  (Technical University of Munich)",
+     "id": "https://openalex.org/S4377196330",
+     "adresse": "https://mediatum.ub.tum.de/",
+     "arbeiten": 13875,
+     "traeger": "Technical University of Munich"
+    }
+   ],
+   "namensvarianten": [
+    "Technical University of Munich",
+    "Technische Universitaet Muenchen",
+    "Technische Universität München"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Munich",
+   "lat": 48.13743,
+   "lon": 11.57549
+  },
+  {
+   "name": "Universität Duisburg-Essen",
+   "datei": "universitat-duisburg-essen.html",
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin, Universitätsmedizin Essen, Medizinische Fakultät, Universität Duisburg-Essen",
+    "Universität Duisburg Essen",
+    "Universität Duisburg-Essen"
+   ],
+   "studien": 3,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/04mz5ra38",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-due.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 95834,
+   "repositorien": [
+    {
+     "name": "DuEPublico (University of Duisburg-Essen)",
+     "id": "https://openalex.org/S4306400212",
+     "adresse": "https://duepublico2.uni-due.de",
+     "arbeiten": 13684,
+     "traeger": "University of Duisburg-Essen"
+    },
+    {
+     "name": "Käte Hamburger Kolleg/Center for Global Cooperation Research",
+     "id": "https://openalex.org/S7407051517",
+     "adresse": null,
+     "arbeiten": 0,
+     "traeger": "University of Duisburg-Essen"
+    },
+    {
+     "name": "Institute of Sociology at the University of Duisburg-Essen",
+     "id": "https://openalex.org/S7407051550",
+     "adresse": null,
+     "arbeiten": 0,
+     "traeger": "University of Duisburg-Essen"
+    },
+    {
+     "name": "DuEData",
+     "id": "https://openalex.org/S7407053417",
+     "adresse": null,
+     "arbeiten": 33,
+     "traeger": "University of Duisburg-Essen"
+    }
+   ],
+   "namensvarianten": [
+    "University of Duisburg-Essen",
+    "Universität Duisburg-Essen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Essen",
+   "lat": 51.45657,
+   "lon": 7.01228
+  },
+  {
+   "name": "Universitätsklinikum des Saarlandes",
+   "datei": "universitatsklinikum-des-saarlandes.html",
+   "schreibweisen": [
+    "Universitätsklinikum des Saarlandes"
+   ],
+   "studien": 3,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00nvxt968",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uks.eu/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 21505,
+   "repositorien": [],
+   "namensvarianten": [
+    "Universitätsklinikum des Saarlandes"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Homburg",
+   "lat": 49.32637,
+   "lon": 7.33867
+  },
+  {
+   "name": "Universitätsklinikum Erlangen",
+   "datei": "universitatsklinikum-erlangen.html",
+   "schreibweisen": [
+    "Universitätsklinikum Erlangen"
+   ],
+   "studien": 3,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/0030f2a11",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uk-erlangen.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 41606,
+   "repositorien": [],
+   "namensvarianten": [
+    "Erlangen University Hospital",
+    "Universitaetsklinikum Erlangen",
+    "University Hospital Erlangen",
+    "University Hospital of Erlangen",
+    "Universitätsklinikum Erlangen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Erlangen",
+   "lat": 49.59099,
+   "lon": 11.00783
+  },
+  {
+   "name": "Robert-Bosch-Krankenhaus",
+   "datei": "robert-bosch-krankenhaus.html",
+   "schreibweisen": [
+    "Robert Bosch Gesellschaft für medizinische Forschung mbH",
+    "Robert-Bosch-Krankenhaus",
+    "Robert-Bosch-Krankenhaus Klinik für Geriatrische Rehabilitation"
+   ],
+   "studien": 3,
+   "traegerart": "Krankenhaus oder Praxis",
+   "ror": "https://ror.org/034nkkr84",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.rbk.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 4777,
+   "repositorien": [],
+   "namensvarianten": [
+    "Robert Bosch Hospital",
+    "Robert-Bosch-Krankenhaus"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Stuttgart",
+   "lat": 48.78232,
+   "lon": 9.17702
+  },
+  {
+   "name": "Universitätsklinikum Gießen und Marburg",
+   "datei": "universitatsklinikum-gie-en-und-marburg.html",
+   "schreibweisen": [
+    "Universitätsklinikum Gießen und Marburg GmbH; Klinik für Strahlentherapie",
+    "Universitätsklinikum Gießen und Marburg, Standort Marburg",
+    "Universitätsklinikum Gießen-Marburg"
+   ],
+   "studien": 3,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/032nzv584",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.ukgm.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 20932,
+   "repositorien": [],
+   "namensvarianten": [
+    "University Hospital of Giessen and Marburg",
+    "Universitätsklinikum Gießen und Marburg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Giessen",
+   "lat": 50.58727,
+   "lon": 8.67554
+  },
+  {
+   "name": "LVR-Institut für Forschung und Bildung",
+   "datei": "lvr-institut-fur-forschung-und-bildung.html",
+   "schreibweisen": [
+    "LVR-Institut für Forschung und Bildung"
+   ],
+   "studien": 3,
+   "traegerart": "Kommunaler oder kirchlicher Träger",
+   "ror": null,
+   "ror_name": "",
+   "ror_grund": "kein Treffer haelt dem Waechter stand",
+   "netzadresse": null,
+   "oa_typ": null,
+   "oa_arbeiten": null,
+   "repositorien": [],
+   "namensvarianten": [],
+   "geprueft": null,
+   "name_haelt": null,
+   "ort_haelt": null,
+   "oa_ort": null,
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Robert Koch-Institut",
+   "datei": "robert-koch-institut.html",
+   "schreibweisen": [
+    "Robert Koch-Institut",
+    "Robert Koch-Institut, Abteilung für Epidemiologie und Gesundheitsmonitoring"
+   ],
+   "studien": 2,
+   "traegerart": "Ressortforschung des Bundes",
+   "ror": "https://ror.org/01k5qnb77",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.rki.de/",
+   "oa_typ": "government",
+   "oa_arbeiten": 15234,
+   "repositorien": [
+    {
+     "name": "Publication server of the Robert Koch Institute (Robert Kock Institute)",
+     "id": "https://openalex.org/S4306400512",
+     "adresse": null,
+     "arbeiten": 7259,
+     "traeger": "Robert Koch Institute"
+    },
+    {
+     "name": "Forschungsdatenzentrum am Robert Koch Institut",
+     "id": "https://openalex.org/S7407051200",
+     "adresse": "https://www.rki.de/DE/Content/Forsch/FDZ/FDZ_node.html",
+     "arbeiten": 9,
+     "traeger": "Robert Koch Institute"
+    },
+    {
+     "name": "Centre for Cancer Registry Data (ZfKD) at the Robert Koch Institute",
+     "id": "https://openalex.org/S7407051201",
+     "adresse": "https://www.krebsdaten.de/Krebs/EN/Home/homepage_node.html",
+     "arbeiten": 22,
+     "traeger": "Robert Koch Institute"
+    },
+    {
+     "name": "Research Data Centre at the Robert Koch Institute",
+     "id": "https://openalex.org/S7407051536",
+     "adresse": "https://www.rki.de/EN/Content/Health_Monitoring/Main_Topics/topics_node.html",
+     "arbeiten": 396,
+     "traeger": "Robert Koch Institute"
+    }
+   ],
+   "namensvarianten": [
+    "Robert Koch Institute",
+    "Robert Koch-Institut"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Berlin",
+   "lat": 52.52437,
+   "lon": 13.41053
+  },
+  {
+   "name": "Institut für Allgemeinmedizin",
+   "datei": "institut-fur-allgemeinmedizin.html",
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin"
+   ],
+   "studien": 2,
+   "traegerart": "nicht zuzuordnen",
+   "ror": "https://ror.org/05885p792",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.lmu-klinikum.de/institut-allgemeinmedizin",
+   "oa_typ": "facility",
+   "oa_arbeiten": 643,
+   "repositorien": [],
+   "namensvarianten": [
+    "Institut für Allgemeinmedizin",
+    "Institute of General Practice and Family Medicine"
+   ],
+   "geprueft": false,
+   "name_haelt": false,
+   "ort_haelt": false,
+   "oa_ort": "Munich",
+   "lat": 48.13743,
+   "lon": 11.57549
+  },
+  {
+   "name": "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig Holstein, Campus Lübeck",
+   "datei": "institut-fur-allgemeinmedizin-universitatsklinikum-schleswig.html",
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig Holstein, Campus Lübeck",
+    "Institut für Allgemeinmedizin, Universitätsklinikum Schleswig-Holstein, Campus Lübeck"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/01tvm6f46",
+   "ror_name": "University Hospital Schleswig-Holstein",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 0.97",
+   "netzadresse": "https://www.uksh.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 40195,
+   "repositorien": [],
+   "namensvarianten": [
+    "University Hospital Schleswig-Holstein",
+    "Universitätsklinikum Schleswig-Holstein"
+   ],
+   "geprueft": false,
+   "name_haelt": true,
+   "ort_haelt": false,
+   "oa_ort": "Kiel",
+   "lat": 54.32133,
+   "lon": 10.13489
+  },
+  {
+   "name": "Hochschule für angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management",
+   "datei": "hochschule-fur-angewandte-wissenschaften-hamburg-fakultat-wi.html",
+   "schreibweisen": [
+    "Hochschule für Angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management",
+    "Hochschule für angewandte Wissenschaften Hamburg, Fakultät Wirtschaft und Soziales, Department Pflege und Management"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00fkqwx76",
+   "ror_name": "HAW Hamburg",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 1.00",
+   "netzadresse": "https://www.haw-hamburg.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 7259,
+   "repositorien": [
+    {
+     "name": "REPOSIT",
+     "id": "https://openalex.org/S7407050550",
+     "adresse": "https://reposit.haw-hamburg.de/",
+     "arbeiten": 136,
+     "traeger": "HAW Hamburg"
+    }
+   ],
+   "namensvarianten": [
+    "Fachhochschule Hamburg",
+    "HAW Hamburg",
+    "Hamburg University of Applied Sciences",
+    "Hochschule für Angewandte Wissenschaften Hamburg",
+    "Hochschule für Angewandte Wissenschaften Hamburg (HAW Hamburg)"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Hamburg",
+   "lat": 53.55073,
+   "lon": 9.99302
+  },
+  {
+   "name": "Deutsches Herzzentrum der Charité",
+   "datei": "deutsches-herzzentrum-der-charite.html",
+   "schreibweisen": [
+    "Deutsches Herzzentrum der Charité"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/01mmady97",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.dhzb.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 8552,
+   "repositorien": [],
+   "namensvarianten": [
+    "Deutsches Herzzentrum Berlin",
+    "Deutsches Herzzentrum der Charité",
+    "German Heart Center Berlin"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Berlin",
+   "lat": 52.52437,
+   "lon": 13.41053
+  },
+  {
+   "name": "Universitätsklinikum Schleswig-Holstein",
+   "datei": "universitatsklinikum-schleswig-holstein.html",
+   "schreibweisen": [
+    "Universitätsklinikum Schleswig-Holstein"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/01tvm6f46",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uksh.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 40195,
+   "repositorien": [],
+   "namensvarianten": [
+    "University Hospital Schleswig-Holstein",
+    "Universitätsklinikum Schleswig-Holstein"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Kiel",
+   "lat": 54.32133,
+   "lon": 10.13489
+  },
+  {
+   "name": "Rheinhessen-Fachklinik Mainz",
+   "datei": "rheinhessen-fachklinik-mainz.html",
+   "schreibweisen": [
+    "Rheinhessen-Fachklinik Alzey"
+   ],
+   "studien": 2,
+   "traegerart": "Krankenhaus oder Praxis",
+   "ror": "https://ror.org/055kyaa64",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "http://www.rheinhessen-fachklinik-mainz.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 49,
+   "repositorien": [],
+   "namensvarianten": [
+    "Rheinhessen-Fachklinik Mainz"
+   ],
+   "geprueft": false,
+   "name_haelt": true,
+   "ort_haelt": false,
+   "oa_ort": "Mainz",
+   "lat": 50.01580810546875,
+   "lon": 8.239548683166504
+  },
+  {
+   "name": "Kleine Riesen Nordhessen gGmbH",
+   "datei": "kleine-riesen-nordhessen-ggmbh.html",
+   "schreibweisen": [
+    "Kleine Riesen Nordhessen gGmbH"
+   ],
+   "studien": 2,
+   "traegerart": "Gemeinnütziger Träger",
+   "ror": null,
+   "ror_name": "",
+   "ror_grund": "kein Treffer haelt dem Waechter stand",
+   "netzadresse": null,
+   "oa_typ": null,
+   "oa_arbeiten": null,
+   "repositorien": [],
+   "namensvarianten": [],
+   "geprueft": null,
+   "name_haelt": null,
+   "ort_haelt": null,
+   "oa_ort": null,
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Deutsche Krebsgesellschaft e. V.",
+   "datei": "deutsche-krebsgesellschaft-e-v.html",
+   "schreibweisen": [
+    "Deutsche Krebsgesellschaft e. V."
+   ],
+   "studien": 2,
+   "traegerart": "Fachgesellschaft, Verband oder Stiftung",
+   "ror": "https://ror.org/013z6ae41",
+   "ror_name": "German Cancer Society",
+   "ror_grund": "Innofonds-Portal (handgeprueft)",
+   "netzadresse": "https://www.krebsgesellschaft.de/german-cancer-society.html",
+   "oa_typ": "nonprofit",
+   "oa_arbeiten": 1079,
+   "repositorien": [],
+   "namensvarianten": [
+    "Deutsche Krebsgesellschaft",
+    "German Cancer Society"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Berlin",
+   "lat": 52.50527572631836,
+   "lon": 13.290114402770996
+  },
+  {
+   "name": "Technische Universität Dresden",
+   "datei": "technische-universitat-dresden.html",
+   "schreibweisen": [
+    "TU Dresden",
+    "Technische Universität Dresden"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/042aqky30",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://tu-dresden.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 143828,
+   "repositorien": [],
+   "namensvarianten": [
+    "TU Dresden",
+    "TUD Dresden University of Technology",
+    "Technische Universität Dresden"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Dresden",
+   "lat": 51.05089,
+   "lon": 13.73832
+  },
+  {
+   "name": "Medizinische Fakultät Mannheim",
+   "datei": "medizinische-fakultat-mannheim.html",
+   "schreibweisen": [
+    "Medizinische Fakultät Mannheim der Universität Heidelberg",
+    "Universitätsklinikum Heidelberg – UK Mannheim GmbH"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/02m1z0a87",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.umm.uni-heidelberg.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 22842,
+   "repositorien": [],
+   "namensvarianten": [
+    "Heidelberg University Medical Faculty Mannheim",
+    "Medizinische Fakultät Mannheim",
+    "Universitat Heidelberg Medizinische Fakultat Mannheim",
+    "Universitatsmedizin Mannheim Medizinische Fakultat Mannheim"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Mannheim",
+   "lat": 49.48910140991211,
+   "lon": 8.466939926147461
+  },
+  {
+   "name": "Interdisziplinäre Schmerzambulanz, Campus Innenstadt, Klinik für Anaesthesiologie, LMU Klinikum, LMU München",
+   "datei": "interdisziplinare-schmerzambulanz-campus-innenstadt-klinik-f.html",
+   "schreibweisen": [
+    "Interdisziplinäre Schmerzambulanz, Campus Innenstadt, Klinik für Anaesthesiologie, LMU Klinikum, LMU München"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": null,
+   "ror_name": "",
+   "ror_grund": "kein Treffer haelt dem Waechter stand",
+   "netzadresse": null,
+   "oa_typ": null,
+   "oa_arbeiten": null,
+   "repositorien": [],
+   "namensvarianten": [],
+   "geprueft": null,
+   "name_haelt": null,
+   "ort_haelt": null,
+   "oa_ort": null,
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Zentralinstitut für Seelische Gesundheit",
+   "datei": "zentralinstitut-fur-seelische-gesundheit.html",
+   "schreibweisen": [
+    "Zentralinstitut für Seelische Gesundheit",
+    "Zentralinstitut für Seelische Gesundheit Mannheim"
+   ],
+   "studien": 2,
+   "traegerart": "nicht zuzuordnen",
+   "ror": "https://ror.org/01hynnt93",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.zi-mannheim.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 12363,
+   "repositorien": [],
+   "namensvarianten": [
+    "Central Institute of Mental Health",
+    "ZI Mannheim",
+    "Zentralinstitut für Seelische Gesundheit"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Mannheim",
+   "lat": 49.48910140991211,
+   "lon": 8.466939926147461
+  },
+  {
+   "name": "Zentrum für Integrative Psychiatrie gGmbH",
+   "datei": "zentrum-fur-integrative-psychiatrie-ggmbh.html",
+   "schreibweisen": [
+    "Zentrum für Integrative Psychiatrie gGmbH"
+   ],
+   "studien": 2,
+   "traegerart": "Gemeinnütziger Träger",
+   "ror": null,
+   "ror_name": "",
+   "ror_grund": "kein Treffer haelt dem Waechter stand",
+   "netzadresse": null,
+   "oa_typ": null,
+   "oa_arbeiten": null,
+   "repositorien": [],
+   "namensvarianten": [],
+   "geprueft": null,
+   "name_haelt": null,
+   "ort_haelt": null,
+   "oa_ort": null,
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Vestische Kinder- und Jugendklinik Datteln, Universität Witten/Herdecke",
+   "datei": "vestische-kinder-und-jugendklinik-datteln-universitat-witten.html",
+   "schreibweisen": [
+    "Vestische Kinder- und Jugendklinik Datteln, Universität Witten/Herdecke"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00yq55g44",
+   "ror_name": "Witten/Herdecke University",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 1.00",
+   "netzadresse": "https://www.uni-wh.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 24787,
+   "repositorien": [],
+   "namensvarianten": [
+    "Universität Witten/Herdecke",
+    "Witten/Herdecke University"
+   ],
+   "geprueft": false,
+   "name_haelt": true,
+   "ort_haelt": false,
+   "oa_ort": "Witten",
+   "lat": 51.44362,
+   "lon": 7.35258
+  },
+  {
+   "name": "Universität Bremen - Socium",
+   "datei": "universitat-bremen-socium.html",
+   "schreibweisen": [
+    "Universität Bremen  - Socium",
+    "Universität Bremen - Socium"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/04ers2y35",
+   "ror_name": "University of Bremen",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 1.00",
+   "netzadresse": "https://www.uni-bremen.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 72581,
+   "repositorien": [
+    {
+     "name": "Media (https://www.suub.uni-bremen.de/)",
+     "id": "https://openalex.org/S4306402486",
+     "adresse": null,
+     "arbeiten": 5915,
+     "traeger": "University of Bremen"
+    }
+   ],
+   "namensvarianten": [
+    "Universitaet Bremen",
+    "University of Bremen",
+    "Universität Bremen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Bremen",
+   "lat": 53.07582,
+   "lon": 8.80717
+  },
+  {
+   "name": "Orthopädische Klinik König-Ludwig-Haus Würzburg",
+   "datei": "orthopadische-klinik-konig-ludwig-haus-wurzburg.html",
+   "schreibweisen": [
+    "Orthopädische Klinik König-Ludwig-Haus Würzburg"
+   ],
+   "studien": 2,
+   "traegerart": "Krankenhaus oder Praxis",
+   "ror": null,
+   "ror_name": "",
+   "ror_grund": "kein Treffer haelt dem Waechter stand",
+   "netzadresse": null,
+   "oa_typ": null,
+   "oa_arbeiten": null,
+   "repositorien": [],
+   "namensvarianten": [],
+   "geprueft": null,
+   "name_haelt": null,
+   "ort_haelt": null,
+   "oa_ort": null,
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Universitätsklinikum Düsseldorf",
+   "datei": "universitatsklinikum-dusseldorf.html",
+   "schreibweisen": [
+    "Universitätsklinikum Düsseldorf"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/006k2kk72",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-duesseldorf.de/home/en/university-hospital.html",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 29392,
+   "repositorien": [],
+   "namensvarianten": [
+    "Dusseldorf University Hospital",
+    "Düsseldorf University Hospital",
+    "Universitaetsklinikum Duesseldorf",
+    "University Hospital Dusseldorf",
+    "University Hospital Düsseldorf",
+    "University Hospital of Dusseldorf",
+    "University Hospital of Düsseldorf",
+    "Universitätsklinikum Düsseldorf"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Düsseldorf",
+   "lat": 51.22172,
+   "lon": 6.77616
+  },
+  {
+   "name": "Otto-von-Guericke-Universität Magdeburg",
+   "datei": "otto-von-guericke-universitat-magdeburg.html",
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin/Medizinische Fakultät der Otto-von-Guericke-Universität Magdeburg",
+    "Otto-von-Guericke-Universität MagdeburgUniversitätsklinik für Unfallchirurgie"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00ggpsq73",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.ovgu.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 54546,
+   "repositorien": [],
+   "namensvarianten": [
+    "Otto von Guericke University Magdeburg",
+    "Otto-von-Guericke University Magdeburg",
+    "Otto-von-Guericke-Universität Magdeburg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Magdeburg",
+   "lat": 52.13129,
+   "lon": 11.63189
+  },
+  {
+   "name": "Hochschule für angewandte Wissenschaften Kempten, Institut für Gesundheit und Generationen (IGG)",
+   "datei": "hochschule-fur-angewandte-wissenschaften-kempten-institut-fu.html",
+   "schreibweisen": [
+    "Hochschule für angewandte Wissenschaften Kempten, Institut für Gesundheit und Generationen (IGG)"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": null,
+   "ror_name": "",
+   "ror_grund": "kein Treffer haelt dem Waechter stand",
+   "netzadresse": null,
+   "oa_typ": null,
+   "oa_arbeiten": null,
+   "repositorien": [],
+   "namensvarianten": [],
+   "geprueft": null,
+   "name_haelt": null,
+   "ort_haelt": null,
+   "oa_ort": null,
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "LMU Klinikum München",
+   "datei": "lmu-klinikum-munchen.html",
+   "schreibweisen": [
+    "LMU Klinikum München"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/02jet3w32",
+   "ror_name": "LMU Klinikum",
+   "ror_grund": "Innofonds-Portal (handgeprueft)",
+   "netzadresse": "https://www.lmu-klinikum.de/",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 48805,
+   "repositorien": [],
+   "namensvarianten": [
+    "LMU Klinikum",
+    "LMU University Hospital"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Munich",
+   "lat": 48.13743,
+   "lon": 11.57549
+  },
+  {
+   "name": "Hochschule Osnabrück",
+   "datei": "hochschule-osnabruck.html",
+   "schreibweisen": [
+    "Hochschule Osnabrück"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/059vymd37",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.hs-osnabrueck.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 4326,
+   "repositorien": [
+    {
+     "name": "Library Osnabrück University (Hochschule Osnabrück)",
+     "id": "https://openalex.org/S4377196658",
+     "adresse": null,
+     "arbeiten": 3809,
+     "traeger": "Hochschule Osnabrück"
+    }
+   ],
+   "namensvarianten": [
+    "Hochschule Osnabrück",
+    "Osnabrück UAS",
+    "Osnabrück University of Applied Sciences"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Osnabrück",
+   "lat": 52.27264,
+   "lon": 8.0498
+  },
+  {
+   "name": "Universitätsklinikum Ulm, Klinik für Allgemein- und Viszeralchirurgie, Fachbereich Integrative Medizin",
+   "datei": "universitatsklinikum-ulm-klinik-fur-allgemein-und-viszeralch.html",
+   "schreibweisen": [
+    "Universitätsklinikum Ulm, Klinik für Allgemein- und Viszeralchirurgie, Fachbereich Integrative Medizin"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/05emabm63",
+   "ror_name": "University Hospital Ulm",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 1.00",
+   "netzadresse": "https://www.uniklinik-ulm.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 26785,
+   "repositorien": [],
+   "namensvarianten": [
+    "University Hospital Ulm",
+    "Universitätsklinikum Ulm"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Ulm",
+   "lat": 48.39841079711914,
+   "lon": 9.99155044555664
+  },
+  {
+   "name": "Institut für Allgemeinmedizin Universitätsmedizin Essen",
+   "datei": "institut-fur-allgemeinmedizin-universitatsmedizin-essen.html",
+   "schreibweisen": [
+    "Institut für Allgemeinmedizin Universitätsmedizin Essen",
+    "Institut für Allgemeinmedizin, Universitätsmedizin Essen"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/00ykp8811",
+   "ror_name": "Stiftung Universitätsmedizin Essen",
+   "ror_grund": "ROR-Namensauflösung, Punktwert 0.90",
+   "netzadresse": "https://www.universitaetsmedizin.de",
+   "oa_typ": "nonprofit",
+   "oa_arbeiten": 5792,
+   "repositorien": [],
+   "namensvarianten": [
+    "Stiftung Universitätsmedizin Essen",
+    "University Medical Center Essen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Essen",
+   "lat": 51.45657,
+   "lon": 7.01228
+  },
+  {
+   "name": "Universität Bayreuth",
+   "datei": "universitat-bayreuth.html",
+   "schreibweisen": [
+    "Universität Bayreuth"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/0234wmv40",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-bayreuth.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 49703,
+   "repositorien": [
+    {
+     "name": "EPub Bayreuth (University of Bayreuth)",
+     "id": "https://openalex.org/S4306400362",
+     "adresse": "https://epub.uni-bayreuth.de",
+     "arbeiten": 3288,
+     "traeger": "University of Bayreuth"
+    },
+    {
+     "name": "ERef Bayreuth (University of Bayreuth)",
+     "id": "https://openalex.org/S4377196442",
+     "adresse": null,
+     "arbeiten": 9496,
+     "traeger": "University of Bayreuth"
+    }
+   ],
+   "namensvarianten": [
+    "University of Bayreuth",
+    "Universität Bayreuth"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Bayreuth",
+   "lat": 49.94782,
+   "lon": 11.57893
+  },
+  {
+   "name": "Universitätsmedizin Greifswald",
+   "datei": "universitatsmedizin-greifswald.html",
+   "schreibweisen": [
+    "Universitätsmedizin Greifswald",
+    "Universitätsmedizin Greifswald, Institut für Community Medicine"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/025vngs54",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.medizin.uni-greifswald.de",
+   "oa_typ": "healthcare",
+   "oa_arbeiten": 17759,
+   "repositorien": [],
+   "namensvarianten": [
+    "Greifswald University Hospital",
+    "Greifswald University Medicine",
+    "Universitaetsmedizin Greifswald",
+    "University Hospital Greifswald",
+    "University Medical Center Greifswald",
+    "University Medical Centre Greifswald",
+    "University Medicine Greifswald",
+    "University Medicine of Greifswald"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Greifswald",
+   "lat": 54.08905,
+   "lon": 13.40244
+  },
+  {
+   "name": "Universität Heidelberg",
+   "datei": "universitat-heidelberg.html",
+   "schreibweisen": [
+    "Universität Heidelberg"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/038t36y30",
+   "ror_name": "Heidelberg University",
+   "ror_grund": "Innofonds-Portal (handgeprueft)",
+   "netzadresse": "https://www.uni-heidelberg.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 225719,
+   "repositorien": [
+    {
+     "name": "heiDOK – The Heidelberg Document Repository (Heidelberg University)",
+     "id": "https://openalex.org/S4306402124",
+     "adresse": null,
+     "arbeiten": 8019,
+     "traeger": "Heidelberg University"
+    },
+    {
+     "name": "CrossAsia-Repository (Universität Heidelberg)",
+     "id": "https://openalex.org/S4306402193",
+     "adresse": "https://repository.crossasia.org/",
+     "arbeiten": 4382,
+     "traeger": "Heidelberg University"
+    },
+    {
+     "name": "heiDOK (Heidelberg University)",
+     "id": "https://openalex.org/S4306402333",
+     "adresse": null,
+     "arbeiten": 20295,
+     "traeger": "Heidelberg University"
+    }
+   ],
+   "namensvarianten": [
+    "Heidelberg University",
+    "Ruprecht-Karls University Heidelberg",
+    "Ruprecht-Karls-Universitaet Heidelberg",
+    "Ruprecht-Karls-Universität Heidelberg",
+    "University of Heidelberg"
+   ],
+   "geprueft": false,
+   "name_haelt": false,
+   "ort_haelt": true,
+   "oa_ort": "Heidelberg",
+   "lat": 49.40768,
+   "lon": 8.69079
+  },
+  {
+   "name": "Ruhr-Universität Bochum",
+   "datei": "ruhr-universitat-bochum.html",
+   "schreibweisen": [
+    "Ruhr-Universität Bochum",
+    "Ruhr-Universität Bochum St. Josef-Hospital Klinik für Neurologie"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/04tsk2644",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.ruhr-uni-bochum.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 131062,
+   "repositorien": [
+    {
+     "name": "Dokumentenrepositorium der RUB (Ruhr University Bochum)",
+     "id": "https://openalex.org/S4306400167",
+     "adresse": null,
+     "arbeiten": 10155,
+     "traeger": "Ruhr University Bochum"
+    },
+    {
+     "name": "University Library BOCHUM (Ruhr University Bochum)",
+     "id": "https://openalex.org/S4377196777",
+     "adresse": null,
+     "arbeiten": 3684,
+     "traeger": "Ruhr University Bochum"
+    },
+    {
+     "name": "RUB (Ruhr University Bochum)",
+     "id": "https://openalex.org/S4377196861",
+     "adresse": null,
+     "arbeiten": 41,
+     "traeger": "Ruhr University Bochum"
+    },
+    {
+     "name": "LehreLaden Repository",
+     "id": "https://openalex.org/S7407053484",
+     "adresse": null,
+     "arbeiten": 87,
+     "traeger": "Ruhr University Bochum"
+    },
+    {
+     "name": "ReSeeD Repository",
+     "id": "https://openalex.org/S7407053485",
+     "adresse": "https://reseed.ruhr-uni-bochum.de",
+     "arbeiten": 89,
+     "traeger": "Ruhr University Bochum"
+    },
+    {
+     "name": "SFB 1316 Repository",
+     "id": "https://openalex.org/S7407053486",
+     "adresse": null,
+     "arbeiten": 0,
+     "traeger": "Ruhr University Bochum"
+    }
+   ],
+   "namensvarianten": [
+    "Ruhr University Bochum",
+    "Ruhr University of Bochum",
+    "Ruhr-Universitaet Bochum",
+    "Ruhr-University Bochum",
+    "Ruhr-Universität Bochum"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Bochum",
+   "lat": 51.48165,
+   "lon": 7.21648
+  },
+  {
+   "name": "Justus-Liebig-Universität Gießen",
+   "datei": "justus-liebig-universitat-gie-en.html",
+   "schreibweisen": [
+    "Justus-Liebig-Universität Gießen, Fachbereich Medizin",
+    "Klinik für Psychosomatik und Psychotherapie, Universitätsklinikum Gießen und Marburg, Justus-Liebig-Universität Gießen"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/033eqas34",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-giessen.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 97463,
+   "repositorien": [
+    {
+     "name": "University writing server of the Justus Liebig University Giessen (Justus-Liebig-Universität Gießen)",
+     "id": "https://openalex.org/S4306401439",
+     "adresse": null,
+     "arbeiten": 10661,
+     "traeger": "Justus-Liebig-Universität Gießen"
+    },
+    {
+     "name": "Universitätsbibliothek Gießen",
+     "id": "https://openalex.org/S7407052994",
+     "adresse": null,
+     "arbeiten": 6618,
+     "traeger": "Justus-Liebig-Universität Gießen"
+    }
+   ],
+   "namensvarianten": [
+    "Giessen University",
+    "Justus Liebig University",
+    "Justus Liebig University Giessen",
+    "Justus-Liebig-Universität Giessen",
+    "Justus-Liebig-Universität Gießen",
+    "University of Giessen"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Giessen",
+   "lat": 50.58727,
+   "lon": 8.67554
+  },
+  {
+   "name": "Viszeralmedizinisches Zentrum, Evangelisches Diakoniekrankenhaus Freiburg",
+   "datei": "viszeralmedizinisches-zentrum-evangelisches-diakoniekrankenh.html",
+   "schreibweisen": [
+    "Viszeralmedizinisches Zentrum, Evangelisches Diakoniekrankenhaus Freiburg"
+   ],
+   "studien": 2,
+   "traegerart": "Kommunaler oder kirchlicher Träger",
+   "ror": null,
+   "ror_name": "",
+   "ror_grund": "kein Treffer haelt dem Waechter stand",
+   "netzadresse": null,
+   "oa_typ": null,
+   "oa_arbeiten": null,
+   "repositorien": [],
+   "namensvarianten": [],
+   "geprueft": null,
+   "name_haelt": null,
+   "ort_haelt": null,
+   "oa_ort": null,
+   "lat": null,
+   "lon": null
+  },
+  {
+   "name": "Philipps-Universität Marburg",
+   "datei": "philipps-universitat-marburg.html",
+   "schreibweisen": [
+    "Philipps Universität Marburg - Klinik für Neurologie",
+    "Universitätsklinikum Marburg, Philipps Universität Marburg"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/01rdrb571",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-marburg.de/",
+   "oa_typ": "education",
+   "oa_arbeiten": 93955,
+   "repositorien": [
+    {
+     "name": "Publikationsserver (Universitat Marburg)",
+     "id": "https://openalex.org/S4306401416",
+     "adresse": "https://opus4.kobv.de/opus4-hm/home",
+     "arbeiten": 7929,
+     "traeger": "Philipps University of Marburg"
+    },
+    {
+     "name": "Publikationsserver (Philipps-Universität Marburg)",
+     "id": "https://openalex.org/S4306402267",
+     "adresse": null,
+     "arbeiten": 53,
+     "traeger": "Philipps University of Marburg"
+    }
+   ],
+   "namensvarianten": [
+    "Philipps University of Marburg",
+    "Philipps-Universität Marburg",
+    "Universität Marburg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Marburg",
+   "lat": 50.80904,
+   "lon": 8.77069
+  },
+  {
+   "name": "Ruprecht-Karls-Universität Heidelberg",
+   "datei": "ruprecht-karls-universitat-heidelberg.html",
+   "schreibweisen": [
+    "Ruprecht-Karls-Universität Heidelberg",
+    "Ruprecht-Karls-Universität Heidelberg Medizinische Fakultät vertreten durch das Universitätsklinikum Heidelberg und dessen Kaufmännische Direktorin Katrin Erk"
+   ],
+   "studien": 2,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/038t36y30",
+   "ror_name": "",
+   "ror_grund": "bereits aufgeloest",
+   "netzadresse": "https://www.uni-heidelberg.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 225719,
+   "repositorien": [
+    {
+     "name": "heiDOK – The Heidelberg Document Repository (Heidelberg University)",
+     "id": "https://openalex.org/S4306402124",
+     "adresse": null,
+     "arbeiten": 8019,
+     "traeger": "Heidelberg University"
+    },
+    {
+     "name": "CrossAsia-Repository (Universität Heidelberg)",
+     "id": "https://openalex.org/S4306402193",
+     "adresse": "https://repository.crossasia.org/",
+     "arbeiten": 4382,
+     "traeger": "Heidelberg University"
+    },
+    {
+     "name": "heiDOK (Heidelberg University)",
+     "id": "https://openalex.org/S4306402333",
+     "adresse": null,
+     "arbeiten": 20295,
+     "traeger": "Heidelberg University"
+    }
+   ],
+   "namensvarianten": [
+    "Heidelberg University",
+    "Ruprecht-Karls University Heidelberg",
+    "Ruprecht-Karls-Universitaet Heidelberg",
+    "Ruprecht-Karls-Universität Heidelberg",
+    "University of Heidelberg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Heidelberg",
+   "lat": 49.40768,
+   "lon": 8.69079
+  }
+ ]
+}

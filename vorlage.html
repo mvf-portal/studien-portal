@@ -1,0 +1,1237 @@
+<meta charset="utf-8">
+<title>Versorgungsstudien-Landkarte</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+<style>
+/* Layout: Kopfband, Kennzahlenreihe, Filterleiste (klebend), Studienliste,
+   Auswertungen, Grenzen-Abschnitt. Tokens sind die der MVF-Knowledge-Hubs. */
+:root{
+  --paper:#EDF2FA; --card:#FFFFFF; --card-2:#F7FAFD;
+  --ink:#111111; --ink-soft:#444A50; --ink-faint:#545C63;
+  --line:#D0D8E4; --line-soft:#E3EAF3;
+  --brand:#0051A1; --brand-deep:#003B77; --brand-tint:#E1EAF6;
+  --action:#BE9E53; --action-deep:#A5873F; --on-action:#2A2207;
+  --on-brand:#FFFFFF; --accent:#8A6E28;
+  --gut:#1F7A5A; --gut-tint:#DDF0E8;
+  --warn:#9A3B21; --warn-tint:#F7E4DE;
+  --shadow:0 1px 2px rgba(16,40,38,.05), 0 8px 24px -16px rgba(16,40,38,.28);
+  /* Lato ist die Hausschrift der Hubs und des Innofonds-Portals. */
+  --serif:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sans:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+    --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+    --line:#22314A; --line-soft:#1A2639;
+    --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+    --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+    --on-brand:#081726; --accent:#D9BE82;
+    --gut:#6FC6A1; --gut-tint:#122B23;
+    --warn:#E8927A; --warn-tint:#2E1811;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -18px rgba(0,0,0,.7);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+  --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+  --line:#22314A; --line-soft:#1A2639;
+  --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+  --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+  --on-brand:#081726; --accent:#D9BE82;
+  --gut:#6FC6A1; --gut-tint:#122B23;
+  --warn:#E8927A; --warn-tint:#2E1811;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -18px rgba(0,0,0,.7);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper); color:var(--ink); font-family:var(--sans);
+  font-size:15px; line-height:1.55; margin:0}
+/* 1.240 px Seitenbreite, Fliesstext 760 px (Mariann, Canvas 2,
+   n-Vorlage-breite): Laengere Zeilen liest man schlecht, das Auge verliert
+   beim Zeilensprung den Anfang der naechsten Zeile. */
+.wrap{max-width:1240px; margin:0 auto;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px))}
+.lesebreite{max-width:760px}
+h1,h2,h3{font-family:var(--serif); text-wrap:balance; margin:0}
+h1{font-size:clamp(28px,4.4vw,42px); line-height:1.12; font-weight:900;
+  letter-spacing:-.015em}
+h2{font-size:clamp(20px,2.6vw,26px); font-weight:900; margin-bottom:.35em}
+h3{font-size:17px; font-weight:700}
+a{color:var(--brand)}
+.eyebrow{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-faint); font-weight:600}
+
+/* Kopf: weisser Teil mit Titel und EINEM Satz, darunter die Reiter.
+   Der zweite Absatz ist bewusst weg (Mariann, n-Main-1): „Je weniger Text
+   vor dem Suchfeld, desto schneller wird gesucht." */
+header.band{background:var(--card)}
+header.band .wrap{padding-block:30px 0}
+.unter{color:var(--ink-soft); margin-top:10px; font-size:16px}
+.reiter{display:flex; flex-wrap:wrap; gap:4px 22px; margin-top:20px}
+.reiter button, .reiter a{display:inline-block; padding:9px 2px 10px;
+  font:inherit; font-size:14.5px; background:none; border:0; cursor:pointer;
+  text-decoration:none; color:var(--ink-soft);
+  border-bottom:3px solid transparent}
+.reiter button:hover, .reiter a:hover{color:var(--brand);
+  border-bottom-color:var(--line)}
+.reiter [aria-current]{color:var(--ink); font-weight:700;
+  border-bottom-color:var(--brand)}
+
+/* Blauer Teil, in den der Suchkasten hineinragt (Mariann, n-Main-2):
+   „Die Suche ist ohne Scrollen sichtbar." */
+.blau{background:var(--brand-deep); padding-top:30px}
+.blau .wrap{padding-bottom:0}
+.suchkasten{background:var(--card); border-radius:14px; box-shadow:var(--shadow);
+  padding:18px 20px 14px; margin-bottom:-42px; border:1px solid var(--line)}
+.suchzeile{display:flex; gap:10px; align-items:center}
+.suchkasten input[type=search]{flex:1 1 auto; font:inherit; font-size:19px;
+  padding:10px 14px; border:1px solid var(--line); border-radius:9px;
+  background:var(--card-2); color:var(--ink); min-width:0}
+/* Platzhalter grau mit zwei Beispielen, nie ein schwarzer Begriff im Feld
+   (Mariann, n-Main-3): der saehe aus wie eine schon gemachte Suche. */
+.suchkasten input[type=search]::placeholder{color:#9AA5B4; opacity:1}
+.suchknopf{font:inherit; font-size:15px; font-weight:700; padding:11px 22px;
+  border-radius:9px; border:1px solid var(--brand-deep); background:var(--brand);
+  color:var(--on-brand); cursor:pointer; white-space:nowrap}
+.suchknopf:hover{background:var(--brand-deep)}
+.suchfuss{margin-top:10px; font-size:13px; color:var(--ink-faint);
+  display:flex; flex-wrap:wrap; gap:4px 16px; justify-content:flex-end}
+.suchfuss b{color:var(--ink-soft); font-weight:600}
+
+/* „Zum ersten Mal hier?" als eigener Kasten unter der Suche, mit x
+   (Mariann, n-Main-6) - nicht im Suchkasten, sonst wirkt er wie ein Teil
+   der Suche. */
+.topliste{margin:26px 0 6px}
+.topliste h2{font-size:18px; margin:0 0 .5em}
+ol.tliste{list-style:none; margin:0; padding:0}
+ol.tliste li{display:grid; grid-template-columns:28px minmax(0,1fr) auto 90px 34px;
+  gap:10px; align-items:center; padding:6px 0;
+  border-bottom:1px solid var(--line); font-size:13.5px}
+.tplatz{color:var(--ink-faint); font-variant-numeric:tabular-nums;
+  text-align:right}
+.tname{font-weight:600; overflow:hidden; text-overflow:ellipsis;
+  white-space:nowrap}
+.tort{color:var(--ink-faint); font-size:12.5px; white-space:nowrap}
+.tbalken{background:var(--card-2); border-radius:4px; height:9px;
+  overflow:hidden}
+.tbalken i{display:block; height:100%; background:var(--brand)}
+.tzahl{text-align:right; font-weight:700; font-variant-numeric:tabular-nums}
+@media (max-width:620px){
+  ol.tliste li{grid-template-columns:24px minmax(0,1fr) 34px}
+  .tort, .tbalken{display:none}
+}
+.karte{margin:18px 0 6px; display:flex; flex-direction:column;
+  align-items:center}
+.ksvg{width:100%; max-width:430px; height:auto; display:block}
+.kland{fill:var(--card-2); stroke:var(--line); stroke-width:1.1;
+  stroke-linejoin:round}
+.kpunkt circle{fill:var(--brand); fill-opacity:.52; stroke:var(--brand);
+  stroke-width:1.1; transition:fill-opacity .12s}
+.kpunkt:hover circle, .kpunkt:focus circle{fill-opacity:.92;
+  stroke:var(--action-deep); stroke-width:1.8}
+.kname{font-size:11px; fill:var(--ink-soft); pointer-events:none;
+  paint-order:stroke; stroke:var(--card); stroke-width:3px;
+  stroke-linejoin:round}
+.kartenhinweis{font-size:12px; color:var(--ink-faint); margin:10px 0 0;
+  max-width:620px; text-align:center}
+.ausschnitt{border:1px solid var(--warn); border-left:4px solid var(--warn);
+  border-radius:10px; padding:18px 20px; margin:18px 0 0; background:var(--card)}
+.ausschnitt h2{font-size:18px; margin:0 0 .3em; color:var(--warn)}
+.ausschnitt p{font-size:14px; color:var(--ink-soft); margin:.5em 0 0}
+.ausschnitt ol.gruende{margin:.7em 0 0; padding-left:20px; font-size:13.5px;
+  color:var(--ink-soft); max-width:760px}
+.ausschnitt ol.gruende li{margin-top:.45em}
+.ausschnitt .wege{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.ausschnitt .wege button{font:inherit; font-size:13.5px; padding:7px 14px;
+  border-radius:7px; border:1px solid var(--action-deep);
+  background:var(--action); color:var(--on-action); cursor:pointer}
+.ausschnitt .wege button:hover{background:var(--action-deep)}
+#mitmachen .ja-nein{display:flex; gap:14px; margin-top:6px; flex-wrap:wrap}
+#mitmachen .ja-nein label{display:inline-flex; align-items:center; gap:6px;
+  margin:0; font-size:13.5px; color:var(--ink)}
+#mitmachen fieldset{border:1px solid var(--line); border-radius:9px;
+  padding:4px 14px 14px; margin:20px 0 0; background:var(--card-2)}
+#mitmachen legend{font-size:12px; font-weight:700; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--brand); padding:0 6px}
+#mitmachen label{display:block; font-size:13px; color:var(--ink-soft);
+  margin-top:12px}
+#mitmachen label b{display:block; color:var(--ink); font-weight:700;
+  font-size:13.5px; margin-bottom:4px}
+#mitmachen input[type=text], #mitmachen input[type=email], #mitmachen textarea{
+  width:100%; font:inherit; font-size:13.5px; padding:8px 10px;
+  border:1px solid var(--line); border-radius:7px; background:var(--card-2);
+  color:var(--ink)}
+#mitmachen textarea{min-height:76px; resize:vertical}
+#mitmachen summary{cursor:pointer; font-weight:700; color:var(--brand);
+  padding:6px 0}
+#mitmachen button[type=submit]{font:inherit; font-size:14px; font-weight:700;
+  padding:9px 18px; border-radius:7px; border:1px solid var(--action-deep);
+  background:var(--action); color:var(--on-action); cursor:pointer;
+  margin-top:14px}
+#mitmachen .hinweis{font-size:12px; color:var(--ink-faint); margin-top:8px}
+#mitmachen .stand{font-size:13px; margin-top:10px; min-height:1.4em}
+#mitmachen .stand.ok{color:var(--gut); font-weight:700}
+#mitmachen .stand.fehl{color:var(--warn); font-weight:700}
+.ersteMal{background:#E8EFF8; border:1px solid var(--brand);
+  border-radius:12px; padding:16px 18px; margin-top:58px; position:relative;
+  display:flex; gap:14px; align-items:flex-start}
+:root[data-theme="dark"] .ersteMal{background:var(--brand-tint)}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .ersteMal{background:var(--brand-tint)}}
+.ersteMal .i{flex:0 0 auto; width:26px; height:26px; border-radius:50%;
+  background:var(--brand); color:#fff; font-weight:900; font-size:15px;
+  display:grid; place-items:center; margin-top:1px}
+.ersteMal h2{font-size:17px; margin-bottom:.2em}
+.ersteMal p{margin:0; font-size:14px; color:var(--ink-soft); max-width:760px}
+.ersteMal .zu{position:absolute; top:8px; right:10px; border:0; background:none;
+  font-size:20px; line-height:1; color:var(--ink-faint); cursor:pointer;
+  padding:4px 8px}
+.ersteMal .wege{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+.ersteMal .wege button{font:inherit; font-size:13.5px; padding:7px 14px;
+  border-radius:7px; border:1px solid var(--brand); background:var(--card);
+  color:var(--brand); font-weight:600; cursor:pointer}
+.ersteMal .wege button:hover{background:var(--brand); color:var(--on-brand)}
+
+/* Kennzahlen */
+.zahlen{display:grid; gap:12px; margin-block:22px;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.kz{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:14px 16px; min-width:0}
+.kz .n{font-family:var(--serif); font-size:30px; font-weight:700; line-height:1;
+  font-variant-numeric:tabular-nums}
+.kz .t{font-size:12.5px; color:var(--ink-soft); margin-top:6px}
+.kz.mahn .n{color:var(--warn)}
+.kz.gut .n{color:var(--gut)}
+
+/* EIN zuklappbarer Filterkasten fuer alles, direkt ueber den Ergebnissen
+   (Mariann, n-Main-11). Vorher lagen Suchfeld, vier Auswahlfelder und ein
+   Haekchen als lose Knopfreihe in einer klebenden Leiste. */
+.filterkasten{background:var(--card); border:1px solid #9DBBDD;
+  border-radius:10px; margin-top:22px}
+.filterkasten > summary{list-style:none; cursor:pointer; padding:11px 16px;
+  font-size:14px; font-weight:700; color:var(--ink-soft);
+  display:flex; align-items:center; gap:10px}
+.filterkasten > summary::-webkit-details-marker{display:none}
+.filterkasten > summary::before{content:"▸"; color:var(--brand);
+  transition:transform .15s}
+.filterkasten[open] > summary::before{transform:rotate(90deg)}
+.filterkasten .aktiv{margin-left:auto; font-weight:400; font-size:13px;
+  color:var(--ink-faint)}
+.fgruppe{padding:4px 16px 14px; border-top:1px solid var(--line-soft)}
+.fgruppe > b{display:block; font-size:12px; font-weight:700;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint);
+  margin:12px 0 7px}
+.pillen{display:flex; flex-wrap:wrap; gap:7px}
+.pillen button{font:inherit; font-size:13px; padding:5px 13px; border-radius:20px;
+  border:1px solid var(--line); background:var(--card-2); color:var(--ink-soft);
+  cursor:pointer}
+.pillen button:hover{border-color:var(--brand); color:var(--brand)}
+.pillen button[aria-pressed="true"]{background:var(--brand); color:var(--on-brand);
+  border-color:var(--brand-deep); font-weight:600}
+.fzuruck{padding:0 16px 14px}
+
+/* Zeile unter dem Filter: links die Anzahl, rechts die Kennzeichen als
+   Raster (Mariann, n-Main-12) - nicht als Fliesstext, der mitten zwischen
+   Kennzeichen und Erklaerung umbricht. */
+.zaehlzeile{display:flex; flex-wrap:wrap; gap:10px 26px; align-items:flex-start;
+  margin:14px 2px 2px}
+.treffer{font-size:14px; color:var(--ink-soft); font-weight:600;
+  font-variant-numeric:tabular-nums}
+.legende{margin-left:auto; display:grid; gap:8px 26px; font-size:14px;
+  grid-template-columns:repeat(2,auto); color:var(--ink-faint)}
+.legende span{white-space:nowrap}
+button.knopf{font:inherit; font-size:13px; padding:7px 14px; border-radius:7px;
+  border:1px solid var(--action-deep); background:var(--action);
+  color:var(--on-action); font-weight:600; cursor:pointer}
+button.knopf:hover{background:var(--action-deep)}
+button.flach{background:transparent; color:var(--brand);
+  border:1px solid var(--line); font-weight:500}
+button.flach:hover{background:var(--brand-tint)}
+
+/* Studienliste */
+.liste{display:grid; gap:12px; margin-top:14px}
+.studie{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; min-width:0}
+.studie .kopf{display:flex; flex-wrap:wrap; gap:8px 12px; align-items:baseline}
+.studie h3{flex:1 1 320px; min-width:0; line-height:1.3}
+.studie .akr{font-family:var(--sans); font-size:12px; font-weight:700;
+  color:var(--brand-deep); letter-spacing:.04em}
+.pill{font-size:11.5px; font-weight:600; padding:3px 9px; border-radius:20px;
+  white-space:nowrap; border:1px solid transparent}
+.pill.rekrutiert{background:var(--gut-tint); color:var(--gut); border-color:currentColor}
+.pill.geplant{background:var(--brand-tint); color:var(--brand-deep); border-color:currentColor}
+.pill.abgeschlossen{background:var(--line-soft); color:var(--ink-soft)}
+.pill.sonst{background:var(--warn-tint); color:var(--warn)}
+.studie .kurz{font-size:13.5px; color:var(--ink-soft); margin-top:8px;
+  max-width:78ch}
+.fakten{display:grid; gap:4px 20px; margin-top:12px; font-size:12.5px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.fakten div{color:var(--ink-soft); min-width:0}
+.fakten b{color:var(--ink-faint); font-weight:600; letter-spacing:.02em}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; align-items:center}
+.chip{font-size:11.5px; padding:3px 10px; border-radius:6px; text-decoration:none;
+  border:1px solid var(--line); background:var(--card-2); color:var(--ink-soft)}
+a.chip:hover{border-color:var(--brand); color:var(--brand); background:var(--brand-tint)}
+a.chip.hub{border-color:var(--brand); color:var(--brand); background:var(--brand-tint)}
+/* Der Weg zur anderen Haelfte: Einrichtung -> Standortprofil. */
+a.chip.ort{border-color:var(--brand-deep); color:var(--on-brand);
+  background:var(--brand-deep); font-weight:600}
+a.chip.ort:hover{background:var(--brand); color:var(--on-brand)}
+a.chip.inno{border-color:var(--action-deep); color:var(--accent); background:transparent}
+a.chip.drks{border-color:var(--ink-faint); color:var(--ink)}
+.mehr{display:flex; justify-content:center; margin-top:18px}
+
+/* Auswertungen */
+.auswert{display:grid; gap:18px; margin-top:34px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.block{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; min-width:0}
+.balken{display:grid; gap:7px; margin-top:12px}
+.balken .z{display:grid; grid-template-columns:1fr auto; gap:4px 10px;
+  font-size:12.5px; align-items:center}
+.balken .nm{color:var(--ink-soft); min-width:0; overflow-wrap:anywhere}
+.balken .v{font-variant-numeric:tabular-nums; color:var(--ink-faint)}
+.balken .bar{grid-column:1/-1; height:5px; border-radius:3px; background:var(--line-soft)}
+.balken .bar i{display:block; height:100%; border-radius:3px; background:var(--brand)}
+.balken .bar.g i{background:var(--action)}
+
+/* Standorte: der zweite Reiter - und die Verbindung zu den Profilseiten.
+   Gleich hohe weisse Kacheln auf grauem Grund (Mariann, n-Main-8). */
+.ortliste{display:grid; gap:12px; margin-top:14px;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+a.ortkarte{display:flex; flex-direction:column; background:var(--card);
+  border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+  text-decoration:none; color:inherit; min-width:0}
+a.ortkarte:hover{border-color:var(--brand); box-shadow:var(--shadow)}
+a.ortkarte .nm{font-weight:700; font-size:15px; line-height:1.3;
+  color:var(--brand); overflow-wrap:anywhere}
+a.ortkarte .wo{font-size:12.5px; color:var(--ink-faint); margin-top:3px}
+a.ortkarte .ta{font-size:12px; font-weight:700; color:var(--brand-deep);
+  margin-top:8px}
+a.ortkarte .fa{font-size:12.5px; color:var(--accent); margin-top:2px}
+a.ortkarte .fa.leer{color:var(--ink-faint); font-style:italic}
+a.ortkarte .zz{margin-top:auto; padding-top:10px; font-size:12.5px;
+  color:var(--ink-soft); display:flex; flex-wrap:wrap; gap:4px 12px}
+a.ortkarte .zz b{color:var(--ink); font-variant-numeric:tabular-nums}
+a.ortkarte .zz .g{color:var(--gut)}
+
+/* Was die Karte nicht zeigt: links die Grenze, rechts in einem Satz, was
+   stattdessen hilft (Mariann, n-Seite-Ueber-die-Hubs-6). Eine blosse Liste
+   von Einschraenkungen laesst den Leser ratlos stehen. */
+.grenzen{margin-block:34px}
+.grenzen > p{color:var(--ink-soft); font-size:14px; margin:.4em 0 0}
+.gliste{display:grid; gap:10px; margin-top:16px}
+.gzeile{display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--line); border:1px solid var(--line); border-radius:10px;
+  overflow:hidden}
+.gzeile .ist{background:var(--warn-tint); padding:14px 16px; font-size:13.5px;
+  color:var(--ink-soft)}
+.gzeile .hilft{background:var(--card-2); padding:14px 16px; font-size:13.5px;
+  color:var(--ink-soft)}
+.gzeile b{color:var(--ink)}
+.gzeile .ist::before{content:"✕ "; color:var(--warn); font-weight:900}
+.gzeile .hilft::before{content:"→ "; color:var(--brand); font-weight:900}
+@media (max-width:640px){ .gzeile{grid-template-columns:1fr} }
+
+/* Lange Erklaerung zugeklappt (Mariann, n-A-nachher-2). */
+.erklaer{background:var(--card-2); border:1px solid var(--line);
+  border-radius:10px; margin-top:14px}
+.erklaer summary{cursor:pointer; padding:12px 16px; font-size:14px;
+  font-weight:700; color:var(--brand)}
+.erklaer .inn{padding:0 16px 14px; font-size:13.5px; color:var(--ink-soft);
+  max-width:760px}
+.erklaer h4{margin:14px 0 4px; font-size:13px; color:var(--brand-deep);
+  letter-spacing:.04em; text-transform:uppercase}
+footer{border-top:1px solid var(--line); margin-top:30px}
+footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
+@media (max-width:560px){
+  .filter{position:static}
+  .kz .n{font-size:26px}
+}
+</style>
+
+<!--__NETZLEISTE__-->
+
+<header class="band">
+  <div class="wrap">
+    <div class="eyebrow">Knowledge-Hubs &middot; Prototyp</div>
+    <h1>Versorgungsstudien-Landkarte</h1>
+    <p class="unter lesebreite">Ein Zugang zu den Versorgungsstudien, die in
+      Deutschland registriert sind: wer sie führt, wo, und wie weit sie sind.</p>
+    <nav class="reiter" aria-label="Bereiche">
+      <button type="button" data-reiter="studien" aria-current="page">Studien</button>
+      <button type="button" data-reiter="standorte">Standorte</button>
+    </nav>
+  </div>
+</header>
+
+<div class="blau">
+  <div class="wrap">
+    <div class="suchkasten">
+      <div class="suchzeile">
+        <input type="search" id="suche" aria-label="Suche"
+               placeholder="z. B. Hausarztpraxis oder Schlaganfall">
+        <button class="suchknopf" id="suchknopf" type="button">Suchen</button>
+      </div>
+      <div class="suchfuss" id="quelle"></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="ersteMal" id="ersteMal">
+    <div class="i" aria-hidden="true">i</div>
+    <div>
+      <h2>Zum ersten Mal hier?</h2>
+      <p>Diese Karte zeigt, wer in Deutschland an welcher Versorgungsstudie
+        arbeitet. <b>Studien</b> sucht einzelne Vorhaben,
+        <b>Standorte</b> zeigt die Einrichtungen mit einer eigenen Profilseite.
+        Alles stammt aus dem öffentlichen Studienregister — ergänzt um die
+        Verbindung zu unseren Knowledge-Hubs und zum Innovationsfonds-Radar.</p>
+      <div class="wege">
+        <button type="button" data-reiter="standorte">Nach Standort suchen</button>
+        <button type="button" data-ziel="grenzen">Was die Karte nicht zeigt</button>
+      </div>
+    </div>
+    <button class="zu" id="ersteMalZu" type="button" aria-label="Hinweis schließen">×</button>
+  </div>
+
+  <div class="ausschnitt" id="ausschnitt">
+    <h2>Dies ist ein Ausschnitt, kein Gesamtbild</h2>
+    <p class="lesebreite"><b id="ausschnittZahl"></b> Das liegt nicht an der
+      Forschung, sondern an drei Schranken — und zwei davon können die
+      Forschenden selbst aufheben.</p>
+    <ol class="gruende">
+      <li><b>Die Lizenz wirkt wie ein Zeitfilter.</b> Nur Einträge, die ab 2025
+        registriert oder zuletzt aktualisiert wurden, stehen unter CC BY 4.0 und
+        dürfen wiedergegeben werden. Von 2025 und 2026 ist deshalb alles dabei,
+        von den Jahrgängen vor 2021 nur rund ein Viertel — und davon fast nur
+        das, was noch läuft. Abgeschlossene Forschung fehlt am stärksten.</li>
+      <li><b>Nur registrierte Forschung.</b> Kleine, qualitative und nicht
+        geförderte Versorgungsforschung wird oft gar nicht erst registriert.
+        Sie hat ein Ethikvotum, aber taucht in keinem Register auf.</li>
+      <li><b>Nur ein Register.</b> Multizentrische Studien werden häufig bei
+        ClinicalTrials.gov geführt, nicht im DRKS. Wir sehen sie hier nicht.</li>
+    </ol>
+    <p class="lesebreite"><b>Deshalb unsere Bitte an alle Forschenden und
+      Einrichtungen:</b> Tragen Sie ein, was hier fehlt — Ihre Studien, Ihr
+      Publikationsverzeichnis, Ihre Arbeitsgruppe. Jede Einrichtung behält, was
+      sie einträgt, und erkennbar getrennt von den Registerdaten. Erst damit
+      entsteht ein Bild des ganzen Fachs statt eines Ausschnitts.</p>
+    <div class="wege">
+      <button type="button" data-ziel="mitmachen">Studien und Repositorium
+        eintragen</button>
+      <button type="button" data-ziel="grenzen">Alle Grenzen im Einzelnen</button>
+    </div>
+  </div>
+
+  <div class="zahlen" id="zahlen"></div>
+
+  <section id="bereich-studien">
+    <details class="filterkasten" id="filterkasten">
+      <summary>Filter<span class="aktiv" id="faktiv">alle Studien</span></summary>
+      <div class="fgruppe">
+        <b>Status</b><div class="pillen" id="fstatus"></div>
+        <b>Knowledge-Hub</b><div class="pillen" id="fhub"></div>
+        <b>Bundesland</b><div class="pillen" id="fland"></div>
+        <b>Art der Studie</b><div class="pillen" id="fart"></div>
+        <b>Bezug zum eigenen Bestand</b><div class="pillen" id="finno"></div>
+      </div>
+      <div class="fzuruck">
+        <button class="knopf flach" id="reset" type="button">Alle Filter zurücksetzen</button>
+      </div>
+    </details>
+
+    <div class="zaehlzeile">
+      <span class="treffer" id="treffer"></span>
+      <div class="legende">
+        <span><b style="color:var(--gut)">rekrutiert</b> — sucht Teilnehmende</span>
+        <span><b style="color:var(--brand)">geplant</b> — angemeldet, nicht gestartet</span>
+        <span><b style="color:var(--ink-soft)">abgeschlossen</b> — Nachbeobachtung beendet</span>
+        <span><b style="color:var(--warn)">abgebrochen</b> — vorzeitig beendet</span>
+      </div>
+    </div>
+
+    <div class="liste" id="liste"></div>
+    <div class="mehr"><button class="knopf" id="mehr" type="button">Weitere 40 anzeigen</button></div>
+  </section>
+
+  <section id="bereich-standorte" hidden>
+    <p class="unter lesebreite" style="margin-top:22px">Hier steht, wer
+      Versorgungsforschung <em>betreibt</em> — die Einrichtung, die eine
+      Studie verantwortet, nicht die Praxis, die Teilnehmende einschließt.
+      Jede mit mindestens zwei Studien hat eine eigene Profilseite, auf der
+      die Verantwortlichen ergänzen können, was im Register fehlt: offene
+      Stellen, Veröffentlichungen, Methoden und Datenzugänge.</p>
+
+    <div class="karte" id="karte"></div>
+
+    <div class="topliste" id="topliste"></div>
+
+    <details class="filterkasten" id="ofilterkasten">
+      <summary>Filter<span class="aktiv" id="ofaktiv">alle Standorte</span></summary>
+      <div class="fgruppe">
+        <b>Art der Einrichtung</b><div class="pillen" id="ftraeger"></div>
+        <b>Wissenschaftsrichtung</b><div class="pillen" id="ffach"></div>
+      </div>
+      <div class="fzuruck">
+        <button class="knopf flach" id="oreset" type="button">Alle Filter zurücksetzen</button>
+      </div>
+    </details>
+
+    <div class="zaehlzeile">
+      <span class="treffer" id="otreffer"></span>
+    </div>
+    <div class="ortliste" id="ortliste"></div>
+    <div class="mehr"><button class="knopf" id="omehr" type="button">Weitere 60 anzeigen</button></div>
+  </section>
+
+  <div class="auswert">
+    <div class="block">
+      <h2>Zuordnung zu den Knowledge-Hubs</h2>
+      <p style="font-size:13px;color:var(--ink-soft);margin:.4em 0 0">
+        Primär über die ICD-10-Codes des Datensatzes, nur hilfsweise über Stichwörter.
+        Eine Studie kann mehreren Hubs zufallen.</p>
+      <div class="balken" id="bhub"></div>
+    </div>
+    <div class="block">
+      <h2>Wo geforscht wird</h2>
+      <p style="font-size:13px;color:var(--ink-soft);margin:.4em 0 0" id="landhinweis"></p>
+      <div class="balken" id="bland"></div>
+    </div>
+    <div class="block">
+      <h2>Ethikkommissionen</h2>
+      <p style="font-size:13px;color:var(--ink-soft);margin:.4em 0 0" id="kommhinweis"></p>
+      <div class="balken" id="bkomm"></div>
+    </div>
+    <div class="block">
+      <h2>Finanzierung</h2>
+      <p style="font-size:13px;color:var(--ink-soft);margin:.4em 0 0">
+        Mehrfachnennung möglich; die Angabe stammt aus der Selbstauskunft im Register.</p>
+      <div class="balken" id="bfoerder"></div>
+    </div>
+  </div>
+
+  <div class="grenzen" id="grenzen">
+    <h2>Was diese Karte nicht zeigt</h2>
+    <p class="lesebreite">Links steht die Grenze, rechts, was stattdessen
+      weiterhilft.</p>
+    <div class="gliste" id="gliste"></div>
+  </div>
+
+  <div class="grenzen" id="mitmachen">
+    <h2>Eintragen, was hier fehlt</h2>
+    <p class="lesebreite">Für alle Einrichtungen — auch für die, die hier noch
+      keine Profilseite haben. Hat Ihre Einrichtung eine, tragen Sie dort direkt
+      ein; dieses Formular ist der Weg für alle anderen.</p>
+    <p class="lesebreite"><b>Auch ganz ohne registrierte Studie.</b> Eine neu
+      gegründete oder neu ausgerichtete Einrichtung kann hier gar nicht
+      auftauchen — die Karte entsteht aus dem Studienregister, und wer noch
+      keine Studie registriert hat, steht dort nicht. Die Medizinische
+      Universität Lausitz – Carl Thiem etwa fehlt aus genau diesem Grund.
+      Tragen Sie sich trotzdem ein: Wir legen die Einrichtung an, auch wenn das
+      Feld „Studien" leer bleibt.</p>
+
+    <details id="mitmachen-auf">
+      <summary>Zugang anfordern und Angaben eintragen</summary>
+      <form id="mitform" novalidate>
+        <label><b>Ihre Einrichtung</b>
+          <input type="text" name="einrichtung" required
+                 placeholder="Name wie in Veröffentlichungen, gern mit Abteilung"></label>
+
+        <label><b>Ihre dienstliche E-Mail-Adresse</b>
+          <input name="email" type="email" required
+                 placeholder="name@einrichtung.de"></label>
+        <p class="hinweis">Wir schicken einen persönlichen Link an diese
+          Adresse. Ist die Domain der Einrichtung zuzuordnen, geht er sofort
+          heraus; sonst prüfen wir von Hand.</p>
+
+        <label><b>Ihr Name und Ihre Funktion</b>
+          <input type="text" name="person"
+                 placeholder="Prof. Dr. … , Leitung des Instituts für …"></label>
+
+        <fieldset>
+          <legend>Ist das eine neue Einrichtung?</legend>
+          <p class="hinweis">Neugründung, Umbenennung, Zusammenschluss,
+            Ausgründung eines Instituts — all das kommt im Studienregister erst
+            an, wenn die erste Studie läuft.</p>
+          <div class="ja-nein">
+            <label><input type="radio" name="neu" value="nein" checked> bestehende Einrichtung</label>
+            <label><input type="radio" name="neu" value="ja"> neu oder neu benannt</label>
+          </div>
+          <label><b>Seit wann, und was ist geschehen?</b>
+            <input type="text" name="neu_text"
+                   placeholder="z. B. gegründet 2024; hervorgegangen aus …; umbenannt von …"></label>
+          <label><b>Arbeitsschwerpunkte in der Versorgungsforschung</b>
+            <textarea name="schwerpunkte"
+              placeholder="Womit befasst sich Ihre Einrichtung? Auch ohne laufende Studie."></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Studien, die hier fehlen</legend>
+          <p class="hinweis">Gerade die abgeschlossenen und die älteren — die
+            fehlen uns am meisten, weil die Lizenz am Datum hängt.</p>
+          <label><b>Studien</b>
+            <textarea name="studien_fehlen"
+              placeholder="Eine je Zeile: DRKS- oder ClinicalTrials-Nummer, sonst Titel, Zeitraum, Förderung. Auch nicht registrierte Studien."></textarea></label>
+          <label><b>Ergebnispublikationen</b>
+            <textarea name="publikationen"
+              placeholder="Eine je Zeile, gern mit DOI."></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Die Einrichtung im Netz</legend>
+          <label><b>Publikationsverzeichnis / Repositorium</b>
+            <textarea name="repositorien"
+              placeholder="Adresse Ihres Repositoriums, eine je Zeile. Auch mehrere: Hochschulschriftenserver, Forschungsinformationssystem, Publikationsliste des Instituts, Forschungsdatenrepositorium."></textarea></label>
+          <label><b>Netzauftritt der Einrichtung</b>
+            <input type="text" name="netzadresse" placeholder="https://…"></label>
+          <label><b>ROR-Kennung, falls bekannt</b>
+            <input type="text" name="ror" placeholder="https://ror.org/…"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Lehre, Menschen, Stellen, Veranstaltungen</legend>
+          <label><b>Studiengänge mit Bezug zur Versorgungsforschung</b>
+            <textarea name="studiengaenge"
+              placeholder="Name, Abschluss, Regelstudienzeit, Beginn, Link."></textarea></label>
+          <label><b>Professuren und wissenschaftliche Mitarbeitende</b>
+            <textarea name="menschen"
+              placeholder="Denomination, Name, Arbeitsgebiet, gern mit ORCID."></textarea></label>
+          <label><b>Offene Stellen</b>
+            <textarea name="stellen"
+              placeholder="Eine je Zeile: Bezeichnung, Umfang, Befristung, Bewerbungsfrist, Link."></textarea></label>
+          <label><b>Eigene Kongresse und Veranstaltungen</b>
+            <textarea name="veranstaltungen"
+              placeholder="Eine je Zeile: Titel, Datum, Ort oder online, Anmeldung bis, Link."></textarea></label>
+        </fieldset>
+
+        <label><b>Was sonst fehlt oder falsch ist</b>
+          <textarea name="sonstiges"></textarea></label>
+
+        <button type="submit">Absenden</button>
+        <p class="stand" id="mitstand" aria-live="polite"></p>
+        <p class="hinweis">Mit dem Absenden stimmen Sie zu, dass wir Ihre
+          Angaben zur Pflege dieser Landkarte verarbeiten. Sie erscheinen als
+          Angaben Ihrer Einrichtung, erkennbar getrennt von den Registerdaten.
+          <a href="https://knowledge-hubs.m-vf.de/datenschutz.html"
+             target="_blank" rel="noopener">Datenschutz</a></p>
+      </form>
+    </details>
+  </div>
+</div>
+
+<footer><div class="wrap" id="fuss"></div></footer>
+
+<!--__FUSSLEISTE__-->
+
+<script id="daten" type="application/json">/*__DATEN__*/</script>
+<script>
+(function(){
+  "use strict";
+  var D = JSON.parse(document.getElementById("daten").textContent);
+  var ENDPUNKT = "{{ENDPUNKT}}";
+  var S = D.studien, Z = D.zaehlung;
+  var ORTE = (D.standorte && D.standorte.standorte) || [];
+  var hubUrl = {};
+  Z.hub.forEach(function(r){ hubUrl[r[0]] = {name:r[1], url:r[2], n:r[3]}; });
+
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+  function zahl(n){ return n.toLocaleString("de-DE"); }
+  function id(x){ return document.getElementById(x); }
+
+  /* ---- Die Verbindung: Rohname aus dem Register -> Profilseite ----
+     Das Register normiert Einrichtungsnamen nicht; `schreibweisen` haelt je
+     Standort alle Varianten, unter denen er dort auftaucht. Darueber findet
+     eine Studienkarte die Profilseite ihrer Einrichtung. */
+  function nkey(s){
+    return String(s==null?"":s).toLowerCase()
+      .replace(/[–—]/g, "-")
+      .replace(/[^a-z0-9äöüß]+/g, " ").trim();
+  }
+  var ortVon = {};
+  ORTE.forEach(function(o){
+    (o.schreibweisen || [o.name]).forEach(function(n){
+      var k = nkey(n);
+      if (k && !ortVon[k]) ortVon[k] = o;
+    });
+  });
+
+  /* ---- Kopfzeile im Suchkasten: Quelle und Abrufdatum sind Pflicht ---- */
+  id("quelle").innerHTML =
+    "<span><b>Quelle:</b> DRKS, BfArM &middot; <b>Abruf:</b> " + esc(D.stand) +
+    "</span><span>" + zahl(D.ccby_gesamt) + " von " + zahl(D.roh_gesamt) +
+    " Registereinträgen sind frei verwendbar</span>";
+
+  /* ---- Kennzahlen ---- */
+  var st = {}; Z.status.forEach(function(r){ st[r[0]] = r[1]; });
+  var kz = [
+    ["", zahl(D.vf_gesamt), "Studien mit Versorgungsbezug"],
+    ["gut", zahl(st["rekrutiert"]||0), "suchen derzeit Teilnehmende"],
+    ["", zahl(ORTE.length), "Standorte mit eigener Profilseite"],
+    ["", zahl(Z.mit_innofonds), "an Einrichtungen mit Innovationsfonds-Vorhaben"],
+    ["mahn", zahl(Z.abgeschlossen_ohne_publikation) + " von " + zahl(Z.abgeschlossen),
+     "abgeschlossenen Studien ohne Publikationsangabe"]
+  ];
+  id("zahlen").innerHTML = kz.map(function(k){
+    return '<div class="kz ' + k[0] + '"><div class="n">' + k[1] +
+           '</div><div class="t">' + k[2] + "</div></div>"; }).join("");
+
+  /* ---- Reiter: Studien / Standorte ---- */
+  function reiter(welcher){
+    id("bereich-studien").hidden = welcher !== "studien";
+    id("bereich-standorte").hidden = welcher !== "standorte";
+    document.querySelectorAll(".reiter button").forEach(function(b){
+      if (b.dataset.reiter === welcher) b.setAttribute("aria-current", "page");
+      else b.removeAttribute("aria-current");
+    });
+    id("suche").placeholder = welcher === "standorte"
+      ? "z. B. Charité oder Freiburg"
+      : "z. B. Hausarztpraxis oder Schlaganfall";
+    if (welcher === "standorte") zeichneOrte(); else zeichne();
+    if (location.hash !== "#" + welcher) history.replaceState(null, "", "#" + welcher);
+  }
+  document.querySelectorAll("[data-reiter]").forEach(function(b){
+    b.addEventListener("click", function(){ reiter(b.dataset.reiter); });
+  });
+  document.querySelectorAll("[data-ziel]").forEach(function(b){
+    b.addEventListener("click", function(){
+      id(b.dataset.ziel).scrollIntoView({block:"start"}); });
+  });
+
+  /* ---- „Zum ersten Mal hier?" schliessen ----
+     Bewusst ohne Speichern: Das Versprechen der Hubs lautet „keine Cookies". */
+  /* ---- Die Karte ----------------------------------------------------
+     Eine einfache Mercator-Projektion. Fuer ein Land von 8 Breitengraden
+     Hoehe reicht das vollkommen; der Unterschied zu einer winkeltreuen
+     Abbildung liegt unter einem Pixel.
+
+     Die Umrisslinie kommt MIT der Seite (Natural Earth, Public Domain),
+     nicht von einem Kachelserver. Das ist keine Sparsamkeit, sondern das
+     Cookie-Versprechen der Knowledge-Hubs: Ein Kachelserver bekommt jede
+     Bewegung der Lesenden zu sehen.                                     */
+  function karteBauen(){
+    var ziel = id("karte");
+    if (!ziel) { return; }
+    var ringe = D.kontur || [];
+    var orte = ((D.standorte || {}).standorte || [])
+                 .filter(function(s){ return s.lat && s.lon; });
+    if (!ringe.length) {
+      ziel.innerHTML = "<p class='kartenhinweis'>Der Umriss fehlt — die "
+        + "Karte bleibt aus. (daten/kontur.json, erzeugt mit kontur.py)</p>";
+      return;
+    }
+
+    var B = 640, H = 820, R = 18;          /* Zeichenflaeche und Rand */
+    /* BEIDE Achsen im Bogenmass. Nimmt man die Laenge in Grad und die
+       Breite in Mercator-Einheiten (die sind im Bogenmass), unterscheiden
+       sich die Spannweiten um den Faktor 57 - und Deutschland wird zu
+       einem waagerechten Strich. Genau so ist es beim ersten Versuch
+       herausgekommen. */
+    function mx(lon){ return lon * Math.PI / 180; }
+    function my(lat){ return Math.log(Math.tan(Math.PI/4 + lat*Math.PI/360)); }
+
+    var lo = [], la = [];
+    ringe.forEach(function(r){ r.forEach(function(p){
+      lo.push(mx(p[0])); la.push(my(p[1])); }); });
+    var lo0 = Math.min.apply(null, lo), lo1 = Math.max.apply(null, lo),
+        la0 = Math.min.apply(null, la), la1 = Math.max.apply(null, la);
+    var sx = (B - 2*R) / (lo1 - lo0), sy = (H - 2*R) / (la1 - la0),
+        s  = Math.min(sx, sy);
+    var vx = R + ((B - 2*R) - (lo1 - lo0)*s) / 2,
+        vy = R + ((H - 2*R) - (la1 - la0)*s) / 2;
+    function X(lon){ return vx + (mx(lon) - lo0) * s; }
+    function Y(lat){ return vy + (la1 - my(lat)) * s; }
+
+    var d = ringe.map(function(r){
+      return "M" + r.map(function(p){
+        return X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1);
+      }).join("L") + "Z";
+    }).join(" ");
+
+    /* Flaeche nach Studienzahl, nicht Radius: Ein Kreis mit doppeltem
+       Radius sieht VIERMAL so gross aus und uebertreibt den Unterschied. */
+    var max = Math.max.apply(null, orte.map(function(o){ return o.studien; }));
+    function rad(n){ return 4 + 16 * Math.sqrt(n / max); }
+
+    orte.sort(function(a, b){ return b.studien - a.studien; });
+    var punkte = orte.map(function(o){
+      var x = X(o.lon), y = Y(o.lat), r = rad(o.studien);
+      return '<a href="standort/' + o.datei + '" class="kpunkt">'
+        + '<title>' + esc(o.name) + ' — ' + o.studien + ' Studien'
+        + (o.ort ? ', ' + esc(o.ort) : '') + '</title>'
+        + '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1)
+        + '" r="' + r.toFixed(1) + '"/></a>';
+    }).join("");
+
+    /* Die groessten beschriften - mehr wird zur Buchstabenwolke. */
+    var namen = orte.slice(0, 8).map(function(o){
+      var x = X(o.lon), y = Y(o.lat), r = rad(o.studien);
+      var rechts = x < B * 0.55;
+      return '<text class="kname" x="' + (x + (rechts ? r+5 : -(r+5))).toFixed(1)
+        + '" y="' + (y + 3.5).toFixed(1) + '"'
+        + (rechts ? '' : ' text-anchor="end"') + '>'
+        + esc(o.ort || o.name) + '</text>';
+    }).join("");
+
+    var ohne = ((D.standorte || {}).standorte || []).length - orte.length;
+    ziel.innerHTML =
+      '<svg viewBox="0 0 ' + B + ' ' + H + '" class="ksvg" role="img" '
+      + 'aria-label="Karte der Forschungsstandorte">'
+      + '<path class="kland" d="' + d + '"/>' + punkte + namen + '</svg>'
+      + "<p class='kartenhinweis'>Kreisfläche nach Zahl der Studien. "
+      + "Anklicken führt zum Standortprofil. Ortsangabe aus ROR und "
+      + "OpenAlex, geprüft gegen den Ort im Register."
+      + (ohne > 0 ? " <b>" + ohne + " der " + (orte.length + ohne)
+           + " Standorte sind nicht eingezeichnet</b> — für sie "
+           + "ließ sich keine Einrichtung zweifelsfrei zuordnen, und ein "
+           + "Punkt an der falschen Stelle wäre schlimmer als keiner."
+         : "")
+      + "</p>";
+  }
+
+  karteBauen();
+  /* ---- Die Rangliste der Standorte --------------------------------
+     Gezaehlt wird, was im CC-BY-Teil des Registers steht. Das ist KEIN
+     Lebenswerk-Ranking: Weil die Lizenz am Datum haengt, misst die Liste
+     vor allem, wer in den letzten Jahren registriert hat. Der Satz
+     darunter sagt das, und er muss stehen bleiben.                     */
+  function toplisteBauen(){
+    var ziel = id("topliste");
+    if (!ziel) { return; }
+    var orte = ((D.standorte || {}).standorte || []).slice();
+    if (!orte.length) { return; }
+    orte.sort(function(a, b){
+      return b.studien - a.studien || (a.name || "").localeCompare(b.name || "");
+    });
+    var N = 15, max = orte[0].studien;
+    var zeilen = orte.slice(0, N).map(function(o, i){
+      var breite = (100 * o.studien / max).toFixed(1);
+      return '<li>'
+        + '<span class="tplatz">' + (i + 1) + '</span>'
+        + '<a class="tname" href="standort/' + o.datei + '">' + esc(o.name)
+        + '</a>'
+        + '<span class="tort">' + esc(o.ort || "") + '</span>'
+        + '<span class="tbalken"><i style="width:' + breite + '%"></i></span>'
+        + '<span class="tzahl">' + o.studien + '</span>'
+        + '</li>';
+    }).join("");
+    ziel.innerHTML =
+      "<h2>Die Standorte mit den meisten Studien</h2>"
+      + '<ol class="tliste">' + zeilen + "</ol>"
+      + "<p class='kartenhinweis' style='text-align:left'>"
+      + "Gezählt sind die " + zahl(D.vf_gesamt) + " Studien, die wir "
+      + "wiedergeben dürfen. <b>Das misst nicht das Lebenswerk, sondern "
+      + "wer zuletzt registriert hat</b> — die Lizenz des Registers "
+      + "hängt am Datum, ältere und abgeschlossene Forschung fehlt "
+      + "deshalb. Eine Einrichtung kann hier klein aussehen und trotzdem "
+      + "seit Jahrzehnten führend sein.</p>";
+  }
+  toplisteBauen();
+
+
+  id("ersteMalZu").addEventListener("click", function(){ id("ersteMal").hidden = true; });
+
+  /* ---- Der Ausschnitt-Hinweis. Er ist bewusst NICHT wegklickbar: Er sagt,
+     wie vollstaendig alles darunter ist, und das muss man sehen koennen,
+     solange man die Zahlen liest. ---- */
+  id("ausschnittZahl").textContent =
+    "Im Studienregister stehen " + zahl(D.vf_im_register) + " Studien mit "
+    + "Versorgungsbezug. Wiedergeben dürfen wir " + zahl(D.vf_gesamt) + " davon — "
+    + zahl(D.vf_nicht_zeigbar) + " fehlen hier, obwohl es sie gibt.";
+
+  /* ---- Mitmach-Formular: gleiches Muster wie auf den Profilseiten ---- */
+  (function(){
+    var f = id("mitform"), st = id("mitstand");
+    var BETREFF = "Eintrag zur Versorgungsstudien-Landkarte";
+    if (!f) { return; }
+    f.addEventListener("submit", async function(ev){
+      ev.preventDefault();
+      var d = new FormData(f), o = {quelle: "landkarte"};
+      d.forEach(function(v, k){ o[k] = v; });
+      if (!o.einrichtung || !o.einrichtung.trim()) {
+        st.className = "stand fehl";
+        st.textContent = "Bitte den Namen der Einrichtung angeben.";
+        return;
+      }
+      if (!o.email || o.email.indexOf("@") < 1) {
+        st.className = "stand fehl";
+        st.textContent = "Bitte eine dienstliche E-Mail-Adresse angeben.";
+        return;
+      }
+      if (!ENDPUNKT) {
+        /* Solange der Endpunkt auf dem MVF-Server fehlt, ist der Weg die
+           E-Mail. Die Seite BITTET um Eintraege - sie darf die Leute dann
+           nicht mit einer Fehlermeldung stehen lassen. */
+        var zeilen = [];
+        Object.keys(o).forEach(function(k){
+          var v = (o[k] == null ? "" : String(o[k])).trim();
+          if (v && k !== "email") { zeilen.push(k + ": " + v); }
+        });
+        var UM = String.fromCharCode(10);
+        var mail = "mailto:info@m-vf.de"
+          + "?subject=" + encodeURIComponent(BETREFF)
+          + "&body=" + encodeURIComponent(
+              "Absender: " + (o.email || "") + UM + UM
+              + zeilen.join(UM + UM));
+        st.className = "stand";
+        st.innerHTML = "Das Absenden über die Seite ist noch nicht "
+          + "eingerichtet — wir richten den Zugang gerade ein. "
+          + "<a href='" + mail + "'>Ihre Angaben als E-Mail öffnen</a>: "
+          + "Der Text ist bereits ausgefüllt, Sie müssen nur senden.";
+        return;
+      }
+      st.className = "stand"; st.textContent = "wird gesendet …";
+      try {
+        var r = await fetch(ENDPUNKT, {method:"POST",
+          headers:{"Content-Type":"application/json"}, body: JSON.stringify(o)});
+        if (r.ok) {
+          st.className = "stand ok";
+          st.textContent = "Angekommen. Wir schicken den persönlichen Link an "
+            + o.email + ".";
+          f.querySelector("button[type=submit]").disabled = true;
+        } else {
+          st.className = "stand fehl";
+          st.textContent = "Der Server hat abgelehnt (" + r.status + "). Bitte "
+            + "schreiben Sie an info@m-vf.de.";
+        }
+      } catch (err) {
+        st.className = "stand fehl";
+        st.textContent = "Keine Verbindung. Bitte später erneut versuchen "
+          + "oder an info@m-vf.de schreiben.";
+      }
+    });
+  })();
+
+  /* ---- Pillenfilter: EIN Kasten statt loser Knopfreihen ---- */
+  var gewaehlt = {fstatus:"", fhub:"", fland:"", fart:"", finno:""};
+  var BESCHRIFTUNG = {fstatus:"Status", fhub:"Hub", fland:"Land",
+                      fart:"Art", finno:""};
+
+  function pillen(feld, werte){
+    id(feld).innerHTML = werte.map(function(w){
+      return '<button type="button" data-feld="' + feld + '" data-wert="' +
+        esc(w[0]) + '" aria-pressed="false">' + esc(w[1]) + "</button>"; }).join("");
+  }
+  pillen("fstatus", Z.status.map(function(r){ return [r[0], r[0] + " " + r[1]]; }));
+  pillen("fhub", Z.hub.map(function(r){ return [r[0], r[1] + " " + r[3]]; }));
+  pillen("fland", Z.land.map(function(r){ return [r[0], r[0] + " " + r[1]]; }));
+  pillen("fart", [["NON_INTERVENTIONAL", "nicht-interventionell"],
+                  ["INTERVENTIONAL", "interventionell"]]);
+  pillen("finno", [["ja", "nur mit Innofonds-Bezug " + Z.mit_innofonds]]);
+
+  document.querySelectorAll(".pillen button").forEach(function(b){
+    b.addEventListener("click", function(){
+      var f = b.dataset.feld;
+      gewaehlt[f] = (gewaehlt[f] === b.dataset.wert) ? "" : b.dataset.wert;
+      document.querySelectorAll('[data-feld="' + f + '"]').forEach(function(x){
+        x.setAttribute("aria-pressed", String(x.dataset.wert === gewaehlt[f])); });
+      filtern();
+    });
+  });
+
+  function faktiv(){
+    var t = [];
+    Object.keys(gewaehlt).forEach(function(f){
+      if (!gewaehlt[f]) return;
+      var b = document.querySelector('[data-feld="' + f + '"][data-wert="' +
+        gewaehlt[f] + '"]');
+      t.push((BESCHRIFTUNG[f] ? BESCHRIFTUNG[f] + ": " : "") +
+             (b ? b.textContent.replace(/\s+\d+$/, "") : gewaehlt[f]));
+    });
+    id("faktiv").textContent = t.length ? t.join(" · ") : "alle Studien";
+  }
+
+  /* ---- Studienkarte ---- */
+  var gezeigt = 40, gefiltert = S;
+  function karte(s){
+    var cls = s.status_de === "rekrutiert" ? "rekrutiert"
+            : s.status_de === "geplant" ? "geplant"
+            : s.status_de === "abgeschlossen" ? "abgeschlossen" : "sonst";
+    var votum = (s.voten[0] || {});
+    var f = [];
+    /* Die FUEHRENDE Einrichtung zuerst - sie verantwortet die Studie. Die
+       rekrutierenden Zentren stehen darunter als eigene Angabe: Eine Praxis,
+       die Teilnehmende einschliesst, forscht nicht. */
+    if (s.sponsor && s.sponsor.name)
+      f.push("<div><b>Führende Einrichtung</b><br>" + esc(s.sponsor.name) +
+        (s.sponsor.ort ? ", " + esc(s.sponsor.ort) : "") + "</div>");
+    if (s.orte.length) {
+      var namen = s.orte.slice(0, 3).map(function(o){
+        return esc(o.name) + (o.ort ? " (" + esc(o.ort) + ")" : ""); }).join(" · ");
+      f.push("<div><b>Rekrutiert an " + s.orte.length +
+        (s.orte.length === 1 ? " Zentrum" : " Zentren") + "</b><br>" + namen +
+        (s.orte.length > 3 ? " <span style='color:var(--ink-faint)'>und " +
+         (s.orte.length - 3) + " weiteren</span>" : "") + "</div>");
+    }
+    if (s.land) f.push("<div><b>Land</b><br>" + esc(s.land) +
+      (s.land_unsicher ? " <span style='color:var(--ink-faint)'>(PLZ-Näherung)</span>" : "") +
+      "</div>");
+    if (votum.kommission) f.push("<div><b>Ethikvotum</b><br>" + esc(votum.kommission) +
+      (votum.datum ? ", " + esc(votum.datum) : "") + "</div>");
+    if (s.teilnehmer) f.push("<div><b>Teilnehmende</b><br>" + zahl(s.teilnehmer) +
+      (s.zentrik === "MULTICENTRIC" ? ", multizentrisch" : ", monozentrisch") + "</div>");
+    if (s.indikation) f.push("<div><b>Indikation</b><br>" + esc(s.indikation) +
+      (s.icd.length ? " <span style='color:var(--ink-faint)'>(" + esc(s.icd.join(", ")) + ")</span>" : "") +
+      "</div>");
+    if (s.foerderung.length) f.push("<div><b>Finanzierung</b><br>" +
+      esc(s.foerderung.join(", ")) + "</div>");
+
+    var c = [];
+    /* Die Verbindung zur anderen Haelfte: jede beteiligte Einrichtung, die
+       eine Profilseite hat, wird hier verlinkt. */
+    if (s.sponsor && s.sponsor.name) {
+      var t = ortVon[nkey(s.sponsor.name)];
+      if (t) c.push('<a class="chip ort" href="standort/' + esc(t.datei) + '">' +
+        esc(t.name) + " · Forschungsstandort</a>");
+    }
+    s.hubs.forEach(function(h){ if (hubUrl[h]) c.push('<a class="chip hub" target="_blank" rel="noopener" href="' +
+      esc(hubUrl[h].url) + '">Hub ' + esc(hubUrl[h].name) + "</a>"); });
+    s.innofonds.slice(0, 2).forEach(function(i){
+      c.push('<a class="chip inno" target="_blank" rel="noopener" href="https://innofonds.m-vf.de">' +
+        esc(i.name) + " im Innofonds-Radar</a>"); });
+    /* Das Feld `url` im Datensatz ist die Website der Studie, NICHT der
+       Registereintrag. Der Eintrag wird aus der DRKS-Kennung gebildet. */
+    if (s.id) c.push('<a class="chip drks" target="_blank" rel="noopener" href="https://drks.de/search/de/trial/' +
+      esc(s.id) + '">' + esc(s.id) + " im DRKS</a>");
+    if (s.url) c.push('<a class="chip" target="_blank" rel="noopener" href="' +
+      esc(s.url) + '">Website der Studie</a>');
+    s.dois.slice(0, 3).forEach(function(d){
+      c.push('<a class="chip" target="_blank" rel="noopener" href="https://doi.org/' +
+        esc(d) + '">Publikation</a>'); });
+    if (s.retrospektiv) c.push('<span class="chip" title="nach Studienbeginn registriert">rückwirkend registriert</span>');
+
+    return '<article class="studie"><div class="kopf">' +
+      "<h3>" + esc(s.titel || "(ohne Titel)") + "</h3>" +
+      (s.akronym ? '<span class="akr">' + esc(s.akronym) + "</span>" : "") +
+      '<span class="pill ' + cls + '">' + esc(s.status_de) + "</span></div>" +
+      (s.kurz ? '<p class="kurz">' + esc(s.kurz) + "</p>" : "") +
+      '<div class="fakten">' + f.join("") + "</div>" +
+      '<div class="chips">' + c.join("") + "</div></article>";
+  }
+  function zeichne(){
+    id("liste").innerHTML =
+      gefiltert.slice(0, gezeigt).map(karte).join("") ||
+      '<div class="studie" style="text-align:center;color:var(--ink-faint)">Kein Treffer. Filter lockern.</div>';
+    id("treffer").textContent =
+      zahl(gefiltert.length) + " von " + zahl(S.length) + " Studien";
+    id("mehr").hidden = gezeigt >= gefiltert.length;
+  }
+  function filtern(){
+    var q = id("suche").value.trim().toLowerCase();
+    gefiltert = S.filter(function(s){
+      if (gewaehlt.fstatus && s.status_de !== gewaehlt.fstatus) return false;
+      if (gewaehlt.fhub && s.hubs.indexOf(gewaehlt.fhub) < 0) return false;
+      if (gewaehlt.fland && s.land !== gewaehlt.fland) return false;
+      if (gewaehlt.fart && s.art !== gewaehlt.fart) return false;
+      if (gewaehlt.finno && !s.innofonds.length) return false;
+      if (q) {
+        var h = (s.titel + " " + s.akronym + " " + s.kurz + " " + s.indikation + " " +
+          s.orte.map(function(o){ return o.name + " " + o.ort; }).join(" ") + " " +
+          (s.sponsor ? s.sponsor.name : "") + " " + s.id).toLowerCase();
+        if (h.indexOf(q) < 0) return false;
+      }
+      return true;
+    });
+    gezeigt = 40; faktiv(); zeichne();
+  }
+
+  /* ---- Standortliste ---- */
+  var ogezeigt = 60, ogefiltert = ORTE;
+  var ogewaehlt = {traeger: "", fach: ""};
+
+  var ztraeger = {}, zfach = {}, ohneFach = 0;
+  ORTE.forEach(function(o){
+    if (o.traegerart) ztraeger[o.traegerart] = (ztraeger[o.traegerart] || 0) + 1;
+    if ((o.faecher || []).length)
+      o.faecher.forEach(function(f){ zfach[f] = (zfach[f] || 0) + 1; });
+    else ohneFach++;
+  });
+  function nachZahl(obj){
+    return Object.keys(obj).sort(function(a, b){ return obj[b] - obj[a]; })
+      .map(function(k){ return [k, k + " " + obj[k]]; });
+  }
+  pillen("ftraeger", nachZahl(ztraeger));
+  /* „Nicht genannt" ist eine eigene Auswahl, kein Loch: Ein Filter muss
+     sagen, was er liegen laesst. */
+  pillen("ffach", nachZahl(zfach).concat(
+    ohneFach ? [["__offen__", "im Register nicht genannt " + ohneFach]] : []));
+
+  document.querySelectorAll('[data-feld="ftraeger"], [data-feld="ffach"]')
+    .forEach(function(b){
+      b.addEventListener("click", function(){
+        var f = b.dataset.feld === "ftraeger" ? "traeger" : "fach";
+        ogewaehlt[f] = (ogewaehlt[f] === b.dataset.wert) ? "" : b.dataset.wert;
+        document.querySelectorAll('[data-feld="' + b.dataset.feld + '"]')
+          .forEach(function(x){
+            x.setAttribute("aria-pressed", String(x.dataset.wert === ogewaehlt[f])); });
+        ogezeigt = 60; zeichneOrte();
+      });
+    });
+  id("oreset").addEventListener("click", function(){
+    id("suche").value = "";
+    ogewaehlt.traeger = ogewaehlt.fach = "";
+    document.querySelectorAll('[data-feld="ftraeger"], [data-feld="ffach"]')
+      .forEach(function(x){ x.setAttribute("aria-pressed", "false"); });
+    ogezeigt = 60; zeichneOrte();
+  });
+  function ortkarte(o){
+    /* Jede Angabe in ein eigenes <span>, sonst greift der Abstand des
+       Rasters nicht und die Zeile laeuft zusammen. */
+    var z = ["<span><b>" + zahl(o.studien) + "</b> Studien</span>"];
+    if (o.rekrutiert) z.push('<span class="g"><b>' + zahl(o.rekrutiert) +
+      "</b> rekrutieren</span>");
+    if (o.zentren) z.push("<span>" + zahl(o.zentren) + " Studienzentren</span>");
+    if (o.ror) z.push("<span>im Innofonds-Radar</span>");
+    var fach = (o.faecher || []).length
+      ? '<span class="fa">' + esc(o.faecher.join(" · ")) + "</span>"
+      : '<span class="fa leer">Fach im Register nicht genannt</span>';
+    return '<a class="ortkarte" href="standort/' + esc(o.datei) + '">' +
+      '<span class="nm">' + esc(o.name) + "</span>" +
+      '<span class="wo">' + esc([o.ort, o.land].filter(Boolean).join(" · ")) + "</span>" +
+      '<span class="ta">' + esc(o.traegerart || "") + "</span>" + fach +
+      '<span class="zz">' + z.join("") + "</span></a>";
+  }
+  function zeichneOrte(){
+    var q = id("suche").value.trim().toLowerCase();
+    ogefiltert = ORTE.filter(function(o){
+      if (ogewaehlt.traeger && o.traegerart !== ogewaehlt.traeger) return false;
+      if (ogewaehlt.fach) {
+        if (ogewaehlt.fach === "__offen__") {
+          if ((o.faecher || []).length) return false;
+        } else if ((o.faecher || []).indexOf(ogewaehlt.fach) < 0) return false;
+      }
+      if (!q) return true;
+      return ((o.name + " " + o.ort + " " + o.land + " " +
+               (o.traegerart || "") + " " + (o.faecher || []).join(" ") + " " +
+               (o.schreibweisen || []).join(" ")).toLowerCase().indexOf(q) >= 0);
+    });
+    id("ortliste").innerHTML = ogefiltert.slice(0, ogezeigt).map(ortkarte).join("") ||
+      '<div class="studie" style="text-align:center;color:var(--ink-faint)">Kein Standort gefunden.</div>';
+    id("otreffer").textContent = zahl(ogefiltert.length) + " von " +
+      zahl(ORTE.length) + " Forschungsstandorten";
+    id("omehr").hidden = ogezeigt >= ogefiltert.length;
+    var t = [];
+    if (ogewaehlt.traeger) t.push(ogewaehlt.traeger);
+    if (ogewaehlt.fach) t.push(ogewaehlt.fach === "__offen__"
+      ? "Fach nicht genannt" : ogewaehlt.fach);
+    id("ofaktiv").textContent = t.length ? t.join(" · ") : "alle Standorte";
+  }
+
+  id("suche").addEventListener("input", function(){
+    if (id("bereich-standorte").hidden) filtern(); else { ogezeigt = 60; zeichneOrte(); }
+  });
+  id("suchknopf").addEventListener("click", function(){
+    (id("bereich-standorte").hidden ? id("liste") : id("ortliste"))
+      .scrollIntoView({block:"start"});
+  });
+  id("mehr").addEventListener("click", function(){ gezeigt += 40; zeichne(); });
+  id("omehr").addEventListener("click", function(){ ogezeigt += 60; zeichneOrte(); });
+  id("reset").addEventListener("click", function(){
+    id("suche").value = "";
+    Object.keys(gewaehlt).forEach(function(f){ gewaehlt[f] = ""; });
+    document.querySelectorAll(".pillen button").forEach(function(x){
+      x.setAttribute("aria-pressed", "false"); });
+    filtern();
+  });
+
+  /* ---- Balken ---- */
+  function balken(bid, zeilen, gold){
+    var max = Math.max.apply(null, zeilen.map(function(r){ return r[1]; })) || 1;
+    id(bid).innerHTML = zeilen.map(function(r){
+      return '<div class="z"><span class="nm">' + esc(r[0]) + '</span><span class="v">' +
+        zahl(r[1]) + '</span><span class="bar' + (gold ? " g" : "") + '"><i style="width:' +
+        (r[1] / max * 100).toFixed(1) + '%"></i></span></div>'; }).join("");
+  }
+  balken("bhub", Z.hub.map(function(r){ return [r[1], r[3]]; }));
+  balken("bland", Z.land);
+  balken("bkomm", Z.kommissionen_top.slice(0, 10).map(function(r){
+    return [r[0], r[1]]; }), true);
+  balken("bfoerder", Z.foerderung, true);
+
+  id("landhinweis").textContent =
+    "Abgeleitet aus der Postleitzahl der federführenden Einrichtung. Postleitregionen " +
+    "folgen der Post, nicht der Landesgrenze: bei " + zahl(Z.land_unsicher) +
+    " Studien liegt die Zuordnung in einer Region, die über eine Landesgrenze läuft.";
+  id("kommhinweis").textContent =
+    "Jede Studie im Register trägt ihr Votum. In dieser Auswahl kommen " +
+    zahl(Z.kommissionen_schreibweisen) + " Schreibweisen vor, die sich auf rund " +
+    zahl(Z.kommissionen_zusammengefuehrt) + " Kommissionen zusammenführen lassen — " +
+    "das Register normiert die Namen nicht.";
+
+  /* ---- Grenzen: links die Grenze, rechts was stattdessen hilft ---- */
+  var ohneHubAnteil = (Z.ohne_hub / D.vf_gesamt * 100).toFixed(1).replace(".", ",");
+  var g = [
+    ["<b>Es gibt mehr, als hier steht: " + zahl(D.vf_im_register) + " statt " +
+     zahl(D.vf_gesamt) + ".</b> So viele Studien mit Versorgungsbezug stehen im " +
+     "ganzen Register. Wiedergeben dürfen wir nur Einträge, die ab 2025 " +
+     "registriert oder aktualisiert wurden — das sind 44 Prozent des Registers. " +
+     "<b>" + zahl(D.vf_nicht_zeigbar) + " Studien mit Versorgungsbezug fehlen " +
+     "hier also, obwohl es sie gibt.</b> Weil die Lizenz am Datum hängt, wirkt " +
+     "sie wie ein Zeitfilter: Von 2025 und 2026 ist alles dabei, von den Jahren " +
+     "vor 2021 nur rund ein Viertel — und davon fast nur, was noch läuft und " +
+     "darum aktualisiert wurde.",
+     "Verlinken ist immer erlaubt: Die <a href=\"https://drks.de\" target=\"_blank\" " +
+     "rel=\"noopener\">Suche im DRKS</a> zeigt auch die älteren Einträge."],
+
+    ["<b>Nur registrierte Forschung.</b> Kleine, qualitative und nicht geförderte " +
+     "Versorgungsforschung wird oft gar nicht registriert. Sie hat ein Ethikvotum, " +
+     "aber die Kommissionen veröffentlichen keine Einzelvoten.",
+     "Die Tätigkeitsberichte der Kommissionen nennen Antragszahlen. Das Dunkelfeld " +
+     "lässt sich so in seiner Größe schätzen — nur nicht auflisten."],
+
+    ["<b>„Versorgungsbezug“ ist geschätzt, nicht gemessen.</b> Das Register kennt " +
+     "nur interventionell und nicht-interventionell; beides deckt sich nicht mit " +
+     "Versorgungsforschung. Bei milderer Schwelle wären es 1.405 statt " +
+     zahl(D.vf_gesamt) + " Studien.",
+     "Die Regeln liegen offen in <code>zuschnitt.py</code>, und jede Karte nennt " +
+     "ihren Registereintrag — jede Zuordnung ist nachprüfbar."],
+
+    ["<b>Die Hub-Zuordnung ist eine Heuristik.</b> " + zahl(Z.ohne_hub) + " Studien (" +
+     ohneHubAnteil + " Prozent) ließen sich keinem Hub zuordnen; Mehrfachzuordnung " +
+     "ist möglich und häufig.",
+     "Zugeordnet wird primär über die ICD-10-Codes des Datensatzes — die sind " +
+     "vergeben, nicht geraten. Nur hilfsweise über Stichwörter."],
+
+    ["<b>Kein Methoden- und kein Datenzugangsprofil.</b> Ob eine Gruppe mit " +
+     "Routinedaten, qualitativ oder cluster-randomisiert arbeitet und an welche " +
+     "Datenquellen sie kommt, steht im Register nicht.",
+     "Genau dafür gibt es die <b>Standortprofile</b>: Dort kann jede Einrichtung " +
+     "selbst eintragen, mit welchen Methoden und Datenzugängen sie arbeitet."],
+
+    ["<b>Keine offenen Stellen.</b> Das Register kennt keine Personalsuche.",
+     "Auch das steht im Standortprofil — die Verantwortlichen können dort " +
+     "eintragen, ob sie Personal suchen."],
+
+    ["<b>Kein Treffer im eigenen Studienbestand — noch nicht.</b> Der Abgleich der " +
+     "Ergebnis-DOIs gegen die Arbeiten unserer 15 Knowledge-Hubs findet derzeit null " +
+     "Übereinstimmungen.",
+     "Das ist kein Fehler: Die Hub-Archive stammen zu 99,8 Prozent aus 2026, die " +
+     "Ergebnispublikationen im Register aus 2022 bis 2024. Die Verknüpfung greift " +
+     "mit jedem Jahr, das die Hubs weiterlaufen."],
+
+    ["<b>Angaben sind Selbstauskunft.</b> Das BfArM übernimmt keine Gewähr für " +
+     "Richtigkeit, Vollständigkeit und Aktualität. " + zahl(Z.retrospektiv) +
+     " der hier gezeigten Studien wurden erst nach Beginn registriert.",
+     "Jede Karte führt zum Originaleintrag im DRKS; der ist stets maßgeblich."]
+  ];
+  id("gliste").innerHTML = g.map(function(r){
+    return '<div class="gzeile"><div class="ist">' + r[0] +
+           '</div><div class="hilft">' + r[1] + "</div></div>"; }).join("");
+
+  id("fuss").innerHTML =
+    "Prototyp, erstellt am " + esc(D.stand) + " von <em>Monitor Versorgungsforschung</em>. " +
+    "Studiendaten: Deutsches Register Klinischer Studien (DRKS), BfArM, abgerufen am " +
+    esc(D.stand) + ", Einträge unter CC BY 4.0. Personenbezogene Kontaktangaben aus dem " +
+    "Register werden bewusst nicht wiedergegeben. Das DRKS-Logo wird nicht verwendet. " +
+    "Keine Gewähr für Richtigkeit und Vollständigkeit; maßgeblich ist stets der " +
+    '<a href="https://drks.de" target="_blank" rel="noopener">Originaleintrag im DRKS</a>.';
+
+  filtern();
+  if (location.hash === "#standorte") reiter("standorte");
+})();
+</script>

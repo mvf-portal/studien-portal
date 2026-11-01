@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.claude/
+
+# Der DRKS-Gesamtexport. 88 MB, und vor allem: Er enthaelt das GANZE
+# Register, nicht nur den CC-BY-Teil. Wiedergeben duerfen wir nur den
+# CC-BY-Teil - also darf der Rohexport nicht in ein oeffentliches Repo.
+daten/drks-export-*.zip
+
+# Zwischenstaende der Bauschritte. Sie entstehen aus dem Export und aus
+# offenen Schnittstellen und werden mit `py holen.py` ... neu gebaut.
+# landkarte.json bleibt NICHT ausgeschlossen: Die Seite liest sie.
+daten/hub-dois.json
+fremd/
