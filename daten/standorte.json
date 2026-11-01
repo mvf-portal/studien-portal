@@ -10,6 +10,7 @@
    "ror": "https://ror.org/001w7jn25",
    "lat": 52.52437,
    "lon": 13.41053,
+   "koordinate": "einrichtung",
    "rekrutiert": 17,
    "hubs": [
     "mental",
@@ -69,6 +70,7 @@
    "ror": "https://ror.org/013czdx64",
    "lat": 49.40768,
    "lon": 8.69079,
+   "koordinate": "einrichtung",
    "rekrutiert": 12,
    "hubs": [
     "mental",
@@ -111,6 +113,7 @@
    "ror": "https://ror.org/01zgy1s35",
    "lat": 53.55073,
    "lon": 9.99302,
+   "koordinate": "einrichtung",
    "rekrutiert": 8,
    "hubs": [
     "mental",
@@ -150,6 +153,7 @@
    "ror": null,
    "lat": 53.86893,
    "lon": 10.68729,
+   "koordinate": "einrichtung",
    "rekrutiert": 4,
    "hubs": [
     "wissen",
@@ -180,6 +184,7 @@
    "ror": "https://ror.org/02gm5zw39",
    "lat": 50.77664,
    "lon": 6.08342,
+   "koordinate": "einrichtung",
    "rekrutiert": 4,
    "hubs": [
     "mental",
@@ -213,6 +218,7 @@
    "ror": "https://ror.org/00f2yqf98",
    "lat": 52.37052,
    "lon": 9.73322,
+   "koordinate": "einrichtung",
    "rekrutiert": 3,
    "hubs": [
     "wissen",
@@ -242,6 +248,7 @@
    "ror": "https://ror.org/024z2rq82",
    "lat": 51.22319,
    "lon": 6.77927,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "kardio",
@@ -276,6 +283,7 @@
    "ror": "https://ror.org/04cvxnb49",
    "lat": 50.11552,
    "lon": 8.68417,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "mental",
@@ -308,6 +316,7 @@
    "ror": "https://ror.org/01xnwqx93",
    "lat": 50.73438,
    "lon": 7.09549,
+   "koordinate": "einrichtung",
    "rekrutiert": 5,
    "hubs": [
     "wissen",
@@ -335,6 +344,7 @@
    "ror": "https://ror.org/00rcxh774",
    "lat": 50.93333,
    "lon": 6.95,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "wissen",
@@ -366,6 +376,7 @@
    "ror": "https://ror.org/03pvr2g57",
    "lat": 49.79391,
    "lon": 9.95121,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -396,6 +407,7 @@
    "ror": "https://ror.org/00pjgxh97",
    "lat": 48.52266,
    "lon": 9.05222,
+   "koordinate": "einrichtung",
    "rekrutiert": 3,
    "hubs": [
     "wissen",
@@ -419,6 +431,7 @@
    "ror": "https://ror.org/05mxhda18",
    "lat": 50.93333,
    "lon": 6.95,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -448,6 +461,7 @@
    "ror": "https://ror.org/033n9gh91",
    "lat": 53.14039,
    "lon": 8.21479,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -477,6 +491,7 @@
    "ror": null,
    "lat": 51.44362,
    "lon": 7.35258,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -505,6 +520,7 @@
    "ror": "https://ror.org/05gqaka33",
    "lat": 51.48158,
    "lon": 11.97947,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "onkologie",
@@ -533,6 +549,7 @@
    "ror": "https://ror.org/03hbmgt12",
    "lat": 47.85636901855469,
    "lon": 12.122469902038574,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "pflege",
@@ -559,6 +576,7 @@
    "ror": "https://ror.org/00q1fsf04",
    "lat": 49.98185,
    "lon": 8.28008,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "wissen",
@@ -586,6 +604,7 @@
    "ror": "https://ror.org/04jc43x05",
    "lat": 48.13743,
    "lon": 11.57549,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "ki",
@@ -611,6 +630,7 @@
    "ror": "https://ror.org/04gx8zb05",
    "lat": 52.51518630981445,
    "lon": 13.333866119384766,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "mental"
@@ -632,6 +652,7 @@
    "ror": "https://ror.org/04za5zm41",
    "lat": 51.05089,
    "lon": 13.73832,
+   "koordinate": "einrichtung",
    "rekrutiert": 3,
    "hubs": [
     "diabetes",
@@ -661,6 +682,7 @@
    "ror": "https://ror.org/03vzbgh69",
    "lat": 47.9959,
    "lon": 7.85222,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "wissen",
@@ -688,6 +710,7 @@
    "ror": "https://ror.org/00f7hpc57",
    "lat": 49.59099,
    "lon": 11.00783,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -708,6 +731,32 @@
    ]
   },
   {
+   "datei": "universitat-heidelberg.html",
+   "name": "Universität Heidelberg",
+   "ort": "Heidelberg",
+   "land": "Baden-Württemberg",
+   "studien": 4,
+   "ror": null,
+   "lat": 49.40768,
+   "lon": 8.69079,
+   "koordinate": "einrichtung",
+   "rekrutiert": 3,
+   "hubs": [
+    "wissen",
+    "onkologie",
+    "kardio",
+    "mental"
+   ],
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "faecher": [],
+   "zentren": 16,
+   "schreibweisen": [
+    "Ruprecht-Karls-Universität Heidelberg",
+    "Ruprecht-Karls-Universität Heidelberg Medizinische Fakultät vertreten durch das Universitätsklinikum Heidelberg und dessen Kaufmännische Direktorin Katrin Erk",
+    "Universität Heidelberg"
+   ]
+  },
+  {
    "datei": "berliner-institut-fur-gesundheitsforschung.html",
    "name": "Berliner Institut für Gesundheitsforschung",
    "ort": "Berlin",
@@ -716,6 +765,7 @@
    "ror": "https://ror.org/0493xsw21",
    "lat": 52.52437,
    "lon": 13.41053,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -741,6 +791,7 @@
    "ror": "https://ror.org/02na8dn90",
    "lat": 51.45656967163086,
    "lon": 7.012279987335205,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "onkologie",
@@ -763,6 +814,7 @@
    "ror": null,
    "lat": 48.13743,
    "lon": 11.57549,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "wissen",
@@ -790,6 +842,7 @@
    "ror": "https://ror.org/04mz5ra38",
    "lat": 51.45657,
    "lon": 7.01228,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "wissen",
@@ -816,6 +869,7 @@
    "ror": "https://ror.org/00nvxt968",
    "lat": 49.32637,
    "lon": 7.33867,
+   "koordinate": "einrichtung",
    "rekrutiert": 3,
    "hubs": [
     "wissen",
@@ -837,6 +891,7 @@
    "ror": "https://ror.org/0030f2a11",
    "lat": 49.59099,
    "lon": 11.00783,
+   "koordinate": "einrichtung",
    "rekrutiert": 3,
    "hubs": [
     "impfen",
@@ -859,6 +914,7 @@
    "ror": "https://ror.org/034nkkr84",
    "lat": 48.78232,
    "lon": 9.17702,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "safety",
@@ -886,6 +942,7 @@
    "ror": "https://ror.org/032nzv584",
    "lat": 50.58727,
    "lon": 8.67554,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "onkologie",
@@ -907,8 +964,9 @@
    "land": "",
    "studien": 3,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 50.93333,
+   "lon": 6.95,
+   "koordinate": "ort",
    "rekrutiert": 1,
    "hubs": [
     "longevity",
@@ -935,6 +993,7 @@
    "ror": "https://ror.org/01k5qnb77",
    "lat": 52.52437,
    "lon": 13.41053,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "mental"
@@ -956,8 +1015,9 @@
    "land": "Nordrhein-Westfalen",
    "studien": 2,
    "ror": "https://ror.org/05885p792",
-   "lat": null,
-   "lon": null,
+   "lat": 51.22319,
+   "lon": 6.77927,
+   "koordinate": "ort",
    "rekrutiert": 0,
    "hubs": [
     "mental",
@@ -979,8 +1039,9 @@
    "land": "Schleswig-Holstein",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 53.86893,
+   "lon": 10.68729,
+   "koordinate": "ort",
    "rekrutiert": 0,
    "hubs": [
     "mental"
@@ -1004,6 +1065,7 @@
    "ror": null,
    "lat": 53.55073,
    "lon": 9.99302,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "mental"
@@ -1025,6 +1087,7 @@
    "ror": "https://ror.org/01mmady97",
    "lat": 52.52437,
    "lon": 13.41053,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "kardio",
@@ -1047,6 +1110,7 @@
    "ror": "https://ror.org/01tvm6f46",
    "lat": 54.32133,
    "lon": 10.13489,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "wissen",
@@ -1067,8 +1131,9 @@
    "land": "Rheinland-Pfalz",
    "studien": 2,
    "ror": "https://ror.org/055kyaa64",
-   "lat": null,
-   "lon": null,
+   "lat": 49.745421,
+   "lon": 8.11298,
+   "koordinate": "ort",
    "rekrutiert": 0,
    "hubs": [
     "pflege",
@@ -1088,8 +1153,9 @@
    "land": "Hessen",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 51.31667,
+   "lon": 9.5,
+   "koordinate": "ort",
    "rekrutiert": 2,
    "hubs": [
     "ki"
@@ -1110,6 +1176,7 @@
    "ror": null,
    "lat": 52.50527572631836,
    "lon": 13.290114402770996,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "wissen",
@@ -1131,6 +1198,7 @@
    "ror": "https://ror.org/042aqky30",
    "lat": 51.05089,
    "lon": 13.73832,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "pflege",
@@ -1156,6 +1224,7 @@
    "ror": "https://ror.org/02m1z0a87",
    "lat": 49.48910140991211,
    "lon": 8.466939926147461,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "healthliteracy",
@@ -1178,8 +1247,9 @@
    "land": "Bayern",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "koordinate": "ort",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -1201,6 +1271,7 @@
    "ror": "https://ror.org/01hynnt93",
    "lat": 49.48910140991211,
    "lon": 8.466939926147461,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "mental",
@@ -1222,8 +1293,9 @@
    "land": "Schleswig-Holstein",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 53.86893,
+   "lon": 10.68729,
+   "koordinate": "ort",
    "rekrutiert": 2,
    "hubs": [
     "mental"
@@ -1242,8 +1314,9 @@
    "land": " · BR",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 51.65598,
+   "lon": 7.3453,
+   "koordinate": "ort",
    "rekrutiert": 2,
    "hubs": [
     "mental",
@@ -1267,6 +1340,7 @@
    "ror": null,
    "lat": 53.07582,
    "lon": 8.80717,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "pflege",
@@ -1287,8 +1361,9 @@
    "land": "Bayern",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 49.79391,
+   "lon": 9.95121,
+   "koordinate": "ort",
    "rekrutiert": 2,
    "hubs": [
     "ncd",
@@ -1312,6 +1387,7 @@
    "ror": "https://ror.org/006k2kk72",
    "lat": 51.22172,
    "lon": 6.77616,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "mental",
@@ -1336,6 +1412,7 @@
    "ror": "https://ror.org/00ggpsq73",
    "lat": 52.13129,
    "lon": 11.63189,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "wissen",
@@ -1358,8 +1435,9 @@
    "land": "Bayern",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 47.72674,
+   "lon": 10.31389,
+   "koordinate": "ort",
    "rekrutiert": 1,
    "hubs": [
     "pflege"
@@ -1380,6 +1458,7 @@
    "ror": null,
    "lat": 48.13743,
    "lon": 11.57549,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "healthliteracy"
@@ -1400,6 +1479,7 @@
    "ror": "https://ror.org/059vymd37",
    "lat": 52.27264,
    "lon": 8.0498,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "onkologie",
@@ -1421,6 +1501,7 @@
    "ror": null,
    "lat": 48.39841079711914,
    "lon": 9.99155044555664,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "wissen",
@@ -1442,6 +1523,7 @@
    "ror": null,
    "lat": 51.45657,
    "lon": 7.01228,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "impfen"
@@ -1465,6 +1547,7 @@
    "ror": "https://ror.org/0234wmv40",
    "lat": 49.94782,
    "lon": 11.57893,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "gender",
@@ -1486,6 +1569,7 @@
    "ror": "https://ror.org/025vngs54",
    "lat": 54.08905,
    "lon": 13.40244,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "mental",
@@ -1502,29 +1586,6 @@
    ]
   },
   {
-   "datei": "universitat-heidelberg.html",
-   "name": "Universität Heidelberg",
-   "ort": "Heidelberg",
-   "land": "Baden-Württemberg",
-   "studien": 2,
-   "ror": null,
-   "lat": null,
-   "lon": null,
-   "rekrutiert": 2,
-   "hubs": [
-    "kardio",
-    "wissen",
-    "mental",
-    "onkologie"
-   ],
-   "traegerart": "Hochschule und Universitätsmedizin",
-   "faecher": [],
-   "zentren": 7,
-   "schreibweisen": [
-    "Universität Heidelberg"
-   ]
-  },
-  {
    "datei": "ruhr-universitat-bochum.html",
    "name": "Ruhr-Universität Bochum",
    "ort": "Bochum",
@@ -1533,6 +1594,7 @@
    "ror": "https://ror.org/04tsk2644",
    "lat": 51.48165,
    "lon": 7.21648,
+   "koordinate": "einrichtung",
    "rekrutiert": 1,
    "hubs": [
     "mental",
@@ -1556,6 +1618,7 @@
    "ror": "https://ror.org/033eqas34",
    "lat": 50.58727,
    "lon": 8.67554,
+   "koordinate": "einrichtung",
    "rekrutiert": 2,
    "hubs": [
     "wissen",
@@ -1578,8 +1641,9 @@
    "land": "",
    "studien": 2,
    "ror": null,
-   "lat": null,
-   "lon": null,
+   "lat": 47.9959,
+   "lon": 7.85222,
+   "koordinate": "ort",
    "rekrutiert": 0,
    "hubs": [
     "onkologie"
@@ -1600,6 +1664,7 @@
    "ror": "https://ror.org/01rdrb571",
    "lat": 50.80904,
    "lon": 8.77069,
+   "koordinate": "einrichtung",
    "rekrutiert": 0,
    "hubs": [
     "wissen",
@@ -1612,28 +1677,6 @@
    "schreibweisen": [
     "Philipps Universität Marburg - Klinik für Neurologie",
     "Universitätsklinikum Marburg, Philipps Universität Marburg"
-   ]
-  },
-  {
-   "datei": "ruprecht-karls-universitat-heidelberg.html",
-   "name": "Ruprecht-Karls-Universität Heidelberg",
-   "ort": "Heidelberg",
-   "land": "Baden-Württemberg",
-   "studien": 2,
-   "ror": "https://ror.org/038t36y30",
-   "lat": 49.40768,
-   "lon": 8.69079,
-   "rekrutiert": 1,
-   "hubs": [
-    "onkologie",
-    "wissen"
-   ],
-   "traegerart": "Hochschule und Universitätsmedizin",
-   "faecher": [],
-   "zentren": 9,
-   "schreibweisen": [
-    "Ruprecht-Karls-Universität Heidelberg",
-    "Ruprecht-Karls-Universität Heidelberg Medizinische Fakultät vertreten durch das Universitätsklinikum Heidelberg und dessen Kaufmännische Direktorin Katrin Erk"
    ]
   }
  ]

@@ -125,6 +125,8 @@ ol.tliste li{display:grid; grid-template-columns:28px minmax(0,1fr) auto 90px 34
 }
 .karte{margin:18px 0 6px; display:flex; flex-direction:column;
   align-items:center}
+.kpunkt.nurstadt circle{fill:none; stroke-dasharray:3 2}
+.kpunkt.nurstadt:hover circle{fill:var(--brand); fill-opacity:.35}
 .ksvg{width:100%; max-width:430px; height:auto; display:block}
 .kland{fill:var(--card-2); stroke:var(--line); stroke-width:1.1;
   stroke-linejoin:round}
@@ -796,9 +798,13 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     orte.sort(function(a, b){ return b.studien - a.studien; });
     var punkte = orte.map(function(o){
       var x = X(o.lon), y = Y(o.lat), r = rad(o.studien);
-      return '<a href="standort/' + o.datei + '" class="kpunkt">'
+      var stadt = o.koordinate === "ort";
+      return '<a href="standort/' + o.datei + '" class="kpunkt'
+        + (stadt ? ' nurstadt' : '') + '">'
         + '<title>' + esc(o.name) + ', ' + o.studien + ' Studien'
-        + (o.ort ? ', ' + esc(o.ort) : '') + '</title>'
+        + (o.ort ? ', ' + esc(o.ort) : '')
+        + (stadt ? ' (Lage der Stadt, nicht der Einrichtung)' : '')
+        + '</title>'
         + '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1)
         + '" r="' + r.toFixed(1) + '"/></a>';
     }).join("");
@@ -814,6 +820,8 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     }).join("");
 
     var ohne = ((D.standorte || {}).standorte || []).length - orte.length;
+    var nurStadt = orte.filter(function(o){
+      return o.koordinate === "ort"; }).length;
     ziel.innerHTML =
       '<svg viewBox="0 0 ' + B + ' ' + H + '" class="ksvg" role="img" '
       + 'aria-label="Karte der Forschungsstandorte">'
@@ -821,10 +829,13 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
       + "<p class='kartenhinweis'>Kreisfläche nach Zahl der Studien. "
       + "Anklicken führt zum Standortprofil. Ortsangabe aus ROR und "
       + "OpenAlex, geprüft gegen den Ort im Register."
-      + (ohne > 0 ? " <b>" + ohne + " der " + (orte.length + ohne)
-           + " Standorte sind nicht eingezeichnet</b>, denn für sie "
-           + "ließ sich keine Einrichtung zweifelsfrei zuordnen, und ein "
-           + "Punkt an der falschen Stelle wäre schlimmer als keiner."
+      + (nurStadt > 0 ? " <b>" + nurStadt + " Kreise sind hohl</b>: Dort "
+           + "ließ sich die Einrichtung nicht zweifelsfrei zuordnen, "
+           + "meist weil die Kennung zur Mutterorganisation in einer anderen "
+           + "Stadt gehört. Gezeigt wird dann der Ort aus dem Register, "
+           + "nicht die Lage der Einrichtung." : "")
+      + (ohne > 0 ? " " + ohne + " Standort"
+           + (ohne === 1 ? " ist" : "e sind") + " gar nicht eingezeichnet."
          : "")
       + "</p>";
   }

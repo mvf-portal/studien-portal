@@ -120,7 +120,7 @@ KLASSE = {
     "universitaet", "universitaets", "universitaetsklinikum", "universitaetsmedizin",
     "universitaetsspital", "hochschule", "fachhochschule", "klinikum", "klinik",
     "university", "hospital", "medical", "college", "angewandte", "wissenschaften",
-    "applied", "sciences", "technische", "technical", "medizinische", "fakultaet",
+    "applied", "sciences", "technische", "technology", "technologie", "technical", "medizinische", "fakultaet",
     "faculty", "universitaetsklinik",
 }
 RAUSCHEN = (set(bestandsbezug.RAUSCHEN) | ORTE_RAUSCHEN | KLASSE
@@ -184,8 +184,46 @@ def orte(name: str) -> set[str]:
     return (w & ORTE_RAUSCHEN) | (w & BUNDESLAENDER)
 
 
+# Dieselbe Einrichtungsart, deutsch und englisch. ROR fuehrt viele Haeuser
+# unter dem englischen Namen: „Universitaet Heidelberg" gegen „Heidelberg
+# University". Ort und Art stimmen dann ueberein, aber die Woerter nicht,
+# und Regel (b) scheitert. Gemessen am 01.11.2026 an genau diesem Fall.
+#
+# Zusammengefasst wird nur, was wirklich dasselbe ist. „Universitaet" und
+# „Universitaetsklinikum" bleiben GETRENNT: Das sind zwei Einrichtungen,
+# und sie zu vermengen haengt die Universitaet an das Klinikum.
+KLASSEN_GLEICH = {
+    "university": "universitaet",
+    "universitaet": "universitaet",
+    "hospital": "klinikum",
+    "klinikum": "klinikum",
+    "klinik": "klinik",
+    "clinic": "klinik",
+    "universitaetsklinikum": "universitaetsklinikum",
+    "universitaetsmedizin": "universitaetsmedizin",
+    "fachhochschule": "hochschule",
+    "hochschule": "hochschule",
+    "fakultaet": "fakultaet",
+    "faculty": "fakultaet",
+    "medical": "medizinisch",
+    "medizinische": "medizinisch",
+    "medizinisches": "medizinisch",
+    "technische": "technisch",
+    "technical": "technisch",
+    "technology": "technisch",
+    "technologie": "technisch",
+}
+
+
+def klassenform(wort):
+    """Die Art einer Einrichtung, deutsch und englisch auf einen Nenner."""
+    return KLASSEN_GLEICH.get(wort, wort)
+
+
 def klassen(name: str) -> set[str]:
-    return {w for w in norm(name).split() if w in KLASSE}
+    # Auf die gemeinsame Form gebracht, damit „Universitaet Heidelberg"
+    # und „Heidelberg University" dieselbe Art tragen.
+    return {klassenform(w) for w in norm(name).split() if w in KLASSE}
 
 
 def traegt(anfrage: str, kandidat: str, aliase: list[str]) -> bool:
@@ -419,6 +457,28 @@ def gegentest() -> int:
         if not gut:
             print(f"          erwartet: "
                   f"{'angenommen' if erwartet else 'abgewiesen'}")
+
+    print("")
+    print("Deutsch und Englisch, dieselbe Einrichtungsart:")
+    faelle_kl = [
+        # Das war der Fehler: Ort stimmte, Art stimmte, nur die Woerter nicht.
+        ("Universität Heidelberg", "Heidelberg University", True),
+        ("Technische Universität Dresden", "Dresden University of Technology", True),
+        # UND das darf dadurch NICHT passieren: Universitaet und
+        # Universitaetsklinikum sind zwei Einrichtungen.
+        ("Universität Heidelberg", "Universitätsklinikum Heidelberg", False),
+        ("Universitätsklinikum Heidelberg", "Heidelberg University", False),
+        # Andere Stadt bleibt andere Stadt.
+        ("Universität Heidelberg", "Mannheim University", False),
+        ("Universitätsklinikum Lübeck",
+         "University Hospital Schleswig-Holstein", False),
+    ]
+    for a, b, soll in faelle_kl:
+        ist = traegt(a, b, [])
+        gut = ist == soll
+        ok = ok and gut
+        print(f"  {chr(111)+chr(107)+chr(32) if gut else chr(70)+chr(69)+chr(72)+chr(76)+chr(69)+chr(82)} {a[:30]:<32} <-> {b[:34]:<36} {ist}")
+
     print("\n" + ("  Gegentest bestanden." if ok
                   else "  GEGENTEST FEHLGESCHLAGEN."))
     return 0 if ok else 1

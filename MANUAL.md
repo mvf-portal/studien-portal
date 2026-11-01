@@ -1117,3 +1117,89 @@ Arbeit. Dass die Trefferwahrscheinlichkeit an der Schwelle mit 48 % deutlich
 unter den 63–68 % darüber liegt, ist eine ehrliche Eigenschaft der Daten,
 kein Fehler. Offen (Peters Entscheidung): ob die Punktzahl als Maß für die
 Sicherheit des Versorgungsbezugs auf der Seite sichtbar werden soll.
+
+---
+
+## Koordinaten: Einrichtung, sonst Stadt (01.11.2026)
+
+Die Karte zeigt jetzt **alle 63 Standorte**, vorher 52.
+
+```
+Lage der Einrichtung   52   gefüllter Kreis
+Lage der Stadt         11   hohler Kreis, gestrichelt
+```
+
+Die elf hohlen sind größtenteils kein Fehler, sondern der Erfolg des
+Wächters: Die ROR-Kennung gehört zur Mutterorganisation in einer anderen
+Stadt.
+
+```
+Institut für Allgemeinmedizin, UK Lübeck    ROR-Kennung sitzt in Kiel
+Rheinhessen-Fachklinik Mainz                Kennung in Mainz, Klinik in Alzey
+Vestische Kinder- und Jugendklinik Datteln  Kennung ist Uni Witten/Herdecke
+```
+
+Ein gefüllter Punkt dort wäre eine Behauptung, die nicht stimmt. Der ORT
+aus dem Register stimmt dagegen. `ortskoordinaten.py` baut die Tabelle aus
+vier Quellen, in dieser Reihenfolge:
+
+```
+eigene geprüfte Standorte    35 Städte
+Innofonds-Cache (nur lesen) 137 Städte
+ROR, nach Ortsnamen gefragt
+Wikidata, nach der SIEDLUNG gefragt
+```
+
+### ⚠ Warum Wikidata nötig war
+
+ROR führt **„DRK Krankenhaus Alzey" und verortet es in Hachenburg**, 130
+Kilometer entfernt. Der Ortsabgleich hat den Treffer abgelehnt, sonst
+stünde ein Punkt im Westerwald. Eine Einrichtung, die den Ort im Namen
+trägt, sitzt nicht unbedingt dort.
+
+Wikidata wird deshalb ausdrücklich nach einer **Siedlung in Deutschland**
+gefragt (`P31/P279* Q486972`, `P17 Q183`), nicht nach einer Einrichtung.
+Ohne diese beiden Bedingungen trifft die Abfrage auch Vereine, Bahnhöfe und
+Verwaltungsgebilde gleichen Namens.
+
+## ⚠ Der Wächter verglich Deutsch und Englisch Wort für Wort
+
+`universitaet` gegen `university`: beide stehen in `KLASSE`, verglichen
+wurde aber das Wort. Dadurch scheiterte „Universität Heidelberg" an
+„Heidelberg University", und mit ihr jede englische ROR-Schreibweise.
+
+`KLASSEN_GLEICH` bringt sie auf eine Form. **Nur was wirklich dasselbe
+ist:** Universität und Universitätsklinikum bleiben getrennt, sonst hängt
+die Universität am Klinikum. Der Gegentest prüft beide Richtungen, sechs
+Fälle.
+
+Dabei fiel auf, dass `technology` noch als unterscheidendes Wort galt,
+obwohl es eine Gattung ist wie „technische". Jetzt in `KLASSE`.
+
+Wirkung: eine Zusammenführung mehr, und sie ist richtig. „Universität
+Heidelberg" hat „Ruprecht-Karls-Universität Heidelberg" aufgenommen.
+64 → **63 Standorte**, Charité bei 46 Studien aus 24 Schreibweisen.
+
+## Wenn eine Studie die Zahlen beherrscht
+
+Gemessen über alle Standorte: Bei zweien stammen mindestens 60 Prozent
+aller Arbeiten aus **einer einzigen Studie**.
+
+```
+Ruhr-Universität Bochum          21 von 21 Arbeiten (100 %)  -> 62 Personen
+Universitätsklinikum Heidelberg  18 von 27 Arbeiten ( 67 %)  -> 47 Personen
+```
+
+Bochum hat 2 Studien und 62 Personen, die Charité 46 Studien und 23. Ohne
+Hinweis liest man die 62 als Größe des Hauses, dabei ist es das Team einer
+Studie. Darum steht es jetzt im Kasten: *„Alle davon stammen aus dieser
+einen Studie, was die Zahlen unten prägt."*
+
+## Personen je Standort, in der Fläche gemessen
+
+```
+Standorte gesamt             63
+ohne geprüfte ROR            11   kein Kasten
+mit ROR, aber ohne Arbeiten  21   kein Kasten
+mit Personen-Kasten          29   zusammen 441 Personen
+```

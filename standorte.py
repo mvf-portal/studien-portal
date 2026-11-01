@@ -69,12 +69,31 @@ def e(s) -> str:
 
 
 REPOS: dict[str, dict] = {}
+ORTE_KOORD: dict[str, dict] = {}
 # Schreibweise -> wurde sie ueber die ROR-Kennung zusammengefuehrt?
 # nach_ror() fuellt das; der Kasten auf der Profilseite nennt damit
 # den richtigen Weg statt pauschal die Innofonds-Traegerliste.
 RORWEG: dict[str, bool] = {}
 VERZ: dict[str, list] = {}
 DOIB: dict = {}
+
+
+def _koordinate(rep, ort):
+    """Koordinate des Standorts: Einrichtung, sonst Stadt, sonst nichts."""
+    if rep and rep.get("geprueft") and rep.get("lat"):
+        return {"lat": rep["lat"], "lon": rep["lon"],
+                "koordinate": "einrichtung"}
+    import unicodedata
+    k = (ort or "").lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"),
+                 ("ß", "ss")):
+        k = k.replace(a, b)
+    k = unicodedata.normalize("NFKD", k).encode("ascii", "ignore").decode()
+    k = k.split("(")[0].strip().strip(",").strip()
+    e = ORTE_KOORD.get(k)
+    if e:
+        return {"lat": e["lat"], "lon": e["lon"], "koordinate": "ort"}
+    return {"lat": None, "lon": None, "koordinate": None}
 
 
 def darf_verschmelzen(a: str, b: str) -> tuple[bool, str]:
@@ -324,6 +343,12 @@ def main() -> int:
         n = sum(1 for x in VERZ.values() if x)
         print(f"  Verzeichniseintraege: {n} Standorte, "
               f"{sum(len(x) for x in VERZ.values())} Verweise")
+    global ORTE_KOORD
+    ok_ = _laden("ortskoordinaten.json", "Ortskoordinaten", "ortskoordinaten.py")
+    if ok_:
+        ORTE_KOORD = ok_["orte"]
+        print(f"  Ortskoordinaten    : {len(ORTE_KOORD)} Orte")
+
     d = _laden("doi_bezug.json", "Fachgebiete aus Publikationen", "doi_bezug.py")
     if d:
         DOIB = d
@@ -627,12 +652,14 @@ def main() -> int:
             mit: dict[str, dict] = {}
             arbeiten_n = 0
             studien_mit = 0
+            groessen: list[int] = []
             for s in z["studien"]:
                 b = DOIB["studien"].get(s["id"])
                 if not b or not b["arbeiten"]:
                     continue
                 studien_mit += 1
                 arbeiten_n += len(b["arbeiten"])
+                groessen.append(len(b["arbeiten"]))
                 for f in b.get("fach") or []:
                     fach_zahl[f] += 1
                 for arb in b["arbeiten"]:
@@ -643,12 +670,31 @@ def main() -> int:
                         m = mit.setdefault(ins["ror"], dict(ins, n=0))
                         m["n"] += 1
             if studien_mit:
+                # Wenn fast alle Arbeiten aus EINER Studie stammen, muss
+                # das dastehen. Sonst liest man 62 Personen als Groesse des
+                # Hauses, obwohl es das Team einer einzigen Studie ist.
+                # Gemessen am 01.11.2026: zwei Standorte, Bochum mit 21 von
+                # 21 Arbeiten aus einer Studie und Heidelberg mit 18 von 27.
+                groesste = max(groessen) if groessen else 0
+                konzentriert = (arbeiten_n >= 5
+                                and groesste / arbeiten_n >= 0.6)
                 t = ["<div class=\"box\"><h3>Aus den Ergebnispublikationen</h3>",
                      "<p style='font-size:13px;color:var(--ink-soft);"
                      "margin:8px 0 0'>",
-                     f"{studien_mit} der {len(z['studien'])} Studien nennen "
-                     f"Veröffentlichungen; dazu sind {arbeiten_n} "
-                     "Arbeiten auffindbar.</p>"]
+                     f"{studien_mit} der {len(z['studien'])} Studien "
+                     + ("nennt" if studien_mit == 1 else "nennen")
+                     + " Veröffentlichungen, dazu "
+                     + ("ist" if arbeiten_n == 1 else "sind")
+                     + f" {arbeiten_n} "
+                     + ("Arbeit" if arbeiten_n == 1 else "Arbeiten")
+                     + " auffindbar."
+                     + ("" if not konzentriert else
+                        (" <b>Alle davon stammen aus dieser einen Studie</b>, "
+                         "was die Zahlen unten prägt."
+                         if studien_mit == 1 else
+                         f" <b>Davon stammen {groesste} aus einer einzigen "
+                         "Studie</b>, was die Zahlen unten prägt."))
+                     + "</p>"]
                 if fach_zahl:
                     t.append("<p style='margin:14px 0 4px;font-weight:700;"
                              "font-size:13px'>Fachgebiete der Arbeiten</p>"
@@ -819,8 +865,15 @@ def main() -> int:
                             # Koordinaten nur aus GEPRUEFTEN Zuordnungen. Ein
                             # Punkt an der falschen Stelle ist schlimmer als
                             # gar kein Punkt: Er behauptet etwas.
-                            "lat": (rep or {}).get("lat") if (rep or {}).get("geprueft") else None,
-                            "lon": (rep or {}).get("lon") if (rep or {}).get("geprueft") else None,
+                            #
+                            # Haelt die Zuordnung nicht, bleibt der ORT aus dem
+                            # Register richtig. Dann die Koordinate der Stadt,
+                            # und auf der Karte als solche kenntlich. Das ist
+                            # meistens kein Fehler der Zuordnung, sondern ihr
+                            # Erfolg: Die ROR-Kennung gehoert dann zur Mutter
+                            # in einer anderen Stadt (Luebeck -> Kiel,
+                            # Datteln -> Witten, Alzey -> Mainz).
+                            **_koordinate(rep, ort),
                             "rekrutiert": st.get("rekrutiert", 0),
                             "hubs": [h for h, _ in z["hubs"].most_common()],
                             "traegerart": tart,

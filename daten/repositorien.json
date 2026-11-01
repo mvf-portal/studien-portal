@@ -18,6 +18,7 @@
     "Charité - Universitätsmedizin Berlin, Institut für Allgemeinmedizin",
     "Charité - Universitätsmedizin Berlin, Institut für Medizinische Soziologie und Rehabilitationswissenschaft",
     "Charité - Universitätsmedizin Berlin, Klinik für Radiologie",
+    "Charité Campus Charité Mitte",
     "Charité Competence Center for Traditional and Integrative Medicine (CCCTIM) Charité – Universitätsmedizin Berlin",
     "Charité Universitäsmedizin Berlin",
     "Charité Universitätsmedizin Berlin",
@@ -35,7 +36,7 @@
     "Medizinische Klinik für Endokrinologie, Charité - Universitätsmedizin Berlin",
     "Medizinische Klinik m.S. Psychosomatik Charité Berlin"
    ],
-   "studien": 41,
+   "studien": 46,
    "traegerart": "Hochschule und Universitätsmedizin",
    "ror": "https://ror.org/001w7jn25",
    "ror_name": "",
@@ -441,42 +442,6 @@
    "lon": 9.95121
   },
   {
-   "name": "Charité Campus Charité Mitte",
-   "datei": "charite-campus-charite-mitte.html",
-   "schreibweisen": [
-    "Charité Campus Charité Mitte"
-   ],
-   "studien": 5,
-   "traegerart": "Hochschule und Universitätsmedizin",
-   "ror": "https://ror.org/001w7jn25",
-   "ror_name": "Charité – Universitätsmedizin Berlin",
-   "ror_grund": "ROR-Namensauflösung über das Kopfwort „charite“, Punktwert 1.00",
-   "netzadresse": "https://www.charite.de",
-   "oa_typ": "healthcare",
-   "oa_arbeiten": 163973,
-   "repositorien": [
-    {
-     "name": "Publication Server (Berlin-Brandenburg Academy of Sciences and Humanities)",
-     "id": "https://openalex.org/S4306400214",
-     "adresse": null,
-     "arbeiten": 3941,
-     "traeger": "Charité – Universitätsmedizin Berlin"
-    }
-   ],
-   "namensvarianten": [
-    "Charité",
-    "Charité - Universitätsmedizin Berlin",
-    "Charité Universitätsmedizin Berlin",
-    "Charité – Universitätsmedizin Berlin"
-   ],
-   "geprueft": true,
-   "name_haelt": true,
-   "ort_haelt": true,
-   "oa_ort": "Berlin",
-   "lat": 52.52437,
-   "lon": 13.41053
-  },
-  {
    "name": "Universitätsklinikum Tübingen",
    "datei": "universitatsklinikum-tubingen.html",
    "schreibweisen": [
@@ -855,6 +820,59 @@
    "oa_ort": "Erlangen",
    "lat": 49.59099,
    "lon": 11.00783
+  },
+  {
+   "name": "Universität Heidelberg",
+   "datei": "universitat-heidelberg.html",
+   "schreibweisen": [
+    "Ruprecht-Karls-Universität Heidelberg",
+    "Ruprecht-Karls-Universität Heidelberg Medizinische Fakultät vertreten durch das Universitätsklinikum Heidelberg und dessen Kaufmännische Direktorin Katrin Erk",
+    "Universität Heidelberg"
+   ],
+   "studien": 4,
+   "traegerart": "Hochschule und Universitätsmedizin",
+   "ror": "https://ror.org/038t36y30",
+   "ror_name": "Heidelberg University",
+   "ror_grund": "Innofonds-Portal (handgeprueft)",
+   "netzadresse": "https://www.uni-heidelberg.de",
+   "oa_typ": "education",
+   "oa_arbeiten": 225719,
+   "repositorien": [
+    {
+     "name": "heiDOK – The Heidelberg Document Repository (Heidelberg University)",
+     "id": "https://openalex.org/S4306402124",
+     "adresse": null,
+     "arbeiten": 8019,
+     "traeger": "Heidelberg University"
+    },
+    {
+     "name": "CrossAsia-Repository (Universität Heidelberg)",
+     "id": "https://openalex.org/S4306402193",
+     "adresse": "https://repository.crossasia.org/",
+     "arbeiten": 4382,
+     "traeger": "Heidelberg University"
+    },
+    {
+     "name": "heiDOK (Heidelberg University)",
+     "id": "https://openalex.org/S4306402333",
+     "adresse": null,
+     "arbeiten": 20295,
+     "traeger": "Heidelberg University"
+    }
+   ],
+   "namensvarianten": [
+    "Heidelberg University",
+    "Ruprecht-Karls University Heidelberg",
+    "Ruprecht-Karls-Universitaet Heidelberg",
+    "Ruprecht-Karls-Universität Heidelberg",
+    "University of Heidelberg"
+   ],
+   "geprueft": true,
+   "name_haelt": true,
+   "ort_haelt": true,
+   "oa_ort": "Heidelberg",
+   "lat": 49.40768,
+   "lon": 8.69079
   },
   {
    "name": "Berliner Institut für Gesundheitsforschung",
@@ -1904,57 +1922,6 @@
    "lon": 13.40244
   },
   {
-   "name": "Universität Heidelberg",
-   "datei": "universitat-heidelberg.html",
-   "schreibweisen": [
-    "Universität Heidelberg"
-   ],
-   "studien": 2,
-   "traegerart": "Hochschule und Universitätsmedizin",
-   "ror": "https://ror.org/038t36y30",
-   "ror_name": "Heidelberg University",
-   "ror_grund": "Innofonds-Portal (handgeprueft)",
-   "netzadresse": "https://www.uni-heidelberg.de",
-   "oa_typ": "education",
-   "oa_arbeiten": 225719,
-   "repositorien": [
-    {
-     "name": "heiDOK – The Heidelberg Document Repository (Heidelberg University)",
-     "id": "https://openalex.org/S4306402124",
-     "adresse": null,
-     "arbeiten": 8019,
-     "traeger": "Heidelberg University"
-    },
-    {
-     "name": "CrossAsia-Repository (Universität Heidelberg)",
-     "id": "https://openalex.org/S4306402193",
-     "adresse": "https://repository.crossasia.org/",
-     "arbeiten": 4382,
-     "traeger": "Heidelberg University"
-    },
-    {
-     "name": "heiDOK (Heidelberg University)",
-     "id": "https://openalex.org/S4306402333",
-     "adresse": null,
-     "arbeiten": 20295,
-     "traeger": "Heidelberg University"
-    }
-   ],
-   "namensvarianten": [
-    "Heidelberg University",
-    "Ruprecht-Karls University Heidelberg",
-    "Ruprecht-Karls-Universitaet Heidelberg",
-    "Ruprecht-Karls-Universität Heidelberg",
-    "University of Heidelberg"
-   ],
-   "geprueft": false,
-   "name_haelt": false,
-   "ort_haelt": true,
-   "oa_ort": "Heidelberg",
-   "lat": 49.40768,
-   "lon": 8.69079
-  },
-  {
    "name": "Ruhr-Universität Bochum",
    "datei": "ruhr-universitat-bochum.html",
    "schreibweisen": [
@@ -2138,58 +2105,6 @@
    "oa_ort": "Marburg",
    "lat": 50.80904,
    "lon": 8.77069
-  },
-  {
-   "name": "Ruprecht-Karls-Universität Heidelberg",
-   "datei": "ruprecht-karls-universitat-heidelberg.html",
-   "schreibweisen": [
-    "Ruprecht-Karls-Universität Heidelberg",
-    "Ruprecht-Karls-Universität Heidelberg Medizinische Fakultät vertreten durch das Universitätsklinikum Heidelberg und dessen Kaufmännische Direktorin Katrin Erk"
-   ],
-   "studien": 2,
-   "traegerart": "Hochschule und Universitätsmedizin",
-   "ror": "https://ror.org/038t36y30",
-   "ror_name": "",
-   "ror_grund": "bereits aufgeloest",
-   "netzadresse": "https://www.uni-heidelberg.de",
-   "oa_typ": "education",
-   "oa_arbeiten": 225719,
-   "repositorien": [
-    {
-     "name": "heiDOK – The Heidelberg Document Repository (Heidelberg University)",
-     "id": "https://openalex.org/S4306402124",
-     "adresse": null,
-     "arbeiten": 8019,
-     "traeger": "Heidelberg University"
-    },
-    {
-     "name": "CrossAsia-Repository (Universität Heidelberg)",
-     "id": "https://openalex.org/S4306402193",
-     "adresse": "https://repository.crossasia.org/",
-     "arbeiten": 4382,
-     "traeger": "Heidelberg University"
-    },
-    {
-     "name": "heiDOK (Heidelberg University)",
-     "id": "https://openalex.org/S4306402333",
-     "adresse": null,
-     "arbeiten": 20295,
-     "traeger": "Heidelberg University"
-    }
-   ],
-   "namensvarianten": [
-    "Heidelberg University",
-    "Ruprecht-Karls University Heidelberg",
-    "Ruprecht-Karls-Universitaet Heidelberg",
-    "Ruprecht-Karls-Universität Heidelberg",
-    "University of Heidelberg"
-   ],
-   "geprueft": true,
-   "name_haelt": true,
-   "ort_haelt": true,
-   "oa_ort": "Heidelberg",
-   "lat": 49.40768,
-   "lon": 8.69079
   }
  ]
 }

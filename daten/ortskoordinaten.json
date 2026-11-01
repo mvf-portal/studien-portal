@@ -1,0 +1,858 @@
+{
+ "stand": "2026-11-01",
+ "hinweis": "Koordinate der STADT, nicht der Einrichtung. Nur benutzt, wo die Einrichtung sich nicht zweifelsfrei zuordnen laesst. Auf der Karte als solche kenntlich.",
+ "orte": {
+  "hamburg": {
+   "lat": 53.55073,
+   "lon": 9.99302,
+   "ort": "Hamburg",
+   "quelle": "eigener Bestand"
+  },
+  "wuppertal": {
+   "lat": 51.25627,
+   "lon": 7.14816,
+   "ort": "Wuppertal",
+   "quelle": "Innofonds-Cache"
+  },
+  "berlin": {
+   "lat": 52.52437,
+   "lon": 13.41053,
+   "ort": "Berlin",
+   "quelle": "eigener Bestand"
+  },
+  "koeln": {
+   "lat": 50.93333,
+   "lon": 6.95,
+   "ort": "Köln",
+   "quelle": "eigener Bestand"
+  },
+  "heidelberg": {
+   "lat": 49.40768,
+   "lon": 8.69079,
+   "ort": "Heidelberg",
+   "quelle": "eigener Bestand"
+  },
+  "dresden": {
+   "lat": 51.05089,
+   "lon": 13.73832,
+   "ort": "Dresden",
+   "quelle": "eigener Bestand"
+  },
+  "hannover": {
+   "lat": 52.37052,
+   "lon": 9.73322,
+   "ort": "Hannover",
+   "quelle": "eigener Bestand"
+  },
+  "greifswald": {
+   "lat": 54.08905,
+   "lon": 13.40244,
+   "ort": "Greifswald",
+   "quelle": "eigener Bestand"
+  },
+  "jena": {
+   "lat": 50.92878,
+   "lon": 11.5899,
+   "ort": "Jena",
+   "quelle": "Innofonds-Cache"
+  },
+  "mainz": {
+   "lat": 49.98185,
+   "lon": 8.28008,
+   "ort": "Mainz",
+   "quelle": "eigener Bestand"
+  },
+  "muenchen": {
+   "lat": 48.13743,
+   "lon": 11.57549,
+   "ort": "München",
+   "quelle": "eigener Bestand"
+  },
+  "wuerzburg": {
+   "lat": 49.79391,
+   "lon": 9.95121,
+   "ort": "Würzburg",
+   "quelle": "eigener Bestand"
+  },
+  "essen": {
+   "lat": 51.45656967163086,
+   "lon": 7.012279987335205,
+   "ort": "Essen",
+   "quelle": "eigener Bestand"
+  },
+  "bielefeld": {
+   "lat": 52.03333,
+   "lon": 8.53333,
+   "ort": "Bielefeld",
+   "quelle": "Innofonds-Cache"
+  },
+  "freiburg im breisgau": {
+   "lat": 47.9959,
+   "lon": 7.85222,
+   "ort": "Freiburg im Breisgau",
+   "quelle": "Innofonds-Cache"
+  },
+  "halle": {
+   "lat": 51.48158,
+   "lon": 11.97947,
+   "ort": "Halle",
+   "quelle": "eigener Bestand"
+  },
+  "ulm": {
+   "lat": 48.39841079711914,
+   "lon": 9.99155044555664,
+   "ort": "Ulm",
+   "quelle": "eigener Bestand"
+  },
+  "luebeck": {
+   "lat": 53.86893,
+   "lon": 10.68729,
+   "ort": "Lübeck",
+   "quelle": "eigener Bestand"
+  },
+  "erlangen": {
+   "lat": 49.59099,
+   "lon": 11.00783,
+   "ort": "Erlangen",
+   "quelle": "eigener Bestand"
+  },
+  "muenster": {
+   "lat": 51.96236,
+   "lon": 7.62571,
+   "ort": "Münster",
+   "quelle": "Innofonds-Cache"
+  },
+  "tuebingen": {
+   "lat": 48.52266,
+   "lon": 9.05222,
+   "ort": "Tübingen",
+   "quelle": "eigener Bestand"
+  },
+  "duesseldorf": {
+   "lat": 51.22319,
+   "lon": 6.77927,
+   "ort": "Düsseldorf",
+   "quelle": "eigener Bestand"
+  },
+  "aachen": {
+   "lat": 50.77664,
+   "lon": 6.08342,
+   "ort": "Aachen",
+   "quelle": "eigener Bestand"
+  },
+  "magdeburg": {
+   "lat": 52.13129,
+   "lon": 11.63189,
+   "ort": "Magdeburg",
+   "quelle": "eigener Bestand"
+  },
+  "bochum": {
+   "lat": 51.48165,
+   "lon": 7.21648,
+   "ort": "Bochum",
+   "quelle": "eigener Bestand"
+  },
+  "leipzig": {
+   "lat": 51.33962,
+   "lon": 12.37129,
+   "ort": "Leipzig",
+   "quelle": "Innofonds-Cache"
+  },
+  "frankfurt am main": {
+   "lat": 50.11552,
+   "lon": 8.68417,
+   "ort": "Frankfurt am Main",
+   "quelle": "eigener Bestand"
+  },
+  "marburg": {
+   "lat": 50.80904,
+   "lon": 8.77069,
+   "ort": "Marburg",
+   "quelle": "eigener Bestand"
+  },
+  "goettingen": {
+   "lat": 51.53443,
+   "lon": 9.93228,
+   "ort": "Göttingen",
+   "quelle": "Innofonds-Cache"
+  },
+  "bremen": {
+   "lat": 53.07582,
+   "lon": 8.80717,
+   "ort": "Bremen",
+   "quelle": "eigener Bestand"
+  },
+  "bonn": {
+   "lat": 50.73438,
+   "lon": 7.09549,
+   "ort": "Bonn",
+   "quelle": "eigener Bestand"
+  },
+  "kiel": {
+   "lat": 54.32133,
+   "lon": 10.13489,
+   "ort": "Kiel",
+   "quelle": "eigener Bestand"
+  },
+  "oldenburg": {
+   "lat": 53.14039,
+   "lon": 8.21479,
+   "ort": "Oldenburg",
+   "quelle": "eigener Bestand"
+  },
+  "rostock": {
+   "lat": 54.0887,
+   "lon": 12.14049,
+   "ort": "Rostock",
+   "quelle": "Innofonds-Cache"
+  },
+  "neuruppin": {
+   "lat": 52.92815,
+   "lon": 12.80311,
+   "ort": "Neuruppin",
+   "quelle": "Innofonds-Cache"
+  },
+  "giessen": {
+   "lat": 50.58727,
+   "lon": 8.67554,
+   "ort": "Gießen",
+   "quelle": "eigener Bestand"
+  },
+  "augsburg": {
+   "lat": 48.37154,
+   "lon": 10.89851,
+   "ort": "Augsburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "wolfenbuettel": {
+   "lat": 52.16442,
+   "lon": 10.54095,
+   "ort": "Wolfenbüttel",
+   "quelle": "Innofonds-Cache"
+  },
+  "saarbruecken": {
+   "lat": 49.23262,
+   "lon": 7.00982,
+   "ort": "Saarbrücken",
+   "quelle": "Innofonds-Cache"
+  },
+  "stuttgart": {
+   "lat": 48.78232,
+   "lon": 9.17702,
+   "ort": "Stuttgart",
+   "quelle": "eigener Bestand"
+  },
+  "regensburg": {
+   "lat": 49.01513,
+   "lon": 12.10161,
+   "ort": "Regensburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "mannheim": {
+   "lat": 49.48910140991211,
+   "lon": 8.466939926147461,
+   "ort": "Mannheim",
+   "quelle": "eigener Bestand"
+  },
+  "bayreuth": {
+   "lat": 49.94782,
+   "lon": 11.57893,
+   "ort": "Bayreuth",
+   "quelle": "eigener Bestand"
+  },
+  "fulda": {
+   "lat": 50.55162,
+   "lon": 9.67518,
+   "ort": "Fulda",
+   "quelle": "Innofonds-Cache"
+  },
+  "dortmund": {
+   "lat": 51.51494,
+   "lon": 7.466,
+   "ort": "Dortmund",
+   "quelle": "Innofonds-Cache"
+  },
+  "potsdam": {
+   "lat": 52.39886,
+   "lon": 13.06566,
+   "ort": "Potsdam",
+   "quelle": "Innofonds-Cache"
+  },
+  "nuernberg": {
+   "lat": 49.45421,
+   "lon": 11.07752,
+   "ort": "Nürnberg",
+   "quelle": "Innofonds-Cache"
+  },
+  "fuerth": {
+   "lat": 49.47593,
+   "lon": 10.98856,
+   "ort": "Fürth",
+   "quelle": "Innofonds-Cache"
+  },
+  "braunschweig": {
+   "lat": 52.26594,
+   "lon": 10.52673,
+   "ort": "Braunschweig",
+   "quelle": "Innofonds-Cache"
+  },
+  "datteln": {
+   "lat": 51.65598,
+   "lon": 7.3453,
+   "ort": "Datteln",
+   "quelle": "eigener Bestand"
+  },
+  "osnabrueck": {
+   "lat": 52.27264,
+   "lon": 8.0498,
+   "ort": "Osnabrück",
+   "quelle": "eigener Bestand"
+  },
+  "landau": {
+   "lat": 49.19844,
+   "lon": 8.11692,
+   "ort": "Landau",
+   "quelle": "Innofonds-Cache"
+  },
+  "sankt augustin": {
+   "lat": 50.77538,
+   "lon": 7.197,
+   "ort": "Sankt Augustin",
+   "quelle": "Innofonds-Cache"
+  },
+  "duisburg": {
+   "lat": 51.43247,
+   "lon": 6.76516,
+   "ort": "Duisburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "ludwigshafen am rhein": {
+   "lat": 49.48121,
+   "lon": 8.44641,
+   "ort": "Ludwigshafen am Rhein",
+   "quelle": "Innofonds-Cache"
+  },
+  "neubrandenburg": {
+   "lat": 53.56414,
+   "lon": 13.27532,
+   "ort": "Neubrandenburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "reutlingen": {
+   "lat": 48.49144,
+   "lon": 9.20427,
+   "ort": "Reutlingen",
+   "quelle": "Innofonds-Cache"
+  },
+  "cottbus": {
+   "lat": 51.75769,
+   "lon": 14.32888,
+   "ort": "Cottbus",
+   "quelle": "Innofonds-Cache"
+  },
+  "stralsund": {
+   "lat": 54.30911,
+   "lon": 13.0818,
+   "ort": "Stralsund",
+   "quelle": "Innofonds-Cache"
+  },
+  "chemnitz": {
+   "lat": 50.8357,
+   "lon": 12.92922,
+   "ort": "Chemnitz",
+   "quelle": "Innofonds-Cache"
+  },
+  "erfurt": {
+   "lat": 50.9787,
+   "lon": 11.03283,
+   "ort": "Erfurt",
+   "quelle": "Innofonds-Cache"
+  },
+  "kassel": {
+   "lat": 51.31667,
+   "lon": 9.5,
+   "ort": "Kassel",
+   "quelle": "eigener Bestand"
+  },
+  "kaiserslautern": {
+   "lat": 49.443,
+   "lon": 7.77161,
+   "ort": "Kaiserslautern",
+   "quelle": "Innofonds-Cache"
+  },
+  "bad aibling": {
+   "lat": 47.8638,
+   "lon": 12.01055,
+   "ort": "Bad Aibling",
+   "quelle": "Innofonds-Cache"
+  },
+  "konstanz": {
+   "lat": 47.66033,
+   "lon": 9.17582,
+   "ort": "Konstanz",
+   "quelle": "Innofonds-Cache"
+  },
+  "eichstaett": {
+   "lat": 48.88854,
+   "lon": 11.19675,
+   "ort": "Eichstätt",
+   "quelle": "Innofonds-Cache"
+  },
+  "bamberg": {
+   "lat": 49.89873,
+   "lon": 10.90067,
+   "ort": "Bamberg",
+   "quelle": "Innofonds-Cache"
+  },
+  "guetersloh": {
+   "lat": 51.90693,
+   "lon": 8.37853,
+   "ort": "Gütersloh",
+   "quelle": "Innofonds-Cache"
+  },
+  "offenbach": {
+   "lat": 50.10061,
+   "lon": 8.76647,
+   "ort": "Offenbach",
+   "quelle": "Innofonds-Cache"
+  },
+  "itzehoe": {
+   "lat": 53.92099,
+   "lon": 9.51529,
+   "ort": "Itzehoe",
+   "quelle": "Innofonds-Cache"
+  },
+  "gronau": {
+   "lat": 52.21099,
+   "lon": 7.02238,
+   "ort": "Gronau",
+   "quelle": "Innofonds-Cache"
+  },
+  "homburg": {
+   "lat": 49.32637,
+   "lon": 7.33867,
+   "ort": "Homburg",
+   "quelle": "eigener Bestand"
+  },
+  "wiesbaden": {
+   "lat": 50.08258,
+   "lon": 8.24932,
+   "ort": "Wiesbaden",
+   "quelle": "Innofonds-Cache"
+  },
+  "moenchengladbach": {
+   "lat": 51.18539,
+   "lon": 6.44172,
+   "ort": "Mönchengladbach",
+   "quelle": "Innofonds-Cache"
+  },
+  "herne": {
+   "lat": 51.5388,
+   "lon": 7.22572,
+   "ort": "Herne",
+   "quelle": "Innofonds-Cache"
+  },
+  "hanau": {
+   "lat": 50.13423,
+   "lon": 8.91418,
+   "ort": "Hanau",
+   "quelle": "Innofonds-Cache"
+  },
+  "baden-baden": {
+   "lat": 48.7606,
+   "lon": 8.23975,
+   "ort": "Baden-Baden",
+   "quelle": "Innofonds-Cache"
+  },
+  "wernigerode": {
+   "lat": 51.83652,
+   "lon": 10.78216,
+   "ort": "Wernigerode",
+   "quelle": "Innofonds-Cache"
+  },
+  "bad mergentheim": {
+   "lat": 49.4925,
+   "lon": 9.77361,
+   "ort": "Bad Mergentheim",
+   "quelle": "Innofonds-Cache"
+  },
+  "elmshorn": {
+   "lat": 53.75396,
+   "lon": 9.65339,
+   "ort": "Elmshorn",
+   "quelle": "Innofonds-Cache"
+  },
+  "koenigstein im taunus": {
+   "lat": 50.17943,
+   "lon": 8.47132,
+   "ort": "Königstein im Taunus",
+   "quelle": "Innofonds-Cache"
+  },
+  "landshut": {
+   "lat": 48.52961,
+   "lon": 12.16179,
+   "ort": "Landshut",
+   "quelle": "Innofonds-Cache"
+  },
+  "aalen": {
+   "lat": 48.83777,
+   "lon": 10.0933,
+   "ort": "Aalen",
+   "quelle": "Innofonds-Cache"
+  },
+  "schoenau am koenigssee": {
+   "lat": 47.60055,
+   "lon": 12.98704,
+   "ort": "Schönau am Königssee",
+   "quelle": "Innofonds-Cache"
+  },
+  "brandenburg": {
+   "lat": 52.41667,
+   "lon": 12.55,
+   "ort": "Brandenburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "neu-isenburg": {
+   "lat": 50.04832,
+   "lon": 8.69406,
+   "ort": "Neu-Isenburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "hagen": {
+   "lat": 51.36081,
+   "lon": 7.47168,
+   "ort": "Hagen",
+   "quelle": "Innofonds-Cache"
+  },
+  "aschaffenburg": {
+   "lat": 49.97704,
+   "lon": 9.15214,
+   "ort": "Aschaffenburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "marktredwitz": {
+   "lat": 50.00443,
+   "lon": 12.08593,
+   "ort": "Marktredwitz",
+   "quelle": "Innofonds-Cache"
+  },
+  "koblenz": {
+   "lat": 50.35357,
+   "lon": 7.57883,
+   "ort": "Koblenz",
+   "quelle": "Innofonds-Cache"
+  },
+  "paderborn": {
+   "lat": 51.71905,
+   "lon": 8.75439,
+   "ort": "Paderborn",
+   "quelle": "Innofonds-Cache"
+  },
+  "hamm": {
+   "lat": 51.68033,
+   "lon": 7.82089,
+   "ort": "Hamm",
+   "quelle": "Innofonds-Cache"
+  },
+  "trier": {
+   "lat": 49.75565,
+   "lon": 6.63935,
+   "ort": "Trier",
+   "quelle": "Innofonds-Cache"
+  },
+  "radeberg": {
+   "lat": 51.11112,
+   "lon": 13.91199,
+   "ort": "Radeberg",
+   "quelle": "Innofonds-Cache"
+  },
+  "villingen-schwenningen": {
+   "lat": 48.06226,
+   "lon": 8.49358,
+   "ort": "Villingen-Schwenningen",
+   "quelle": "Innofonds-Cache"
+  },
+  "dueren": {
+   "lat": 50.80434,
+   "lon": 6.49299,
+   "ort": "Düren",
+   "quelle": "Innofonds-Cache"
+  },
+  "forchheim": {
+   "lat": 49.71754,
+   "lon": 11.05877,
+   "ort": "Forchheim",
+   "quelle": "Innofonds-Cache"
+  },
+  "recklinghausen": {
+   "lat": 51.61379,
+   "lon": 7.19738,
+   "ort": "Recklinghausen",
+   "quelle": "Innofonds-Cache"
+  },
+  "senftenberg": {
+   "lat": 51.52517,
+   "lon": 14.00164,
+   "ort": "Senftenberg",
+   "quelle": "Innofonds-Cache"
+  },
+  "heide": {
+   "lat": 54.19562,
+   "lon": 9.09742,
+   "ort": "Heide",
+   "quelle": "Innofonds-Cache"
+  },
+  "grosshansdorf": {
+   "lat": 53.66667,
+   "lon": 10.28333,
+   "ort": "Großhansdorf",
+   "quelle": "Innofonds-Cache"
+  },
+  "viersen": {
+   "lat": 51.25435,
+   "lon": 6.39441,
+   "ort": "Viersen",
+   "quelle": "Innofonds-Cache"
+  },
+  "ingolstadt": {
+   "lat": 48.76508,
+   "lon": 11.42372,
+   "ort": "Ingolstadt",
+   "quelle": "Innofonds-Cache"
+  },
+  "isny": {
+   "lat": 47.6926,
+   "lon": 10.03857,
+   "ort": "Isny",
+   "quelle": "Innofonds-Cache"
+  },
+  "gerlingen": {
+   "lat": 48.79954,
+   "lon": 9.06316,
+   "ort": "Gerlingen",
+   "quelle": "Innofonds-Cache"
+  },
+  "hildesheim": {
+   "lat": 52.15077,
+   "lon": 9.95112,
+   "ort": "Hildesheim",
+   "quelle": "Innofonds-Cache"
+  },
+  "ludwigsburg": {
+   "lat": 48.89731,
+   "lon": 9.19161,
+   "ort": "Ludwigsburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "ravensburg": {
+   "lat": 47.78198,
+   "lon": 9.61062,
+   "ort": "Ravensburg",
+   "quelle": "Innofonds-Cache"
+  },
+  "haar": {
+   "lat": 48.10881,
+   "lon": 11.72653,
+   "ort": "Haar",
+   "quelle": "Innofonds-Cache"
+  },
+  "rheine": {
+   "lat": 52.28509,
+   "lon": 7.44055,
+   "ort": "Rheine",
+   "quelle": "Innofonds-Cache"
+  },
+  "sendenhorst": {
+   "lat": 51.84303,
+   "lon": 7.82996,
+   "ort": "Sendenhorst",
+   "quelle": "Innofonds-Cache"
+  },
+  "gummersbach": {
+   "lat": 51.02608,
+   "lon": 7.56473,
+   "ort": "Gummersbach",
+   "quelle": "Innofonds-Cache"
+  },
+  "speyer": {
+   "lat": 49.32083,
+   "lon": 8.43111,
+   "ort": "Speyer",
+   "quelle": "Innofonds-Cache"
+  },
+  "karlsruhe": {
+   "lat": 49.00937,
+   "lon": 8.40444,
+   "ort": "Karlsruhe",
+   "quelle": "Innofonds-Cache"
+  },
+  "oberhausen": {
+   "lat": 51.47805,
+   "lon": 6.8625,
+   "ort": "Oberhausen",
+   "quelle": "Innofonds-Cache"
+  },
+  "langen": {
+   "lat": 49.98955,
+   "lon": 8.66852,
+   "ort": "Langen",
+   "quelle": "Innofonds-Cache"
+  },
+  "bad segeberg": {
+   "lat": 53.93775,
+   "lon": 10.30745,
+   "ort": "Bad Segeberg",
+   "quelle": "Innofonds-Cache"
+  },
+  "hemer": {
+   "lat": 51.38707,
+   "lon": 7.77019,
+   "ort": "Hemer",
+   "quelle": "Innofonds-Cache"
+  },
+  "bad krozingen": {
+   "lat": 47.91667,
+   "lon": 7.7,
+   "ort": "Bad Krozingen",
+   "quelle": "Innofonds-Cache"
+  },
+  "garmisch-partenkirchen": {
+   "lat": 47.49209,
+   "lon": 11.09576,
+   "ort": "Garmisch-Partenkirchen",
+   "quelle": "Innofonds-Cache"
+  },
+  "vallendar": {
+   "lat": 50.39586,
+   "lon": 7.62427,
+   "ort": "Vallendar",
+   "quelle": "Innofonds-Cache"
+  },
+  "heilbronn": {
+   "lat": 49.13995,
+   "lon": 9.22054,
+   "ort": "Heilbronn",
+   "quelle": "Innofonds-Cache"
+  },
+  "gelsenkirchen": {
+   "lat": 51.50508,
+   "lon": 7.09654,
+   "ort": "Gelsenkirchen",
+   "quelle": "Innofonds-Cache"
+  },
+  "gera": {
+   "lat": 50.88029,
+   "lon": 12.08187,
+   "ort": "Gera",
+   "quelle": "Innofonds-Cache"
+  },
+  "detmold": {
+   "lat": 51.93855,
+   "lon": 8.87318,
+   "ort": "Detmold",
+   "quelle": "Innofonds-Cache"
+  },
+  "darmstadt": {
+   "lat": 49.87167,
+   "lon": 8.65027,
+   "ort": "Darmstadt",
+   "quelle": "Innofonds-Cache"
+  },
+  "dessau": {
+   "lat": 51.83864,
+   "lon": 12.24555,
+   "ort": "Dessau",
+   "quelle": "Innofonds-Cache"
+  },
+  "koethen": {
+   "lat": 51.75185,
+   "lon": 11.97093,
+   "ort": "Köthen",
+   "quelle": "Innofonds-Cache"
+  },
+  "krefeld": {
+   "lat": 51.33645,
+   "lon": 6.55381,
+   "ort": "Krefeld",
+   "quelle": "Innofonds-Cache"
+  },
+  "weingarten": {
+   "lat": 47.81009,
+   "lon": 9.63863,
+   "ort": "Weingarten",
+   "quelle": "Innofonds-Cache"
+  },
+  "liebenau": {
+   "lat": 52.60362,
+   "lon": 9.09719,
+   "ort": "Liebenau",
+   "quelle": "Innofonds-Cache"
+  },
+  "zwickau": {
+   "lat": 50.72724,
+   "lon": 12.48839,
+   "ort": "Zwickau",
+   "quelle": "Innofonds-Cache"
+  },
+  "albstadt": {
+   "lat": 48.21644,
+   "lon": 9.02596,
+   "ort": "Albstadt",
+   "quelle": "Innofonds-Cache"
+  },
+  "arnsberg": {
+   "lat": 51.38333,
+   "lon": 8.08333,
+   "ort": "Arnsberg",
+   "quelle": "Innofonds-Cache"
+  },
+  "dormagen": {
+   "lat": 51.09683,
+   "lon": 6.83167,
+   "ort": "Dormagen",
+   "quelle": "Innofonds-Cache"
+  },
+  "haslach": {
+   "lat": 48.56531,
+   "lon": 8.05658,
+   "ort": "Haslach",
+   "quelle": "Innofonds-Cache"
+  },
+  "hausham": {
+   "lat": 47.7466,
+   "lon": 11.84069,
+   "ort": "Hausham",
+   "quelle": "Innofonds-Cache"
+  },
+  "witten": {
+   "lat": 51.44362,
+   "lon": 7.35258,
+   "ort": "Witten",
+   "quelle": "eigener Bestand"
+  },
+  "rosenheim": {
+   "lat": 47.85636901855469,
+   "lon": 12.122469902038574,
+   "ort": "Rosenheim",
+   "quelle": "eigener Bestand"
+  },
+  "freiburg": {
+   "lat": 47.9959,
+   "lon": 7.85222,
+   "ort": "Freiburg",
+   "quelle": "eigener Bestand"
+  },
+  "kempten": {
+   "lat": 47.72674,
+   "lon": 10.31389,
+   "ort": "Kempten",
+   "quelle": "eigener Bestand"
+  },
+  "alzey": {
+   "lat": 49.745421,
+   "lon": 8.11298,
+   "ort": "Alzey",
+   "quelle": "Wikidata"
+  }
+ }
+}
