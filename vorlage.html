@@ -302,6 +302,16 @@ button.flach:hover{background:var(--brand-tint)}
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .fakten div{color:var(--ink-soft); min-width:0}
 .fakten b{color:var(--ink-faint); font-weight:600; letter-spacing:.02em}
+/* Versorgungsbezug: drei Stufen, an den Publikationen gemessen */
+.bezug{display:inline-flex; align-items:center; gap:4px; font-size:11.5px;
+  padding:3px 10px; border-radius:6px; border:1px solid var(--line);
+  background:var(--card-2); color:var(--ink-faint); cursor:help}
+.bezug i{width:6px; height:6px; border-radius:50%; background:var(--line);
+  display:inline-block}
+.bezug.b1 i:nth-child(1){background:var(--ink-faint)}
+.bezug.b2 i:nth-child(-n+2){background:var(--brand)}
+.bezug.b3 i{background:var(--brand)}
+.bezug.b2, .bezug.b3{color:var(--ink-soft)}
 .chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; align-items:center}
 .chip{font-size:11.5px; padding:3px 10px; border-radius:6px; text-decoration:none;
   border:1px solid var(--line); background:var(--card-2); color:var(--ink-soft)}
@@ -473,6 +483,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
         <b>Knowledge-Hub</b><div class="pillen" id="fhub"></div>
         <b>Bundesland</b><div class="pillen" id="fland"></div>
         <b>Art der Studie</b><div class="pillen" id="fart"></div>
+        <b>Sicherheit des Versorgungsbezugs</b><div class="pillen" id="fbezug"></div>
         <b>Bezug zum eigenen Bestand</b><div class="pillen" id="finno"></div>
       </div>
       <div class="fzuruck">
@@ -954,9 +965,10 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
   })();
 
   /* ---- Pillenfilter: EIN Kasten statt loser Knopfreihen ---- */
-  var gewaehlt = {fstatus:"", fhub:"", fland:"", fart:"", finno:""};
+  var gewaehlt = {fstatus:"", fhub:"", fland:"", fart:"", finno:"",
+                  fbezug:""};
   var BESCHRIFTUNG = {fstatus:"Status", fhub:"Hub", fland:"Land",
-                      fart:"Art", finno:""};
+                      fart:"Art", finno:"", fbezug:"Bezug"};
 
   function pillen(feld, werte){
     id(feld).innerHTML = werte.map(function(w){
@@ -969,6 +981,13 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
   pillen("fart", [["NON_INTERVENTIONAL", "nicht-interventionell"],
                   ["INTERVENTIONAL", "interventionell"]]);
   pillen("finno", [["ja", "nur mit Innofonds-Bezug " + Z.mit_innofonds]]);
+  (function(){
+    var n = {1:0, 2:0, 3:0};
+    S.forEach(function(s){ n[stufe(s.vf_punkte || 0).n]++; });
+    pillen("fbezug", [["3", "stark " + n[3]],
+                      ["2", "deutlich " + n[2]],
+                      ["1", "an der Schwelle " + n[1]]]);
+  })();
 
   document.querySelectorAll(".pillen button").forEach(function(b){
     b.addEventListener("click", function(){
@@ -994,6 +1013,41 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
 
   /* ---- Studienkarte ---- */
   var gezeigt = 40, gefiltert = S;
+  /* ---- Wie sicher ist der Versorgungsbezug? ------------------------
+     Die Punktzahl ist UNSER Mass, nicht das des Registers. Sie zaehlt die
+     Begriffe im Titel und in der Zusammenfassung, gewichtet nach Naehe zur
+     Versorgungsforschung (die Regeln stehen offen in zuschnitt.py).
+
+     Was die Stufen bedeuten, ist nicht geschaetzt, sondern an einem
+     UNABHAENGIGEN Merkmal gemessen: dem Fachgebiet, das OpenAlex den
+     Ergebnispublikationen dieser Studien gibt. Anteil versorgungsnaher
+     Teilgebiete, 01.11.2026:
+
+         2 Punkte (nicht aufgenommen)   33 %
+         3 Punkte (an der Schwelle)     48 %
+         4 bis 5 Punkte                 63 %
+         6 und mehr                     68 %
+
+     Darum drei Stufen und nicht fuenf: Zwischen 4 und 5 ist kein
+     messbarer Unterschied, zwischen 3 und 4 schon.                    */
+  function stufe(p){
+    if (p >= 6) return {kurz:"stark", n:3};
+    if (p >= 4) return {kurz:"deutlich", n:2};
+    return {kurz:"an der Schwelle", n:1};
+  }
+  function bezugChip(s){
+    var st = stufe(s.vf_punkte || 0);
+    var gruende = (s.vf_begriffe || []).join(", ");
+    var titel = "Versorgungsbezug " + st.kurz + ", " + (s.vf_punkte || 0)
+      + " Punkte nach unserer eigenen Zählung"
+      + (gruende ? ". Ausgelöst durch: " + gruende : "")
+      + ". Je höher, desto häufiger liegen die "
+      + "Ergebnispublikationen in einem versorgungsnahen Fachgebiet: "
+      + "48 Prozent an der Schwelle, 68 Prozent bei sechs und mehr.";
+    return '<span class="bezug b' + st.n + '" title="' + esc(titel) + '">'
+      + '<i></i><i></i><i></i> ' + st.kurz + "</span>";
+  }
+
   function karte(s){
     var cls = s.status_de === "rekrutiert" ? "rekrutiert"
             : s.status_de === "geplant" ? "geplant"
@@ -1042,6 +1096,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
         esc(i.name) + " im Innofonds-Radar</a>"); });
     /* Das Feld `url` im Datensatz ist die Website der Studie, NICHT der
        Registereintrag. Der Eintrag wird aus der DRKS-Kennung gebildet. */
+    c.push(bezugChip(s));
     if (s.id) c.push('<a class="chip drks" target="_blank" rel="noopener" href="https://drks.de/search/de/trial/' +
       esc(s.id) + '">' + esc(s.id) + " im DRKS</a>");
     if (s.url) c.push('<a class="chip" target="_blank" rel="noopener" href="' +
@@ -1143,6 +1198,9 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
       if (gewaehlt.fhub && s.hubs.indexOf(gewaehlt.fhub) < 0) return false;
       if (gewaehlt.fland && s.land !== gewaehlt.fland) return false;
       if (gewaehlt.fart && s.art !== gewaehlt.fart) return false;
+      if (gewaehlt.fbezug
+          && String(stufe(s.vf_punkte || 0).n) !== gewaehlt.fbezug)
+        return false;
       if (gewaehlt.finno && !s.innofonds.length) return false;
       if (q) {
         var h = (s.titel + " " + s.akronym + " " + s.kurz + " " + s.indikation + " " +
@@ -1339,13 +1397,23 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
      + "wenn das Feld „Studien“ leer bleibt."
      + tunKnopf("Einrichtung anlegen", "einrichtung")],
 
-    ["<b>„Versorgungsbezug“ ist geschätzt, nicht gemessen.</b> Das Register "
-     + "kennt nur interventionell und nicht-interventionell. Beides deckt "
-     + "sich nicht mit Versorgungsforschung. Bei milderer Schwelle wären es "
-     + "1.405 statt " + zahl(D.vf_gesamt) + " Studien.",
-     "Nachprüfbar: Die Regeln liegen offen in <code>zuschnitt.py</code>, und "
-     + "jede Karte nennt ihren Registereintrag. Falsch zugeordnet? "
-     + "Schreiben Sie an <a href=\"mailto:info@m-vf.de\">info@m-vf.de</a>."],
+    ["<b>„Versorgungsbezug“ ist unsere Zählung, nicht die des Registers.</b> "
+     + "Das Register kennt nur interventionell und nicht-interventionell, "
+     + "und beides deckt sich nicht mit Versorgungsforschung. Wir zählen "
+     + "Begriffe in Titel und Zusammenfassung. Bei milderer Schwelle wären "
+     + "es 1.405 statt " + zahl(D.vf_gesamt) + " Studien.",
+     "<b>Jede Studie zeigt, wie sicher der Bezug ist</b> — der Punkt-Chip "
+     + "auf der Karte, mit den auslösenden Begriffen. Die drei Stufen sind "
+     + "an einem unabhängigen Merkmal gemessen, dem Fachgebiet der "
+     + "Ergebnispublikationen bei OpenAlex:"
+     + "<ul style=\"margin:6px 0 0;padding-left:18px\">"
+     + "<li>2 Punkte, nicht aufgenommen: 33 Prozent versorgungsnah</li>"
+     + "<li>3 Punkte, an der Schwelle: 48 Prozent</li>"
+     + "<li>4 bis 5 Punkte: 63 Prozent</li>"
+     + "<li>6 und mehr: 68 Prozent</li></ul>"
+     + "<p style=\"margin:6px 0 0\">Die Regeln liegen offen in "
+     + "<code>zuschnitt.py</code>. Falsch zugeordnet? Schreiben Sie an "
+     + "<a href=\"mailto:info@m-vf.de\">info@m-vf.de</a>.</p>"],
 
     ["<b>Die Hub-Zuordnung ist eine Heuristik.</b> " + zahl(Z.ohne_hub)
      + " Studien (" + ohneHubAnteil + " Prozent) ließen sich keinem Hub "

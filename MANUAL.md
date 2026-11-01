@@ -1203,3 +1203,41 @@ ohne geprüfte ROR            11   kein Kasten
 mit ROR, aber ohne Arbeiten  21   kein Kasten
 mit Personen-Kasten          29   zusammen 441 Personen
 ```
+
+## Die Punktzahl ist sichtbar (01.11.2026)
+
+Jede Studienkarte trägt jetzt einen Chip mit drei Punkten:
+
+```
+stark            137    6 Punkte und mehr
+deutlich         220    4 bis 5 Punkte
+an der Schwelle  353    3 Punkte
+```
+
+Dazu ein Filter. Beim Zeigen auf den Chip erscheint die Punktzahl, **die
+auslösenden Begriffe** und was die Stufe bedeutet.
+
+### Warum drei Stufen und nicht fünf
+
+Weil nur drei messbar sind. Das Merkmal ist nicht geschätzt, sondern an
+einem **unabhängigen** gemessen: dem Fachgebiet, das OpenAlex den
+Ergebnispublikationen gibt.
+
+```
+2 Punkte (nicht aufgenommen)   33 % versorgungsnah
+3 Punkte (an der Schwelle)     48 %
+4 bis 5 Punkte                 63 %
+6 und mehr                     68 %
+```
+
+Zwischen 4 und 5 ist kein Unterschied zu sehen, zwischen 3 und 4 schon.
+Darum die Grenze dort.
+
+### Was der Chip nicht ist
+
+Keine Wertung der Studie. Er sagt nur, wie sicher **unsere Zuordnung**
+ist. Darum stehen die auslösenden Begriffe dabei: Eine Zahl ohne Grund ist
+eine Behauptung, eine Zahl mit Grund ist nachprüfbar.
+
+`seite.py` behält dafür bis zu drei `vf_begriffe` je Studie. Das kostet
+rund 70 KB und ist es wert.

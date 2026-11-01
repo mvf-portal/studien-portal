@@ -66,7 +66,10 @@ def main() -> int:
     for s in daten["studien"]:
         if s.get("kurz") and len(s["kurz"]) > 260:
             s["kurz"] = s["kurz"][:260].rsplit(" ", 1)[0] + " …"
-        s.pop("vf_begriffe", None)
+        # Die auslösenden Begriffe bleiben, auf drei gekürzt. Eine
+        # Punktzahl ohne Grund ist eine Behauptung; mit Grund ist sie
+        # nachprüfbar.
+        s["vf_begriffe"] = (s.get("vf_begriffe") or [])[:3]
 
     if PLATZ_DATEN not in vorlage:
         print(f"FEHLER: Platzhalter {PLATZ_DATEN} fehlt in vorlage.html")
