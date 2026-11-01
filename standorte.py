@@ -497,7 +497,7 @@ def main() -> int:
             fach = ('<div class="box"><h3>Wissenschaftsrichtung</h3>'
                     "<p class='hinweis'>Das Register nennt hier nur den Namen "
                     "des Hauses, nicht das Institut. Die Fachrichtung ist "
-                    "daraus nicht abzulesen — und wird nicht geraten. Die "
+                    "daraus nicht abzulesen, und wird nicht geraten. Die "
                     "Einrichtung kann sie unten selbst eintragen.</p></div>")
 
         # Studienzentren: rekrutierende Einrichtungen bekommen KEINE eigene
@@ -593,7 +593,7 @@ def main() -> int:
         selbst = (
             "<p class='hinweis' style='margin-top:12px'>Fehlt hier Ihr "
             "Publikationsverzeichnis, oder steht etwas falsch? Diese "
-            "Verzeichnisse pflegt Ihre Einrichtung nicht selbst — "
+            "Verzeichnisse pflegt Ihre Einrichtung nicht selbst. "
             "richtigstellen können das nur Sie: "
             "<a href='#eintragen' class='zum-formular' "
             "data-feld='repositorien'>selbst eintragen</a>.</p>")
@@ -615,7 +615,7 @@ def main() -> int:
                 "Zu diesem Standort haben wir <b>keinen gesicherten "
                 "Verzeichniseintrag</b>. Entweder führt ihn keines der "
                 "offenen Register, oder der Name im Studienregister lässt "
-                "sich nicht zweifelsfrei zuordnen — dann verlinken wir "
+                "sich nicht zweifelsfrei zuordnen. Dann verlinken wir "
                 "lieber nichts als das Falsche.</p>" + selbst + "</div>")
 
         # Was die Ergebnispublikationen hergeben: Fachgebiet auf Studienebene
@@ -677,7 +677,7 @@ def main() -> int:
                     t.append("<p class='hinweis'><b>Das sind Mitautoren, "
                              "nicht Forschungsstandorte.</b> Bei einer "
                              "Multizenterstudie stehen hier die Partner aller "
-                             "beteiligten Häuser — wer die Studie leitet, "
+                             "beteiligten Häuser. Wer die Studie leitet, "
                              "sagt diese Liste nicht. Sie zählt auch nicht in "
                              "die Studienzahl dieses Standorts.</p>")
                 # Wer hier veroeffentlicht hat. BEWUSST OHNE RANGPLATZ:
@@ -727,7 +727,7 @@ def main() -> int:
                         "font-size:13px'>" + "".join(zeilen_p) + "</ul>"
                         "<p class='hinweis'><b>Keine Rangliste.</b> Gezählt "
                         "sind nur die Arbeiten, die zu den hier gelisteten "
-                        "Studien als Ergebnis angegeben sind — eine einzige "
+                        "Studien als Ergebnis angegeben sind. Eine einzige "
                         "publikationsreiche Studie hebt ihr ganzes Team. "
                         "Wer hier fehlt, hat nicht weniger geforscht, "
                         "sondern führt keine Studie mit Ergebnis-DOI. "

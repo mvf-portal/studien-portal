@@ -137,6 +137,35 @@ ol.tliste li{display:grid; grid-template-columns:28px minmax(0,1fr) auto 90px 34
   stroke-linejoin:round}
 .kartenhinweis{font-size:12px; color:var(--ink-faint); margin:10px 0 0;
   max-width:620px; text-align:center}
+/* Einstieg nach Marianns Entwurf: Kacheln auf grauem Grund, gleich hoch,
+   drei je Reihe. Weniger ist mehr. */
+.eblock{margin:26px 0 0}
+.eblock h2{font-size:20px; margin:0 0 .25em}
+.eblock > p{margin:0 0 14px; font-size:14px; color:var(--ink-soft)}
+.ekacheln{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
+  background:var(--card-2); padding:12px; border-radius:12px;
+  border:1px solid var(--line)}
+button.ekachel{display:flex; flex-direction:column; gap:2px; text-align:left;
+  background:var(--card); border:1px solid var(--line); border-radius:9px;
+  padding:13px 15px; cursor:pointer; font:inherit; margin:0;
+  transition:border-color .12s, transform .12s}
+button.ekachel:hover{border-color:var(--brand); transform:translateY(-1px)}
+.ename{font-weight:700; font-size:14px; color:var(--ink); line-height:1.25}
+.ezahl{font-size:23px; font-weight:800; color:var(--brand);
+  font-variant-numeric:tabular-nums; margin-top:4px}
+.eunter{font-size:12px; color:var(--ink-faint)}
+.ewege{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.eneu{display:grid; grid-template-columns:repeat(2, 1fr); gap:12px}
+@media (max-width:760px){
+  .ekacheln{grid-template-columns:repeat(2, 1fr)}
+  .eneu{grid-template-columns:1fr}
+}
+@media (max-width:460px){ .ekacheln{grid-template-columns:1fr} }
+button.tun{display:block; margin-top:10px; font:inherit; font-size:13px;
+  font-weight:700; padding:7px 14px; border-radius:7px;
+  border:1px solid var(--action-deep); background:var(--action);
+  color:var(--on-action); cursor:pointer}
+button.tun:hover{background:var(--action-deep)}
 .ausschnitt{border:1px solid var(--warn); border-left:4px solid var(--warn);
   border-radius:10px; padding:18px 20px; margin:18px 0 0; background:var(--card)}
 .ausschnitt h2{font-size:18px; margin:0 0 .3em; color:var(--warn)}
@@ -854,7 +883,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
       <p>Diese Karte zeigt, wer in Deutschland an welcher Versorgungsstudie
         arbeitet. <b>Studien</b> sucht einzelne Vorhaben,
         <b>Standorte</b> zeigt die Einrichtungen mit einer eigenen Profilseite.
-        Alles stammt aus dem öffentlichen Studienregister — ergänzt um die
+        Alles stammt aus dem öffentlichen Studienregister, ergänzt um die
         Verbindung zu unseren Knowledge-Hubs und zum Innovationsfonds-Radar.</p>
       <div class="wege">
         <button type="button" data-reiter="standorte">Nach Standort suchen</button>
@@ -883,7 +912,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
         ClinicalTrials.gov geführt, nicht im DRKS. Wir sehen sie hier nicht.</li>
     </ol>
     <p class="lesebreite"><b>Deshalb unsere Bitte an alle Forschenden und
-      Einrichtungen:</b> Tragen Sie ein, was hier fehlt — Ihre Studien, Ihr
+      Einrichtungen:</b> Tragen Sie ein, was hier fehlt: Ihre Studien, Ihr
       Publikationsverzeichnis, Ihre Arbeitsgruppe. Jede Einrichtung behält, was
       sie einträgt, und erkennbar getrennt von den Registerdaten. Erst damit
       entsteht ein Bild des ganzen Fachs statt eines Ausschnitts.</p>
@@ -897,6 +926,9 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
   <div class="zahlen" id="zahlen"></div>
 
   <section id="bereich-studien">
+    <div id="einstieg"></div>
+
+    <div id="studienliste" hidden>
     <details class="filterkasten" id="filterkasten">
       <summary>Filter<span class="aktiv" id="faktiv">alle Studien</span></summary>
       <div class="fgruppe">
@@ -914,20 +946,21 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     <div class="zaehlzeile">
       <span class="treffer" id="treffer"></span>
       <div class="legende">
-        <span><b style="color:var(--gut)">rekrutiert</b> — sucht Teilnehmende</span>
-        <span><b style="color:var(--brand)">geplant</b> — angemeldet, nicht gestartet</span>
-        <span><b style="color:var(--ink-soft)">abgeschlossen</b> — Nachbeobachtung beendet</span>
-        <span><b style="color:var(--warn)">abgebrochen</b> — vorzeitig beendet</span>
+        <span><b style="color:var(--gut)">rekrutiert</b> sucht Teilnehmende</span>
+        <span><b style="color:var(--brand)">geplant</b> angemeldet, nicht gestartet</span>
+        <span><b style="color:var(--ink-soft)">abgeschlossen</b> Nachbeobachtung beendet</span>
+        <span><b style="color:var(--warn)">abgebrochen</b> vorzeitig beendet</span>
       </div>
     </div>
 
     <div class="liste" id="liste"></div>
     <div class="mehr"><button class="knopf" id="mehr" type="button">Weitere 40 anzeigen</button></div>
+    </div>
   </section>
 
   <section id="bereich-standorte" hidden>
     <p class="unter lesebreite" style="margin-top:22px">Hier steht, wer
-      Versorgungsforschung <em>betreibt</em> — die Einrichtung, die eine
+      Versorgungsforschung <em>betreibt</em>, also die Einrichtung, die eine
       Studie verantwortet, nicht die Praxis, die Teilnehmende einschließt.
       Jede mit mindestens zwei Studien hat eine eigene Profilseite, auf der
       die Verantwortlichen ergänzen können, was im Register fehlt: offene
@@ -982,26 +1015,27 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
   </div>
 
   <div class="grenzen" id="grenzen">
-    <h2>Was diese Karte nicht zeigt</h2>
-    <p class="lesebreite">Links steht die Grenze, rechts, was stattdessen
-      weiterhilft.</p>
+    <h2>Was diese Karte nicht zeigt, und was Sie dagegen tun können</h2>
+    <p class="lesebreite">Links steht die Grenze, rechts der Weg, sie zu
+      schließen. Die meisten dieser Lücken kann nur Ihre Einrichtung
+      füllen.</p>
     <div class="gliste" id="gliste"></div>
   </div>
 
   <div class="grenzen" id="mitmachen">
     <h2>Eintragen, was hier fehlt</h2>
-    <p class="lesebreite">Für alle Einrichtungen — auch für die, die hier noch
+    <p class="lesebreite">Für alle Einrichtungen, auch für die, die hier noch
       keine Profilseite haben. Hat Ihre Einrichtung eine, tragen Sie dort direkt
       ein; dieses Formular ist der Weg für alle anderen.</p>
     <p class="lesebreite"><b>Auch ganz ohne registrierte Studie.</b> Eine neu
       gegründete oder neu ausgerichtete Einrichtung kann hier gar nicht
-      auftauchen — die Karte entsteht aus dem Studienregister, und wer noch
+      auftauchen. Die Karte entsteht aus dem Studienregister, und wer noch
       keine Studie registriert hat, steht dort nicht. Die Medizinische
       Universität Lausitz – Carl Thiem etwa fehlt aus genau diesem Grund.
       Tragen Sie sich trotzdem ein: Wir legen die Einrichtung an, auch wenn das
       Feld „Studien" leer bleibt.</p>
 
-    <details id="mitmachen-auf">
+    <details id="mitmachen-auf" open>
       <summary>Zugang anfordern und Angaben eintragen</summary>
       <form id="mitform" novalidate>
         <label><b>Ihre Einrichtung</b>
@@ -1022,7 +1056,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
         <fieldset>
           <legend>Ist das eine neue Einrichtung?</legend>
           <p class="hinweis">Neugründung, Umbenennung, Zusammenschluss,
-            Ausgründung eines Instituts — all das kommt im Studienregister erst
+            Ausgründung eines Instituts: All das kommt im Studienregister erst
             an, wenn die erste Studie läuft.</p>
           <div class="ja-nein">
             <label><input type="radio" name="neu" value="nein" checked> bestehende Einrichtung</label>
@@ -1038,7 +1072,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
 
         <fieldset>
           <legend>Studien, die hier fehlen</legend>
-          <p class="hinweis">Gerade die abgeschlossenen und die älteren — die
+          <p class="hinweis">Gerade die abgeschlossenen und die älteren. Die
             fehlen uns am meisten, weil die Lizenz am Datum hängt.</p>
           <label><b>Studien</b>
             <textarea name="studien_fehlen"
@@ -1242,7 +1276,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     var orte = ((D.standorte || {}).standorte || [])
                  .filter(function(s){ return s.lat && s.lon; });
     if (!ringe.length) {
-      ziel.innerHTML = "<p class='kartenhinweis'>Der Umriss fehlt — die "
+      ziel.innerHTML = "<p class='kartenhinweis'>Der Umriss fehlt, die "
         + "Karte bleibt aus. (daten/kontur.json, erzeugt mit kontur.py)</p>";
       return;
     }
@@ -1283,7 +1317,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     var punkte = orte.map(function(o){
       var x = X(o.lon), y = Y(o.lat), r = rad(o.studien);
       return '<a href="standort/' + o.datei + '" class="kpunkt">'
-        + '<title>' + esc(o.name) + ' — ' + o.studien + ' Studien'
+        + '<title>' + esc(o.name) + ', ' + o.studien + ' Studien'
         + (o.ort ? ', ' + esc(o.ort) : '') + '</title>'
         + '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1)
         + '" r="' + r.toFixed(1) + '"/></a>';
@@ -1308,7 +1342,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
       + "Anklicken führt zum Standortprofil. Ortsangabe aus ROR und "
       + "OpenAlex, geprüft gegen den Ort im Register."
       + (ohne > 0 ? " <b>" + ohne + " der " + (orte.length + ohne)
-           + " Standorte sind nicht eingezeichnet</b> — für sie "
+           + " Standorte sind nicht eingezeichnet</b>, denn für sie "
            + "ließ sich keine Einrichtung zweifelsfrei zuordnen, und ein "
            + "Punkt an der falschen Stelle wäre schlimmer als keiner."
          : "")
@@ -1347,7 +1381,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
       + "<p class='kartenhinweis' style='text-align:left'>"
       + "Gezählt sind die " + zahl(D.vf_gesamt) + " Studien, die wir "
       + "wiedergeben dürfen. <b>Das misst nicht das Lebenswerk, sondern "
-      + "wer zuletzt registriert hat</b> — die Lizenz des Registers "
+      + "wer zuletzt registriert hat</b>, denn die Lizenz des Registers "
       + "hängt am Datum, ältere und abgeschlossene Forschung fehlt "
       + "deshalb. Eine Einrichtung kann hier klein aussehen und trotzdem "
       + "seit Jahrzehnten führend sein.</p>";
@@ -1401,7 +1435,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
               + zeilen.join(UM + UM));
         st.className = "stand";
         st.innerHTML = "Das Absenden über die Seite ist noch nicht "
-          + "eingerichtet — wir richten den Zugang gerade ein. "
+          + "eingerichtet, wir richten den Zugang gerade ein. "
           + "<a href='" + mail + "'>Ihre Angaben als E-Mail öffnen</a>: "
           + "Der Text ist bereits ausgefüllt, Sie müssen nur senden.";
         return;
@@ -1542,6 +1576,75 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
       zahl(gefiltert.length) + " von " + zahl(S.length) + " Studien";
     id("mehr").hidden = gezeigt >= gefiltert.length;
   }
+  /* ---- Einstieg statt Liste -----------------------------------------
+     Nach Marianns Entwurf: Kacheln auf grauem Grund, gleich hoch, drei je
+     Reihe, und wenige grosse Karten statt vieler kleiner. Die Liste aller
+     Studien untereinander ist kein Einstieg, sondern ein Ergebnis. Sie
+     erscheint erst, wenn jemand gesucht, gefiltert oder sie ausdruecklich
+     geoeffnet hat.                                                     */
+  function listeZeigen(offen){
+    id("einstieg").hidden = offen;
+    id("studienliste").hidden = !offen;
+    if (offen) { zeichne(); }
+  }
+
+  function filterSetzen(feld, wert){
+    gewaehlt[feld] = wert;
+    document.querySelectorAll('[data-feld="' + feld + '"]').forEach(function(x){
+      x.setAttribute("aria-pressed", String(x.dataset.wert === wert));
+    });
+  }
+
+  function einstiegBauen(){
+    var ziel = id("einstieg");
+    if (!ziel) { return; }
+
+    /* Themenkacheln aus den Knowledge-Hubs. Das ist der Einstieg, den die
+       Leute im Kopf haben, nicht "Status" oder "Art der Studie". */
+    var kacheln = Z.hub.map(function(r){
+      return '<button type="button" class="ekachel" data-hub="' + esc(r[0]) + '">'
+        + '<span class="ename">' + esc(r[1]) + "</span>"
+        + '<span class="ezahl">' + zahl(r[3]) + "</span>"
+        + '<span class="eunter">Studien</span></button>';
+    }).join("");
+
+    var neu = S.slice().sort(function(a, b){
+      return String(b.aktualisiert || "").localeCompare(
+             String(a.aktualisiert || ""));
+    }).slice(0, 6);
+
+    ziel.innerHTML =
+      '<div class="eblock"><h2>Wonach suchen Sie?</h2>'
+      + '<p class="lesebreite">' + zahl(S.length) + " Studien, geordnet nach "
+      + "Themenfeld. Ein Klick zeigt die Studien eines Feldes.</p>"
+      + '<div class="ekacheln">' + kacheln + "</div>"
+      + '<div class="ewege">'
+      + '<button type="button" class="knopf" id="allezeigen">Alle '
+      + zahl(S.length) + " Studien durchsuchen</button>"
+      + '<button type="button" class="knopf flach" data-zureiter="standorte">'
+      + "Nach Forschungsstandort suchen</button></div></div>"
+      + '<div class="eblock"><h2>Zuletzt aktualisiert</h2>'
+      + '<p class="lesebreite">Die sechs Studien, deren Registereintrag '
+      + "zuletzt geaendert wurde.</p>"
+      + '<div class="eneu">' + neu.map(karte).join("") + "</div></div>";
+
+    ziel.querySelectorAll("button.ekachel").forEach(function(b){
+      b.addEventListener("click", function(){
+        filterSetzen("fhub", b.dataset.hub);
+        listeZeigen(true);
+        filtern();
+        id("studienliste").scrollIntoView({block:"start"});
+      });
+    });
+    id("allezeigen").addEventListener("click", function(){
+      listeZeigen(true);
+      id("studienliste").scrollIntoView({block:"start"});
+    });
+    ziel.querySelectorAll("[data-zureiter]").forEach(function(b){
+      b.addEventListener("click", function(){ reiter(b.dataset.zureiter); });
+    });
+  }
+
   function filtern(){
     var q = id("suche").value.trim().toLowerCase();
     gefiltert = S.filter(function(s){
@@ -1558,7 +1661,14 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
       }
       return true;
     });
-    gezeigt = 40; faktiv(); zeichne();
+    gezeigt = 40; faktiv();
+    /* Wer sucht oder filtert, will Ergebnisse sehen, nicht wieder
+       den Einstieg. Also Liste aufmachen, sobald etwas gewaehlt ist. */
+    var etwasGewaehlt = q || Object.keys(gewaehlt).some(function(k){
+      return gewaehlt[k]; });
+    if (etwasGewaehlt && id("studienliste").hidden) { listeZeigen(true); }
+    else if (!etwasGewaehlt && !id("studienliste").hidden) { zeichne(); }
+    else { zeichne(); }
   }
 
   /* ---- Standortliste ---- */
@@ -1647,6 +1757,9 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     if (id("bereich-standorte").hidden) filtern(); else { ogezeigt = 60; zeichneOrte(); }
   });
   id("suchknopf").addEventListener("click", function(){
+    /* Gefiltert wird schon beim Tippen. Der Knopf muss trotzdem filtern:
+       Wer den Begriff einfuegt und klickt, hat nie getippt. */
+    if (id("bereich-standorte").hidden) { filtern(); } else { zeichneOrte(); }
     (id("bereich-standorte").hidden ? id("liste") : id("ortliste"))
       .scrollIntoView({block:"start"});
   });
@@ -1658,6 +1771,10 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     document.querySelectorAll(".pillen button").forEach(function(x){
       x.setAttribute("aria-pressed", "false"); });
     filtern();
+    /* Ohne Filter und ohne Suchwort gibt es nichts zu zeigen ausser dem
+       Einstieg. 710 Studien untereinander sind kein Ergebnis. */
+    listeZeigen(false);
+    id("einstieg").scrollIntoView({block:"start"});
   });
 
   /* ---- Balken ---- */
@@ -1681,68 +1798,94 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
   id("kommhinweis").textContent =
     "Jede Studie im Register trägt ihr Votum. In dieser Auswahl kommen " +
     zahl(Z.kommissionen_schreibweisen) + " Schreibweisen vor, die sich auf rund " +
-    zahl(Z.kommissionen_zusammengefuehrt) + " Kommissionen zusammenführen lassen — " +
+    zahl(Z.kommissionen_zusammengefuehrt) + " Kommissionen zusammenführen lassen, " +
     "das Register normiert die Namen nicht.";
 
   /* ---- Grenzen: links die Grenze, rechts was stattdessen hilft ---- */
   var ohneHubAnteil = (Z.ohne_hub / D.vf_gesamt * 100).toFixed(1).replace(".", ",");
+  /* Rechts steht, was die Lesenden TUN koennen, nicht, was wir uns dabei
+     gedacht haben. Wo eine Grenze von aussen zu schliessen ist, steht dort
+     ein Knopf, der das Formular an der richtigen Stelle aufmacht. Der erste
+     Eintrag von frueher ist weg: Er wiederholte den Kasten oben. */
+  function tunKnopf(text, feld){
+    return '<button type="button" class="tun" data-formular="' + feld + '">'
+      + text + "</button>";
+  }
   var g = [
-    ["<b>Es gibt mehr, als hier steht: " + zahl(D.vf_im_register) + " statt " +
-     zahl(D.vf_gesamt) + ".</b> So viele Studien mit Versorgungsbezug stehen im " +
-     "ganzen Register. Wiedergeben dürfen wir nur Einträge, die ab 2025 " +
-     "registriert oder aktualisiert wurden — das sind 44 Prozent des Registers. " +
-     "<b>" + zahl(D.vf_nicht_zeigbar) + " Studien mit Versorgungsbezug fehlen " +
-     "hier also, obwohl es sie gibt.</b> Weil die Lizenz am Datum hängt, wirkt " +
-     "sie wie ein Zeitfilter: Von 2025 und 2026 ist alles dabei, von den Jahren " +
-     "vor 2021 nur rund ein Viertel — und davon fast nur, was noch läuft und " +
-     "darum aktualisiert wurde.",
-     "Verlinken ist immer erlaubt: Die <a href=\"https://drks.de\" target=\"_blank\" " +
-     "rel=\"noopener\">Suche im DRKS</a> zeigt auch die älteren Einträge."],
+    ["<b>Ihre Studie steht nicht hier?</b> Dann ist sie entweder vor 2021 "
+     + "registriert worden und darf von uns nicht wiedergegeben werden, oder "
+     + "sie steht in einem anderen Register, oder in gar keinem. "
+     + "<b>" + zahl(D.vf_nicht_zeigbar) + " Studien mit Versorgungsbezug "
+     + "fehlen aus diesen Gründen.</b>",
+     "<b>Sie können sie eintragen.</b> Nummer oder Titel genügen. Ob DRKS, "
+     + "ClinicalTrials.gov oder nirgends registriert, spielt keine Rolle."
+     + tunKnopf("Studie eintragen", "studien_fehlen")],
 
-    ["<b>Nur registrierte Forschung.</b> Kleine, qualitative und nicht geförderte " +
-     "Versorgungsforschung wird oft gar nicht registriert. Sie hat ein Ethikvotum, " +
-     "aber die Kommissionen veröffentlichen keine Einzelvoten.",
-     "Die Tätigkeitsberichte der Kommissionen nennen Antragszahlen. Das Dunkelfeld " +
-     "lässt sich so in seiner Größe schätzen — nur nicht auflisten."],
+    ["<b>Kein Methoden- und kein Datenzugangsprofil.</b> Ob eine Gruppe mit "
+     + "Routinedaten, qualitativ oder cluster-randomisiert arbeitet und an "
+     + "welche Datenquellen sie kommt, steht im Register nicht.",
+     "<b>Das weiß nur Ihre Einrichtung.</b> Im Standortprofil eintragbar, "
+     + "und wenn Ihre Einrichtung noch keines hat, dann hier."
+     + tunKnopf("Einrichtung beschreiben", "schwerpunkte")],
 
-    ["<b>„Versorgungsbezug“ ist geschätzt, nicht gemessen.</b> Das Register kennt " +
-     "nur interventionell und nicht-interventionell; beides deckt sich nicht mit " +
-     "Versorgungsforschung. Bei milderer Schwelle wären es 1.405 statt " +
-     zahl(D.vf_gesamt) + " Studien.",
-     "Die Regeln liegen offen in <code>zuschnitt.py</code>, und jede Karte nennt " +
-     "ihren Registereintrag — jede Zuordnung ist nachprüfbar."],
+    ["<b>Keine offenen Stellen, keine Studiengänge, keine Veranstaltungen.</b> "
+     + "Das Register kennt weder Personalsuche noch Lehre noch Kongresse.",
+     "<b>Sie schon.</b> Ausschreibungen zeigen wir mit Frist und nehmen sie "
+     + "danach wieder von der Seite."
+     + tunKnopf("Stellen und Termine eintragen", "stellen")],
 
-    ["<b>Die Hub-Zuordnung ist eine Heuristik.</b> " + zahl(Z.ohne_hub) + " Studien (" +
-     ohneHubAnteil + " Prozent) ließen sich keinem Hub zuordnen; Mehrfachzuordnung " +
-     "ist möglich und häufig.",
-     "Zugeordnet wird primär über die ICD-10-Codes des Datensatzes — die sind " +
-     "vergeben, nicht geraten. Nur hilfsweise über Stichwörter."],
+    ["<b>Ihr Publikationsverzeichnis fehlt.</b> Wir finden nur, was in ROR, "
+     + "OpenAlex, Wikidata oder re3data steht. Diese Verzeichnisse pflegt "
+     + "Ihre Einrichtung nicht selbst.",
+     "<b>Die Adresse haben nur Sie.</b> Hochschulschriftenserver, "
+     + "Forschungsinformationssystem, Institutsliste, alles willkommen."
+     + tunKnopf("Repositorium melden", "repositorien")],
 
-    ["<b>Kein Methoden- und kein Datenzugangsprofil.</b> Ob eine Gruppe mit " +
-     "Routinedaten, qualitativ oder cluster-randomisiert arbeitet und an welche " +
-     "Datenquellen sie kommt, steht im Register nicht.",
-     "Genau dafür gibt es die <b>Standortprofile</b>: Dort kann jede Einrichtung " +
-     "selbst eintragen, mit welchen Methoden und Datenzugängen sie arbeitet."],
+    ["<b>Eine neue Einrichtung kann hier gar nicht auftauchen.</b> Die Karte "
+     + "entsteht aus dem Studienregister. Wer noch keine Studie registriert "
+     + "hat, steht dort nicht, eine Neugründung also nie.",
+     "<b>Auch ohne Studie eintragbar.</b> Wir legen die Einrichtung an, auch "
+     + "wenn das Feld „Studien“ leer bleibt."
+     + tunKnopf("Einrichtung anlegen", "einrichtung")],
 
-    ["<b>Keine offenen Stellen.</b> Das Register kennt keine Personalsuche.",
-     "Auch das steht im Standortprofil — die Verantwortlichen können dort " +
-     "eintragen, ob sie Personal suchen."],
+    ["<b>„Versorgungsbezug“ ist geschätzt, nicht gemessen.</b> Das Register "
+     + "kennt nur interventionell und nicht-interventionell. Beides deckt "
+     + "sich nicht mit Versorgungsforschung. Bei milderer Schwelle wären es "
+     + "1.405 statt " + zahl(D.vf_gesamt) + " Studien.",
+     "Nachprüfbar: Die Regeln liegen offen in <code>zuschnitt.py</code>, und "
+     + "jede Karte nennt ihren Registereintrag. Falsch zugeordnet? "
+     + "Schreiben Sie an <a href=\"mailto:info@m-vf.de\">info@m-vf.de</a>."],
 
-    ["<b>Kein Treffer im eigenen Studienbestand — noch nicht.</b> Der Abgleich der " +
-     "Ergebnis-DOIs gegen die Arbeiten unserer 15 Knowledge-Hubs findet derzeit null " +
-     "Übereinstimmungen.",
-     "Das ist kein Fehler: Die Hub-Archive stammen zu 99,8 Prozent aus 2026, die " +
-     "Ergebnispublikationen im Register aus 2022 bis 2024. Die Verknüpfung greift " +
-     "mit jedem Jahr, das die Hubs weiterlaufen."],
+    ["<b>Die Hub-Zuordnung ist eine Heuristik.</b> " + zahl(Z.ohne_hub)
+     + " Studien (" + ohneHubAnteil + " Prozent) ließen sich keinem Hub "
+     + "zuordnen. Mehrfachzuordnung ist möglich und häufig.",
+     "Zugeordnet wird primär über die ICD-10-Codes des Datensatzes. Die "
+     + "sind vergeben, nicht geraten. Nur hilfsweise über Stichwörter."],
 
-    ["<b>Angaben sind Selbstauskunft.</b> Das BfArM übernimmt keine Gewähr für " +
-     "Richtigkeit, Vollständigkeit und Aktualität. " + zahl(Z.retrospektiv) +
-     " der hier gezeigten Studien wurden erst nach Beginn registriert.",
-     "Jede Karte führt zum Originaleintrag im DRKS; der ist stets maßgeblich."]
+    ["<b>Angaben sind Selbstauskunft.</b> Das BfArM übernimmt keine Gewähr "
+     + "für Richtigkeit, Vollständigkeit und Aktualität. "
+     + zahl(Z.retrospektiv) + " der hier gezeigten Studien wurden erst nach "
+     + "Beginn registriert.",
+     "Jede Karte führt zum Originaleintrag im DRKS. Der ist stets "
+     + "maßgeblich."]
   ];
   id("gliste").innerHTML = g.map(function(r){
     return '<div class="gzeile"><div class="ist">' + r[0] +
            '</div><div class="hilft">' + r[1] + "</div></div>"; }).join("");
+
+  /* Jeder Knopf macht das Formular auf und springt in SEIN Feld. Ein blosser
+     Verweis auf den Abschnitt laesst die Leute auf einer Ueberschrift
+     stehen und weitersuchen. */
+  document.querySelectorAll("button.tun").forEach(function(b){
+    b.addEventListener("click", function(){
+      var auf = id("mitmachen-auf");
+      if (auf) { auf.open = true; }
+      id("mitmachen").scrollIntoView({behavior:"smooth", block:"start"});
+      var f = id("mitform");
+      var ziel = f && f.querySelector('[name="' + b.dataset.formular + '"]');
+      if (ziel) { setTimeout(function(){ ziel.focus(); }, 420); }
+    });
+  });
 
   id("fuss").innerHTML =
     "Prototyp, erstellt am " + esc(D.stand) + " von <em>Monitor Versorgungsforschung</em>. " +
@@ -1752,6 +1895,9 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
     "Keine Gewähr für Richtigkeit und Vollständigkeit; maßgeblich ist stets der " +
     '<a href="https://drks.de" target="_blank" rel="noopener">Originaleintrag im DRKS</a>.';
 
+  einstiegBauen();
+  /* Start: der Einstieg, nicht die Liste. */
+  listeZeigen(false);
   filtern();
   if (location.hash === "#standorte") reiter("standorte");
 })();
