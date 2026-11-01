@@ -1241,3 +1241,49 @@ eine Behauptung, eine Zahl mit Grund ist nachprüfbar.
 
 `seite.py` behält dafür bis zu drei `vf_begriffe` je Studie. Das kostet
 rund 70 KB und ist es wert.
+
+## studien.m-vf.de mit HTTPS (01.11.2026)
+
+```
+Pages        built
+Zertifikat   approved, gültig bis 30.01.2027
+HTTPS        erzwungen
+```
+
+### ⚠ Das Zertifikat kam nicht von selbst
+
+Nach dem DNS-Wechsel stand `https_certificate` eine Stunde lang auf
+`null`, obwohl DNS richtig auflöste und HTTP mit 200 antwortete. Ein PUT
+mit `https_enforced=true` wird in diesem Zustand abgelehnt.
+
+Was geholfen hat: die Domäne **entfernen und neu setzen**.
+
+```
+gh api -X PUT repos/<repo>/pages -f cname=""
+gh api -X PUT repos/<repo>/pages -f cname="studien.m-vf.de"
+```
+
+Danach war das Zertifikat sofort `approved`.
+
+**Nebenwirkung, mit der man rechnen muss:** In dem Moment ohne Domäne
+schlagen die Pages-Bauten fehl, weil die `CNAME`-Datei im Repo weiter eine
+verlangt. Zwei Bauten standen auf `errored`. Ein angeforderter Neubau
+(`gh api -X POST repos/<repo>/pages/builds`) räumt das auf. Kein Schaden,
+aber der Handgriff ist nichts für nebenbei.
+
+`https_scharf.sh` wartet bis zu einer Stunde auf das Zertifikat und
+erzwingt HTTPS dann selbst. Kommt in der Stunde nichts, ist der
+Handgriff oben dran.
+
+### ⚠ Und: Die API schreibt dabei ins Repo
+
+Ein `PUT .../pages -f cname=...` legt GitHub als **Commit im Repo** ab,
+„Delete CNAME" und „Create CNAME". Wer danach pusht, bekommt
+
+```
+! [rejected]  main -> main (fetch first)
+```
+
+Das ist kein Konflikt, nur ein Vorsprung. Erst `git fetch`, dann ansehen,
+was dazugekommen ist, dann darauf aufsetzen. Hier war der Endzustand
+beider Seiten identisch (CNAME = studien.m-vf.de).
