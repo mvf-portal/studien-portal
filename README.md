@@ -12,7 +12,7 @@ https://studien.m-vf.de/
 ## ⚠ Dies ist ein Ausschnitt, kein Gesamtbild
 
 Im DRKS stehen **1.298** Studien mit Versorgungsbezug. Wiedergeben dürfen wir
-**710** davon — **588 fehlen, obwohl es sie gibt.**
+**710** davon, **588 fehlen hier, obwohl es sie gibt.**
 
 Die CC-BY-4.0-Lizenz des Registers gilt nur für Einträge, die ab 2025
 registriert **oder aktualisiert** wurden. Sie wirkt damit wie ein Zeitfilter:
