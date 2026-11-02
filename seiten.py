@@ -659,7 +659,15 @@ def inhalt_forschende():
     Anwendung auf einen geschlossenen Autorenkreis.</p>
   <p>Die Zuordnung gelingt damit bei <b>%d von 100 Nennungen</b>. Was
     fehlt, fehlt nicht in der Zeitschrift, sondern in der Verknüpfung
-    zwischen Beitrag und Person. <b>Fehlt bei Ihnen etwas?</b>
+    zwischen Beitrag und Person.</p>
+  <p><b>Gezählt wird nur, was einen DOI hat.</b> Das Archiv der
+    Zeitschrift führt 1.528 Beiträge, aber nur 839 davon tragen einen
+    DOI. Wer Kommentare, Editorials oder Nachrichten geschrieben hat,
+    steht hier deshalb mit weniger Beiträgen, als sein Autorenprofil auf
+    m-vf.de zeigt. Bei 675 der übrigen Beiträge steht in unserem Abzug
+    gar keine Autorenangabe, die Lücke lässt sich von hier aus also
+    nicht schließen.</p>
+  <p><b>Fehlt bei Ihnen etwas?</b>
     <a href="eintragen.html?art=person">Hier zuordnen oder abweisen</a>.</p>
 </div>
 

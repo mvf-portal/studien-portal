@@ -197,9 +197,43 @@ REDAKTION = {
     "stegmaier, peter":  "Chefredakteur und Verleger",
     "roski, reinhold":   "Herausgeber",
     "pieloth, kathrin":  "Redaktion",
+    "gilbers, olga":     "Redakteurin bei MVF (Peter, 02.11.2026)",
 }
 
 
 def ist_redaktion(schluessel: str) -> bool:
     """Gehoert dieser Personenschluessel zur Redaktion?"""
     return (schluessel or "").strip().lower() in REDAKTION
+
+
+# ---------------------------------------- 4. Einrichtung, von Hand gesetzt
+#
+# Peter am 02.11.2026 zu Ursula Marschall: „warum steht keine Affiliation
+# bei ihr? Dr. Ursula Marschall ist Forschungsbereichsleiterin des Barmer
+# Instituts für Gesundheitssystemforschung."
+#
+# Der Grund: Ihr Institut steht im ZWEITEN Satz ihres Vorstellungstextes
+# („Seit 2007 führt sie ... im BARMER Institut für
+# Gesundheitssystemforschung"). Der automatische Schnitt liest nur den
+# ersten Satzteil, damit niemand an seinen vorletzten Arbeitgeber
+# gehängt wird.
+#
+# ⚠ DIE REGEL WURDE NICHT GELOCKERT, UND DAS MIT ABSICHT. Gemessen am
+# 02.11.2026: Den zweiten Satz mitzulesen brächte 117 Einrichtungen
+# dazu, aber etwa die Hälfte davon falsch - „Medic Center" aus einem
+# Satz über ein Studium in Wien, „Danone Deutschland" aus einem Satz
+# über ökonomische Schwerpunkte, „USA und Japan" als Einrichtung. Selbst
+# eine enge Fassung, die nur Sätze ab „Seit 2007" liest, liefert bei
+# Marschall „Forschungsbereich Medizin" statt „BARMER Institut" und
+# anderswo „Preisstrategien und Nutzenbewertungsverfahren".
+#
+# Eine falsche Einrichtung unter einem Namen ist schlechter als keine.
+# Deshalb hier eine kurze Liste von Hand, die den automatischen Schnitt
+# STICHT - so wie es die 84 gepflegten Interviewpaare auch tun.
+#
+# ⚠ DIESE LISTE IST KEIN ERSATZ FÜR DAS FORMULAR. Wer sich selbst
+# einträgt, hat immer recht. Hier stehen nur Fälle, die uns aufgefallen
+# sind, bevor die Betroffenen es konnten.
+EINRICHTUNG_VON_HAND = {
+    "marschall, ursula": "BARMER Institut für Gesundheitssystemforschung",
+}

@@ -459,7 +459,27 @@ def bauen():
     # damit ganz oben in einer Liste, die nach Forschungsbelegen sortiert.
     # Die Regel und die Begruendung stehen in zuschnitt.py, nicht hier.
     sys.path.insert(0, str(HIER))
-    from zuschnitt import REDAKTION
+    from zuschnitt import REDAKTION, EINRICHTUNG_VON_HAND
+
+    # ⚠ HANDKORREKTUR STICHT DEN AUTOMATISCHEN SCHNITT. Begruendung je
+    # Fall in zuschnitt.py. Gesetzt wird erst hier, damit die Zaehlung
+    # oben misst, was die Regel von allein schafft.
+    von_hand = 0
+    for k, haus in EINRICHTUNG_VON_HAND.items():
+        if k in leute:
+            leute[k]["einrichtung"] = haus
+            leute[k]["einrichtung_grund"] = "von Hand gesetzt, siehe zuschnitt.py"
+            leute[k]["art"] = art_aus_regel(haus)
+            von_hand += 1
+        else:
+            print("  HINWEIS: %r steht in EINRICHTUNG_VON_HAND, aber nicht "
+                  "im Bestand" % k)
+    # ⚠ NICHT NUR zaehl, SONDERN AUCH DIE AUSGABE. Das Verzeichnis
+    # mit "zaehlung" wird weiter oben gebaut, ein spaeteres zaehl[...]
+    # kaeme dort nie an - die Zahl stand als None in der Datei.
+    zaehl["einrichtung_von_hand"] = von_hand
+    raus["zaehlung"]["einrichtung_von_hand"] = von_hand
+
     weg = [k for k in leute if k in REDAKTION]
     for k in weg:
         del leute[k]
