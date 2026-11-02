@@ -32,7 +32,7 @@ PLATZ_DATEN = "/*__DATEN__*/"
 
 
 def main() -> int:
-    vorlage = (HIER / "vorlage.html").read_text(encoding="utf-8")
+    vorlage = (HIER / "_vorlage.html").read_text(encoding="utf-8")
     daten = json.loads((HIER / "daten" / "landkarte.json").read_text(encoding="utf-8"))
 
     # Das Standortverzeichnis traegt die Verbindung zur anderen Haelfte: Es

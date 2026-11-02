@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><!--__TITEL__--></title>
+<meta name="description" content="<!--__BESCHREIBUNG__-->">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="<!--__WURZEL__-->teile/stil.css">
+<link rel="stylesheet" href="<!--__WURZEL__-->teile/stil-zusatz.css">
+</head>
+<body>
+<!--__NETZLEISTE__-->
+
+<header class="band">
+  <div class="wrap">
+    <div class="eyebrow">Knowledge-Hubs &middot; Versorgungsstudien</div>
+    <h1><!--__H1__--></h1>
+    <p class="unter lesebreite"><!--__UNTER__--></p>
+  </div>
+</header>
+
+<div class="blau suchband">
+  <div class="wrap">
+    <div class="suchkasten">
+      <label class="suchlabel" for="allesuche">Eine Suche über alles</label>
+      <div class="suchzeile">
+        <input type="search" id="allesuche" autocomplete="off"
+               placeholder="Name, Einrichtung, Studie, Thema, Förderer">
+      </div>
+      <div class="treffer" id="allesuche-treffer" role="listbox" hidden></div>
+      <div class="suchfuss">Forschende, Institutionen, Studien,
+        MVF-Beiträge, Förderer und die Studien der 15 Knowledge-Hubs
+        in einem Feld.</div>
+    </div>
+  </div>
+</div>
+
+<nav class="seitenleiste" aria-label="Bereiche">
+  <div class="wrap"><!--__NAVIGATION__--></div>
+</nav>
+
+<main class="wrap">
+<!--__INHALT__-->
+</main>
+
+<footer><div class="wrap" id="fuss"></div></footer>
+<!--__FUSSLEISTE__-->
+
+<script>window.WURZEL = "<!--__WURZEL__-->";</script>
+<script src="<!--__WURZEL__-->teile/suche.js"></script>
+<!--__SKRIPTE__-->
+</body>
+</html>

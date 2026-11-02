@@ -16,6 +16,12 @@ das DNVF hat keinen Nachfolger, der Innovationsfonds deckt einen Fördertopf ab.
 
 ## Die Kette
 
+> ⚠ **Diese Liste ist der erste Ausbau und nicht mehr vollständig.**
+> Die heutige Kette steht unten unter „Listen, Sprungmarken und das
+> Eintragen (02.11.2026)“. Dort fehlen `einrichtungen.py`,
+> `suchindex.py`, `personen.py` und `seiten.py` nicht, und dort steht
+> auch, warum die Kette zweimal laufen muss.
+
 Vier Schritte, in dieser Reihenfolge:
 
 ```
@@ -1287,3 +1293,409 @@ Ein `PUT .../pages -f cname=...` legt GitHub als **Commit im Repo** ab,
 Das ist kein Konflikt, nur ein Vorsprung. Erst `git fetch`, dann ansehen,
 was dazugekommen ist, dann darauf aufsetzen. Hier war der Endzustand
 beider Seiten identisch (CNAME = studien.m-vf.de).
+
+## Listen, Sprungmarken und das Eintragen (02.11.2026)
+
+Peter Stegmaier hat am 01.11.2026 drei Dinge nacheinander gefragt, die
+alle dieselbe Ursache hatten:
+
+> „wie sind die sortiert? alfabetisch? filter möglich?"
+> „keine links klickbar, warum?"
+> „nicht klickbar, wie sortiert? Können personen profile anlegen und
+> pflegen?"
+
+### Was gemessen war
+
+| | vorher | jetzt |
+|---|---|---|
+| Zeilen in `institutionen.html` | 440 von 2.430 | **2.430** |
+| Zeilen in `forschende.html` | 90 von 5.395, teils doppelt | **5.395** |
+| Zeilen mit Sprungmarke | 0 | **7.825** |
+| Zeilen mit Ziel | 165 + 1.321 | **alle** |
+| Sortierung genannt | nein | ja, und umschaltbar |
+
+### Die Steuerung: `teile/liste.js`
+
+Die Seite liefert **alle** Zeilen aus, richtig sortiert, jede mit `id`.
+`liste.js` legt darüber: Sortierfeld, Filter, Suchfeld, Mengengrenze je
+Abschnitt. Ohne JavaScript ist die Liste lang, aber vollständig und
+richtig sortiert.
+
+Der Bauplan steht in `seiten.py`:
+
+* `steuerleiste(felder, suche)` baut die Leiste, **`hidden`** — `liste.js`
+  deckt sie auf. Eine Leiste, die ohne JavaScript nichts tut, zeigen wir
+  nicht an.
+* `haus_zeile(e, art, gesehen)` und `zeile(k, p)` schreiben die
+  Sortierschlüssel als `data-`Attribute.
+* `vergleichbar()` muss zu `norm()` in `liste.js` passen, sonst findet
+  das Filterfeld „Münster" nicht unter „Muenster".
+* `sortname()` ist `vergleichbar()` ohne führende Nicht-Buchstaben.
+
+> ⚠ **Nicht auf Nachladen umstellen.** Die Personenzeilen tragen die
+> Sprungmarken, zu denen die Suche verlinkt. Was erst JavaScript baut,
+> ist beim Sprung noch nicht da. Das kostet 269 KB gzip auf
+> `forschende.html`, und das ist der Preis dafür, dass 4.615 Links
+> ankommen.
+
+> ⚠ **Der Sprung muss dreimal angefahren werden.** `malen()` deckt bis zu
+> 5.345 Zeilen auf, die Seite wächst dabei von 15.000 auf 530.000 Pixel,
+> und der Browser holt seinen eigenen Sprung später nach. Gemessen:
+> `#betzler-felix` landete 115.283 Pixel unter der Zeile. `hin()` fährt
+> nach dem Umbruch, nach `load` und nach 350 ms. Dazu
+> `.haus { scroll-margin-top: 140px }`, weil die Leiste oben klebt.
+
+### Die Sprungmarke steht in den Daten
+
+`personen.py` setzt `anker` für **alle** Personen, gebildet aus dem
+Zusammenführungsschlüssel durch `ankername()`. `suchindex.py` holt
+dieselbe Funktion.
+
+> ⚠ **Die Regel darf sich nicht ändern.** Die Anker stehen als Adresse in
+> `suchindex.json` und in Lesezeichen.
+> ⚠ **Nicht am Bindestrich zurückrechnen.** „Niepraschk-von Dollen" wird
+> `niepraschk-von-dollen-lena`, und daraus ist der Schlüssel nicht
+> wiederzugewinnen. Der Schlüssel steht als Feld `k` im Index.
+
+Vorher entstand `anker` als Nebenprodukt in der Belegschleife: 4.615 von
+5.395 Personen hatten einen, 779 nicht.
+
+### `kontrolle_anker.py` — kommt jeder Link an?
+
+```
+py kontrolle_anker.py
+```
+
+Prüft gegen die **gebauten Dateien**, nicht gegen die Daten. Wer gegen
+die Daten prüft, prüft seine eigene Absicht.
+
+Die Gegenprobe nimmt einer Zeile die Sprungmarke weg und verlangt, dass
+die Prüfung das meldet. Eine Prüfung, die nie fehlschlägt, prüft nichts.
+
+> ⚠ Im Quelltext steht `id="n&#x27;doye-ramatoulaye"`, im Browser ist die
+> Marke `n'doye-ramatoulaye`. Ohne `html.unescape` meldet die Prüfung
+> einen Fehler, den es nicht gibt.
+
+### `eintragen.html` — die Seite, auf die drei Links zeigen wollten
+
+Drei Stellen verwiesen auf „Zum Formular" und meinten
+`standort-vorlage.html`. Das ist eine **Vorlage mit 17 Platzhaltern**.
+Wer klickte, sah `{{NAME}}` als Überschrift.
+
+Das Einrichtungsformular steht jetzt einmal in
+`teile/formular-einrichtung.html` und wird an zwei Stellen eingesetzt:
+`standorte.py` füllt damit `{{FORMULAR}}`, `seiten.py` baut daraus
+`eintragen.html`. Dazu ein eigenes Personenformular.
+
+Jede Zeile ohne eigene Seite führt mit `?art=…&name=…` hierher, und der
+Name steht dann schon im Feld.
+
+> ⚠ Der Name kommt aus der Adresszeile. `teile/eintragen.js` setzt ihn
+> nur in Formularfelder und per `textContent`, nie als HTML.
+
+Absenden läuft wie auf den Innofonds-Prüfseiten: POST an einen Endpunkt
+auf dem MVF-Server. **`ENDPUNKT` ist noch leer.** Solange sagt die Seite
+das und öffnet eine vorbereitete E-Mail an `info@m-vf.de`.
+
+### Drei Fehler, die erst „Name A bis Z" sichtbar gemacht hat
+
+**Nachname und Vorname waren bei 4.056 von 5.395 Personen vertauscht.**
+In `personen.py` stand `nach, _, vor = name.rpartition(" ")`. `rpartition`
+gibt `(davor, Trenner, danach)` — der Nachname steht **hinten**. „Neil K.
+Aaronson" wurde Nachname „Neil K.". Es fiel nicht auf, weil nichts die
+beiden Felder anzeigte. Berichtigt; 59 bleiben ungenau, das sind
+mehrteilige Nachnamen („de Bock", „Bravo Guijarro"), bei denen nur das
+letzte Wort genommen wird.
+
+> Die Anker hingen nie daran. Sie kommen aus dem Schlüssel, und der war
+> immer richtig.
+
+**Die vier Voreinstellungsknöpfe taten nichts.** `liste.js` suchte sie mit
+`raum.querySelectorAll`, sie stehen aber im Hinweiskasten **über** der
+Liste, also außerhalb von `.listenraum`.
+
+**Ein Bereichsschnitt zwischen zwei Funktionen nahm eine dritte mit.**
+`patch_listenseiten.py` schnitt von `inhalt_forschende` bis zum nächsten
+`inhalt_studien`. Dazwischen lag `inhalt_eintragen`. Der Bau meldete es,
+weil der Bauplan die Funktion noch nannte — ohne diesen Eintrag wäre die
+Seite lautlos verschwunden.
+
+### Die Lücke zwischen 1.321 und 581
+
+Die Seite nannte „1.339 haben ein Profil" und „581 mit MVF-Beiträgen" und
+schwieg dazu. Gemessen, steht als `zuordnung` in `suchindex.json`:
+
+| | |
+|---|---|
+| Beiträge mit Autorenangabe | 895 |
+| Autorennennungen darin | 1.747 |
+| einer Person zugeordnet | **1.016** → 581 Personen |
+| nur eine Initiale als Vorname | **724** |
+| ohne Vornamen | 7 |
+
+Die 724 sind kein Fehler, sie sind unsere Regel:
+`personenschluessel()` verwirft eine bloße Initiale, weil „Schmidt, A."
+mit jeder anderen Schmidt zusammenfiele. Die Seite sagt das jetzt.
+
+> ⚠ Die Quote wird dort gezählt, wo die Zuordnung geschieht. Wer sie
+> woanders nachrechnet, rechnet irgendwann etwas anderes.
+
+Nebenbei: Die Zählung `aus_wordpress` sagte 1.339, gezählt wurden 1.321
+Profile. Die Seite nimmt jetzt die gemessene Zahl.
+
+### Die Hubs waren auch auf `mvf.html` noch ausgesperrt
+
+Dort stand bis zum 01.11.2026, zu den Hub-Beiträgen lägen „nur PMID und
+DOI vor, keine Titel". Gemessen: 5.880 Einträge, 5.880 mit deutschem
+Titel, 5.880 mit deutscher Zusammenfassung.
+
+> ⚠ Eine Aussage über den eigenen Bestand gehört nicht in den Seitentext.
+> Sie veraltet dort, ohne dass es auffällt. Dieselbe Behauptung stand an
+> drei Stellen und wurde an zweien berichtigt.
+
+### Die Kette, wie sie heute ist
+
+```
+py holen.py        # DRKS-Gesamtexport
+py hubbezug.py     # PMIDs der 15 Hub-Archive -> DOIs
+py bauen.py        # Auswahl, Zuordnung  -> daten/landkarte.json
+py einrichtungen.py
+py standorte.py    # Profilseiten + daten/standorte.json
+py foerderer.py
+py suchindex.py    # MUSS vor personen.py
+py personen.py
+py seiten.py       # die acht Seiten
+py seite.py        # landkarte.html
+
+py seiten.py --gegentest
+py suchindex.py --gegentest
+py personen.py --gegentest
+py kontrolle_anker.py
+```
+
+> ⚠ **Die Kette zweimal laufen lassen.** `suchindex.py` und `personen.py`
+> hängen wechselseitig zusammen. Nachgemessen am 02.11.2026: Nach dem
+> zweiten Lauf sind die Seiten byteweise gleich.
+
+---
+
+## Der Formular-Endpunkt und die Suchlücke (02.11.2026)
+
+### Zwei Endpunkt-Konstanten, mit Absicht
+
+In `standorte.py` stehen **zwei**:
+
+    ENDPUNKT            = "https://www.monitor-versorgungsforschung.de/studien/studien.php"
+    ENDPUNKT_EINTRAGEN  = ""
+
+Das ist kein Versehen. Die Standortprofile und die Landkarte senden an den
+Server und verlieren dabei **kein** Feld. Die Eintragsseite `eintragen.html`
+würde sieben verlieren, solange die alte Fassung oben liegt, und sendet darum
+nicht, sondern öffnet eine vorausgefüllte E-Mail.
+
+⚠ **Der Endpunkt antwortet `{"ok":true}` für Felder, die er verwirft.** Seine
+Liste `FELDER` ist eine Weißliste. Am 02.11. kam eine echte Probe mit `ok`
+zurück, und beim Abholen stand in `angaben` genau ein Feld. Lokale Gegenprobe,
+gleiche Einsendung gegen beide PHP-Fassungen: **alt 4 von 12, neu 12 von 12.**
+
+`teile/kontrolle_felder.py` prüft das. Es hält die Feldnamen der **gebauten**
+Seiten gegen die Weißliste, in beide Richtungen, und fragt dann den **Server**
+nach seiner `FASSUNG`. Es fällt durch, wenn `ENDPUNKT_EINTRAGEN` gesetzt ist,
+während der Server hinter der lokalen Datei liegt.
+
+⚠ **Eine Datei im eigenen Ordner sagt nichts darüber, was oben liegt.**
+Dazwischen stehen eine Mail an Levan und sein Einspielen. Die erste Fassung der
+Prüfung las die lokale PHP und meldete „bestanden", während der Server noch die
+alte trug.
+
+⚠ **Ohne eigene Kennung antwortet Cloudflare mit 403.** Mit der Vorgabe von
+`urllib` kam 403, dasselbe `curl` bekam 200, und die Prüfung las das als „kein
+Netz". Eine Antwort ist eine Antwort: 403 heißt abgewiesen, nicht offline.
+
+**Scharf stellen:** Sobald `kontrolle_felder.py` „Server trägt dieselbe Fassung"
+meldet, `ENDPUNKT_EINTRAGEN = ENDPUNKT` setzen und neu bauen.
+
+**Stand 02.11.2026:** Die neue `studien.php` (Fassung `2026-11-02-a`) liegt in
+`LEVAN-MAIL/lieferung-02112026-studien-felder/` und ist **am 02.11. um 10:05 an
+Levan gesendet**, als erste Mail des Tages, auf Peters ausdrückliches Ja in der
+Sitzung Innofonds-REMOTE. Gegenprobe aus den gesendeten Elementen: 10941 B,
+72893D86619A9AEC, gleich dem Lieferstand. Offen ist nur noch sein Einspielen.
+
+### 780 Menschen standen auf der Seite und die Suche fand sie nicht
+
+    Zeilen in forschende.html        5.395
+    Personen im Suchindex            4.615   (bis 02.11.2026)
+    Differenz                          780
+
+Alle 780 haben null gezählte Belege, aber ein Autorenprofil auf m-vf.de.
+`personen.py` liest drei Quellen, die `suchindex.py` nicht las: `wp_autoren.json`,
+`archiv_interviews.json`, `mvf_autorenbox.json`.
+
+⚠ **Ein Name auf einer Seite, den die eigene Suche nicht findet, ist schlimmer
+als ein fehlender Name.** Aufgefallen ist es an zwei Zahlen, die nicht
+zusammenpassten: Die Startseite nannte 4.615, die Liste 5.395.
+
+`suchindex.py` trägt sie jetzt aus `personen.json` nach. Damit lesen sich beide
+gegenseitig, und **die Kette muss zweimal laufen**. Sie läuft fest, weil beide
+Seiten nur hinzufügen: Lauf 1 und jeder weitere geben 5.395.
+
+### Die Prüfungen
+
+    py kontrolle_anker.py          Sprungmarken, Ziele, mit Gegenprobe
+    py teile/kontrolle_felder.py   Formularfelder gegen Weißliste UND Server
+    py seiten.py --gegentest       Platzhalter und Tausenderpunkte
+
+---
+
+## Die Dachseite des Fachs: `fach.html` (Entwurf, 02.11.2026)
+
+**ENTWURF. Nicht verlinkt, nicht veröffentlicht, nicht im Baulauf von
+`seiten.py`.** Peter: „Bau bitte eine Testseite, die mir zeigt, wie das
+aussehen könnte. Für das Fach Versorgungsforschung wäre es wichtig, eine
+einzige Seite zu haben, die möglichst vieles gesamthaft darstellt.“
+
+### Die Kette
+
+    py fachbestand.py    zählt 13 Säulen aus 8 Beständen -> daten/fachbestand.json
+    py fach.py           setzt sie in vorlage-fach.html ein -> fach.html
+
+    py fachbestand.py --gegentest   beweist, dass pflicht() greift
+    py fach.py --gegentest          beweist, dass keine Zahl von Hand dasteht
+
+Der Stil liegt in `teile/stil-fach.css` und wird von `fach.py` in den Kopf
+gehängt. ⚠ **Nicht in `stil-zusatz.css` schreiben.** Der Entwurf darf an
+den veröffentlichten Seiten nichts ändern, und das wird nach jedem Bau
+über die Prüfsummen von `forschende.html`, `institutionen.html`,
+`index.html` und `mvf.html` nachgesehen.
+
+### `pflicht()` statt `.get()`
+
+⚠ **EINE VORGABE MACHT AUS EINEM FALSCHEN FELDNAMEN EINE PLAUSIBLE NULL.**
+Der erste Entwurf suchte die Listen mit einer Heuristik und zählte vier
+Säulen falsch: 0 rekrutierende Studien statt 265, 11 Einrichtungen statt
+2.430, 0 Ausschreibungen statt 24. Nichts davon sah nach einem Fehler aus.
+
+Darum holt `pflicht(d, *weg)` jeden Wert auf einem ausgeschriebenen Weg
+und wirft `Fehlt`, wenn der Weg ins Leere führt. Drei Fallen, die dabei
+sichtbar wurden und im Code stehen:
+
+* In `foerderer.json` ist **`foerderer` eine Zahl**, die Liste heißt
+  `liste`. Beide stehen nebeneinander.
+* In `landkarte.json` ist **`vf_gesamt` das Zeigbare**, nicht das
+  Gefundene. Gefunden sind `vf_im_register` (1.298), gesperrt sind
+  `vf_nicht_zeigbar` (588). Wer sie verwechselt, schreibt „710 von 710“.
+* Eine Prüfung auf **Wortbestandteile** fand in „standort“ das Wort
+  „stand“ und erklärte einen Ort zum Datum. Ganze Feldnamen vergleichen.
+
+### Zählen nach Person, nicht nach Zeichenkette
+
+„Peter Stegmaier“ und „Dr. Peter Stegmaier“ sind zwei Zeichenketten und
+ein Mensch. Über Zeichenketten gezählt kamen 43 Personen mit langer
+Publikationsspanne heraus, über `personenschluessel()` aus `suchindex.py`
+sind es 31. Letzteres stimmt und deckt sich mit einer zweiten, unabhängig
+gerechneten Messung.
+
+### Was die Seite über Profilpflege sagt, und was nicht
+
+    Personen                                     5.395
+    mit irgendeiner Einrichtung                  1.664
+    mit DATIERTER Einrichtung                        0
+    mit einer HISTORIE                               0
+    publizieren bei uns über 5 Jahre                31
+    publizieren bei uns über 10 Jahre               15
+
+⚠ **WIE OFT GEWECHSELT WIRD, KÖNNEN WIR NICHT MESSEN**, und die Seite
+behauptet es auch nicht:
+
+* Die **Autorenbox** trägt die Einrichtung nur als Maildomäne
+  (`bereich`, 822 von 1.303 Nennungen), und die ist um eine Position
+  verschoben: Carsten Telschow bekommt im Datensatz die Adresse von
+  Jonas Lohmüller. Eine verschobene Quelle beantwortet die Frage nicht.
+  Das ist derselbe Fehler, der auch die Mitautorenschaft über
+  Maildomänen blockiert.
+* Die **DKVF-Abstracts** haben zwei Jahrgänge. Von 99 Personen in beiden
+  nennen 66 eine andere Zugehörigkeit, aber die Beispiele sind fast alle
+  Schreib- und Sprachvarianten desselben Hauses („Universität
+  Witten/Herdecke“ gegen „Witten/Herdecke University“) oder ein Institut
+  statt der Hochschule. Zwei Jahre sind zu kurz für Karrieren.
+
+Messbar und entscheidend ist dafür: **keine einzige Einrichtungsangabe
+trägt ein Datum.** Die Frage „wo war diese Person 2017?“ ist nicht falsch
+beantwortet, sie ist gar nicht stellbar. Das ist ein Mangel der Bauart,
+keiner der Datenmenge, und er geht durch keine weitere Quelle weg.
+
+**Folge für das Eintragsformular:** Einrichtung als Liste mit von und
+bis, das Haus zur Auswahl aus dem Register statt als freies Feld (sonst
+wächst bei jeder Selbstauskunft eine Schreibweise nach), eigene Studien
+und Beiträge zuordnen oder abweisen können, und Ändern statt
+Überschreiben.
+
+---
+
+## Initialen im geschlossenen Bestand auflösen (02.11.2026)
+
+Peter: „ich soll nur 146 Beiträge geschrieben haben? das müssen über 1000
+sein“. Nachgemessen gegen die Autorenseiten auf m-vf.de:
+
+| | Website | vorher | jetzt |
+|---|---|---|---|
+| Stegmaier | 385 | 146 | **326** |
+| Kostev | 39 | 20 | **38** |
+| Schrappe | 25 | 12 | **27** |
+
+Schrappe liegt zwei über der Website, weil eFirst und Print **zwei DOIs
+für einen Artikel** sind. Das ist kein Fehler, sondern die Zählweise des
+DOI-Bestands.
+
+### Die Regel war richtig, ihre Reichweite war falsch
+
+„Schmidt, A.“ darf nicht mit jeder anderen Schmidt zusammenfallen. Diese
+Regel bleibt. Der Fehler war, sie **global** anzuwenden, obwohl der
+Bestand **geschlossen** ist: eine Zeitschrift mit bekanntem Autorenkreis
+und 1.321 Autorenprofilen.
+
+    Autorennennungen            1.747
+    früher zugeordnet           1.016   (58 von 100)
+    jetzt zugeordnet            1.645   (94 von 100)
+    offen, weil mehrdeutig         46
+    ohne Vornamen                  56
+
+Aufgelöst wird **nur bei genau einem Kandidaten**. „M. Klein“ bleibt
+offen (Martin, Matthias, Melanie), „B. Müller“ auch. Genau dafür ist die
+Regel da.
+
+Zwei Register, beide aus dem Lauf selbst plus den Autorenprofilen:
+
+* `reg[(nachname, anfangsbuchstabe)]` für „P. Stegmaier“
+* `nur_nachname[nachname]` für „et al. Schrappe“, das **gar keinen**
+  Vornamen trägt und zwölfmal vorkommt
+
+⚠ **DAS REGISTER MUSS DIE AUTORENPROFILE ENTHALTEN.** Ohne sie kannte der
+Lauf nur, wer schon mit vollem Vornamen belegt war, und löste 449 statt
+678 auf. Matthias Schrappe blieb bei 12.
+
+### Scheinpersonen, und wie sie sich selbst am Leben hielten
+
+„et al. Kostev“ wurde zu einer Person **„Et Kostev“** mit drei Beiträgen.
+24 solche Einträge gab es. Sie standen nicht nur falsch in der Liste, sie
+machten echte Namen künstlich mehrdeutig: „E. Neugebauer“ hatte drei
+Kandidaten, zwei davon Schrott.
+
+⚠ **DIE WECHSELSEITIGE KETTE TRÄGT AUCH FEHLER.** Es genügte nicht, sie
+in `teile_namen()` abzuweisen. `personen.py` schrieb sie nach
+`personen.json`, `suchindex.py` trug sie von dort nach, und `personen.py`
+las sie im nächsten Lauf wieder daraus. Der Filter muss **an beiden
+Enden** stehen, sonst hält sich der Fehler selbst am Leben.
+
+Auch die verdrehten Schreibweisen gehören in `VORSATZ_WEG`: neben
+„et al. Schrappe“ steht im Bestand „et. al Schrappe“, mit dem Punkt
+hinter „et“. Die eine Fassung wurde abgefangen, die andere wurde zur
+Person.
+
+### Was offen bleibt
+
+Bei Stegmaier zählen wir 326, die Website 385. Die rund 60 fehlenden
+Stücke tragen im Bestand keine maschinell lesbare Autorenangabe. Der
+WordPress-Bestand hilft dabei nicht weiter: Von seinen 1.528 Datensätzen
+haben nur 636 einen Zitationstext und 698 gar kein Jahr. Über 1.000
+Beiträge weist ihm auch seine eigene Autorenseite nicht zu.

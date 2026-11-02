@@ -774,6 +774,7 @@ Institut und Poliklinik für Medizinische Psychologie</li><li>Universitätsklini
           <a href="https://knowledge-hubs.m-vf.de/datenschutz.html" target="_blank"
              rel="noopener">Datenschutz</a></p>
       </form>
+
     </details>
   </div>
 </div>
@@ -852,7 +853,7 @@ Institut und Poliklinik für Medizinische Psychologie</li><li>Universitätsklini
   /* Gleiches Muster wie die Innofonds-Pruefseiten: POST an einen Endpunkt auf
      dem MVF-Server. ENDPUNKT ist noch nicht eingerichtet - solange er leer
      ist, sagt das Formular das ehrlich, statt eine Einsendung vorzutaeuschen. */
-  var ENDPUNKT = "";
+  var ENDPUNKT = "https://www.monitor-versorgungsforschung.de/studien/studien.php";
   var STANDORT = {"kennung": "https://ror.org/01zgy1s35", "name": "Universitätsklinikum Hamburg-Eppendorf", "ror": "https://ror.org/01zgy1s35", "ort": "Hamburg"};
   var BETREFF = "Standortprofil ergänzen: " + (STANDORT.name || "");
   var f = document.getElementById("form"), st = document.getElementById("stand");

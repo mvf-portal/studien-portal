@@ -44,7 +44,25 @@ from zuschnitt import HUB_NAMEN
 
 DATEN = HIER / "daten"
 ZIEL = HIER / "standort"
-ENDPUNKT = ""          # noch nicht eingerichtet - siehe MANUAL.md
+# Gemessen scharf am 02.11.2026 (Probe, Abholweg mit und ohne
+# Schluessel). Eine Adresse fuer alle Formulare: Standortseiten,
+# Landkarte und eintragen.html. Wird sie leer gesetzt, fallen alle
+# drei gemeinsam auf die vorbereitete E-Mail zurueck.
+ENDPUNKT = "https://www.monitor-versorgungsforschung.de/studien/studien.php"
+
+# Dieselbe Adresse, aber fuer eintragen.html noch zurueckgehalten. Die
+# Fassung auf dem Server (bis 02.11.2026) verwirft sieben Felder des
+# Personenformulars still, darunter den Namen - gemessen mit
+# teile/kontrolle_felder.py und einer lokalen Gegenprobe gegen beide
+# PHP-Fassungen. Solange hier "" steht, oeffnet die Eintragsseite eine
+# vorausgefuellte E-Mail und sagt das; die verliert nichts.
+#
+# SCHARF STELLEN, SOBALD die neue studien.php eingespielt ist. Probe:
+#   curl -s -X POST .../studien/studien.php -d '{"art":"probe"}'
+#   -> muss "fassung":"2026-11-02-a" enthalten
+# Danach diese Zeile auf ENDPUNKT setzen und kontrolle_felder.py laufen
+# lassen.
+ENDPUNKT_EINTRAGEN = ""
 
 # Traegerarten, die keine Forschungsstandorte sind. Sie tauchen im Register
 # als „Sponsor" auf, weil sie die Studie verantworten oder bezahlen - aber
@@ -450,7 +468,12 @@ def main() -> int:
     print(f"  Profilseiten ab {a.ab} Studien: {len(gross)}")
 
     # ---------------------------------------------------- Seiten schreiben
-    vorlage = (HIER / "standort-vorlage.html").read_text(encoding="utf-8")
+    vorlage = (HIER / "_standort-vorlage.html").read_text(encoding="utf-8")
+    # Das Formular steht in teile/, damit eintragen.html dasselbe benutzt.
+    vorlage = vorlage.replace(
+        "{{FORMULAR}}",
+        (HIER / "teile" / "_formular-einrichtung.html").read_text(
+            encoding="utf-8"))
     # Dieselben Leisten wie auf der Karte - EIN Baustein, siehe leisten.py.
     netz, fuss = leisten.beide()
     ZIEL.mkdir(exist_ok=True)

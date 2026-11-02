@@ -1,0 +1,117 @@
+/* Stil nur fuer den Entwurf fach.html.
+ *
+ * ⚠ EIGENE DATEI, NICHT stil-zusatz.css. Der Entwurf darf an den
+ * veroeffentlichten Seiten nichts aendern. Wird aus fach.py in den Kopf
+ * gehaengt, sonst nirgends verlinkt.
+ *
+ * Die Farben kommen aus stil.css (:root), damit heller und dunkler Modus
+ * ohne eigenes Zutun stimmen. Hier steht kein einziger Farbwert.
+ */
+
+/* ------------------------------------------------------ Entwurfsband */
+.entwurfsband {
+  background: var(--warn-tint);
+  border: 1px solid var(--warn);
+  border-left: 5px solid var(--warn);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 22px 0 8px;
+  font-size: .95rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.entwurfsband b { color: var(--warn); }
+
+/* ----------------------------------------------------- Aufschlagtext */
+.aufschlag { margin: 30px 0 8px; }
+.aufschlag h2 {
+  font-size: 1.5rem; color: var(--brand-deep); margin: 0 0 12px;
+}
+.aufschlag p { color: var(--ink-soft); line-height: 1.62; margin: 0 0 12px; }
+
+/* ----------------------------------------------- Die vier Gruppen */
+.gruppe { margin: 40px 0 8px; scroll-margin-top: 90px; }
+.gruppe > h2 {
+  font-size: 1.6rem; color: var(--brand-deep);
+  margin: 0 0 6px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+.gruppe > .was {
+  color: var(--ink-faint); margin: 0; font-size: .97rem; line-height: 1.55;
+}
+
+/* Eine Saeule, deren Quelle gerade fehlt. Sie wird gezeigt, nicht
+   weggelassen - sonst behauptet die Seite etwas ueber das Fach. */
+.kachel.fehlt {
+  display: block; background: var(--card-2);
+  border: 1px dashed var(--warn); border-radius: 14px; padding: 20px;
+}
+.kachel.fehlt h2 { color: var(--warn); }
+
+/* -------------------------------------------------- Profilpflege */
+.pflege, .grenze, .umbau {
+  margin: 44px 0 8px; padding: 26px;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; box-shadow: var(--shadow);
+  scroll-margin-top: 90px;
+}
+.pflege h2, .grenze h2, .umbau h2 {
+  margin: 0 0 12px; font-size: 1.45rem; color: var(--brand-deep);
+}
+.pflege h3, .umbau h3 {
+  margin: 26px 0 10px; font-size: 1.1rem; color: var(--ink);
+}
+.pflege p, .grenze p, .umbau p {
+  color: var(--ink-soft); line-height: 1.62; margin: 0 0 12px;
+}
+
+table.messung {
+  border-collapse: collapse; width: 100%; max-width: 620px;
+  margin: 18px 0 20px; font-size: .97rem;
+}
+table.messung th, table.messung td {
+  text-align: left; padding: 9px 12px;
+  border-bottom: 1px solid var(--line-soft);
+}
+table.messung th { font-weight: 400; color: var(--ink-soft); }
+table.messung td {
+  text-align: right; font-weight: 900; color: var(--brand);
+  font-variant-numeric: tabular-nums; width: 7em;
+}
+/* Die beiden Nullen sind der Kern der Aussage, also stehen sie so da. */
+table.messung tr.hart th { color: var(--ink); font-weight: 700; }
+table.messung tr.hart td { color: var(--warn); font-size: 1.15rem; }
+
+ul.fordert, ul.fehlt { margin: 6px 0 0; padding-left: 22px; }
+ul.fordert li, ul.fehlt li {
+  margin: 0 0 11px; line-height: 1.6; color: var(--ink-soft);
+}
+ul.fordert li b, ul.fehlt li b { color: var(--ink); }
+
+/* ------------------------------------------------- Was sich aendert */
+.zweispalt {
+  display: grid; gap: 18px; margin-top: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+}
+.spalte {
+  padding: 18px; border-radius: 12px; background: var(--card-2);
+  border: 1px solid var(--line-soft);
+}
+.spalte h3 { margin: 0 0 10px; font-size: 1.05rem; }
+.spalte ul { margin: 0; padding-left: 20px; }
+.spalte li {
+  margin: 0 0 9px; line-height: 1.55; font-size: .95rem;
+  color: var(--ink-soft);
+}
+.spalte.ja { border-left: 4px solid var(--gut); }
+.spalte.ja h3 { color: var(--gut); }
+.spalte.offen { border-left: 4px solid var(--action); }
+.spalte.offen h3 { color: var(--action-deep); }
+
+/* ------------------------------------------------------------ klein */
+@media (max-width: 720px) {
+  .pflege, .grenze, .umbau { padding: 18px; }
+  table.messung { font-size: .9rem; }
+  table.messung th, table.messung td { padding: 8px 6px; }
+  table.messung td { width: 5.4em; }
+}

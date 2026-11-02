@@ -775,6 +775,7 @@ Förderkennzeichen: 01VSF17002</b> <i>EVAL FAV Ortho</i><div class="meta">Orthop
           <a href="https://knowledge-hubs.m-vf.de/datenschutz.html" target="_blank"
              rel="noopener">Datenschutz</a></p>
       </form>
+
     </details>
   </div>
 </div>
@@ -853,7 +854,7 @@ Förderkennzeichen: 01VSF17002</b> <i>EVAL FAV Ortho</i><div class="meta">Orthop
   /* Gleiches Muster wie die Innofonds-Pruefseiten: POST an einen Endpunkt auf
      dem MVF-Server. ENDPUNKT ist noch nicht eingerichtet - solange er leer
      ist, sagt das Formular das ehrlich, statt eine Einsendung vorzutaeuschen. */
-  var ENDPUNKT = "";
+  var ENDPUNKT = "https://www.monitor-versorgungsforschung.de/studien/studien.php";
   var STANDORT = {"kennung": "https://ror.org/04cvxnb49", "name": "Goethe-Universität Frankfurt am Main", "ror": "https://ror.org/04cvxnb49", "ort": "Frankfurt am Main"};
   var BETREFF = "Standortprofil ergänzen: " + (STANDORT.name || "");
   var f = document.getElementById("form"), st = document.getElementById("stand");

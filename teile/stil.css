@@ -1,0 +1,391 @@
+/* Layout: Kopfband, Kennzahlenreihe, Filterleiste (klebend), Studienliste,
+   Auswertungen, Grenzen-Abschnitt. Tokens sind die der MVF-Knowledge-Hubs. */
+:root{
+  --paper:#EDF2FA; --card:#FFFFFF; --card-2:#F7FAFD;
+  --ink:#111111; --ink-soft:#444A50; --ink-faint:#545C63;
+  --line:#D0D8E4; --line-soft:#E3EAF3;
+  --brand:#0051A1; --brand-deep:#003B77; --brand-tint:#E1EAF6;
+  --action:#BE9E53; --action-deep:#A5873F; --on-action:#2A2207;
+  --on-brand:#FFFFFF; --accent:#8A6E28;
+  --gut:#1F7A5A; --gut-tint:#DDF0E8;
+  --warn:#9A3B21; --warn-tint:#F7E4DE;
+  --shadow:0 1px 2px rgba(16,40,38,.05), 0 8px 24px -16px rgba(16,40,38,.28);
+  /* Lato ist die Hausschrift der Hubs und des Innofonds-Portals. */
+  --serif:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sans:"Lato", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+    --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+    --line:#22314A; --line-soft:#1A2639;
+    --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+    --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+    --on-brand:#081726; --accent:#D9BE82;
+    --gut:#6FC6A1; --gut-tint:#122B23;
+    --warn:#E8927A; --warn-tint:#2E1811;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -18px rgba(0,0,0,.7);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0A1120; --card:#111B2E; --card-2:#0E1728;
+  --ink:#E9EEF6; --ink-soft:#A9B7CA; --ink-faint:#8FA0B7;
+  --line:#22314A; --line-soft:#1A2639;
+  --brand:#6FA8E8; --brand-deep:#9CC6F4; --brand-tint:#152742;
+  --action:#D4B878; --action-deep:#E3CB94; --on-action:#221A08;
+  --on-brand:#081726; --accent:#D9BE82;
+  --gut:#6FC6A1; --gut-tint:#122B23;
+  --warn:#E8927A; --warn-tint:#2E1811;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -18px rgba(0,0,0,.7);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper); color:var(--ink); font-family:var(--sans);
+  font-size:15px; line-height:1.55; margin:0}
+/* 1.240 px Seitenbreite, Fliesstext 760 px (Mariann, Canvas 2,
+   n-Vorlage-breite): Laengere Zeilen liest man schlecht, das Auge verliert
+   beim Zeilensprung den Anfang der naechsten Zeile. */
+.wrap{max-width:1240px; margin:0 auto;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px))}
+.lesebreite{max-width:760px}
+h1,h2,h3{font-family:var(--serif); text-wrap:balance; margin:0}
+h1{font-size:clamp(28px,4.4vw,42px); line-height:1.12; font-weight:900;
+  letter-spacing:-.015em}
+h2{font-size:clamp(20px,2.6vw,26px); font-weight:900; margin-bottom:.35em}
+h3{font-size:17px; font-weight:700}
+a{color:var(--brand)}
+.eyebrow{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-faint); font-weight:600}
+
+/* Kopf: weisser Teil mit Titel und EINEM Satz, darunter die Reiter.
+   Der zweite Absatz ist bewusst weg (Mariann, n-Main-1): „Je weniger Text
+   vor dem Suchfeld, desto schneller wird gesucht." */
+header.band{background:var(--card)}
+header.band .wrap{padding-block:30px 0}
+.unter{color:var(--ink-soft); margin-top:10px; font-size:16px}
+.reiter{display:flex; flex-wrap:wrap; gap:4px 22px; margin-top:20px}
+.reiter button, .reiter a{display:inline-block; padding:9px 2px 10px;
+  font:inherit; font-size:14.5px; background:none; border:0; cursor:pointer;
+  text-decoration:none; color:var(--ink-soft);
+  border-bottom:3px solid transparent}
+.reiter button:hover, .reiter a:hover{color:var(--brand);
+  border-bottom-color:var(--line)}
+.reiter [aria-current]{color:var(--ink); font-weight:700;
+  border-bottom-color:var(--brand)}
+
+/* Blauer Teil, in den der Suchkasten hineinragt (Mariann, n-Main-2):
+   „Die Suche ist ohne Scrollen sichtbar." */
+.blau{background:var(--brand-deep); padding-top:30px}
+.blau .wrap{padding-bottom:0}
+.suchkasten{background:var(--card); border-radius:14px; box-shadow:var(--shadow);
+  padding:18px 20px 14px; margin-bottom:-42px; border:1px solid var(--line)}
+.suchzeile{display:flex; gap:10px; align-items:center}
+.suchkasten input[type=search]{flex:1 1 auto; font:inherit; font-size:19px;
+  padding:10px 14px; border:1px solid var(--line); border-radius:9px;
+  background:var(--card-2); color:var(--ink); min-width:0}
+/* Platzhalter grau mit zwei Beispielen, nie ein schwarzer Begriff im Feld
+   (Mariann, n-Main-3): der saehe aus wie eine schon gemachte Suche. */
+.suchkasten input[type=search]::placeholder{color:#9AA5B4; opacity:1}
+.suchknopf{font:inherit; font-size:15px; font-weight:700; padding:11px 22px;
+  border-radius:9px; border:1px solid var(--brand-deep); background:var(--brand);
+  color:var(--on-brand); cursor:pointer; white-space:nowrap}
+.suchknopf:hover{background:var(--brand-deep)}
+.suchfuss{margin-top:10px; font-size:13px; color:var(--ink-faint);
+  display:flex; flex-wrap:wrap; gap:4px 16px; justify-content:flex-end}
+.suchfuss b{color:var(--ink-soft); font-weight:600}
+
+/* „Zum ersten Mal hier?" als eigener Kasten unter der Suche, mit x
+   (Mariann, n-Main-6) - nicht im Suchkasten, sonst wirkt er wie ein Teil
+   der Suche. */
+.topliste{margin:26px 0 6px}
+.topliste h2{font-size:18px; margin:0 0 .5em}
+ol.tliste{list-style:none; margin:0; padding:0}
+ol.tliste li{display:grid; grid-template-columns:28px minmax(0,1fr) auto 90px 34px;
+  gap:10px; align-items:center; padding:6px 0;
+  border-bottom:1px solid var(--line); font-size:13.5px}
+.tplatz{color:var(--ink-faint); font-variant-numeric:tabular-nums;
+  text-align:right}
+.tname{font-weight:600; overflow:hidden; text-overflow:ellipsis;
+  white-space:nowrap}
+.tort{color:var(--ink-faint); font-size:12.5px; white-space:nowrap}
+.tbalken{background:var(--card-2); border-radius:4px; height:9px;
+  overflow:hidden}
+.tbalken i{display:block; height:100%; background:var(--brand)}
+.tzahl{text-align:right; font-weight:700; font-variant-numeric:tabular-nums}
+@media (max-width:620px){
+  ol.tliste li{grid-template-columns:24px minmax(0,1fr) 34px}
+  .tort, .tbalken{display:none}
+}
+.karte{margin:18px 0 6px; display:flex; flex-direction:column;
+  align-items:center}
+.kpunkt.nurstadt circle{fill:none; stroke-dasharray:3 2}
+.kpunkt.nurstadt:hover circle{fill:var(--brand); fill-opacity:.35}
+.ksvg{width:100%; max-width:430px; height:auto; display:block}
+.kland{fill:var(--card-2); stroke:var(--line); stroke-width:1.1;
+  stroke-linejoin:round}
+.kpunkt circle{fill:var(--brand); fill-opacity:.52; stroke:var(--brand);
+  stroke-width:1.1; transition:fill-opacity .12s}
+.kpunkt:hover circle, .kpunkt:focus circle{fill-opacity:.92;
+  stroke:var(--action-deep); stroke-width:1.8}
+.kname{font-size:11px; fill:var(--ink-soft); pointer-events:none;
+  paint-order:stroke; stroke:var(--card); stroke-width:3px;
+  stroke-linejoin:round}
+.kartenhinweis{font-size:12px; color:var(--ink-faint); margin:10px 0 0;
+  max-width:620px; text-align:center}
+/* Einstieg nach Marianns Entwurf: Kacheln auf grauem Grund, gleich hoch,
+   drei je Reihe. Weniger ist mehr. */
+.eblock{margin:26px 0 0}
+.eblock h2{font-size:20px; margin:0 0 .25em}
+.eblock > p{margin:0 0 14px; font-size:14px; color:var(--ink-soft)}
+.ekacheln{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;
+  background:var(--card-2); padding:12px; border-radius:12px;
+  border:1px solid var(--line)}
+button.ekachel{display:flex; flex-direction:column; gap:2px; text-align:left;
+  background:var(--card); border:1px solid var(--line); border-radius:9px;
+  padding:13px 15px; cursor:pointer; font:inherit; margin:0;
+  transition:border-color .12s, transform .12s}
+button.ekachel:hover{border-color:var(--brand); transform:translateY(-1px)}
+.ename{font-weight:700; font-size:14px; color:var(--ink); line-height:1.25}
+.ezahl{font-size:23px; font-weight:800; color:var(--brand);
+  font-variant-numeric:tabular-nums; margin-top:4px}
+.eunter{font-size:12px; color:var(--ink-faint)}
+.ewege{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.eneu{display:grid; grid-template-columns:repeat(2, 1fr); gap:12px}
+@media (max-width:760px){
+  .ekacheln{grid-template-columns:repeat(2, 1fr)}
+  .eneu{grid-template-columns:1fr}
+}
+@media (max-width:460px){ .ekacheln{grid-template-columns:1fr} }
+button.tun{display:block; margin-top:10px; font:inherit; font-size:13px;
+  font-weight:700; padding:7px 14px; border-radius:7px;
+  border:1px solid var(--action-deep); background:var(--action);
+  color:var(--on-action); cursor:pointer}
+button.tun:hover{background:var(--action-deep)}
+.ausschnitt{border:1px solid var(--warn); border-left:4px solid var(--warn);
+  border-radius:10px; padding:18px 20px; margin:18px 0 0; background:var(--card)}
+.ausschnitt h2{font-size:18px; margin:0 0 .3em; color:var(--warn)}
+.ausschnitt p{font-size:14px; color:var(--ink-soft); margin:.5em 0 0}
+.ausschnitt ol.gruende{margin:.7em 0 0; padding-left:20px; font-size:13.5px;
+  color:var(--ink-soft); max-width:760px}
+.ausschnitt ol.gruende li{margin-top:.45em}
+.ausschnitt .wege{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.ausschnitt .wege button{font:inherit; font-size:13.5px; padding:7px 14px;
+  border-radius:7px; border:1px solid var(--action-deep);
+  background:var(--action); color:var(--on-action); cursor:pointer}
+.ausschnitt .wege button:hover{background:var(--action-deep)}
+#mitmachen .ja-nein{display:flex; gap:14px; margin-top:6px; flex-wrap:wrap}
+#mitmachen .ja-nein label{display:inline-flex; align-items:center; gap:6px;
+  margin:0; font-size:13.5px; color:var(--ink)}
+#mitmachen fieldset{border:1px solid var(--line); border-radius:9px;
+  padding:4px 14px 14px; margin:20px 0 0; background:var(--card-2)}
+#mitmachen legend{font-size:12px; font-weight:700; letter-spacing:.04em;
+  text-transform:uppercase; color:var(--brand); padding:0 6px}
+#mitmachen label{display:block; font-size:13px; color:var(--ink-soft);
+  margin-top:12px}
+#mitmachen label b{display:block; color:var(--ink); font-weight:700;
+  font-size:13.5px; margin-bottom:4px}
+#mitmachen input[type=text], #mitmachen input[type=email], #mitmachen textarea{
+  width:100%; font:inherit; font-size:13.5px; padding:8px 10px;
+  border:1px solid var(--line); border-radius:7px; background:var(--card-2);
+  color:var(--ink)}
+#mitmachen textarea{min-height:76px; resize:vertical}
+#mitmachen summary{cursor:pointer; font-weight:700; color:var(--brand);
+  padding:6px 0}
+#mitmachen button[type=submit]{font:inherit; font-size:14px; font-weight:700;
+  padding:9px 18px; border-radius:7px; border:1px solid var(--action-deep);
+  background:var(--action); color:var(--on-action); cursor:pointer;
+  margin-top:14px}
+#mitmachen .hinweis{font-size:12px; color:var(--ink-faint); margin-top:8px}
+#mitmachen .stand{font-size:13px; margin-top:10px; min-height:1.4em}
+#mitmachen .stand.ok{color:var(--gut); font-weight:700}
+#mitmachen .stand.fehl{color:var(--warn); font-weight:700}
+.ersteMal{background:#E8EFF8; border:1px solid var(--brand);
+  border-radius:12px; padding:16px 18px; margin-top:58px; position:relative;
+  display:flex; gap:14px; align-items:flex-start}
+:root[data-theme="dark"] .ersteMal{background:var(--brand-tint)}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .ersteMal{background:var(--brand-tint)}}
+.ersteMal .i{flex:0 0 auto; width:26px; height:26px; border-radius:50%;
+  background:var(--brand); color:#fff; font-weight:900; font-size:15px;
+  display:grid; place-items:center; margin-top:1px}
+.ersteMal h2{font-size:17px; margin-bottom:.2em}
+.ersteMal p{margin:0; font-size:14px; color:var(--ink-soft); max-width:760px}
+.ersteMal .zu{position:absolute; top:8px; right:10px; border:0; background:none;
+  font-size:20px; line-height:1; color:var(--ink-faint); cursor:pointer;
+  padding:4px 8px}
+.ersteMal .wege{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+.ersteMal .wege button{font:inherit; font-size:13.5px; padding:7px 14px;
+  border-radius:7px; border:1px solid var(--brand); background:var(--card);
+  color:var(--brand); font-weight:600; cursor:pointer}
+.ersteMal .wege button:hover{background:var(--brand); color:var(--on-brand)}
+
+/* Kennzahlen */
+.zahlen{display:grid; gap:12px; margin-block:22px;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.kz{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:14px 16px; min-width:0}
+.kz .n{font-family:var(--serif); font-size:30px; font-weight:700; line-height:1;
+  font-variant-numeric:tabular-nums}
+.kz .t{font-size:12.5px; color:var(--ink-soft); margin-top:6px}
+.kz.mahn .n{color:var(--warn)}
+.kz.gut .n{color:var(--gut)}
+
+/* EIN zuklappbarer Filterkasten fuer alles, direkt ueber den Ergebnissen
+   (Mariann, n-Main-11). Vorher lagen Suchfeld, vier Auswahlfelder und ein
+   Haekchen als lose Knopfreihe in einer klebenden Leiste. */
+.filterkasten{background:var(--card); border:1px solid #9DBBDD;
+  border-radius:10px; margin-top:22px}
+.filterkasten > summary{list-style:none; cursor:pointer; padding:11px 16px;
+  font-size:14px; font-weight:700; color:var(--ink-soft);
+  display:flex; align-items:center; gap:10px}
+.filterkasten > summary::-webkit-details-marker{display:none}
+.filterkasten > summary::before{content:"▸"; color:var(--brand);
+  transition:transform .15s}
+.filterkasten[open] > summary::before{transform:rotate(90deg)}
+.filterkasten .aktiv{margin-left:auto; font-weight:400; font-size:13px;
+  color:var(--ink-faint)}
+.fgruppe{padding:4px 16px 14px; border-top:1px solid var(--line-soft)}
+.fgruppe > b{display:block; font-size:12px; font-weight:700;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint);
+  margin:12px 0 7px}
+.pillen{display:flex; flex-wrap:wrap; gap:7px}
+.pillen button{font:inherit; font-size:13px; padding:5px 13px; border-radius:20px;
+  border:1px solid var(--line); background:var(--card-2); color:var(--ink-soft);
+  cursor:pointer}
+.pillen button:hover{border-color:var(--brand); color:var(--brand)}
+.pillen button[aria-pressed="true"]{background:var(--brand); color:var(--on-brand);
+  border-color:var(--brand-deep); font-weight:600}
+.fzuruck{padding:0 16px 14px}
+
+/* Zeile unter dem Filter: links die Anzahl, rechts die Kennzeichen als
+   Raster (Mariann, n-Main-12) - nicht als Fliesstext, der mitten zwischen
+   Kennzeichen und Erklaerung umbricht. */
+.zaehlzeile{display:flex; flex-wrap:wrap; gap:10px 26px; align-items:flex-start;
+  margin:14px 2px 2px}
+.treffer{font-size:14px; color:var(--ink-soft); font-weight:600;
+  font-variant-numeric:tabular-nums}
+.legende{margin-left:auto; display:grid; gap:8px 26px; font-size:14px;
+  grid-template-columns:repeat(2,auto); color:var(--ink-faint)}
+.legende span{white-space:nowrap}
+button.knopf{font:inherit; font-size:13px; padding:7px 14px; border-radius:7px;
+  border:1px solid var(--action-deep); background:var(--action);
+  color:var(--on-action); font-weight:600; cursor:pointer}
+button.knopf:hover{background:var(--action-deep)}
+button.flach{background:transparent; color:var(--brand);
+  border:1px solid var(--line); font-weight:500}
+button.flach:hover{background:var(--brand-tint)}
+
+/* Studienliste */
+.liste{display:grid; gap:12px; margin-top:14px}
+.studie{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; min-width:0}
+.studie .kopf{display:flex; flex-wrap:wrap; gap:8px 12px; align-items:baseline}
+.studie h3{flex:1 1 320px; min-width:0; line-height:1.3}
+.studie .akr{font-family:var(--sans); font-size:12px; font-weight:700;
+  color:var(--brand-deep); letter-spacing:.04em}
+.pill{font-size:11.5px; font-weight:600; padding:3px 9px; border-radius:20px;
+  white-space:nowrap; border:1px solid transparent}
+.pill.rekrutiert{background:var(--gut-tint); color:var(--gut); border-color:currentColor}
+.pill.geplant{background:var(--brand-tint); color:var(--brand-deep); border-color:currentColor}
+.pill.abgeschlossen{background:var(--line-soft); color:var(--ink-soft)}
+.pill.sonst{background:var(--warn-tint); color:var(--warn)}
+.studie .kurz{font-size:13.5px; color:var(--ink-soft); margin-top:8px;
+  max-width:78ch}
+.fakten{display:grid; gap:4px 20px; margin-top:12px; font-size:12.5px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.fakten div{color:var(--ink-soft); min-width:0}
+.fakten b{color:var(--ink-faint); font-weight:600; letter-spacing:.02em}
+/* Versorgungsbezug: drei Stufen, an den Publikationen gemessen */
+.bezug{display:inline-flex; align-items:center; gap:4px; font-size:11.5px;
+  padding:3px 10px; border-radius:6px; border:1px solid var(--line);
+  background:var(--card-2); color:var(--ink-faint); cursor:help}
+.bezug i{width:6px; height:6px; border-radius:50%; background:var(--line);
+  display:inline-block}
+.bezug.b1 i:nth-child(1){background:var(--ink-faint)}
+.bezug.b2 i:nth-child(-n+2){background:var(--brand)}
+.bezug.b3 i{background:var(--brand)}
+.bezug.b2, .bezug.b3{color:var(--ink-soft)}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; align-items:center}
+.chip{font-size:11.5px; padding:3px 10px; border-radius:6px; text-decoration:none;
+  border:1px solid var(--line); background:var(--card-2); color:var(--ink-soft)}
+a.chip:hover{border-color:var(--brand); color:var(--brand); background:var(--brand-tint)}
+a.chip.hub{border-color:var(--brand); color:var(--brand); background:var(--brand-tint)}
+/* Der Weg zur anderen Haelfte: Einrichtung -> Standortprofil. */
+a.chip.ort{border-color:var(--brand-deep); color:var(--on-brand);
+  background:var(--brand-deep); font-weight:600}
+a.chip.ort:hover{background:var(--brand); color:var(--on-brand)}
+a.chip.inno{border-color:var(--action-deep); color:var(--accent); background:transparent}
+a.chip.drks{border-color:var(--ink-faint); color:var(--ink)}
+.mehr{display:flex; justify-content:center; margin-top:18px}
+
+/* Auswertungen */
+.auswert{display:grid; gap:18px; margin-top:34px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.block{background:var(--card); border:1px solid var(--line); border-radius:10px;
+  padding:16px 18px; min-width:0}
+.balken{display:grid; gap:7px; margin-top:12px}
+.balken .z{display:grid; grid-template-columns:1fr auto; gap:4px 10px;
+  font-size:12.5px; align-items:center}
+.balken .nm{color:var(--ink-soft); min-width:0; overflow-wrap:anywhere}
+.balken .v{font-variant-numeric:tabular-nums; color:var(--ink-faint)}
+.balken .bar{grid-column:1/-1; height:5px; border-radius:3px; background:var(--line-soft)}
+.balken .bar i{display:block; height:100%; border-radius:3px; background:var(--brand)}
+.balken .bar.g i{background:var(--action)}
+
+/* Standorte: der zweite Reiter - und die Verbindung zu den Profilseiten.
+   Gleich hohe weisse Kacheln auf grauem Grund (Mariann, n-Main-8). */
+.ortliste{display:grid; gap:12px; margin-top:14px;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+a.ortkarte{display:flex; flex-direction:column; background:var(--card);
+  border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+  text-decoration:none; color:inherit; min-width:0}
+a.ortkarte:hover{border-color:var(--brand); box-shadow:var(--shadow)}
+a.ortkarte .nm{font-weight:700; font-size:15px; line-height:1.3;
+  color:var(--brand); overflow-wrap:anywhere}
+a.ortkarte .wo{font-size:12.5px; color:var(--ink-faint); margin-top:3px}
+a.ortkarte .ta{font-size:12px; font-weight:700; color:var(--brand-deep);
+  margin-top:8px}
+a.ortkarte .fa{font-size:12.5px; color:var(--accent); margin-top:2px}
+a.ortkarte .fa.leer{color:var(--ink-faint); font-style:italic}
+a.ortkarte .zz{margin-top:auto; padding-top:10px; font-size:12.5px;
+  color:var(--ink-soft); display:flex; flex-wrap:wrap; gap:4px 12px}
+a.ortkarte .zz b{color:var(--ink); font-variant-numeric:tabular-nums}
+a.ortkarte .zz .g{color:var(--gut)}
+
+/* Was die Karte nicht zeigt: links die Grenze, rechts in einem Satz, was
+   stattdessen hilft (Mariann, n-Seite-Ueber-die-Hubs-6). Eine blosse Liste
+   von Einschraenkungen laesst den Leser ratlos stehen. */
+.grenzen{margin-block:34px}
+.grenzen > p{color:var(--ink-soft); font-size:14px; margin:.4em 0 0}
+.gliste{display:grid; gap:10px; margin-top:16px}
+.gzeile{display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--line); border:1px solid var(--line); border-radius:10px;
+  overflow:hidden}
+.gzeile .ist{background:var(--warn-tint); padding:14px 16px; font-size:13.5px;
+  color:var(--ink-soft)}
+.gzeile .hilft{background:var(--card-2); padding:14px 16px; font-size:13.5px;
+  color:var(--ink-soft)}
+.gzeile b{color:var(--ink)}
+.gzeile .ist::before{content:"✕ "; color:var(--warn); font-weight:900}
+.gzeile .hilft::before{content:"→ "; color:var(--brand); font-weight:900}
+@media (max-width:640px){ .gzeile{grid-template-columns:1fr} }
+
+/* Lange Erklaerung zugeklappt (Mariann, n-A-nachher-2). */
+.erklaer{background:var(--card-2); border:1px solid var(--line);
+  border-radius:10px; margin-top:14px}
+.erklaer summary{cursor:pointer; padding:12px 16px; font-size:14px;
+  font-weight:700; color:var(--brand)}
+.erklaer .inn{padding:0 16px 14px; font-size:13.5px; color:var(--ink-soft);
+  max-width:760px}
+.erklaer h4{margin:14px 0 4px; font-size:13px; color:var(--brand-deep);
+  letter-spacing:.04em; text-transform:uppercase}
+footer{border-top:1px solid var(--line); margin-top:30px}
+footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
+@media (max-width:560px){
+  .filter{position:static}
+  .kz .n{font-size:26px}
+}
+</style>
+

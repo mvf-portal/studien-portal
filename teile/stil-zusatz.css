@@ -1,0 +1,254 @@
+/* Ergaenzung zu stil.css fuer die sieben Seiten.
+ *
+ * stil.css ist Marianns Entwurf und bleibt unangetastet. Hier steht nur,
+ * was neu hinzukommt: das Suchfeld mit seiner Trefferliste, die
+ * Seitennavigation, die Kacheln und die Abschnitte der Traegerarten.
+ *
+ * Marianns Vorgabe, die hier traegt: Kacheln statt Listen, wenige grosse
+ * Karten, wenig Text vor der Suche.
+ */
+
+/* ------------------------------------------------ Suche mit Trefferliste */
+
+.suchband { padding-block: 22px 26px; }
+.suchkasten { position: relative; max-width: 760px; }
+.suchlabel {
+  display: block; font-weight: 900; font-size: 1.05rem;
+  color: var(--on-brand); margin-bottom: 8px; letter-spacing: .01em;
+}
+.suchzeile { display: flex; }
+.suchzeile input[type="search"] {
+  flex: 1 1 auto; font: inherit; font-size: 1.08rem;
+  padding: 14px 16px; border: 2px solid transparent; border-radius: 10px;
+  background: var(--card); color: var(--ink);
+  box-shadow: var(--shadow); min-width: 0;
+}
+.suchzeile input[type="search"]:focus-visible {
+  outline: 3px solid var(--action); outline-offset: 2px;
+}
+.suchfuss {
+  margin-top: 8px; font-size: .9rem; color: var(--on-brand); opacity: .82;
+}
+
+.treffer {
+  position: absolute; z-index: 40; left: 0; right: 0; top: calc(100% - 26px);
+  max-height: min(70vh, 620px); overflow-y: auto;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: 0 10px 40px -12px rgba(0,0,0,.4);
+}
+.sgrp { border-bottom: 1px solid var(--line-soft); }
+.sgrp:last-of-type { border-bottom: 0; }
+.sk {
+  position: sticky; top: 0; background: var(--card-2);
+  padding: 8px 14px; font-size: .78rem; font-weight: 900;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--ink-faint);
+  border-bottom: 1px solid var(--line-soft);
+}
+.sk span { color: var(--brand); }
+a.str {
+  display: block; padding: 10px 14px; text-decoration: none; color: inherit;
+  border-bottom: 1px solid var(--line-soft);
+}
+a.str:last-child { border-bottom: 0; }
+a.str:hover, a.str.an { background: var(--brand-tint); }
+.sn { display: block; font-weight: 700; color: var(--brand-deep); }
+.st {
+  display: block; font-size: .9rem; color: var(--ink-soft); margin-top: 1px;
+}
+.sz {
+  display: block; font-size: .82rem; color: var(--ink-faint); margin-top: 2px;
+}
+.smehr {
+  padding: 7px 14px; font-size: .84rem; color: var(--ink-faint);
+  background: var(--card-2);
+}
+.sleer { padding: 16px; }
+.sleer p { margin: 6px 0 0; font-size: .92rem; color: var(--ink-soft); }
+.sfuss {
+  padding: 11px 14px; font-size: .82rem; line-height: 1.5;
+  color: var(--ink-faint); background: var(--card-2);
+  border-top: 1px solid var(--line);
+}
+
+/* --------------------------------------------------- Seitennavigation */
+
+.seitenleiste {
+  background: var(--card); border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 30;
+}
+.seitenleiste .wrap {
+  display: flex; gap: 2px; overflow-x: auto; scrollbar-width: thin;
+}
+.seitenleiste a {
+  flex: 0 0 auto; padding: 13px 15px; text-decoration: none;
+  color: var(--ink-soft); font-weight: 700; font-size: .95rem;
+  border-bottom: 3px solid transparent; white-space: nowrap;
+}
+.seitenleiste a:hover { color: var(--brand); background: var(--card-2); }
+.seitenleiste a[aria-current="page"] {
+  color: var(--brand-deep); border-bottom-color: var(--action);
+}
+
+/* ------------------------------------------------------------ Kacheln */
+
+.kacheln {
+  display: grid; gap: 16px; margin: 26px 0 8px;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+}
+a.kachel {
+  display: block; text-decoration: none; color: inherit;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; padding: 20px; box-shadow: var(--shadow);
+  transition: border-color .12s, transform .12s;
+}
+a.kachel:hover {
+  border-color: var(--brand); transform: translateY(-2px);
+}
+.kachel .frage {
+  font-size: .8rem; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--accent); margin-bottom: 7px;
+}
+.kachel h2 {
+  margin: 0 0 7px; font-size: 1.22rem; color: var(--brand-deep);
+  line-height: 1.25;
+}
+.kachel p { margin: 0; font-size: .95rem; color: var(--ink-soft); }
+.kachel .zahl {
+  display: block; margin-top: 12px; font-size: 1.9rem; font-weight: 900;
+  color: var(--brand); line-height: 1;
+}
+.kachel .zahl small {
+  display: block; font-size: .8rem; font-weight: 700; color: var(--ink-faint);
+  margin-top: 4px; letter-spacing: 0;
+}
+a.kachel.jetzt { border-left: 5px solid var(--action); }
+a.kachel.jetzt .zahl { color: var(--action-deep); }
+
+/* -------------------------------------------- Abschnitte der Traeger */
+
+.traeger { margin: 30px 0; }
+.traeger > h2 {
+  margin: 0 0 4px; font-size: 1.5rem; color: var(--brand-deep);
+}
+.traeger > .was {
+  margin: 0 0 14px; color: var(--ink-soft); font-size: .96rem;
+  max-width: 62ch;
+}
+.traeger.fremd {
+  background: var(--warn-tint); border: 1px solid var(--warn);
+  border-radius: 14px; padding: 22px;
+}
+.traeger.fremd > h2 { color: var(--warn); }
+
+.haeuser { display: grid; gap: 10px; }
+.haus {
+  display: grid; gap: 4px 14px; align-items: baseline;
+  grid-template-columns: 1fr auto;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 13px 16px;
+}
+.haus a { font-weight: 700; color: var(--brand-deep); text-decoration: none; }
+.haus a:hover { text-decoration: underline; }
+.haus .wo { grid-column: 1; font-size: .88rem; color: var(--ink-faint); }
+.haus .zahlen {
+  grid-column: 2; grid-row: 1 / span 2; text-align: right;
+  font-size: .88rem; color: var(--ink-soft); white-space: nowrap;
+}
+.haus .zahlen b { color: var(--brand); }
+.marke {
+  display: inline-block; margin-left: 7px; padding: 1px 7px;
+  border-radius: 999px; font-size: .74rem; font-weight: 900;
+  background: var(--gut-tint); color: var(--gut);
+  text-transform: uppercase; letter-spacing: .05em;
+}
+
+/* ------------------------------------------------------------- Rest */
+
+.hinweiskasten {
+  background: var(--card-2); border: 1px solid var(--line);
+  border-left: 5px solid var(--brand); border-radius: 12px;
+  padding: 18px 20px; margin: 24px 0;
+}
+.hinweiskasten h2 { margin: 0 0 8px; font-size: 1.2rem; color: var(--brand-deep); }
+.hinweiskasten p { margin: 0 0 8px; }
+.hinweiskasten p:last-child { margin-bottom: 0; }
+.hinweiskasten ol, .hinweiskasten ul { margin: 8px 0 0 1.1em; padding: 0; }
+.hinweiskasten li { margin-bottom: 7px; }
+
+.mehr {
+  display: inline-block; margin-top: 10px; font-weight: 700;
+  color: var(--brand); text-decoration: none;
+}
+.mehr:hover { text-decoration: underline; }
+.mehr::after { content: " \2192"; }
+
+@media (max-width: 560px) {
+  .kacheln { grid-template-columns: 1fr; }
+  .haus { grid-template-columns: 1fr; }
+  .haus .zahlen { grid-column: 1; grid-row: auto; text-align: left; }
+}
+
+/* ------------------------------------------- Listensteuerung (liste.js)
+
+   Die Leiste steht als hidden in der Seite und wird von liste.js
+   aufgedeckt. Ohne JavaScript nuetzen Sortierfeld und Filter nichts,
+   darum zeigt die Seite sie dann auch nicht an. Die Liste selbst ist
+   ohne JavaScript vollstaendig da. */
+.steuer {
+  display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-end;
+  background: var(--card-2); border: 1px solid var(--line);
+  border-radius: 12px; padding: 14px 16px; margin: 18px 0 14px;
+  position: sticky; top: 0; z-index: 20;
+}
+.steuer label {
+  display: flex; flex-direction: column; gap: 3px;
+  font-size: .8rem; font-weight: 700; color: var(--ink-soft);
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.steuer select, .steuer input[type="search"] {
+  font: inherit; font-size: .95rem; font-weight: 400;
+  text-transform: none; letter-spacing: 0;
+  padding: 7px 10px; border: 1px solid var(--line);
+  border-radius: 8px; background: var(--card); color: var(--ink);
+  min-width: 13rem;
+}
+.steuer input[type="search"] { min-width: 15rem; }
+.steuer-stand {
+  flex: 1 1 100%; margin: 2px 0 0; font-size: .88rem;
+  color: var(--ink-faint);
+}
+.steuer-stand b { color: var(--brand); }
+
+.teil-stand {
+  margin: 10px 0 0; font-size: .9rem; color: var(--ink-faint);
+}
+button.alle {
+  font: inherit; font-size: .9rem; font-weight: 700; cursor: pointer;
+  background: none; border: none; padding: 0; margin-left: 4px;
+  color: var(--brand); text-decoration: underline;
+}
+
+/* Die Zeile ohne eigene Seite: kein Scheinlink auf dem Namen, aber ein
+   Ziel am Ende der Zeile. Peter Stegmaier am 01.11.2026: „keine links
+   klickbar, warum?" - weil 2.265 Einrichtungen keine Seite haben. Jetzt
+   sagt die Zeile das und bietet den Weg an. */
+.haus .ziel {
+  grid-column: 1; font-size: .84rem; font-weight: 400;
+  color: var(--ink-faint); text-decoration: none;
+}
+.haus .ziel b { font-weight: 700; color: var(--brand); }
+.haus .ziel:hover b { text-decoration: underline; }
+.haus.gesucht {
+  outline: 3px solid var(--brand); outline-offset: 2px;
+}
+/* Die Steuerleiste klebt oben. Ohne Abstand setzt der Browser die
+   angesprungene Zeile genau darunter, und sie ist verdeckt. Gilt auch
+   fuer den Sprung, den der Browser selbst macht. */
+.haus { scroll-margin-top: 140px; }
+.listenraum [data-teil][hidden] { display: none; }
+
+@media (max-width: 560px) {
+  .steuer { position: static; }
+  .steuer select, .steuer input[type="search"] { min-width: 0; width: 100%; }
+  .steuer label { flex: 1 1 100%; }
+}

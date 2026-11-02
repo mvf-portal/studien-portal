@@ -1201,7 +1201,7 @@ footer .wrap{padding-block:22px 34px; font-size:12.5px; color:var(--ink-faint)}
 (function(){
   "use strict";
   var D = JSON.parse(document.getElementById("daten").textContent);
-  var ENDPUNKT = "";
+  var ENDPUNKT = "https://www.monitor-versorgungsforschung.de/studien/studien.php";
   var S = D.studien, Z = D.zaehlung;
   var ORTE = (D.standorte && D.standorte.standorte) || [];
   var hubUrl = {};

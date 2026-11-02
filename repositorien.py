@@ -62,7 +62,14 @@ HIER = pathlib.Path(__file__).resolve().parent
 DATEN = HIER / "daten"
 INNO_CACHE = HIER.parent / "innovationsfonds" / "db" / "ror_cache.json"
 ZIEL = DATEN / "repositorien.json"
-MAILTO = "peterstegmaier7@gmail.com"
+# Die Hausadresse, wie in kontur.py, mvf_artikel.py und
+# mvf_autorenbox.py. OpenAlex und Crossref wollen eine
+# Kontaktadresse fuer den hoeflichen Zugang.
+#
+# ⚠ HIER STAND BIS ZUM 02.11.2026 DIE PRIVATE GMAIL-ADRESSE,
+# in einer verfolgten Datei eines OEFFENTLICHEN Repos. Jedes
+# andere Skript des Projekts nahm schon die Hausadresse.
+MAILTO = "stegmaier@m-vf.de"
 
 sys.path.insert(0, str(HIER))
 if hasattr(sys.stdout, "reconfigure"):

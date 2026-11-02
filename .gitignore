@@ -12,3 +12,57 @@ daten/drks-export-*.zip
 # landkarte.json bleibt NICHT ausgeschlossen: Die Seite liest sie.
 daten/hub-dois.json
 fremd/
+
+# Die Beitrags-PDFs von m-vf.de. Rund 1.470 Dateien, mehrere hundert MB.
+# Sie sind unser eigenes Material unter CC BY 4.0, also kein Rechtsproblem,
+# aber sie gehoeren nicht in ein Repo, das eine Webseite ausliefert. Neu
+# geholt werden sie mit `py -I mvf_autorenbox.py`.
+pdf-zwischenlager/
+
+# Zwischenstaende der MVF-Auswertung. Die Seite liest sie NICHT, sie
+# entstehen aus Crossref, der WordPress-Schnittstelle und den PDFs.
+# daten/suchindex.json bleibt NICHT ausgeschlossen: Die Suche liest sie.
+daten/mvf_beitraege.json
+daten/mvf_artikel.json
+daten/mvf_autorenbox.json
+daten/mvf_autoren_archiv.json
+daten/mvf_openalex.json
+daten/mvf_bruecke.json
+
+# Bauteile, die in mvf_autorenbox.py gespleisst wurden. Sie sind dort
+# eingearbeitet und waeren hier nur eine zweite, veraltende Fassung.
+teile/korrespondenz_neu.py
+teile/anker.py
+teile/boxen_neu.py
+teile/einsetzen.py
+teile/alt-skript.js
+# Zwischenstaende aus dem Aufbau von seiten.py, 02.11.2026. Null
+# Verweise aus der Kette, gemessen mit grep.
+teile/forschende_neu.py
+teile/seiten_rest.py
+teile/seiten_standorte.py
+
+# -------------------------------------------------- Nicht ausliefern
+# ⚠ EINE DATEI IM REPO IST EINE SEITE IM NETZ. studien.m-vf.de ist live,
+# und GitHub Pages liefert jede Datei aus, auch unverlinkte. Am
+# 02.11.2026 gab standort-vorlage.html oeffentlich HTTP 200 mit {{DNVF}}
+# im Klartext. Die beiden Bauvorlagen heissen seither _vorlage.html und
+# _standort-vorlage.html: Jekyll laesst fuehrende Unterstriche weg.
+# Wer je eine .nojekyll anlegt, macht sie wieder oeffentlich.
+# kontrolle_auslieferung.py prueft das.
+
+# Personenbezogenes. mvf-doi-autor-orcid.csv traegt 266 Mailadressen.
+daten/mvf-doi-autor-orcid.csv
+# 5.373 Namen mit ORCID und Einrichtung. Die Seite laedt die Datei NICHT
+# nach, sie ist nur Bauzwischenstand. Entscheidung Peter 02.11.2026:
+# draussen lassen.
+daten/personen.json
+
+# Weitere Bauzwischenstaende, die der Browser nicht laedt.
+daten/einrichtungen.json
+daten/vf_korpus.json
+daten/mvf_schlagworte.json
+daten/fachbestand.json
+
+# Flickskripte. Entwicklungsschutt, gehoert nicht auf eine Webseite.
+teile/patch_*.py
