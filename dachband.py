@@ -155,7 +155,12 @@ def einsetzen(band):
 def stand_aus_datei():
     if not ZIEL.exists():
         return None
-    m = re.search(r"Stand (\d{1,2})\. (\w+) (\d{4})\.",
+    # ⚠ NICHT AN DAS SATZZEICHEN DAHINTER BINDEN. Die erste Fassung
+    # verlangte einen Punkt nach der Jahreszahl. Als die Fusszeile
+    # umformuliert wurde und dort ein Komma stand, meldete die Pruefung
+    # „kein lesbares Standdatum" - richtig gemeldet, aber aus dem
+    # falschen Grund. Ein Wortende genuegt.
+    m = re.search(r"Stand (\d{1,2})\. (\w+) (\d{4})\b",
                   ZIEL.read_text(encoding="utf-8"))
     if not m:
         return None
