@@ -1699,3 +1699,65 @@ Stücke tragen im Bestand keine maschinell lesbare Autorenangabe. Der
 WordPress-Bestand hilft dabei nicht weiter: Von seinen 1.528 Datensätzen
 haben nur 636 einen Zitationstext und 698 gar kein Jahr. Über 1.000
 Beiträge weist ihm auch seine eigene Autorenseite nicht zu.
+
+---
+
+## Das Dach-Band auf wissen.m-vf.de (02.11.2026)
+
+Peter: „Auf der Startseite muss klar werden, dass ‚Wissen‘ mehr ist als
+nur ein hub von 15." Entschieden ist: **wissen.m-vf.de trägt das Dach**,
+nicht studien.m-vf.de.
+
+    py dachband.py             erzeugen und in den Hub einsetzen
+    py dachband.py --zeigen    nur erzeugen
+    py dachband.py --pruefen   Marken und Standdatum
+    py dachband.py --gegentest beweisen, dass die Prüfung greift
+
+Die Quelle ist `daten/fachbestand.json`, der feste Text steht in
+`vorlage-dach-band.html`, das Ziel ist
+`../versorgungsforschung-portal/index.html` zwischen zwei Marken. Beim
+ersten Lauf wird eingefügt, danach immer ersetzt.
+
+### Warum die Zahlen festgeschrieben sind
+
+⚠ **EINE KETTE ÜBER PROJEKTGRENZEN REISST, UND SIE REISST LEISE.** Am
+selben Tag hat genau das 281 Profillinks gekostet: `personen.py` las die
+Autorenprofile aus dem Arbeitsordner der Archiv-Sitzung, die Datei war
+einen Moment nicht da, und die Seite behauptete danach „Kein MVF-Profil".
+
+Darum steht das Band fest in `index.html`, mit sichtbarem Standdatum.
+Eine Zahl, die ihr Alter nennt, ist besser als eine, die stillschweigend
+nicht mehr stimmt. `--pruefen` meldet ab 60 Tagen.
+
+### Die Regeln des Hub-Repos, die dabei gelten
+
+Aus dessen `CLAUDE.md`, und sie sind keine Förmlichkeiten:
+
+* **Kein JavaScript im Band.** Das gesamte Skript des Hubs liegt in
+  einem inline-Block. Ein Syntaxfehler lässt die Seite **leer** stehen,
+  weil Kacheln und Studien per JS erzeugt werden.
+* **Keine zweite Schrift, kein Gold als Fließtext, keine eigenen
+  Farbwerte.** Das Band nimmt nur die Tokens (`--brand`, `--card`,
+  `--line`), darum stimmen heller und dunkler Modus ohne Zutun.
+* **Live prüfen nur mit Cache-Buster**, sonst kommt die alte Fassung.
+
+### Zwei Dinge, die beim Bauen fast schiefgingen
+
+**`auto-fit` bei vier Karten ergibt 3 + 1.** Die vierte stand allein in
+einer leeren Reihe. Jetzt feste Stufen: vier ab 1080 px, sonst zwei, auf
+dem Telefon eine.
+
+⚠ **DIE MARKENNAMEN DÜRFEN IM ERKLÄRTEXT NICHT AUSGESCHRIEBEN STEHEN.**
+Die erste Fassung der Vorlage tat es, damit standen beide Namen zweimal
+in `index.html`. Gerettet hat nur, dass die ganze Marke länger ist als
+der bloße Name. `--pruefen` zählt deshalb jetzt beides.
+
+### Was am Kopf geändert wurde
+
+    Augenbraue   KNOWLEDGE-HUB  ->  KNOWLEDGE-HUB · DAS FACH
+    Untertitel   Ein Zugang zu allen wichtigen Datenbanken
+                 ->  Das ganze Fach an einer Stelle, nicht eines von
+                     fünfzehn Themen
+
+Der Untertitel stammte aus Marianns Entwurf. Peter hat die Änderung am
+02.11.2026 ausdrücklich freigegeben.
