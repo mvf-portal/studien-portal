@@ -71,3 +71,4 @@ teile/patch_*.py
 # sie sind Arbeitsmaterial fuer den Nachtrag in WordPress.
 daten/wp_autorenluecke.json
 daten/wp_luecken_benannt.json
+daten/wp_abgleich.json
