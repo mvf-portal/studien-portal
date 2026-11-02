@@ -66,3 +66,8 @@ daten/fachbestand.json
 
 # Flickskripte. Entwicklungsschutt, gehoert nicht auf eine Webseite.
 teile/patch_*.py
+
+# Messergebnisse des WordPress-Abgleichs. Der Browser laedt sie nicht,
+# sie sind Arbeitsmaterial fuer den Nachtrag in WordPress.
+daten/wp_autorenluecke.json
+daten/wp_luecken_benannt.json
