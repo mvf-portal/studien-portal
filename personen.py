@@ -341,7 +341,19 @@ def bauen():
 
     zaehl = collections.Counter()
     for v in (WP.get("autoren") or {}).values():
-        k = schluessel(v.get("nachname"), v.get("vorname"))
+        # ⚠ IST DER NACHNAME EIN GRAD, IST DER DATENSATZ VERDREHT.
+        # Ein Profil traegt nachname="BEng", vorname="Alexander
+        # Tamdjidi". Daraus wurde die Person "Alexander BEng" neben
+        # dem richtigen "Alexander Tamdjidi" - zwei Eintraege, eine
+        # ORCID, ein Mensch. Dann lieber den vollen Namen zerlegen.
+        from suchindex import ist_grad, teile_namen
+        if ist_grad(v.get("nachname")):
+            nach2, vor2 = teile_namen(v.get("name") or "")
+            print("  verdrehter Datensatz: nachname=%r -> %r, %r"
+                  % (v.get("nachname"), nach2, vor2))
+            k = schluessel(nach2, vor2)
+        else:
+            k = schluessel(v.get("nachname"), v.get("vorname"))
         if not k:
             zaehl["ohne_brauchbaren_namen"] += 1
             continue
@@ -462,7 +474,34 @@ def bauen():
     # damit ganz oben in einer Liste, die nach Forschungsbelegen sortiert.
     # Die Regel und die Begruendung stehen in zuschnitt.py, nicht hier.
     sys.path.insert(0, str(HIER))
-    from zuschnitt import REDAKTION, EINRICHTUNG_VON_HAND
+    from zuschnitt import (REDAKTION, EINRICHTUNG_VON_HAND,
+                           ORCID_FALSCH, ORCID_RICHTIG)
+
+    # ⚠ EINE FREMDE ORCID IST SCHLIMMER ALS KEINE. Sie schreibt einem
+    # Menschen maschinenlesbar die Arbeiten eines anderen zu. Welche
+    # falsch ist, wurde bei ORCID selbst erfragt, nicht aus der
+    # Namensaehnlichkeit geschlossen. Begruendung je Fall in
+    # zuschnitt.py.
+    weg_o = neu_o = 0
+    for k, falsch in ORCID_FALSCH.items():
+        p = leute.get(k)
+        if not p:
+            print("  HINWEIS: %r steht in ORCID_FALSCH, aber nicht im "
+                  "Bestand" % k)
+            continue
+        if (p.get("orcid") or "").strip() != falsch:
+            # Schon berichtigt oder nie dagewesen: nichts tun, aber sagen.
+            print("  HINWEIS: %r traegt nicht mehr %s, sondern %r"
+                  % (k, falsch, p.get("orcid")))
+            continue
+        p["orcid"] = ORCID_RICHTIG.get(k, "")
+        weg_o += 1
+        if p["orcid"]:
+            neu_o += 1
+    if weg_o:
+        print("  fremde ORCID entfernt: %d, davon durch die richtige "
+              "ersetzt: %d" % (weg_o, neu_o))
+
 
     # ⚠ HANDKORREKTUR STICHT DEN AUTOMATISCHEN SCHNITT. Begruendung je
     # Fall in zuschnitt.py. Gesetzt wird erst hier, damit die Zaehlung

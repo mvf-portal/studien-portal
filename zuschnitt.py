@@ -261,3 +261,49 @@ EINRICHTUNG_VON_HAND = {
 NAME_ZUSAMMEN = {
     "giulini, ch": "giulini limbach, chiara",
 }
+
+
+# -------------------------------------------- 6. ORCID: falsch, und richtig
+#
+# Peter am 02.11.2026: „die falschen orcids löschen/entfernen."
+#
+# Eine ORCID ist die Forscherkennung eines Menschen. Steht sie auf dem
+# Profil einer anderen Person, schreibt sie ihr fremde Arbeiten zu, und
+# zwar dauerhaft und maschinenlesbar.
+#
+# ⚠ GLEICHE ORCID ALLEIN BEWEIST KEINE DUBLETTE. Von 14 mehrfach
+# vergebenen ORCID in den 1.340 Autorenprofilen gehören nur 4 zu
+# Profilen mit gleichem Nachnamen. Die übrigen 10 stehen auf Profilen
+# verschiedener Menschen, und dort ist die Kennung schlicht falsch.
+#
+# Entschieden wurde nicht nach Namensähnlichkeit, sondern bei ORCID
+# selbst: Die Kennung gehört genau einer Person, und ORCID nennt sie.
+# Wessen Profil dazu passt, behält sie. Alle anderen stehen hier.
+#
+# Die Korrektur gilt NUR für unsere Anzeige. In WordPress stehen sie
+# weiter, das muss dort geschehen.
+ORCID_FALSCH = {
+    "diel, franziska":   "0000-0001-8287-2299",   # gehoert Theda Borde
+    "ewers, michael":    "0000-0003-4947-1770",   # gehoert Florian Brandt
+    "froehlich, juergen": "0000-0002-3167-6105",  # gehoert Jonas Grininger
+    "maul, stephan":     "0000-0002-0514-0542",   # gehoert Sebastian Lempfert
+    "mischker, andrea":  "0000-0002-5218-5508",   # gehoert Hans-R. Hartweg
+    "popp, walter":      "0000-0001-7994-6058",   # gehoert Fabian Holbe
+    "raab, marc":        "0000-0002-7215-8398",   # gehoert Tobias Tenenbaum
+    "richter, karl":     "0000-0003-4777-0961",   # gehoert Stefanie Thoennes
+    "rujescu, dan":      "0000-0002-0514-0542",   # gehoert Sebastian Lempfert
+    "van lente, evert":  "0000-0001-7994-6058",   # gehoert Fabian Holbe
+    "winkler, eva":      "0000-0002-9360-9442",   # gehoert Jens Aberle
+}
+
+# ⚠ NUR WAS BELEGT IST. Die Namenssuche bei ORCID lieferte zu neun
+# Profilen Vorschläge, davon waren sieben falsch: Zu „Michael Ewers"
+# kamen Timothy, Simone, Cynthia, Bradley und Torsten Ewers, zu „Eva
+# Winkler" zwei verschiedene Personen. Hier stehen nur die beiden, bei
+# denen die hinterlegte Anstellung den Menschen bestätigt.
+ORCID_RICHTIG = {
+    # Head of Clinical Division, Medical University of Vienna, seit 2021
+    "rujescu, dan":  "0000-0002-1432-313X",
+    # Martin-Luther-Universitaet Halle-Wittenberg, wo Rujescu vor Wien war
+    "maul, stephan": "0000-0002-0668-797X",
+}

@@ -128,6 +128,24 @@ def personenschluessel(nachname, vorname):
 # ⚠ AUCH DIE VERDREHTEN SCHREIBWEISEN. Im Bestand steht neben „et al.
 # Schrappe" auch „et. al Schrappe" - mit dem Punkt hinter „et". Die eine
 # Fassung wurde abgefangen, die andere wurde zur Person „Et Schrappe".
+# Nachgestellte akademische Grade. EIN Verzeichnis, damit nicht zwei
+# Stellen zwei verschiedene Listen pflegen.
+GRADE_HINTEN = {"msc", "mph", "ma", "mba", "bsc", "ba", "phd", "md",
+                "mhba", "llm", "beng", "meng", "mpa", "drph",
+                "m.sc.", "b.sc.", "m.a.", "ll.m.", "m.p.h."}
+
+
+def ist_grad(wort):
+    """Ist dieses Wort ein nachgestellter Grad und kein Nachname?
+
+    ⚠ IM REGISTER STEHT NACHNAME UND VORNAME GETRENNT, und bei genau
+    einem Profil falsch: nachname="BEng", vorname="Alexander Tamdjidi".
+    Die Zerlegung eines vollen Namens kommt dort nie vorbei, also
+    braucht die Stelle, die das Register liest, einen eigenen Riegel.
+    """
+    return (wort or "").strip().strip(",").lower() in GRADE_HINTEN
+
+
 VORSATZ_WEG = ("et al.", "et. al.", "et. al", "et al", "et.al.", "et.al",
                "u. a.", "u.a.", "and others")
 
@@ -168,7 +186,14 @@ def teile_namen(roh):
     if not n:
         return "", ""
     # Nachgestellte Grade stoeren die Zerlegung.
-    for grad in (" MPH", " MSc", " PhD", " MD", " M.Sc.", " M.A."):
+    # ⚠ DIE LISTE WAR LUECKENHAFT. Von 297 Namen mit nachgestelltem
+    # Grad deckten die sechs Eintraege nur einen Teil ab: MA (42),
+    # MBA (29), BSc (23), BA (11), MHBA (8), LLM (6) und BEng
+    # fehlten. Gemessen am 02.11.2026 im Autorenregister.
+    for grad in (" MPH", " MSc", " PhD", " MD", " M.Sc.", " M.A.",
+                 " MBA", " BSc", " B.Sc.", " MA", " BA", " MHBA",
+                 " LLM", " LL.M.", " BEng", " MEng", " MPA",
+                 " DrPH", " M.P.H."):
         if n.endswith(grad):
             n = n[: -len(grad)].strip().rstrip(",")
     if "," in n:
@@ -492,6 +517,15 @@ def bauen():
         # besonders hartnaeckig, weil jede Seite sich auf die andere
         # beruft.
         if personenschluessel(p.get("nachname"), p.get("vorname")) != k:
+            verworfen += 1
+            continue
+        # ⚠ AUCH DER VERDREHTE DATENSATZ MUSS HIER AUFFALLEN. Die
+        # Pruefung oben leitet den Schluessel aus denselben Feldern ab,
+        # aus denen er entstanden ist - bei nachname="BEng" kommt
+        # wieder "beng, alexander" heraus, und der Eintrag besteht
+        # seine eigene Pruefung. Eine Pruefung, die den Fehler
+        # nachrechnet, bestaetigt ihn.
+        if ist_grad(p.get("nachname")):
             verworfen += 1
             continue
         haus = [p.get("einrichtung")] if p.get("einrichtung") else []
