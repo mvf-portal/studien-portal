@@ -197,6 +197,42 @@ def lade(p):
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
 
 
+# Soviel Autorenprofile hat die Quelle am 02.11.2026. Faellt sie deutlich
+# darunter, stimmt etwas nicht.
+WP_ERWARTET = 1340
+WP_UNTERGRENZE = int(WP_ERWARTET * 0.9)
+
+
+def pruefe_wordpress(WP):
+    """Abbrechen, wenn die Autorenprofile fehlen oder eingebrochen sind.
+
+    ⚠ DIESE QUELLE LIEGT IM ARBEITSORDNER EINER ANDEREN SITZUNG
+    (mvf-archiv-transfer/daten/wp_autoren.json). Wer dort gerade baut,
+    kann sie kurzzeitig wegnehmen oder halb schreiben.
+
+    Am 02.11.2026 ist genau das passiert, mitten in einem Baulauf.
+    `lade(...) or {}` machte daraus still ein leeres Verzeichnis, die
+    Kette lief durch, und 281 Menschen verloren ihren Profillink. Auf
+    der veroeffentlichten Seite stand bei ihnen "Kein MVF-Profil",
+    obwohl sie eines haben. Niemand hat es beim Bauen gemerkt, weil
+    nichts gemeldet wurde.
+
+    ⚠ EIN STILL FEHLENDER EINGANG IST SCHLIMMER ALS EIN ABBRUCH. Eine
+    Seite, die weniger weiss als gestern, sieht aus wie eine Seite.
+    """
+    n = len(((WP or {}).get("autoren")) or {})
+    if n >= WP_UNTERGRENZE:
+        return n
+    raise SystemExit(
+        "ABBRUCH: nur %d Autorenprofile gelesen, erwartet sind rund %d.\n"
+        "  Quelle: %s\n"
+        "  Sie liegt im Arbeitsordner der Sitzung mvf-archiv-transfer.\n"
+        "  Laeuft dort gerade ein Bau, spaeter erneut versuchen.\n"
+        "  Ohne sie verlieren rund 1.300 Menschen ihren Profillink, und\n"
+        "  die Seite behauptet dann 'Kein MVF-Profil'."
+        % (n, WP_ERWARTET, FREMD / "wp_autoren.json"))
+
+
 def erster_teil(satz):
     """Nur bis zum ersten Punkt oder Rueckblickwort.
 
@@ -279,6 +315,7 @@ def einrichtung_aus_satz(satz):
 def bauen():
     _bekannt_laden()
     WP = lade(FREMD / "wp_autoren.json") or {}
+    pruefe_wordpress(WP)
     IV = lade(FREMD / "archiv_interviews.json") or {}
     AB = lade(DATEN / "mvf_autorenbox.json") or {}
     SI = lade(DATEN / "suchindex.json") or {}
@@ -514,6 +551,7 @@ def eichen():
     """
     IV = lade(FREMD / "archiv_interviews.json") or {}
     WP = lade(FREMD / "wp_autoren.json") or {}
+    pruefe_wordpress(WP)
     nach_name = {}
     for v in (WP.get("autoren") or {}).values():
         if v.get("nachname") and v.get("vorname"):
