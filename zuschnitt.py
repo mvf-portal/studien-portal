@@ -237,3 +237,27 @@ def ist_redaktion(schluessel: str) -> bool:
 EINRICHTUNG_VON_HAND = {
     "marschall, ursula": "BARMER Institut für Gesundheitssystemforschung",
 }
+
+
+# ------------------------------------------- 5. Namensvarianten zusammenführen
+#
+# Peter am 02.11.2026: „giulini, ch löschen, artikel link übertragen auf
+# Chiara Giulini-Limbach MSc, mit Profil."
+#
+# Im Heft steht „Ch. Giulini", im Autorenregister „Chiara
+# Giulini-Limbach MSc". Die Initialen-Auflösung greift hier NICHT, denn
+# sie vergleicht den Nachnamen, und „Giulini" ist nicht
+# „Giulini-Limbach". Zwei Namen, eine Person, und kein automatischer Weg
+# dazwischen.
+#
+# ⚠ DAS IST KEINE REGEL, SONDERN EINE ENTSCHEIDUNG JE FALL. Namen
+# ändern sich durch Heirat, Promotion oder Umzug, und keine Heuristik
+# kann wissen, ob zwei Schreibweisen dieselbe Person meinen. Wer hier
+# etwas einträgt, hat nachgesehen.
+#
+# Schlüssel ist die Nennung, wie sie im Heft steht: norm(nachname) plus
+# Komma plus norm(vorname), BEIDE ungekürzt. Wert ist der Schlüssel der
+# Person, die bleibt.
+NAME_ZUSAMMEN = {
+    "giulini, ch": "giulini limbach, chiara",
+}

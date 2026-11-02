@@ -330,11 +330,14 @@ def bauen():
     leute = {}
 
     def schluessel(nach, vor):
-        nach, vor = norm(nach), norm(vor)
-        if not nach or not vor:
-            return None
-        erst = vor.split()[0] if vor.split() else ""
-        return (nach + ", " + erst) if len(erst) > 1 else None
+        # ⚠ DIESELBE REGEL WIE IN suchindex.py, NICHT EINE ZWEITE.
+        # Hier stand eine eigene Fassung, und sie kannte die
+        # Punkt-Regel nicht: Nach der Berichtigung dort blieb "Ch.
+        # Giulini" hier trotzdem eine eigene Person. Zwei Stellen, die
+        # dasselbe entscheiden sollen, driften auseinander.
+        sys.path.insert(0, str(HIER))
+        from suchindex import personenschluessel
+        return personenschluessel(nach, vor)
 
     zaehl = collections.Counter()
     for v in (WP.get("autoren") or {}).values():

@@ -46,6 +46,8 @@ import sys
 import time
 import unicodedata
 
+from zuschnitt import NAME_ZUSAMMEN
+
 HIER = pathlib.Path(__file__).parent
 DATEN = HIER / "daten"
 
@@ -99,11 +101,26 @@ def personenschluessel(nachname, vorname):
     eine Person nicht finden, als zwei zu einer machen.
     """
     nach = norm(nachname)
-    vor = norm((vorname or "").replace(".", " "))
+    roh = (vorname or "").strip()
+    vor = norm(roh.replace(".", " "))
     if not nach or not vor:
         return None
     erst = vor.split()[0] if vor.split() else ""
     if len(erst) < 2:
+        return None
+    # ⚠ DER PUNKT MACHT DIE INITIALE, NICHT DIE LAENGE. „Ch." ist eine
+    # Initiale mit zwei Zeichen und rutschte durch die Laengenpruefung:
+    # Aus „Ch. Giulini" wurde eine eigene Person neben „Chiara
+    # Giulini-Limbach MSc", aus „Ch. Scheu" eine neben „Christoph
+    # Scheu". Gefunden am 02.11.2026, als Peter die Dublette im
+    # WordPress meldete.
+    #
+    # ⚠ NICHT EINFACH KURZE VORNAMEN ABWEISEN. „Ab Klink" ist ein
+    # niederlaendischer Vorname und ein echter Mensch mit Profil. Von
+    # vier verdaechtigen Faellen im Bestand war genau dieser echt. Der
+    # Punkt im Original unterscheidet sie, die Laenge nicht.
+    erstes_stueck = roh.split()[0] if roh.split() else ""
+    if erstes_stueck.endswith(".") and len(erstes_stueck.rstrip(".")) <= 3:
         return None
     return nach + ", " + erst
 
@@ -290,7 +307,29 @@ def personen():
             if not n:
                 # Nur ein Vorname und kein Nachname: nicht aufloesbar.
                 continue
-            if v:
+            # ⚠ ZUERST DIE ENTSCHEIDUNGEN VON HAND. Sie stehen in
+            # zuschnitt.py, je Fall nachgesehen, und schlagen jede
+            # Heuristik. „Ch. Giulini" im Heft ist dieselbe Person wie
+            # „Chiara Giulini-Limbach MSc" im Register, und kein
+            # Nachnamensvergleich kann das wissen.
+            hand = NAME_ZUSAMMEN.get("%s, %s" % (n, v.rstrip(".")))
+            if hand:
+                # ⚠ DAS ZIEL MUSS NICHT IM BELEGBESTAND STEHEN. Chiara
+                # Giulini-Limbach hat ein Autorenprofil, aber keinen
+                # eigenen Beleg - sie kommt erst ueber personen.json
+                # herein. Die erste Fassung verlangte sie in `leute` und
+                # meldete darum „die es nicht gibt", obwohl es sie gibt.
+                if hand not in leute and hand in nur_profil:
+                    echt = (lade("personen.json") or {}).get(
+                        "personen", {}).get(hand, {}).get("name") or hand
+                    eintrag(hand, echt)
+                kand = {hand} if hand in leute else None
+                if kand is None:
+                    print("  HINWEIS: %r soll auf %r gehen, die es nicht "
+                          "gibt" % ("%s, %s" % (n, v.rstrip(".")), hand))
+                    offen += 1
+                    continue
+            elif v:
                 kand = reg.get((n, v[0]))
             else:
                 # Gar kein Vorname, etwa „et al. Schrappe". Auffloesbar,
@@ -440,6 +479,19 @@ def bauen():
             continue
         _, _, vor_k = k.partition(", ")
         if scheinperson(vor_k):
+            verworfen += 1
+            continue
+        # ⚠ DER SCHLUESSEL MUSS DIE HEUTIGE REGEL NOCH BESTEHEN. Sonst
+        # traegt der Nachtrag zurueck, was die Regel gerade entfernt hat:
+        # Nach der Punkt-Regel fiel „Ch. Giulini" aus personen() heraus,
+        # stand aber in der personen.json des VORIGEN Laufs - und kam von
+        # dort ungeprueft wieder herein. Die Personenzahl stieg dabei von
+        # 5.369 auf 5.384, statt zu sinken.
+        #
+        # Wechselseitige Ketten tragen auch Fehler, und sie tragen sie
+        # besonders hartnaeckig, weil jede Seite sich auf die andere
+        # beruft.
+        if personenschluessel(p.get("nachname"), p.get("vorname")) != k:
             verworfen += 1
             continue
         haus = [p.get("einrichtung")] if p.get("einrichtung") else []
