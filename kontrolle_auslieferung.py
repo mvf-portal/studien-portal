@@ -166,12 +166,44 @@ def main():
         print("      %s  %d Adressen, z. B. %s"
               % (z, len(fremd), ", ".join(fremd[:2])))
 
-    # ------------------------------------------- 3. Gegenprobe
+    # ------------------------------------------- 3. Tote interne Verweise
+    #
+    # ⚠ EIN KNOPF AUF JEDER SEITE IST EIN FEHLER AUF JEDER SEITE. Die
+    # Netzleiste der 15 Themen-Hubs verweist auf „newsletter.html"
+    # daneben. Dieses Angebot hat keine, und der Knopf fuehrte auf allen
+    # Seiten ins Leere, auch auf der laengst veroeffentlichten
+    # landkarte.html. Aufgefallen ist es erst beim Durchzaehlen der
+    # Verweise, nicht beim Ansehen der Seite.
+    print("\n3. Keine toten internen Verweise")
+    tot = {}
+    for z in dateien:
+        if not z.endswith(".html"):
+            continue
+        p = HIER / z
+        if not p.exists():
+            continue
+        t = p.read_text(encoding="utf-8", errors="replace")
+        for ziel in set(re.findall(
+                r'href="([^"#?:]+\.html)(?:[#?][^"]*)?"', t)):
+            if ziel.startswith(("http", "//")):
+                continue
+            if (p.parent / ziel).exists() or (HIER / ziel).exists():
+                continue
+            tot.setdefault(ziel, set()).add(z)
+    ok = ok and not tot
+    print("   %s %d Seiten geprueft, %d tote Ziele"
+          % ("ok " if not tot else "FEHLER",
+             sum(1 for z in dateien if z.endswith(".html")), len(tot)))
+    for ziel, wo in sorted(tot.items()):
+        print("      %-24s auf %d Seiten, z. B. %s"
+              % (ziel, len(wo), sorted(wo)[0]))
+
+    # ------------------------------------------- 4. Gegenprobe
     #
     # ⚠ SIE MUSS DIESELBE PRUEFUNG AUFRUFEN WIE DER ERNSTFALL, nicht eine
     # vereinfachte Fassung daneben. Genau dieser Fehler steckte am
     # 02.11.2026 in teile/kontrolle_felder.py.
-    print("\n3. GEGENPROBE")
+    print("\n4. GEGENPROBE")
     kaputt = "<html>{{NAME}} und <!--__INHALT__--></html>"
     gefunden = sorted(set(PLATZHALTER.findall(kaputt)))
     gut = gefunden == ["(nichts)"] or len(gefunden) == 2

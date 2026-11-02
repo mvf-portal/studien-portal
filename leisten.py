@@ -56,6 +56,24 @@ def beide() -> tuple[str, str]:
     netz = _lies("netzleiste.html", {
         "DOMAIN": "knowledge-hubs.m-vf.de", "UTM": UTM,
     }).replace('src="logo/hub-icon.svg"', f'src="{hub_icon}"')
+
+    # ⚠ DIESES ANGEBOT HAT KEINEN EIGENEN NEWSLETTER. Die Netzleiste ist
+    # fuer die 15 Themen-Hubs gebaut und verweist auf "newsletter.html"
+    # daneben. Die haben alle 15, dieses Angebot nicht - der Knopf fuehrte
+    # auf jeder Seite ins Leere, auch auf der schon veroeffentlichten
+    # landkarte.html (gemessen 02.11.2026: HTTP 404).
+    #
+    # Der Innovationsfonds-Monitor hat dasselbe Problem und loest es so
+    # (if_portal.py, Zeile 76). Wir uebernehmen das, statt eine
+    # Newsletter-Seite vorzutaeuschen, hinter der keine Liste steht.
+    ALT_NL = ('<a href="newsletter.html" data-netz-nl>'
+              'Newsletter dieses Hubs ›</a>')
+    NEU_NL = ('<a href="https://knowledge-hubs.m-vf.de/#newsletter" '
+              'data-netz-nl>Newsletter der Hubs ›</a>')
+    if netz and ALT_NL not in netz:
+        raise SystemExit("Netzleiste: Newsletter-Knopf nicht gefunden. "
+                         "Hat portal-vorlage/netzleiste.html sich geaendert?")
+    netz = netz.replace(ALT_NL, NEU_NL)
     fuss = _lies("fussleiste.html", {
         "NF_LOGO": mvf_neg, "NF_IMPRESSUM": IMPRESSUM,
         "NF_DATENSCHUTZ": DATENSCHUTZ, "UTM": UTM,
