@@ -165,3 +165,41 @@ def hubs_fuer(text: str, icd_codes: list[str]) -> tuple[list[str], str]:
     else:
         quelle = "keine Zuordnung"
     return alle, quelle
+
+
+# ------------------------------------------------- 3. Redaktion, nicht Forschung
+#
+# Peter Stegmaier am 02.11.2026: „Das sind rein redaktionelle Beitraege,
+# keine wissenschaftlichen. die verzerren hier alles."
+#
+# Die Forschendenliste sortiert nach Belegen. Ganz oben standen damit drei
+# Menschen aus der Redaktion, weil sie seit Jahren jedes Heft mit
+# Nachrichten, Interviews und Editorials fuellen:
+#
+#     Peter Stegmaier    326 MVF-Beitraege, 0 Studien, 0 DKVF
+#     Reinhold Roski      43 MVF-Beitraege, 0 Studien, 0 DKVF
+#     Kathrin Pieloth     39 MVF-Beitraege, 0 Studien, 0 DKVF
+#
+# ⚠ DAS IST KEINE WERTUNG UEBER MENSCHEN, SONDERN UEBER DIE EINHEIT. Ein
+# redaktioneller Beitrag ist kein Forschungsbeleg, und eine Liste, die
+# beides zusammenzaehlt, misst nicht, was sie zu messen behauptet.
+#
+# ⚠ WARUM NICHT UEBER DIE RUBRIK. Sauberer waere, redaktionelle Rubriken
+# auszunehmen statt Personen. Das geht nicht: Von den 1.528 Datensaetzen
+# der WordPress-Schnittstelle tragen 1.507 KEINE Rubrik (gemessen
+# 02.11.2026). Eine Regel auf ein Feld zu bauen, das in 99 Prozent der
+# Faelle leer ist, waere eine Regel, die nie greift.
+#
+# Diese Liste ist deshalb von Hand gepflegt und bewusst kurz. Wer sie
+# erweitert, traegt den Grund daneben ein. Der Schluessel ist derselbe
+# wie ueberall: norm(nachname) + ", " + erster Vorname.
+REDAKTION = {
+    "stegmaier, peter":  "Chefredakteur und Verleger",
+    "roski, reinhold":   "Herausgeber",
+    "pieloth, kathrin":  "Redaktion",
+}
+
+
+def ist_redaktion(schluessel: str) -> bool:
+    """Gehoert dieser Personenschluessel zur Redaktion?"""
+    return (schluessel or "").strip().lower() in REDAKTION

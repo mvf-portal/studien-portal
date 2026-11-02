@@ -33,7 +33,11 @@ sys.path.insert(0, str(HIER))
 import seiten                                             # noqa: E402
 
 DATEN = HIER / "daten"
-VORLAGE = HIER / "vorlage-dach-band.html"
+# ⚠ FUEHRENDER UNTERSTRICH. Ohne ihn liefert GitHub Pages die
+# Bauvorlage als Seite aus, mit {{KARTEN}} im Klartext. Genau das
+# ist am 02.11.2026 bei standort-vorlage.html passiert, und
+# kontrolle_auslieferung.py hat es hier beim zweiten Mal gefunden.
+VORLAGE = HIER / "_vorlage-dach-band.html"
 HUB = HIER.parent / "versorgungsforschung-portal"
 ZIEL = HUB / "index.html"
 SCHNIPSEL = HUB / "teile-dach-band.html"

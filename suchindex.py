@@ -392,7 +392,14 @@ def bauen():
     zaehlung["institution"] = len(st)
 
     bereits = set()
+    # ⚠ REDAKTION IST KEINE FORSCHUNG. Regel und Begruendung in
+    # zuschnitt.py. Wer hier steht, kommt weder in die Liste noch in die
+    # Suche - beides muss gleich entscheiden, sonst zeigt ein Suchlink
+    # auf eine Zeile, die es nicht gibt.
+    from zuschnitt import REDAKTION
     for k, p in sorted(personen().items()):
+        if k in REDAKTION:
+            continue
         haus = sorted({ror_name[r] for r in p["rors"] if r in ror_name})
         such = " ".join([p["name"]] + haus)
         eintraege.append({
@@ -429,6 +436,8 @@ def bauen():
         # personen.json, wir tragen sie von dort in den Suchindex nach,
         # und personen.py liest sie im naechsten Lauf wieder daraus. Die
         # wechselseitige Kette traegt dann den Fehler mit.
+        if k in REDAKTION:
+            continue
         _, _, vor_k = k.partition(", ")
         if scheinperson(vor_k):
             verworfen += 1

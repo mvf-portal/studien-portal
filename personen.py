@@ -454,6 +454,19 @@ def bauen():
         "zaehlung": dict(zaehl),
         "personen": leute,
     }
+    # ⚠ REDAKTION IST KEINE FORSCHUNG. Drei Menschen fuellen seit Jahren
+    # jedes Heft mit Nachrichten, Interviews und Editorials und standen
+    # damit ganz oben in einer Liste, die nach Forschungsbelegen sortiert.
+    # Die Regel und die Begruendung stehen in zuschnitt.py, nicht hier.
+    sys.path.insert(0, str(HIER))
+    from zuschnitt import REDAKTION
+    weg = [k for k in leute if k in REDAKTION]
+    for k in weg:
+        del leute[k]
+    zaehl["redaktion_ausgeblendet"] = len(weg)
+    if weg:
+        print("  ausgeblendet, weil Redaktion: %s" % ", ".join(sorted(weg)))
+
     ziel = DATEN / "personen.json"
     ziel.write_text(json.dumps(raus, ensure_ascii=False, indent=1),
                     encoding="utf-8")
